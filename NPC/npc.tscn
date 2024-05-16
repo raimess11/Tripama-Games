@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dad6tyopc03kn"]
+
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_2n3x4"]
+[ext_resource type="Script" path="res://NPC/npc.gd" id="1_a6x01"]
+[ext_resource type="PackedScene" uid="uid://bq8v4wqnfb5x" path="res://NPC/ChatBubble/chat_bubble.tscn" id="3_ppckn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dwe3"]
+radius = 40.0
+height = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c35a0"]
+size = Vector2(240, 136)
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_a6x01")
+dialogue_text = "res://NPC/ChatBubble/Dialogue/testDialogue.json"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.894118, 0.533333, 1)
+position = Vector2(9.53674e-07, 0)
+scale = Vector2(0.625, 1)
+texture = ExtResource("1_2n3x4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1dwe3")
+
+[node name="Interaction" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction"]
+position = Vector2(8, -4)
+shape = SubResource("RectangleShape2D_c35a0")
+debug_color = Color(0.788235, 0.160784, 0.964706, 0.419608)
+
+[node name="ChatBubble" parent="." instance=ExtResource("3_ppckn")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = -152.0
+offset_right = 25.0
+offset_bottom = -80.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]
+[connection signal="finshed_chatting" from="ChatBubble" to="." method="_on_chat_bubble_finshed_chatting"]

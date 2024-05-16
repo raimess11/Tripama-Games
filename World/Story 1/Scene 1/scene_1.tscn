@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://h3pyacgf1yi2"]
+
+[ext_resource type="PackedScene" uid="uid://buf3hnfls5kaw" path="res://World/Story 1/Scene 1/s_1_ground.tscn" id="1_vyyfs"]
+[ext_resource type="PackedScene" uid="uid://dua0iu8etq3dk" path="res://World/Story 1/Scene 1/gate.tscn" id="2_3257q"]
+[ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="3_ot328"]
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="4_t1pkv"]
+[ext_resource type="PackedScene" uid="uid://dsp2vsshdmmbw" path="res://Player/player.tscn" id="5_3lcrs"]
+
+[node name="Scene 1" type="Node2D"]
+
+[node name="S1_Ground" parent="." instance=ExtResource("1_vyyfs")]
+position = Vector2(486.8, 940)
+scale = Vector2(0.2, 0.2)
+
+[node name="S1_Ground2" parent="." instance=ExtResource("1_vyyfs")]
+position = Vector2(1454.8, 940)
+scale = Vector2(0.2, 0.2)
+flip_h = true
+
+[node name="Stairs" parent="." instance=ExtResource("3_ot328")]
+position = Vector2(336, 792)
+scale = Vector2(1.5, 1.5)
+
+[node name="NPC" parent="." instance=ExtResource("4_t1pkv")]
+position = Vector2(1184, 728)
+
+[node name="Player" parent="." instance=ExtResource("5_3lcrs")]
+position = Vector2(1424, 728)
+
+[node name="Gate" parent="." instance=ExtResource("2_3257q")]
+position = Vector2(968, 576)
