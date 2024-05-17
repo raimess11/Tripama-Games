@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://buf3hnfls5kaw"]
+
+[ext_resource type="PackedScene" uid="uid://edard48h7bsh" path="res://World/Base_World/ground.tscn" id="1_xexca"]
+
+[node name="S1_Ground" instance=ExtResource("1_xexca")]
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+polygon = PackedVector2Array(2432, -744, -2432, -744, -2432, 968, 2432, 968)
