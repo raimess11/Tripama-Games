@@ -9,11 +9,11 @@
 [node name="Scene 1" type="Node2D"]
 
 [node name="S1_Ground" parent="." instance=ExtResource("1_vyyfs")]
-position = Vector2(486.8, 940)
+position = Vector2(488, 944)
 scale = Vector2(0.2, 0.2)
 
 [node name="S1_Ground2" parent="." instance=ExtResource("1_vyyfs")]
-position = Vector2(1454.8, 940)
+position = Vector2(1456, 944)
 scale = Vector2(0.2, 0.2)
 flip_h = true
 
