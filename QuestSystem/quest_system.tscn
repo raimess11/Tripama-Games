@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh7tb2ax3qi33"]
+
+[ext_resource type="Script" path="res://QuestSystem/quest_system.gd" id="1_li08n"]
+
+[node name="QuestSystem" type="Node"]
+script = ExtResource("1_li08n")
+
+[node name="Available" type="Node" parent="."]
+
+[node name="Active" type="Node" parent="."]
+
+[node name="Completed" type="Node" parent="."]
+
+[node name="Delivered" type="Node" parent="."]

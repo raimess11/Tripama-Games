@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bascw3dgaoere"]
+
+[ext_resource type="Script" path="res://QuestSystem/Quest/quest.gd" id="1_crxpk"]
+
+[node name="Quest" type="Node"]
+script = ExtResource("1_crxpk")
+
+[node name="Objective" type="Node" parent="."]
