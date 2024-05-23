@@ -27,11 +27,9 @@ func display_text(job: String ,text_display: String):
 	#await resized
 	##await resized
 	await get_tree().create_timer(0.01).timeout
-	print(size.x)
 	custom_minimum_size.x = min(size.x, MAX_WIDTH)
 	
 	if size.x > MAX_WIDTH:
-		print("one")
 		label.autowrap_mode = TextServer.AUTOWRAP_WORD
 		await resized
 		await resized

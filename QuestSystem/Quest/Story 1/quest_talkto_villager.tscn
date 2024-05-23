@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://tu12gp216vcs"]
+
+[ext_resource type="PackedScene" uid="uid://bascw3dgaoere" path="res://QuestSystem/Quest/quest.tscn" id="1_cf1qy"]
+[ext_resource type="PackedScene" uid="uid://cmk2b3isel5ah" path="res://QuestSystem/Quest/Story 1/objective_talk_to_villager.tscn" id="2_2fot7"]
+
+[node name="QuestTalktoVillager" instance=ExtResource("1_cf1qy")]
+
+[node name="ObjectiveTalkToVillager" parent="Objective" index="0" instance=ExtResource("2_2fot7")]

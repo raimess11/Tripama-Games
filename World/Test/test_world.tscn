@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://xagbfc6unnts"]
+[gd_scene load_steps=6 format=3 uid="uid://xagbfc6unnts"]
 
 [ext_resource type="Script" path="res://World/Test/test_world.gd" id="1_vh73t"]
 [ext_resource type="PackedScene" uid="uid://dsp2vsshdmmbw" path="res://Player/player.tscn" id="2_gnyin"]
-[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="3_mcw0g"]
+[ext_resource type="PackedScene" uid="uid://cd6ag710byv7r" path="res://NPC/Story 1/guard_1.tscn" id="4_fcxv0"]
+[ext_resource type="PackedScene" uid="uid://boqlgnuwkaot5" path="res://NPC/Story 1/villager_1.tscn" id="4_l0ghh"]
+[ext_resource type="PackedScene" uid="uid://ckujvallmhah8" path="res://NPC/Story 1/guard_2.tscn" id="5_tlujd"]
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_vh73t")
@@ -14,8 +16,17 @@ polygon = PackedVector2Array(-8, 0, 128, 0, 128, 768, 320, 768, 576, 960, 1344, 
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
-[node name="NPC" parent="." instance=ExtResource("3_mcw0g")]
-position = Vector2(1640, 896)
-
 [node name="Player" parent="." instance=ExtResource("2_gnyin")]
 position = Vector2(224, 600)
+
+[node name="Villager 1" parent="." instance=ExtResource("4_l0ghh")]
+position = Vector2(640, 888)
+
+[node name="Villager 2" parent="." instance=ExtResource("4_l0ghh")]
+position = Vector2(840, 888)
+
+[node name="Guard1" parent="." instance=ExtResource("4_fcxv0")]
+position = Vector2(1632, 896)
+
+[node name="Guard 2" parent="." instance=ExtResource("5_tlujd")]
+position = Vector2(208, 704)

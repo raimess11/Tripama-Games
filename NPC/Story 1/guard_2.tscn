@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckujvallmhah8"]
+
+[ext_resource type="PackedScene" uid="uid://d0togqwtqbveu" path="res://NPC/quect_receiver.tscn" id="1_4qun5"]
+[ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_oi3oc"]
+
+[node name="Guard 2" instance=ExtResource("1_4qun5")]
+dialogue_text = "res://NPC/ChatBubble/Dialogue/testDialogue.json"
+
+[node name="CompleteQuestAction" parent="Action" index="0"]
+quest_reference = ExtResource("2_oi3oc")

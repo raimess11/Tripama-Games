@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1tvyug341l0"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_7oyqg"]
+[ext_resource type="Script" path="res://NPC/quest_giver.gd" id="2_ifead"]
+[ext_resource type="PackedScene" uid="uid://b5dwyaegasssa" path="res://NPC/Action/give_quest_action.tscn" id="3_f73cp"]
+
+[node name="QuestGiver" instance=ExtResource("1_7oyqg")]
+script = ExtResource("2_ifead")
+dialogue_text = "null"
+
+[node name="GiveQuestAction" parent="Action" index="0" instance=ExtResource("3_f73cp")]

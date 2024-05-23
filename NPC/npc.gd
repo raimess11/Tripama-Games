@@ -6,12 +6,17 @@ var player
 var is_in_chatting_zone = false
 var is_chatting = false
 var to_next_text = false
+var has_interacted = false
 
 @export_file("*.json") var dialogue_text
 @onready var chat_bubble = $ChatBubble
+@onready var action = $Action
 
 var dialogue = []
 var dialogue_index = 0
+
+signal finished_Chatting
+signal interacted
 
 func _ready():
 	dialogue = load_dialogue()
@@ -26,7 +31,6 @@ func _process(delta):
 		is_chatting = true
 		player.is_chatting = true
 		start_chatting()
-		print("Is Chatting")
 
 func _on_interaction_body_entered(body):
 	if body.is_in_group("Player"):
@@ -42,7 +46,6 @@ func _on_interaction_body_exited(body):
 
 func _input(event):
 	if event.is_action_pressed("Interact") and to_next_text:
-		print("pressed")
 		to_next_text = false
 		next_text()
 
@@ -52,11 +55,12 @@ func load_dialogue():
 	return content
 
 func next_text():
-	print(to_next_text)
 	dialogue_index += 1
-	print(len(dialogue))
 	if dialogue_index >= len(dialogue):
-		print("finished chatting")
+		emit_signal("finished_Chatting")
+		if not has_interacted:
+			has_interacted = true
+			emit_signal("interacted")
 		is_chatting = false
 		player.is_chatting = false
 		return
@@ -65,5 +69,4 @@ func next_text():
 
 
 func _on_chat_bubble_finshed_chatting():
-	print("end of text")
 	to_next_text = true

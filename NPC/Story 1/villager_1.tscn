@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://boqlgnuwkaot5"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_gu1n3"]
+
+[node name="Villager 1" groups=["villager"] instance=ExtResource("1_gu1n3")]
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.698039, 0, 0.666667, 1)
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+
+[node name="CollisionShape2D" parent="Interaction" index="0"]
+visible = false
