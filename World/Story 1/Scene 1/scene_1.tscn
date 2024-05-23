@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://buf3hnfls5kaw" path="res://World/Story 1/Scene 1/s_1_ground.tscn" id="1_vyyfs"]
 [ext_resource type="PackedScene" uid="uid://dua0iu8etq3dk" path="res://World/Story 1/Scene 1/gate.tscn" id="2_3257q"]
 [ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="3_ot328"]
-[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="4_t1pkv"]
 [ext_resource type="PackedScene" uid="uid://dsp2vsshdmmbw" path="res://Player/player.tscn" id="5_3lcrs"]
+[ext_resource type="PackedScene" uid="uid://cd6ag710byv7r" path="res://NPC/Story 1/guard_1.tscn" id="5_5ww8a"]
 
 [node name="Scene 1" type="Node2D"]
 
@@ -21,8 +21,8 @@ flip_h = true
 position = Vector2(336, 792)
 scale = Vector2(1.5, 1.5)
 
-[node name="NPC" parent="." instance=ExtResource("4_t1pkv")]
-position = Vector2(1184, 728)
+[node name="Guard1" parent="." instance=ExtResource("5_5ww8a")]
+position = Vector2(1144, 720)
 
 [node name="Player" parent="." instance=ExtResource("5_3lcrs")]
 position = Vector2(1424, 728)

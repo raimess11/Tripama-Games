@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5dwyaegasssa"]
+
+[ext_resource type="Script" path="res://NPC/Action/give_quest_action.gd" id="1_ls3e6"]
+
+[node name="GiveQuestAction" type="Node"]
+script = ExtResource("1_ls3e6")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bniuhs3gymarh"]
+
+[ext_resource type="Script" path="res://NPC/Action/complete_quest_action.gd" id="1_xaih8"]
+
+[node name="CompleteQuestAction" type="Node"]
+script = ExtResource("1_xaih8")
