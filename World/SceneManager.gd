@@ -1,3 +1,7 @@
+"""
+Scene manager is used to manage all scene transition
+"""
+
 extends Node
 
 
@@ -21,38 +25,48 @@ func _ready():
 	self.connect("content_finished_loading", on_content_finished_loading)
 	self.connect("zelda_content_finished_loading", on_zelda_content_finished_loading)
 
+#Set the transition to zelda style
 func load_level_zelda(content_path : String) -> void:
 	_transition = "zelda"
 	_load_content(content_path)
 
+#Load all content before actual transition
 func _load_content(content_path : String):
 	_content_path = content_path
 	var loader = ResourceLoader.load_threaded_request(content_path)
 	if not ResourceLoader.exists(content_path) or loader == null:
 		content_invalid.emit(content_path)
 		return
-		
+	
+	#Wait for the content to fully with loading screen
 	_load_progress_timer = Timer.new()
 	_load_progress_timer.wait_time = 0.1
 	_load_progress_timer.timeout.connect(monitor_load_status)
 	get_tree().root.add_child(_load_progress_timer)
 	_load_progress_timer.start()
 
+#Monitor content loading for loading screen
 func monitor_load_status() -> void:
 	var load_progress = []
 	var load_status = ResourceLoader.load_threaded_get_status(_content_path, load_progress)
 	
+	#Handle loading update, finished, and error
 	match load_status:
+		#When content invalid
 		ResourceLoader.THREAD_LOAD_INVALID_RESOURCE:
 			content_invalid.emit(_content_path)
 			_load_progress_timer.stop()
 			return
+		#Update load
 		ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			#Add loading update here
 			pass
+		#Failed to load file
 		ResourceLoader.THREAD_LOAD_FAILED:
 			content_failed_to_load.emit(_content_path)
 			_load_progress_timer.stop()
 			return
+		#Finished Loading content
 		ResourceLoader.THREAD_LOAD_LOADED:
 			_load_progress_timer.stop()
 			_load_progress_timer.queue_free()
@@ -62,18 +76,22 @@ func monitor_load_status() -> void:
 				content_finished_loading.emit(ResourceLoader.load_threaded_get(_content_path).instantiate())
 			return
 
+#Error print
 func on_content_invalid(path : String):
 	printerr("error: Cannot load resource: '%s'" % [path])
 
 func on_content_failed_to_load(path : String):
 	printerr("error: Failed to load resource: '%s'" % [path])	
+###
 
 func on_content_finished_loading():
 	pass
 
+#Zelda style transition
 func on_zelda_content_finished_loading(content):
 	var outgoing_scene = get_tree().current_scene
 	
+	#Get data from previous scene
 	var incoming_data : LevelDataHandoff
 	if  get_tree().current_scene is Level:
 		incoming_data = get_tree().current_scene.data as LevelDataHandoff

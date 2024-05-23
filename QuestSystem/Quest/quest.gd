@@ -31,6 +31,7 @@ func get_completed_objectives():
 		completed.append(objective)
 	return completed
 
+#Emit signal when all objective are completed
 func _on_Objective_completed(objective) -> void:
 	if get_completed_objectives().size() == get_objective().size():
 		print("Quest completed")
@@ -39,5 +40,12 @@ func _on_Objective_completed(objective) -> void:
 func _deliver():
 	emit_signal("delivered")
 
+#Delete later
+#Print the updated quest
 func _on_Objective_updated(objective : QuestObjective):
 	print(objective.as_text())
+
+#Connect all objective to the new scene
+func connectQuestSignal():
+	for objective in get_objective():
+		objective.connect_signals()

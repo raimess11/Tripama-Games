@@ -23,7 +23,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	if !is_chatting:
+	if (!is_chatting) and input_enabled:
 		# Handle Jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
@@ -47,8 +47,8 @@ func _physics_process(delta):
 func orient(dir : Vector2):
 	if dir.x:
 		sprite.flip_h = dir.x < 0
-	
 
+#Disable input
 func disable():
 	input_enabled = false
 	

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh7tb2ax3qi33"]
+[gd_scene load_steps=6 format=3 uid="uid://dh7tb2ax3qi33"]
 
 [ext_resource type="Script" path="res://QuestSystem/quest_system.gd" id="1_li08n"]
 [ext_resource type="Script" path="res://QuestSystem/Available.gd" id="2_0wuq5"]
 [ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_xpph0"]
 [ext_resource type="Script" path="res://QuestSystem/Completed.gd" id="4_7roi4"]
+[ext_resource type="Script" path="res://QuestSystem/Active.gd" id="4_uphbn"]
 
 [node name="QuestSystem" type="Node"]
 script = ExtResource("1_li08n")
@@ -14,6 +15,7 @@ script = ExtResource("2_0wuq5")
 [node name="QuestTalktoVillager" parent="Available" instance=ExtResource("2_xpph0")]
 
 [node name="Active" type="Node" parent="."]
+script = ExtResource("4_uphbn")
 
 [node name="Completed" type="Node" parent="."]
 script = ExtResource("4_7roi4")

@@ -7,6 +7,7 @@ var data : LevelDataHandoff
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	QuestSystem.connectAllNodes()
 	addDoorToDoors()
 	player.disable()
 	player.visible = false
