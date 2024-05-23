@@ -17,13 +17,13 @@ polygon = PackedVector2Array(-8, 0, 128, 0, 128, 768, 320, 768, 576, 960, 1344, 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_gnyin")]
-position = Vector2(224, 600)
+position = Vector2(1104, 892)
 
 [node name="Villager 1" parent="." instance=ExtResource("4_l0ghh")]
-position = Vector2(640, 888)
+position = Vector2(640, 896)
 
 [node name="Villager 2" parent="." instance=ExtResource("4_l0ghh")]
-position = Vector2(840, 888)
+position = Vector2(840, 896)
 
 [node name="Guard1" parent="." instance=ExtResource("4_fcxv0")]
 position = Vector2(1632, 896)

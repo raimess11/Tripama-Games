@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn23g8biuhy0r"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_ioj2q"]
+[ext_resource type="PackedScene" uid="uid://2op2l64kn5q" path="res://World/Base_World/Objects/logs.tscn" id="2_qtefw"]
+[ext_resource type="PackedScene" uid="uid://dh64ba1a40w4p" path="res://World/Base_World/Objects/hay.tscn" id="3_0ufdr"]
+[ext_resource type="PackedScene" uid="uid://boqlgnuwkaot5" path="res://NPC/Story 1/villager_1.tscn" id="4_etn2a"]
+
+[node name="S1_Scene 2" instance=ExtResource("1_ioj2q")]
+
+[node name="Hay" parent="." index="2" instance=ExtResource("3_0ufdr")]
+position = Vector2(568, 720)
+
+[node name="Villager 1" parent="." index="3" instance=ExtResource("4_etn2a")]
+position = Vector2(568, 736)
+
+[node name="Villager 2" parent="." index="4" instance=ExtResource("4_etn2a")]
+position = Vector2(1568, 732)
+
+[node name="Logs" parent="." index="5" instance=ExtResource("2_qtefw")]
+position = Vector2(1840, 752)
+
+[node name="LeftDoor" parent="." index="7"]
+position = Vector2(-32, 752)
+path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"

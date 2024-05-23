@@ -7,7 +7,7 @@ var active : bool = true
 
 func _ready():
 	assert(quest_reference)
-	quest = QuestSystem.findAvailable(quest_reference.instantiate())
+	quest = QuestSystem.findComplete(quest_reference.instantiate())
 	quest.connect("completed", _On_Quest_completed)
 
 func _On_Quest_completed():
