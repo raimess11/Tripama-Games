@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm3t8waa87ugi"]
+
+[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="1_2kvre"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_rl6kh"]
+
+[node name="CharacterSelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.231373, 0.427451, 0.462745, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 55.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 120
+
+[node name="CharContain" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 44
+
+[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain"]
+position = Vector2(223, -122)
+scale = Vector2(3.49219, 3.73955)
+texture = ExtResource("3_rl6kh")
+
+[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Char Name"
+
+[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Description"
+level_path = "res://GUI/Character_description.tscn"
+
+[node name="CharContain2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 44
+
+[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain2"]
+position = Vector2(228, -124)
+scale = Vector2(3.49219, 3.73955)
+texture = ExtResource("3_rl6kh")
+
+[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain2" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Char Name"
+
+[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain2" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Description"
+level_path = "res://GUI/Character_description.tscn"
+
+[node name="CharContain3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 44
+
+[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain3"]
+position = Vector2(224, -120)
+scale = Vector2(3.49219, 3.73955)
+texture = ExtResource("3_rl6kh")
+
+[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain3" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Char Name"
+
+[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain3" instance=ExtResource("1_2kvre")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Description"
+level_path = "res://GUI/Character_description.tscn"
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Select Story"

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca8qs65dvn2fu"]
+
+[ext_resource type="Script" path="res://GUI/Button.gd" id="1_mcaud"]
+
+[node name="Button" type="Button"]
+layout_direction = 1
+offset_right = 192.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Bop"
+icon_alignment = 1
+script = ExtResource("1_mcaud")
+level_path = "<null>"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
