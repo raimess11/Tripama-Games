@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbg4ukilwrxah"]
+
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_myh8l"]
+[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="2_bpgjw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.266667, 0.498039, 0.364706, 1)
+
+[node name="ImageArea" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ImageArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ImageArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageArea/VBoxContainer/Panel"]
+position = Vector2(384, 391)
+scale = Vector2(6, 6.10938)
+texture = ExtResource("1_myh8l")
+
+[node name="Label" type="Label" parent="ImageArea/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Character name"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TextArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextArea/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Description"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Panel" type="Panel" parent="TextArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextArea/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet scelerisque arcu, in porta risus. Cras porttitor tellus arcu, eget dapibus nunc vehicula quis. Curabitur magna dolor, vestibulum id tristique pellentesque, aliquam vel neque. Nam varius auctor turpis. Cras nunc sem, gravida quis mattis ac, faucibus vel justo. Sed condimentum sem est, a mattis lorem faucibus quis. Duis egestas viverra risus et maximus. Duis faucibus fermentum semper. Vivamus eget tellus dapibus, suscipit arcu ac, finibus eros. Sed ornare blandit facilisis. Maecenas rutrum risus elit, eget ornare tellus cursus et.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet scelerisque arcu, in porta risus. Cras porttitor tellus arcu, eget dapibus nunc vehicula quis. Curabitur magna dolor, vestibulum id tristique pellentesque, aliquam vel neque. Nam varius auctor turpis. Cras nunc sem, gravida quis mattis ac, faucibus vel justo. Sed condimentum sem est, a mattis lorem faucibus quis. Duis egestas viverra risus et maximus. Duis faucibus fermentum semper. Vivamus eget tellus dapibus, suscipit arcu ac, finibus eros. Sed ornare blandit facilisis. Maecenas rutrum risus elit, eget ornare tellus cursus et."
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("2_bpgjw")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 206.0
+offset_bottom = 98.0
+grow_horizontal = 1
+grow_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "Back"
+level_path = "res://GUI/character_select_screen.tscn"
