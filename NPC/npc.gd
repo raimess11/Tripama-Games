@@ -19,9 +19,11 @@ signal finished_Chatting
 signal interacted
 
 func _ready():
+	#Load initial dialogue
 	dialogue = load_dialogue()
 	dialogue_index = -1
 
+#Start the chatting bubble
 func start_chatting():
 	chat_bubble.visible = true
 	next_text()
@@ -32,6 +34,7 @@ func _process(delta):
 		player.is_chatting = true
 		start_chatting()
 
+#Check if player in area
 func _on_interaction_body_entered(body):
 	if body.is_in_group("Player"):
 		player = body
@@ -49,13 +52,16 @@ func _input(event):
 		to_next_text = false
 		next_text()
 
+#Load dialogue from JSON file to array
 func load_dialogue():
 	var file = FileAccess.open(dialogue_text, FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
 
+#Shift from first text to another by adding the index
 func next_text():
 	dialogue_index += 1
+	#If the out of dialogue complete chatting
 	if dialogue_index >= len(dialogue):
 		emit_signal("finished_Chatting")
 		if not has_interacted:
@@ -64,9 +70,9 @@ func next_text():
 		is_chatting = false
 		player.is_chatting = false
 		return
-		
+	
+	#Display the new text with chat bubble
 	chat_bubble.display_text(dialogue[dialogue_index]['name'], dialogue[dialogue_index]['text'])
-
 
 func _on_chat_bubble_finshed_chatting():
 	to_next_text = true

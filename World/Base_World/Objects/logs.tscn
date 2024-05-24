@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://2op2l64kn5q"]
+
+[ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="1_dwqsv"]
+
+[sub_resource type="Gradient" id="Gradient_q42gs"]
+colors = PackedColorArray(0.422999, 0.289786, 0.160181, 1, 0.365771, 0.463432, 0.213187, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vx8yb"]
+noise_type = 2
+seed = 6
+fractal_type = 3
+fractal_octaves = 7
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 100.0
+domain_warp_fractal_type = 0
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tlfbt"]
+width = 508
+color_ramp = SubResource("Gradient_q42gs")
+noise = SubResource("FastNoiseLite_vx8yb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfhwa"]
+size = Vector2(517.236, 551.385)
+
+[node name="Logs" instance=ExtResource("1_dwqsv")]
+scale = Vector2(0.216535, 0.203125)
+texture = SubResource("NoiseTexture2D_tlfbt")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 1.17375e-05)
+shape = SubResource("RectangleShape2D_lfhwa")

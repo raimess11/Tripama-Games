@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://chai5cvb7h0q7"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_vyc0p"]
+[ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="2_w02rp"]
+[ext_resource type="PackedScene" uid="uid://dua0iu8etq3dk" path="res://World/Story 1/Scene 1/gate.tscn" id="3_lyb5s"]
+[ext_resource type="PackedScene" uid="uid://ckujvallmhah8" path="res://NPC/Story 1/guard_2.tscn" id="4_tghvu"]
+
+[node name="S1_Scene 3" instance=ExtResource("1_vyc0p")]
+
+[node name="Stairs" parent="." index="2" instance=ExtResource("2_w02rp")]
+position = Vector2(336, 810)
+scale = Vector2(1.5, 1.5)
+
+[node name="Guard 2" parent="." index="3" instance=ExtResource("4_tghvu")]
+position = Vector2(1144, 720)
+
+[node name="Player" parent="." index="4"]
+position = Vector2(1360, 736)
+
+[node name="LeftDoor" parent="." index="5"]
+position = Vector2(-24, 656)
+
+[node name="Gate" parent="." index="6" instance=ExtResource("3_lyb5s")]
+position = Vector2(968, 584)

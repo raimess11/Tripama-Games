@@ -1,3 +1,6 @@
+"""
+Base objective to further modified
+"""
 extends Node
 class_name QuestObjective
 

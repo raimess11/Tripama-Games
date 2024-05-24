@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh64ba1a40w4p"]
+
+[ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="1_8s6us"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_2ctj6"]
+
+[node name="Hay" instance=ExtResource("1_8s6us")]
+modulate = Color(0.45098, 0.290196, 0, 1)
+scale = Vector2(1.9375, 1)
+texture = ExtResource("2_2ctj6")
