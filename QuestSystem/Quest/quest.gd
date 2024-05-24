@@ -16,6 +16,8 @@ func _start():
 		#Connect signal with function
 		objective.connect("completed", _on_Objective_completed)
 		objective.connect("updated", _on_Objective_updated.bind(objective))
+		_on_Objective_updated(objective)
+	print("New quest started")
 	emit_signal("started")
 
 func get_objective():
@@ -38,6 +40,7 @@ func _on_Objective_completed(objective) -> void:
 		emit_signal("completed")
 
 func _deliver():
+	print("Quest has been delivered rewards given")
 	emit_signal("delivered")
 
 #Delete later

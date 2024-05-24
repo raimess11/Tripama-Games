@@ -98,12 +98,10 @@ func on_zelda_content_finished_loading(content):
 	
 	if content is Level:
 		content.data = incoming_data
-		print(content.data)
 	
 	# slide new level in
 	content.position.x = incoming_data.move_dir.x * LEVEL_W
 	content.position.y = incoming_data.move_dir.y * LEVEL_H
-	print(content.position)
 	var tween_in:Tween = get_tree().create_tween()
 	tween_in.tween_property(content, "position", Vector2.ZERO, 1).set_trans(Tween.TRANS_SINE)
 	
@@ -112,7 +110,6 @@ func on_zelda_content_finished_loading(content):
 	var vector_off_screen:Vector2 = Vector2.ZERO
 	vector_off_screen.x = -incoming_data.move_dir.x * LEVEL_W
 	vector_off_screen.y = -incoming_data.move_dir.y * LEVEL_H
-	print(vector_off_screen, "SADAS")
 	tween_out.tween_property(outgoing_scene, "position", vector_off_screen, 1).set_trans(Tween.TRANS_SINE)
 	
 	# add new scene to the tree - (Note: could be loaded into a container instead)

@@ -12,8 +12,15 @@ var active : bool = true
 func _ready():
 	assert(quest_reference)
 	#Connect the completed quest with teh function
-	quest = QuestSystem.findComplete(quest_reference.instantiate())
-	quest.connect("completed", _On_Quest_completed)
+	if QuestSystem.isCompleted(quest_reference.instantiate()):
+		quest = QuestSystem.findComplete(quest_reference.instantiate())
+		quest.connect("completed", _On_Quest_completed)
+	elif QuestSystem.isAvailable(quest_reference.instantiate()):
+		quest = QuestSystem.findAvailable(quest_reference.instantiate())
+		quest.connect("completed", _On_Quest_completed)
+	elif QuestSystem.isActive(quest_reference.instantiate()):
+		quest = QuestSystem.findActive(quest_reference.instantiate())
+		quest.connect("completed", _On_Quest_completed)
 
 func _On_Quest_completed():
 	active = false

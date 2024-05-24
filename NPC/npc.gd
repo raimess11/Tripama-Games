@@ -32,6 +32,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("Interact") and !is_chatting and is_in_chatting_zone:
 		is_chatting = true
 		player.is_chatting = true
+		player.playInteractSound()
 		start_chatting()
 
 #Check if player in area
@@ -50,6 +51,7 @@ func _on_interaction_body_exited(body):
 func _input(event):
 	if event.is_action_pressed("Interact") and to_next_text:
 		to_next_text = false
+		player.playInteractSound()
 		next_text()
 
 #Load dialogue from JSON file to array

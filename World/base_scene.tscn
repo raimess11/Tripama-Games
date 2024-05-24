@@ -30,17 +30,17 @@ position = Vector2(960, 1104)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player" parent="." instance=ExtResource("2_kikx2")]
-position = Vector2(880, 736)
+position = Vector2(1014, 663)
 
 [node name="LeftDoor" parent="." instance=ExtResource("3_ir28f")]
-position = Vector2(-24, 752)
+position = Vector2(-24, 663)
 entry_direction = 1
 transition_type = "zelda"
 push_distance = 100
 entry_door_name = "RightDoor"
 
 [node name="RightDoor" parent="." instance=ExtResource("3_ir28f")]
-position = Vector2(1968, 752)
+position = Vector2(1968, 663)
 entry_direction = 0
 transition_type = "zelda"
 push_distance = 100

@@ -41,7 +41,6 @@ func _on_player_entered_door(door:Door) -> void:
 
 func _connect_to_doors() -> void:
 	for door in doors:
-		print(doors)
 		if not door.player_entered_door.is_connected(_on_player_entered_door):
 			door.player_entered_door.connect(_on_player_entered_door.bind(door))
 
