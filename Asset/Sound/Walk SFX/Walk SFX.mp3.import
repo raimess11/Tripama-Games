@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crajc5vxbkq5b"
+path="res://.godot/imported/Walk SFX.mp3-16bfc9e1f284a592725bc56c18553829.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Walk SFX/Walk SFX.mp3"
+dest_files=["res://.godot/imported/Walk SFX.mp3-16bfc9e1f284a592725bc56c18553829.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

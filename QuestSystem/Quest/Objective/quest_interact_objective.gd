@@ -4,7 +4,9 @@ class_name QuestInteractObjective
 @export var amount : int
 @export var npcType : String
 
+var firstAmount : int
 func _ready():
+	firstAmount = amount
 	connect_signals()
 
 #Connect all signals to the correct NPC
@@ -22,5 +24,5 @@ func _on_NPC_interacted(npc):
 
 #Return the string verstion of the quest
 func as_text() -> String:
-	return "Interacted %s (%s) %s" %  [str(amount), npcType, "completed" if objective_completed else ""]
+	return "Interacted %s (%s) %s" %  [str(firstAmount - amount), npcType, "completed" if objective_completed else ""]
 	

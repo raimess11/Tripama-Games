@@ -1,11 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsp2vsshdmmbw"]
+[gd_scene load_steps=16 format=3 uid="uid://dsp2vsshdmmbw"]
 
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_3ycxq"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_21t83"]
+[ext_resource type="AudioStream" uid="uid://dpy4cm7fdrbem" path="res://Asset/Sound/NPC Interaction SFX/NPC Interaction.mp3" id="3_hxorg"]
+[ext_resource type="Texture2D" uid="uid://l35rxfbclujv" path="res://Asset/Sprite/Char Patih Suwanda/export202405172148056627.png" id="4_u1pcs"]
+[ext_resource type="Texture2D" uid="uid://cui77uq12t0yt" path="res://Asset/Sprite/Char Patih Suwanda/export202405172150064914.png" id="5_afp88"]
+[ext_resource type="Texture2D" uid="uid://b8mognfv8axrf" path="res://Asset/Sprite/Char Patih Suwanda/export202405172152172674.png" id="6_5ul74"]
+[ext_resource type="Texture2D" uid="uid://ckxvnu6gqp2k8" path="res://Asset/Sprite/Char Patih Suwanda/export202405172153274639.png" id="7_dndyw"]
+[ext_resource type="Texture2D" uid="uid://133lqx25o108" path="res://Asset/Sprite/Char Patih Suwanda/export202405172155014055.png" id="8_s6twq"]
+[ext_resource type="Texture2D" uid="uid://cpnqr4ynbg67t" path="res://Asset/Sprite/Char Patih Suwanda/export202405172156143978.png" id="9_54q1k"]
+[ext_resource type="Texture2D" uid="uid://kaoo7hv33l2y" path="res://Asset/Sprite/Char Patih Suwanda/export202405172157357473.png" id="10_5qckm"]
+[ext_resource type="Texture2D" uid="uid://bxv7kud60aox7" path="res://Asset/Sprite/Char Patih Suwanda/export202405172159284651.png" id="11_1v6oc"]
+[ext_resource type="Texture2D" uid="uid://bb2oc5msjt2dx" path="res://Asset/Sprite/Char Patih Suwanda/export202405172200446576.png" id="12_xqney"]
+[ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="13_skl0j"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nx4rs"]
-radius = 34.0
-height = 116.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8meq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u1pcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_afp88")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5ul74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dndyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s6twq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_54q1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5qckm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1v6oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xqney")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_skl0j")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y8io"]
+radius = 44.0
+height = 294.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
@@ -13,10 +67,19 @@ floor_snap_length = 10.0
 script = ExtResource("1_21t83")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-1.90735e-06, 0)
 scale = Vector2(0.5625, 1)
 texture = ExtResource("1_3ycxq")
 
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_o8meq")
+animation = &"Idle"
+frame_progress = 0.759629
+
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(1, 4)
-shape = SubResource("CapsuleShape2D_nx4rs")
+shape = SubResource("CapsuleShape2D_7y8io")
+
+[node name="InteractSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hxorg")

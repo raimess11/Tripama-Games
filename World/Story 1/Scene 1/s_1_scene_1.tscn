@@ -15,7 +15,7 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(1144, 720)
 
 [node name="Player" parent="." index="4"]
-position = Vector2(1400, 744)
+position = Vector2(1400, 656)
 
 [node name="LeftDoor" parent="." index="5"]
 position = Vector2(-16, 656)

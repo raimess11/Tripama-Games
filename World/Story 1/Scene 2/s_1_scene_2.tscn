@@ -20,5 +20,5 @@ position = Vector2(1568, 732)
 position = Vector2(1840, 752)
 
 [node name="LeftDoor" parent="." index="7"]
-position = Vector2(-32, 752)
+position = Vector2(-32, 656)
 path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"

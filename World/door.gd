@@ -15,7 +15,6 @@ func _on_body_entered(body):
 	emit_signal("player_entered_door")
 	if transition_type == "zelda":
 		SceneManager.load_level_zelda(path_to_new_scene)
-		print("Zelda")
 	else:
 		SceneManager.load_new_scene(path_to_new_scene,transition_type)
 	queue_free()
