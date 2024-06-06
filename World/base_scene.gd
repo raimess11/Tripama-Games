@@ -5,6 +5,9 @@ class_name Level
 @export var doors : Array[Door]
 var data : LevelDataHandoff
 
+@onready var camera = $Camera2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	QuestSystem.connectAllNodes()

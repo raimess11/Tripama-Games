@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxyvnw0ymvhfd"]
+
+[ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_yyg7x"]
+[ext_resource type="PackedScene" uid="uid://c5h8w1xj4frqq" path="res://QuestSystem/Quest/Story 1/quest_interact_guard.tscn" id="2_w4orm"]
+
+[node name="S1IntroVil1" instance=ExtResource("1_yyg7x")]
+dialogue_text = "res://NPC/ChatBubble/Dialogue/1NPCDialogue.json"
+
+[node name="GiveQuestAction" parent="Action" index="0"]
+quest_reference = ExtResource("2_w4orm")
+
+[connection signal="finished_Chatting" from="." to="." method="_On_finished_chatting"]
+[connection signal="finshed_chatting" from="ChatBubble" to="." method="_on_chat_bubble_finshed_chatting" flags=18]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dsp2vsshdmmbw"]
+[gd_scene load_steps=19 format=3 uid="uid://dsp2vsshdmmbw"]
 
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_3ycxq"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_21t83"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="13_s6dvj"]
 [ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="13_skl0j"]
 [ext_resource type="AudioStream" uid="uid://crajc5vxbkq5b" path="res://Asset/Sound/Walk SFX/Walk SFX.mp3" id="15_jjcfu"]
+[ext_resource type="PackedScene" uid="uid://bq8v4wqnfb5x" path="res://NPC/ChatBubble/chat_bubble.tscn" id="16_8luwh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8meq"]
 animations = [{
@@ -67,6 +68,7 @@ height = 294.0
 collision_layer = 2
 floor_snap_length = 10.0
 script = ExtResource("1_21t83")
+dialogue_text = "res://NPC/ChatBubble/Dialogue/testPlayerDialogue.json"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -89,3 +91,12 @@ stream = ExtResource("3_hxorg")
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jjcfu")
+
+[node name="ChatBubble" parent="." instance=ExtResource("16_8luwh")]
+visible = false
+offset_left = 71.0
+offset_top = -256.0
+offset_right = 120.0
+offset_bottom = -184.0
+
+[connection signal="finshed_chatting" from="ChatBubble" to="." method="set_next_text"]

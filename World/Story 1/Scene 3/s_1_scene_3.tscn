@@ -11,7 +11,7 @@
 position = Vector2(336, 810)
 scale = Vector2(1.5, 1.5)
 
-[node name="Guard 2" parent="." index="3" instance=ExtResource("4_tghvu")]
+[node name="Guard 2" parent="." index="3" groups=["Guard"] instance=ExtResource("4_tghvu")]
 position = Vector2(1144, 720)
 
 [node name="Player" parent="." index="4"]
@@ -19,9 +19,10 @@ position = Vector2(1368, 664)
 
 [node name="LeftDoor" parent="." index="5"]
 position = Vector2(-24, 656)
+monitoring = false
 
 [node name="Gate" parent="." index="6" instance=ExtResource("3_lyb5s")]
 position = Vector2(968, 584)
 
 [node name="RightDoor" parent="." index="7"]
-path_to_new_scene = "res://World/Story 1/Scene 2/s_1_scene_2.tscn"
+monitoring = false

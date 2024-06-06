@@ -90,11 +90,24 @@ func on_content_finished_loading():
 #Zelda style transition
 func on_zelda_content_finished_loading(content):
 	var outgoing_scene = get_tree().current_scene
+	var outCamera : Camera2D
+	var inCamera : Camera2D
+	for child in outgoing_scene.get_children():
+		if child is Camera2D:
+			outCamera = child
+	for child in content.get_children():
+		if child is Camera2D:
+			inCamera = child
+		
+	
 	
 	#Get data from previous scene
 	var incoming_data : LevelDataHandoff
 	if  get_tree().current_scene is Level:
 		incoming_data = get_tree().current_scene.data as LevelDataHandoff
+	
+	outCamera.enabled = false
+	inCamera.enabled = false
 	
 	if content is Level:
 		content.data = incoming_data
@@ -118,6 +131,7 @@ func on_zelda_content_finished_loading(content):
 	# once the tweens are done, do some cleanup
 	await tween_in.finished
 	
+	inCamera.enabled = true
 	# skipped if not a Level
 	if content is Level:
 		content.init_player_location()

@@ -53,4 +53,4 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
 [connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]
-[connection signal="finshed_chatting" from="ChatBubble" to="." method="_on_chat_bubble_finshed_chatting"]
+[connection signal="finshed_chatting" from="ChatBubble" to="." method="set_next_text"]

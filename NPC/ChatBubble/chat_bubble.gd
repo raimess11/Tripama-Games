@@ -13,13 +13,15 @@ var letter_index = 0
 var letter_time = 0.03
 var space_time = 0.06
 var punctuation_time = 0.2
+var disable = true
 
-signal finshed_chatting()
+signal finshed_chatting(value:bool)
 
 var text_finished = false
 
 func display_text(job: String ,text_display: String):
 	text_finished = false
+	print("Diplay test finished? ", text_finished)
 	text = text_display
 	label.text = text_display
 	nameLabel.text = job
@@ -40,7 +42,7 @@ func display_text(job: String ,text_display: String):
 	display_letter()
 
 func _input(event):
-	if event.is_action_pressed("Interact") and !text_finished:
+	if event.is_action_pressed("Interact") and !text_finished and !disable:
 		text_finished = true
 		letter_index = text.length()-2
 		label.text = text
@@ -52,7 +54,7 @@ func display_letter():
 	
 	if letter_index >= text.length():
 		text_finished = true
-		finshed_chatting.emit()
+		finshed_chatting.emit(true)
 		return
 	
 	match text[letter_index]:

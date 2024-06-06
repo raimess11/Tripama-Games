@@ -1,0 +1,279 @@
+[gd_scene load_steps=13 format=3 uid="uid://bk4wy24s8qiyw"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_17mo5"]
+[ext_resource type="Script" path="res://World/New_Story 1/intro_s_1_scene_1.gd" id="2_pokhx"]
+[ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="2_qbcbv"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_cprr0"]
+[ext_resource type="PackedScene" uid="uid://bxyvnw0ymvhfd" path="res://NPC/New_story 1/s_1_intro_vil_1.tscn" id="4_duni3"]
+[ext_resource type="PackedScene" uid="uid://b81xkqccr001n" path="res://NPC/New_story 1/s_1_intro_vil_2.tscn" id="5_206cw"]
+
+[sub_resource type="Animation" id="Animation_l1sr7"]
+resource_name = "NpcComesIn"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("S1IntroVil1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("S1IntroVil2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("S1IntroVil1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"handle_others_chat"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1014, 663), Vector2(1342, 663)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/WalkSfx")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_idle"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_tcb1e"]
+resource_name = "PlayerDialogue"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"start_chatting"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("S1IntroVil1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("S1IntroVil2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_effak"]
+resource_name = "PlayerDialogueEnd"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["NpcComesIn", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disable"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_afgpi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1014, 663)]
+}
+
+[sub_resource type="Animation" id="Animation_rt677"]
+resource_name = "finishedCutscene"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enable"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_incla"]
+_data = {
+"NpcComesIn": SubResource("Animation_l1sr7"),
+"PlayerDialogue": SubResource("Animation_tcb1e"),
+"PlayerDialogueEnd": SubResource("Animation_effak"),
+"RESET": SubResource("Animation_afgpi"),
+"finishedCutscene": SubResource("Animation_rt677")
+}
+
+[node name="IntroS1Scene1" instance=ExtResource("1_17mo5")]
+script = ExtResource("2_pokhx")
+
+[node name="Object" parent="." index="2" instance=ExtResource("2_qbcbv")]
+modulate = Color(0.603922, 0.32549, 0.0862745, 1)
+position = Vector2(978, 551)
+scale = Vector2(6.25, 1.89844)
+texture = ExtResource("3_cprr0")
+metadata/_edit_group_ = true
+
+[node name="S1IntroVil1" parent="." index="3" groups=["villager"] instance=ExtResource("4_duni3")]
+position = Vector2(1650, 673)
+
+[node name="S1IntroVil2" parent="." index="4" groups=["villager"] instance=ExtResource("5_206cw")]
+modulate = Color(0.298039, 0.807843, 0.435294, 1)
+position = Vector2(1776, 727)
+
+[node name="LeftDoor" parent="." index="6"]
+path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
+
+[node name="RightDoor" parent="." index="7"]
+monitoring = false
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_incla")
+}
+
+[node name="Camera2D" parent="." index="9"]
+position = Vector2(960, 533)
+anchor_mode = 1
+zoom = Vector2(1.5, 1.5)
+
+[connection signal="finished_Chatting" from="S1IntroVil1" to="S1IntroVil2" method="finished_cutscene"]
+[connection signal="letNPC_talk" from="S1IntroVil1" to="S1IntroVil2" method="handle_others_chat"]
+[connection signal="finished_Chatting" from="S1IntroVil2" to="S1IntroVil1" method="_On_finished_chatting"]
+[connection signal="finished_Chatting" from="S1IntroVil2" to="S1IntroVil1" method="finished_cutscene"]
+[connection signal="letNPC_talk" from="S1IntroVil2" to="S1IntroVil1" method="handle_others_chat"]
+
+[editable path="Object"]
+[editable path="Player"]

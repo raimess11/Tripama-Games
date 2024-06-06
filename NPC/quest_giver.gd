@@ -13,3 +13,4 @@ func _ready():
 func _On_finished_chatting():
 	print("Finished chatting")
 	giveQuest.give_Quest()
+

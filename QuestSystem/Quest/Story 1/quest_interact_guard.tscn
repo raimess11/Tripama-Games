@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5h8w1xj4frqq"]
+
+[ext_resource type="PackedScene" uid="uid://bascw3dgaoere" path="res://QuestSystem/Quest/quest.tscn" id="1_dnw7p"]
+[ext_resource type="PackedScene" uid="uid://bp0l848isblbc" path="res://QuestSystem/Quest/Story 1/objective_interact_guard.tscn" id="2_kekpk"]
+
+[node name="QuestInteractGuard" instance=ExtResource("1_dnw7p")]
+
+[node name="ObjectiveInteractGuard" parent="Objective" index="0" instance=ExtResource("2_kekpk")]

@@ -46,7 +46,7 @@ texture = ExtResource("3_rl6kh")
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Char Name"
-level_path = "res://World/Story 1/Scene 1/s_1_scene_1.tscn"
+level_path = "res://World/New_Story 1/intro_s_1_scene_1.tscn"
 
 [node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain" instance=ExtResource("1_2kvre")]
 layout_mode = 2

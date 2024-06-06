@@ -8,3 +8,5 @@ dialogue_text = "res://NPC/ChatBubble/Dialogue/testDialogue.json"
 
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_vxl7d")
+
+[connection signal="finshed_chatting" from="ChatBubble" to="." method="_on_chat_bubble_finshed_chatting" flags=18]

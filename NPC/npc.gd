@@ -17,6 +17,7 @@ var dialogue_index = 0
 
 signal finished_Chatting
 signal interacted
+signal letNPC_talk
 
 func _ready():
 	#Load initial dialogue
@@ -25,8 +26,15 @@ func _ready():
 
 #Start the chatting bubble
 func start_chatting():
+	chat_bubble.disable = false
 	chat_bubble.visible = true
-	next_text()
+	is_chatting = true
+	if has_interacted:
+		interacted_chat()
+		player.is_chatting = false
+	else:
+		emit_signal("interacted")
+		next_text()
 
 func _process(delta):
 	if Input.is_action_just_pressed("Interact") and !is_chatting and is_in_chatting_zone:
@@ -49,7 +57,7 @@ func _on_interaction_body_exited(body):
 		dialogue_index = -1
 
 func _input(event):
-	if event.is_action_pressed("Interact") and to_next_text:
+	if event.is_action_pressed("Interact") and to_next_text and player != null:
 		to_next_text = false
 		player.playInteractSound()
 		next_text()
@@ -65,16 +73,49 @@ func next_text():
 	dialogue_index += 1
 	#If the out of dialogue complete chatting
 	if dialogue_index >= len(dialogue):
-		emit_signal("finished_Chatting")
+		print("finished Chat")
 		if not has_interacted:
 			has_interacted = true
-			emit_signal("interacted")
 		is_chatting = false
 		player.is_chatting = false
+		chat_bubble.hide()
+		emit_signal("finished_Chatting")
+		return
+	
+	#Let other NPC talk when given *change NPC*
+	if dialogue[dialogue_index]['text'] == "*change NPC*":
+		emit_signal("letNPC_talk")
+		chat_bubble.hide()
+		chat_bubble.disable = true
 		return
 	
 	#Display the new text with chat bubble
+	chat_bubble.text_finished = false
 	chat_bubble.display_text(dialogue[dialogue_index]['name'], dialogue[dialogue_index]['text'])
 
-func _on_chat_bubble_finshed_chatting():
-	to_next_text = true
+func handle_others_chat():
+	if !is_chatting:
+		for child in get_parent().get_children():
+			if child.is_in_group("Player"):
+				player = child
+				break
+		start_chatting()
+	else:
+		chat_bubble.show()
+		chat_bubble.disable = false
+		next_text()
+
+func finished_cutscene():
+	player = null
+	is_chatting = false
+	has_interacted = true
+	chat_bubble.hide()
+
+func set_next_text(value):
+	to_next_text = value
+
+func interacted_chat():
+	var index = len(dialogue)-1
+	chat_bubble.display_text(dialogue[index]['name'],"Interact with villager")
+	is_chatting = false
+	emit_signal("finished_Chatting")

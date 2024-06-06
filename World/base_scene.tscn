@@ -26,7 +26,7 @@ scale = Vector2(3.76563, 2.10938)
 texture = SubResource("NoiseTexture2D_nurdp")
 
 [node name="VillageGround" parent="." instance=ExtResource("1_mmor0")]
-position = Vector2(960, 1104)
+position = Vector2(960, 1005)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player" parent="." instance=ExtResource("2_kikx2")]
@@ -46,3 +46,9 @@ transition_type = "zelda"
 push_distance = 100
 path_to_new_scene = "null"
 entry_door_name = "LeftDoor"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, 840, -88, 840, -72, 312, -304, 312, -320, 992, 2104, 992, 2088, 408, 1984, 424, 1976, 856, 1936, 848)
