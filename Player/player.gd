@@ -9,8 +9,12 @@ const AIR_FRICTION = 1200.0
 const JUMP_VELOCITY = -400.0
 
 @onready var sprite = $Sprite2D
-@onready var interact_sound = $InteractSound
+#@onready var interact_sound = $InteractSound
 @onready var player_anim = $PlayerAnim
+@onready var audio_queue = $AudioQueue
+@onready var walk_sfx = $WalkSfx
+
+
 
 
 var is_chatting = false
@@ -42,13 +46,16 @@ func _physics_process(delta):
 			else:
 				player_anim.flip_h = false
 			velocity.x = move_toward(velocity.x, SPEED * direction, ACCELERATION * delta)
+			if !walk_sfx.playing:
+					walk_sfx.play()
 		else:
+			if walk_sfx.playing:
+				walk_sfx.stop()
 			player_anim.play("Idle")
 			if !is_on_floor():
 				velocity.x = move_toward(velocity.x, 0, AIR_FRICTION * delta)
 			else:
 				velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
-		
 	else:
 		player_anim.play("Idle")
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
@@ -68,4 +75,4 @@ func enable():
 	visible = true
 
 func playInteractSound():
-	interact_sound.play()
+	audio_queue.PlaySound()

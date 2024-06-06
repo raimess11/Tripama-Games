@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi0846o1rirjc"]
+
+[ext_resource type="Script" path="res://Audio Manager/AudioQueue.gd" id="1_tuisy"]
+
+[node name="AudioQueue" type="Node"]
+script = ExtResource("1_tuisy")
