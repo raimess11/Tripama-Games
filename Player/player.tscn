@@ -1,6 +1,5 @@
-[gd_scene load_steps=19 format=3 uid="uid://dsp2vsshdmmbw"]
+[gd_scene load_steps=29 format=3 uid="uid://dsp2vsshdmmbw"]
 
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_3ycxq"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_21t83"]
 [ext_resource type="AudioStream" uid="uid://dpy4cm7fdrbem" path="res://Asset/Sound/NPC Interaction SFX/NPC Interaction.mp3" id="3_hxorg"]
 [ext_resource type="Texture2D" uid="uid://l35rxfbclujv" path="res://Asset/Sprite/Char Patih Suwanda/export202405172148056627.png" id="4_u1pcs"]
@@ -14,8 +13,19 @@
 [ext_resource type="Texture2D" uid="uid://bb2oc5msjt2dx" path="res://Asset/Sprite/Char Patih Suwanda/export202405172200446576.png" id="12_xqney"]
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="13_s6dvj"]
 [ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="13_skl0j"]
-[ext_resource type="AudioStream" uid="uid://crajc5vxbkq5b" path="res://Asset/Sound/Walk SFX/Walk SFX.mp3" id="15_jjcfu"]
 [ext_resource type="PackedScene" uid="uid://bq8v4wqnfb5x" path="res://NPC/ChatBubble/chat_bubble.tscn" id="16_8luwh"]
+[ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="16_xjfvg"]
+[ext_resource type="AudioStream" uid="uid://cytw8xo6hfivn" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 1.mp3" id="17_fps0r"]
+[ext_resource type="AudioStream" uid="uid://wsha3su70rj0" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 2.mp3" id="18_547lb"]
+[ext_resource type="AudioStream" uid="uid://dme2xw0t3dwu8" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 3.mp3" id="19_eovi6"]
+[ext_resource type="AudioStream" uid="uid://dl24kgespf0yx" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 4.mp3" id="20_u0b7j"]
+[ext_resource type="AudioStream" uid="uid://bat1vccowitpv" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 5.mp3" id="21_4utgw"]
+[ext_resource type="AudioStream" uid="uid://dane3ekwgl4vg" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 6.mp3" id="22_mr2x2"]
+[ext_resource type="AudioStream" uid="uid://0gyfp35oh7mb" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 7.mp3" id="23_cx7ai"]
+[ext_resource type="AudioStream" uid="uid://b13jmxkdjtrnp" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 8.mp3" id="24_ptfe6"]
+[ext_resource type="AudioStream" uid="uid://bknwoatfdmfe8" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 9.mp3" id="25_v5uk1"]
+[ext_resource type="AudioStream" uid="uid://cw1byhdrmlfws" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 10.mp3" id="26_4wffq"]
+[ext_resource type="AudioStream" uid="uid://cggq8j5xbb37s" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 11.mp3" id="27_0kwqe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8meq"]
 animations = [{
@@ -70,12 +80,6 @@ floor_snap_length = 10.0
 script = ExtResource("1_21t83")
 dialogue_text = "res://NPC/ChatBubble/Dialogue/testPlayerDialogue.json"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-1.90735e-06, 0)
-scale = Vector2(0.5625, 1)
-texture = ExtResource("1_3ycxq")
-
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_o8meq")
@@ -89,9 +93,6 @@ shape = SubResource("CapsuleShape2D_7y8io")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioQueue"]
 stream = ExtResource("3_hxorg")
 
-[node name="WalkSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("15_jjcfu")
-
 [node name="ChatBubble" parent="." instance=ExtResource("16_8luwh")]
 visible = false
 offset_left = 71.0
@@ -99,4 +100,62 @@ offset_top = -256.0
 offset_right = 120.0
 offset_bottom = -184.0
 
+[node name="AudioPool" parent="." instance=ExtResource("16_xjfvg")]
+
+[node name="AudioQueue" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue"]
+stream = ExtResource("17_fps0r")
+
+[node name="AudioQueue2" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue2"]
+stream = ExtResource("18_547lb")
+
+[node name="AudioQueue3" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue3"]
+stream = ExtResource("19_eovi6")
+
+[node name="AudioQueue4" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue4"]
+stream = ExtResource("20_u0b7j")
+
+[node name="AudioQueue5" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue5"]
+stream = ExtResource("21_4utgw")
+
+[node name="AudioQueue6" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue6"]
+stream = ExtResource("22_mr2x2")
+
+[node name="AudioQueue7" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue7"]
+stream = ExtResource("23_cx7ai")
+
+[node name="AudioQueue8" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue8"]
+stream = ExtResource("24_ptfe6")
+
+[node name="AudioQueue9" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue9"]
+stream = ExtResource("25_v5uk1")
+
+[node name="AudioQueue10" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue10"]
+stream = ExtResource("26_4wffq")
+
+[node name="AudioQueue11" parent="AudioPool" instance=ExtResource("13_s6dvj")]
+
+[node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue11"]
+stream = ExtResource("27_0kwqe")
+
+[connection signal="frame_changed" from="PlayerAnim" to="." method="_on_player_anim_frame_changed"]
 [connection signal="finshed_chatting" from="ChatBubble" to="." method="set_next_text"]

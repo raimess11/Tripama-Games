@@ -8,18 +8,18 @@ const FRICTION = 2000.0
 const AIR_FRICTION = 1200.0
 const JUMP_VELOCITY = -400.0
 
-@onready var sprite = $Sprite2D
 #@onready var interact_sound = $InteractSound
 @onready var player_anim = $PlayerAnim
 @onready var audio_queue = $AudioQueue
-@onready var walk_sfx = $WalkSfx
 @onready var chat_bubble = $ChatBubble
+@onready var walk_sfx = $AudioPool
+
+var footstep_frame : Array = [3, 6]
 
 @export_file("*.json") var dialogue_text
 
 var dialogue = []
 var dialogue_index = 0
-
 
 var is_chatting = false
 var input_enabled = true
@@ -58,11 +58,11 @@ func _physics_process(delta):
 				else:
 					player_anim.flip_h = false
 				velocity.x = move_toward(velocity.x, SPEED * direction, ACCELERATION * delta)
-				if !walk_sfx.playing:
-						walk_sfx.play()
+				#if !walk_sfx.playing:
+				#		walk_sfx.play()
 			else:
-				if walk_sfx.playing:
-					walk_sfx.stop()
+				#if walk_sfx.playing:
+				#	walk_sfx.stop()
 				player_anim.play("Idle")
 				if !is_on_floor():
 					velocity.x = move_toward(velocity.x, 0, AIR_FRICTION * delta)
@@ -132,3 +132,9 @@ func play_walk():
 	player_anim.play("Walk")
 func play_idle():
 	player_anim.play("Idle")
+
+
+
+func _on_player_anim_frame_changed():
+	if player_anim.animation == "Idle": return
+	if player_anim.frame in footstep_frame: walk_sfx.PlayRandomSound(false)

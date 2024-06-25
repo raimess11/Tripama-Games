@@ -35,6 +35,7 @@ func init_player_location():
 # disables doors and players
 # create handoff data to pass to the new scene (if new scene is a Level)
 func _on_player_entered_door(door:Door) -> void:
+	print("Player")
 	_disconnect_from_doors()
 	player.disable()
 	player.queue_free()

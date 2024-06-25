@@ -11,7 +11,9 @@ signal player_entered_door(door : Door, transition_type : String)
 
 func _on_body_entered(body):
 	if not body is Player:
+		print("Not player")
 		return
+	print("Player entered")
 	emit_signal("player_entered_door")
 	if transition_type == "zelda":
 		SceneManager.load_level_zelda(path_to_new_scene)
