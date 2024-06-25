@@ -22,7 +22,7 @@ position = Vector2(-24, 744)
 
 [node name="RightDoor" parent="." index="4"]
 position = Vector2(1968, 760)
-push_distance = 200
+push_distance = 300
 path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
 
 [node name="King" parent="." index="7" instance=ExtResource("3_cnd2a")]

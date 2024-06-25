@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://chai5cvb7h0q7"]
+[gd_scene load_steps=8 format=3 uid="uid://chai5cvb7h0q7"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_vyc0p"]
 [ext_resource type="PackedScene" uid="uid://caoo2grf6e0o" path="res://World/Base_World/Grounds/gate_ground.tscn" id="2_1l1p8"]
 [ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="2_w02rp"]
 [ext_resource type="PackedScene" uid="uid://dua0iu8etq3dk" path="res://World/Story 1/Scene 1/gate.tscn" id="3_lyb5s"]
+[ext_resource type="Texture2D" uid="uid://bta4sq6aof7u8" path="res://Asset/Object/gerbang recreated (1).png" id="4_aa8eb"]
 [ext_resource type="PackedScene" uid="uid://ckujvallmhah8" path="res://NPC/Story 1/guard_2.tscn" id="4_tghvu"]
+[ext_resource type="Texture2D" uid="uid://qs8pp4fho0mb" path="res://Asset/Object/gerbang recreated.png" id="7_17jxa"]
 
 [node name="S1_Scene 3" instance=ExtResource("1_vyc0p")]
 
@@ -21,25 +23,32 @@ polygon = PackedVector2Array(2432, -736, -2432, -736, -2432, 968, 2432, 968)
 position = Vector2(960, 872)
 scale = Vector2(0.4, 0.4)
 
-[node name="Stairs" parent="." index="3" instance=ExtResource("2_w02rp")]
+[node name="Gate2" parent="." index="3" instance=ExtResource("3_lyb5s")]
+y_sort_enabled = true
+position = Vector2(1178, 691)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_aa8eb")
+
+[node name="Stairs" parent="." index="4" instance=ExtResource("2_w02rp")]
 position = Vector2(-256, 736)
 scale = Vector2(0.8, 0.8)
 
-[node name="Guard 2" parent="." index="4" groups=["Guard"] instance=ExtResource("4_tghvu")]
+[node name="Guard 2" parent="." index="5" groups=["Guard"] instance=ExtResource("4_tghvu")]
 position = Vector2(1456, 672)
 
-[node name="Player" parent="." index="5"]
+[node name="Player" parent="." index="6"]
 position = Vector2(1768, 664)
 
-[node name="LeftDoor" parent="." index="6"]
+[node name="LeftDoor" parent="." index="7"]
 position = Vector2(8, 624)
 path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4.tscn"
 
-[node name="Gate" parent="." index="7" instance=ExtResource("3_lyb5s")]
+[node name="Gate" parent="." index="8" instance=ExtResource("3_lyb5s")]
 y_sort_enabled = true
-position = Vector2(1112, 624)
+position = Vector2(1178, 691)
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_17jxa")
 
-[node name="RightDoor" parent="." index="8"]
+[node name="RightDoor" parent="." index="9"]
 monitoring = false
 path_to_new_scene = "res://World/New_Story 1/intro_s_1_scene_1.tscn"

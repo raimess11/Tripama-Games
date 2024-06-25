@@ -254,8 +254,8 @@ zoom = Vector2(1.5, 1.5)
 
 [connection signal="finished_Chatting" from="S1IntroVil1" to="S1IntroVil2" method="finished_cutscene"]
 [connection signal="letNPC_talk" from="S1IntroVil1" to="S1IntroVil2" method="handle_others_chat"]
-[connection signal="finished_Chatting" from="S1IntroVil2" to="S1IntroVil1" method="_On_finished_chatting"]
 [connection signal="finished_Chatting" from="S1IntroVil2" to="S1IntroVil1" method="finished_cutscene"]
+[connection signal="finished_Chatting" from="S1IntroVil2" to="S1IntroVil1" method="_On_finished_chatting"]
 [connection signal="letNPC_talk" from="S1IntroVil2" to="S1IntroVil1" method="handle_others_chat"]
 
 [editable path="Object"]
