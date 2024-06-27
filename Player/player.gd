@@ -13,6 +13,7 @@ const JUMP_VELOCITY = -400.0
 @onready var audio_queue = $AudioQueue
 @onready var chat_bubble = $ChatBubble
 @onready var walk_sfx = $AudioPool
+@onready var action_detector = $ActionDetector
 
 var footstep_frame : Array = [3, 6]
 
@@ -32,10 +33,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	player_anim.play("Idle")
-	
-	#Load initial dialogue
-	dialogue = load_dialogue()
-	dialogue_index = -1
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -45,8 +42,8 @@ func _physics_process(delta):
 	if input_enabled:
 		if (!is_chatting):
 			# Handle Jump.
-			if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-				velocity.y = JUMP_VELOCITY
+			#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			#	velocity.y = JUMP_VELOCITY
 
 			# Get the input direction and handle the movement/deceleration.
 			# As good practice, you should replace UI actions with custom gameplay actions.
@@ -55,8 +52,10 @@ func _physics_process(delta):
 				player_anim.play("Walk")
 				if direction == -1:
 					player_anim.flip_h = true
+					action_detector.scale = Vector2(-1,1)
 				else:
 					player_anim.flip_h = false
+					action_detector.scale = Vector2(1,1)
 				velocity.x = move_toward(velocity.x, SPEED * direction, ACCELERATION * delta)
 				#if !walk_sfx.playing:
 				#		walk_sfx.play()
@@ -74,11 +73,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _input(event):
-	if event.is_action_pressed("Interact") and is_chatting and !input_enabled:
-		if to_next_text:
-			next_text()
-			to_next_text = false
-			playInteractSound()
+	if event.is_action_pressed("Interact"):
+		
+		var actionables = action_detector.get_overlapping_areas()
+		print("Interact", actionables.size())
+		if actionables.size() > 0:
+			actionables[0].action()
 
 func orient(dir : Vector2):
 	if dir.x:
@@ -95,45 +95,11 @@ func enable():
 func playInteractSound():
 	audio_queue.PlaySound()
 
-#Parts for dialogue
-#Start the chatting bubble
-func start_chatting():
-	disable()
-	chat_bubble.disable = false
-	chat_bubble.visible = true
-	is_chatting = true
-	next_text()
-
-#Load dialogue from JSON file to array
-func load_dialogue():
-	var file = FileAccess.open(dialogue_text, FileAccess.READ)
-	var content = JSON.parse_string(file.get_as_text())
-	return content
-
-#Shift from first text to another by adding the index
-func next_text():
-	dialogue_index += 1
-	#If the out of dialogue complete chatting
-	if dialogue_index >= len(dialogue):
-		emit_signal("playerFinishedTalking")
-		is_chatting = false
-		chat_bubble.hide()
-		enable()
-		return
-	
-	#Display the new text with chat bubble
-	chat_bubble.display_text(dialogue[dialogue_index]['name'], dialogue[dialogue_index]['text'])
-
-func set_next_text(value):
-	to_next_text = value
-
 func play_walk():
 	print("walking")
 	player_anim.play("Walk")
 func play_idle():
 	player_anim.play("Idle")
-
-
 
 func _on_player_anim_frame_changed():
 	if player_anim.animation == "Idle": return

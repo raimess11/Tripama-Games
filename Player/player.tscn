@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bb2oc5msjt2dx" path="res://Asset/Sprite/Char Patih Suwanda/export202405172200446576.png" id="12_xqney"]
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="13_s6dvj"]
 [ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="13_skl0j"]
-[ext_resource type="PackedScene" uid="uid://bq8v4wqnfb5x" path="res://NPC/ChatBubble/chat_bubble.tscn" id="16_8luwh"]
 [ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="16_xjfvg"]
 [ext_resource type="AudioStream" uid="uid://cytw8xo6hfivn" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 1.mp3" id="17_fps0r"]
 [ext_resource type="AudioStream" uid="uid://wsha3su70rj0" path="res://Asset/Sound/Walk SFX/Walk Cut/Walk 2.mp3" id="18_547lb"]
@@ -74,6 +73,9 @@ animations = [{
 radius = 44.0
 height = 294.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyj2v"]
+size = Vector2(113.5, 161)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 floor_snap_length = 10.0
@@ -92,13 +94,6 @@ shape = SubResource("CapsuleShape2D_7y8io")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioQueue"]
 stream = ExtResource("3_hxorg")
-
-[node name="ChatBubble" parent="." instance=ExtResource("16_8luwh")]
-visible = false
-offset_left = 71.0
-offset_top = -256.0
-offset_right = 120.0
-offset_bottom = -184.0
 
 [node name="AudioPool" parent="." instance=ExtResource("16_xjfvg")]
 
@@ -157,5 +152,13 @@ stream = ExtResource("26_4wffq")
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue11"]
 stream = ExtResource("27_0kwqe")
 
+[node name="ActionDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionDetector"]
+position = Vector2(55.25, 0)
+shape = SubResource("RectangleShape2D_pyj2v")
+debug_color = Color(0.745098, 0.345098, 0.788235, 0.419608)
+
 [connection signal="frame_changed" from="PlayerAnim" to="." method="_on_player_anim_frame_changed"]
-[connection signal="finshed_chatting" from="ChatBubble" to="." method="set_next_text"]

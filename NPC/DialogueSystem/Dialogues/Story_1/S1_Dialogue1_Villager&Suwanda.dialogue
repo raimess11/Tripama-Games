@@ -1,0 +1,40 @@
+~ start
+
+if NpcState.villager1and2_Scene1:
+	=> has_Interacted
+
+Warga 1: Permisi, Mapatih Suwanda
+Warga 1: Kamu taahu bahwa Mapatih lagi berduka
+Warga 1: Tapi[speed=0.2]...
+Suwanda: [speed=0.2]...
+Suwanda: Tidak apa-apa. Apakah ada masalah di istana?
+Warga 1: Bukan masalah. Lebihnya[speed=0.2]...
+Warga 2: Kami melihat Mapatih berjasa banyak agar hidup kami lebih tentram di Maespati
+Suwanda: Berjasa[speed=0.2]...
+Warga 2: Iya, jadi apakah Mapatih bisa menuntun kami dan warga-warga agar bisa berjasa untuk Maespati?
+Suwanda: "[speed=0.2]...[wait=1][speed=1]Menuntun, dalam bentuk apa?"
+Warga 2: Seperti menuntun dalam keprajuritan. Apakah bisa?
+- Coba saya sampaikan permintaan ke Prabu
+	set NpcState.questNPC[0]["questS1Scene1"] = true
+	Warga 1: Benar akan sampaikan? Terimakasih banyak Mapatih
+	Warga 2: Iya, terimakasih sudah mempertimbangkan permintaan kami
+	Warga 2: Untuk itu, kami pergi dahulu, Mapatuh Suwanda
+
+- Maaf, tidak sekarang
+	set NpcState.questNPC[0]["questS1Scene1"] = false
+	Warga 2: [speed=0.2]...
+	Warga 1: [speed=0.2]...
+	Warga 2: Saya mengerti bahwa Mapatih masih berduka
+	Warga 1: Tapi kak--
+	Warga 2: Nanti dulu, kita akan ngobrol setelah ini
+	Warga 2: Saya sama adik saya pergi dahulu
+
+set NpcState.villager1and2_Scene1 = true
+
+=> END
+
+~ has_Interacted
+
+Warga 2: Terimakasih atas waktunya Mapatih
+
+=> END

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5h8w1xj4frqq" path="res://QuestSystem/Quest/Story 1/quest_interact_guard.tscn" id="2_aq4my"]
 
 [node name="Guard 2" instance=ExtResource("1_4qun5")]
-dialogue_text = "res://NPC/ChatBubble/Dialogue/testDialogue.json"
+questKey = "questS1Scene2"
 
 [node name="CompleteQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_aq4my")

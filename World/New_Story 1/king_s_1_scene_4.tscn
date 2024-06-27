@@ -28,6 +28,16 @@ path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
 [node name="King" parent="." index="7" instance=ExtResource("3_cnd2a")]
 position = Vector2(176, 712)
 
+[node name="Sprite2D" parent="King" index="0"]
+position = Vector2(9.53674e-07, -92)
+
+[node name="CollisionShape2D" parent="King" index="1"]
+modulate = Color(1, 1, 1, 1)
+scale = Vector2(1, 1)
+
+[node name="Interaction" parent="King" index="2"]
+position = Vector2(0, 0)
+
 [node name="CollisionShape2D" parent="King/Interaction" index="0"]
 position = Vector2(584, -96)
 

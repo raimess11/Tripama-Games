@@ -1,20 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqbxtjhpoi621"]
+[gd_scene load_steps=3 format=3 uid="uid://dqbxtjhpoi621"]
 
 [ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_13vpl"]
 [ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_ph070"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lba5g"]
-size = Vector2(232, 304)
-
 [node name="King" instance=ExtResource("1_13vpl")]
-dialogue_text = "res://NPC/ChatBubble/Dialogue/KingS1Scene4.json"
-
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(-4, -96)
-shape = SubResource("RectangleShape2D_lba5g")
-
-[node name="CollisionShape2D" parent="Interaction" index="0"]
-position = Vector2(0, -96)
 
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_ph070")
+
+[node name="Actionable" parent="." index="3"]
+collision_layer = 0
+collision_mask = 2
