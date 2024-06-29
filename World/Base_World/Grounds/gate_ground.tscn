@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://caoo2grf6e0o"]
+
+[ext_resource type="PackedScene" uid="uid://edard48h7bsh" path="res://World/Base_World/ground.tscn" id="1_ywgk0"]
+[ext_resource type="Texture2D" uid="uid://3gtextfwfdsa" path="res://Asset/Platform/platform stone brick fix.png" id="2_bh0hk"]
+
+[node name="GateGround" instance=ExtResource("1_ywgk0")]
+texture = ExtResource("2_bh0hk")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+polygon = PackedVector2Array(2608, -136, -2552, -152, -2552, 960, 2600, 960)

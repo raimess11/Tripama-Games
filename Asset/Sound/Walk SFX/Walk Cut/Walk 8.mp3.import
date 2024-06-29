@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b13jmxkdjtrnp"
+path="res://.godot/imported/Walk 8.mp3-e3541bda668129c69d6f5030a03f6cf3.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Walk SFX/Walk Cut/Walk 8.mp3"
+dest_files=["res://.godot/imported/Walk 8.mp3-e3541bda668129c69d6f5030a03f6cf3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

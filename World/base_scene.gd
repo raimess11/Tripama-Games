@@ -5,6 +5,9 @@ class_name Level
 @export var doors : Array[Door]
 var data : LevelDataHandoff
 
+@onready var camera = $Camera2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	QuestSystem.connectAllNodes()
@@ -32,6 +35,7 @@ func init_player_location():
 # disables doors and players
 # create handoff data to pass to the new scene (if new scene is a Level)
 func _on_player_entered_door(door:Door) -> void:
+	print("Player")
 	_disconnect_from_doors()
 	player.disable()
 	player.queue_free()

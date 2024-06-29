@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnes118hvgr4k"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_0kje2"]
+[ext_resource type="Resource" uid="uid://mcdfehw8hyvb" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue" id="2_4sb4e"]
+
+[node name="S1_Scene3_Guard" instance=ExtResource("1_0kje2")]
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("2_4sb4e")
+dialogue_start = "start_B"

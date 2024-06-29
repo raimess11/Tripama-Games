@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dua0iu8etq3dk"]
 
 [ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="1_pqh81"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_qr4cq"]
+[ext_resource type="Texture2D" uid="uid://cpc021icbmu5x" path="res://Asset/Object/gerbang fix bg nope.png" id="2_b6sy5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhdwy"]
 size = Vector2(112, 125.754)
 
 [node name="Gate" instance=ExtResource("1_pqh81")]
 position = Vector2(0, -222)
-scale = Vector2(1, 3.53125)
-texture = ExtResource("2_qr4cq")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_b6sy5")
+flip_h = true
 metadata/_edit_vertical_guides_ = [-488.0]
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(-3.8147e-06, -1.52588e-05)
 shape = SubResource("RectangleShape2D_jhdwy")
+disabled = true

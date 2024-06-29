@@ -3,13 +3,17 @@ class_name QuestReceiver
 
 @onready var complete_quest = $Action/CompleteQuestAction
 
+@export var questStory : int = 0
+@export var questKey : String = ""
+
 func _ready():
-	dialogue = load_dialogue()
-	dialogue_index = -1
-	self.connect("finished_Chatting", _On_finished_chatting)
+	actionable.connect("dialogueEnds", _On_finished_chatting)
+	actionable.connect("dialogueEnds", _on_Dialogue_ends)
 
 #Finish quest when chatting is finished
 func _On_finished_chatting():
 	print("Finished chatting")
-	complete_quest.deliver_Quest()
+	if NpcState.questNPC[questStory][questKey]:
+		complete_quest.deliver_Quest()
+		print("Quest received")
 

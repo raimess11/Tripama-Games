@@ -6,6 +6,7 @@
 
 [node name="QuectReceiver" instance=ExtResource("1_qvfsc")]
 script = ExtResource("2_q2y06")
-dialogue_text = null
+questStory = 0
+questKey = ""
 
 [node name="CompleteQuestAction" parent="Action" index="0" instance=ExtResource("2_fu1oh")]

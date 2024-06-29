@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp0l848isblbc"]
+
+[ext_resource type="PackedScene" uid="uid://garry1qa8odj" path="res://QuestSystem/Quest/Objective/quest_interact_objective.tscn" id="1_4wrau"]
+
+[node name="ObjectiveInteractGuard" instance=ExtResource("1_4wrau")]
+amount = 1
+npcType = "Guard"

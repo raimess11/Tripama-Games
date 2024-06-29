@@ -5,4 +5,5 @@
 [node name="VillageGround" instance=ExtResource("1_rberj")]
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+position = Vector2(8, 264)
 polygon = PackedVector2Array(2432, -736, -2432, -736, -2432, 968, 2432, 968)

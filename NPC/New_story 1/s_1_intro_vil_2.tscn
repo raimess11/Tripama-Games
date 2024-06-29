@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b81xkqccr001n"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_1kqy5"]
+
+[node name="S1IntroVil2" instance=ExtResource("1_1kqy5")]
+
+[node name="Actionable" parent="." index="3"]
+monitoring = false
+monitorable = false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://du3rsm7epfbui"
+path="res://.godot/imported/S1_Dialogue6_Villager&Suwanda.dialogue-e231bcef926196c8fc8d90080e3e8c58.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue6_Villager&Suwanda.dialogue"
+dest_files=["res://.godot/imported/S1_Dialogue6_Villager&Suwanda.dialogue-e231bcef926196c8fc8d90080e3e8c58.tres"]
+
+[params]
+
+defaults=true

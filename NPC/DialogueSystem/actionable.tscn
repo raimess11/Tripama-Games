@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b88skfo1t63tl"]
+
+[ext_resource type="Script" path="res://NPC/DialogueSystem/actionable.gd" id="1_spatd"]
+
+[node name="Actionable" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_spatd")

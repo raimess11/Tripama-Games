@@ -6,6 +6,7 @@
 
 [node name="QuestGiver" instance=ExtResource("1_7oyqg")]
 script = ExtResource("2_ifead")
-dialogue_text = "null"
+questStory = 0
+questKey = ""
 
 [node name="GiveQuestAction" parent="Action" index="0" instance=ExtResource("3_f73cp")]
