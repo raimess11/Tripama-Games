@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk4wy24s8qiyw"]
+[gd_scene load_steps=13 format=3 uid="uid://bk4wy24s8qiyw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_17mo5"]
 [ext_resource type="Script" path="res://World/New_Story 1/intro_s_1_scene_1.gd" id="2_pokhx"]
-[ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="2_qbcbv"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_cprr0"]
 [ext_resource type="Resource" uid="uid://18icgtne5p2o" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue" id="3_veb1k"]
 [ext_resource type="PackedScene" uid="uid://bxyvnw0ymvhfd" path="res://NPC/New_story 1/s_1_intro_vil_1.tscn" id="4_duni3"]
+[ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="4_j3ubu"]
 [ext_resource type="PackedScene" uid="uid://b81xkqccr001n" path="res://NPC/New_story 1/s_1_intro_vil_2.tscn" id="5_206cw"]
 
 [sub_resource type="Animation" id="Animation_l1sr7"]
@@ -235,12 +234,9 @@ _data = {
 script = ExtResource("2_pokhx")
 dialogue_resource = ExtResource("3_veb1k")
 
-[node name="Object" parent="." index="2" instance=ExtResource("2_qbcbv")]
-modulate = Color(0.603922, 0.32549, 0.0862745, 1)
-position = Vector2(978, 551)
-scale = Vector2(6.25, 1.89844)
-texture = ExtResource("3_cprr0")
-metadata/_edit_group_ = true
+[node name="Beringin" parent="." index="2" instance=ExtResource("4_j3ubu")]
+position = Vector2(1016, 328)
+scale = Vector2(0.2, 0.2)
 
 [node name="S1IntroVil1" parent="." index="3" groups=["villager"] instance=ExtResource("4_duni3")]
 position = Vector2(1650, 673)
@@ -264,5 +260,4 @@ libraries = {
 position = Vector2(960, 533)
 anchor_mode = 1
 
-[editable path="Object"]
 [editable path="Player"]

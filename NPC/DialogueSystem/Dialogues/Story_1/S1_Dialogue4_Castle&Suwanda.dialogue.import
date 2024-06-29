@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://mcdfehw8hyvb"
+path="res://.godot/imported/S1_Dialogue4_Castle&Suwanda.dialogue-f4612a05ce209c0fe6db38b1d6b4a0dd.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue"
+dest_files=["res://.godot/imported/S1_Dialogue4_Castle&Suwanda.dialogue-f4612a05ce209c0fe6db38b1d6b4a0dd.tres"]
+
+[params]
+
+defaults=true

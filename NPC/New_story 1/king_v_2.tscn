@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvry36aglor4d"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_jt2sj"]
+[ext_resource type="Resource" uid="uid://cny272arbkgw1" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue" id="2_cyhs4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o421e"]
+size = Vector2(704, 312)
+
+[node name="KingV2" instance=ExtResource("1_jt2sj")]
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("2_cyhs4")
+
+[node name="CollisionShape2D" parent="Actionable" index="0"]
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Actionable" index="1"]
+position = Vector2(264, -92)
+shape = SubResource("RectangleShape2D_o421e")
+debug_color = Color(0.796078, 0.282353, 0.788235, 0.419608)

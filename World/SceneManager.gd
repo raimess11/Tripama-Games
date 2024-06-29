@@ -13,6 +13,8 @@ signal zelda_content_finished_loading(content)
 signal content_invalid(content_path : String)
 signal content_failed_to_load(content_path : String)
 
+var transition_screen : TransitionScreen
+var _transition_scene : PackedScene = preload("res://World/transition.tscn")
 var _transition : String
 var _content_path : String
 var _load_progress_timer:Timer
@@ -25,6 +27,16 @@ func _ready():
 	self.connect("content_finished_loading", on_content_finished_loading)
 	self.connect("zelda_content_finished_loading", on_zelda_content_finished_loading)
 
+#Set the transisition to animation transition
+func load_new_scene(content_path:String, transition_type:String="fade_to_black"):
+	_transition = transition_type
+	#Add transition scene
+	transition_screen = _transition_scene.instantiate() as TransitionScreen
+	get_tree().root.add_child(transition_screen)
+	transition_screen.start_transition(transition_type)
+	_load_content(content_path)
+	
+
 #Set the transition to zelda style
 func load_level_zelda(content_path : String) -> void:
 	_transition = "zelda"
@@ -32,6 +44,10 @@ func load_level_zelda(content_path : String) -> void:
 
 #Load all content before actual transition
 func _load_content(content_path : String):
+	print("load content")
+	if transition_screen != null:
+		await transition_screen.transition_is_complete
+	
 	_content_path = content_path
 	var loader = ResourceLoader.load_threaded_request(content_path)
 	if not ResourceLoader.exists(content_path) or loader == null:
@@ -84,8 +100,53 @@ func on_content_failed_to_load(path : String):
 	printerr("error: Failed to load resource: '%s'" % [path])	
 ###
 
-func on_content_finished_loading():
-	pass
+func on_content_finished_loading(content):
+	print("content finished loading")
+	var outgoing_scene = get_tree().current_scene
+	var outCamera : Camera2D
+	var inCamera : Camera2D
+	
+	#Get all camera in scene
+	for child in outgoing_scene.get_children():
+		if child is Camera2D:
+			outCamera = child
+	for child in content.get_children():
+		if child is Camera2D:
+			inCamera = child
+	
+	#If moving between levels, pass LevelDataHandoff here
+	var incoming_data : LevelDataHandoff
+	if get_tree().current_scene is Level:
+		incoming_data = get_tree().current_scene.data as LevelDataHandoff
+	
+	if content is Level:
+		content.data = incoming_data
+	
+	outCamera.enabled = false
+	inCamera.enabled = false
+	
+	#Remove old scene
+	outgoing_scene.queue_free()
+	
+	#Add and set new scene to current scene
+	get_tree().root.call_deferred("add_child", content)
+	get_tree().set_deferred("current_scene", content)
+	
+	#Extra check
+	if transition_screen != null:
+		transition_screen.finish_transition()
+		
+		#Wait transition to finish
+		await transition_screen.animation_player.animation_finished
+		
+		if content is Level:
+			content.init_player_location()
+		
+		inCamera.enabled = true
+		
+		transition_screen = null
+		if content is Level:
+			content.enter_level()
 
 #Zelda style transition
 func on_zelda_content_finished_loading(content):
@@ -99,8 +160,6 @@ func on_zelda_content_finished_loading(content):
 		if child is Camera2D:
 			inCamera = child
 		
-	
-	
 	#Get data from previous scene
 	var incoming_data : LevelDataHandoff
 	if  get_tree().current_scene is Level:
@@ -118,6 +177,7 @@ func on_zelda_content_finished_loading(content):
 	var tween_in:Tween = get_tree().create_tween()
 	tween_in.tween_property(content, "position", Vector2.ZERO, 1).set_trans(Tween.TRANS_SINE)
 	
+	print("second tween")
 	# slide old level out
 	var tween_out:Tween = get_tree().create_tween()
 	var vector_off_screen:Vector2 = Vector2.ZERO
@@ -125,6 +185,7 @@ func on_zelda_content_finished_loading(content):
 	vector_off_screen.y = -incoming_data.move_dir.y * LEVEL_H
 	tween_out.tween_property(outgoing_scene, "position", vector_off_screen, 1).set_trans(Tween.TRANS_SINE)
 	
+	print("Add child")
 	# add new scene to the tree - (Note: could be loaded into a container instead)
 	get_tree().root.call_deferred("add_child",content)
 	

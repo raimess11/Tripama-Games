@@ -80,7 +80,6 @@ size = Vector2(113.5, 161)
 collision_layer = 2
 floor_snap_length = 10.0
 script = ExtResource("1_21t83")
-dialogue_text = "res://NPC/ChatBubble/Dialogue/testPlayerDialogue.json"
 
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

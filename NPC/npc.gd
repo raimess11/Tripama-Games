@@ -13,6 +13,8 @@ func _ready():
 	actionable.connect("dialogueEnds", _on_Dialogue_ends)
 
 func _on_Dialogue_ends():
+	emit_signal("interacted")
+	await get_tree().create_timer(1.0).timeout
 	emit_signal("chat_ends")
 
 func start_dialogue():

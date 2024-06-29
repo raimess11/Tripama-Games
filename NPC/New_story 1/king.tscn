@@ -1,13 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqbxtjhpoi621"]
+[gd_scene load_steps=5 format=3 uid="uid://dqbxtjhpoi621"]
 
 [ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_13vpl"]
 [ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_ph070"]
+[ext_resource type="Resource" uid="uid://8aor4cth3g7a" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue" id="3_fa0er"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nqpn"]
+size = Vector2(600, 312)
 
 [node name="King" instance=ExtResource("1_13vpl")]
+questKey = "questS1Scene4"
 
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_ph070")
 
 [node name="Actionable" parent="." index="3"]
-collision_layer = 0
-collision_mask = 2
+dialogue_resource = ExtResource("3_fa0er")
+
+[node name="CollisionShape2D" parent="Actionable" index="0"]
+visible = false
+position = Vector2(0, -92)
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Actionable" index="1"]
+position = Vector2(228, -92)
+shape = SubResource("RectangleShape2D_2nqpn")
+debug_color = Color(0.894118, 0.247059, 0.52549, 0.419608)
+
+[editable path="Actionable"]

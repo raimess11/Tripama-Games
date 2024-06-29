@@ -33,7 +33,7 @@ texture = ExtResource("4_aa8eb")
 position = Vector2(-256, 736)
 scale = Vector2(0.8, 0.8)
 
-[node name="Guard 2" parent="." index="5" groups=["Guard"] instance=ExtResource("4_tghvu")]
+[node name="Guard 2" parent="." index="5" instance=ExtResource("4_tghvu")]
 position = Vector2(1456, 672)
 
 [node name="Player" parent="." index="6"]
@@ -41,6 +41,7 @@ position = Vector2(1768, 664)
 
 [node name="LeftDoor" parent="." index="7"]
 position = Vector2(8, 624)
+transition_type = "fade_to_black"
 path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4.tscn"
 
 [node name="Gate" parent="." index="8" instance=ExtResource("3_lyb5s")]

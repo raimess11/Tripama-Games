@@ -1,0 +1,223 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpao0gndatply"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1m6yp"]
+[ext_resource type="Script" path="res://World/New_Story 1/kuliha_s_1_scene_5.gd" id="2_74hsp"]
+[ext_resource type="PackedScene" uid="uid://bapnnrce6a23x" path="res://World/Base_World/Objects/warga_warga.tscn" id="2_xwmwj"]
+[ext_resource type="Resource" uid="uid://djj26172c7qte" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Kuliah_Umum.dialogue" id="3_bgfey"]
+
+[sub_resource type="Animation" id="Animation_38scp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(112, 664)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player:input_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0ed0k"]
+resource_name = "end_kuliah"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(728, 664), Vector2(64, 664)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.0001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_idle"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_w1hi2"]
+resource_name = "start_kuliah"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(112, 664), Vector2(728, 664)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.5, 0.9, 1.4, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"play_idle"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/PlayerAnim:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Idle", &"Walk"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player:input_enabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2i5jg"]
+_data = {
+"RESET": SubResource("Animation_38scp"),
+"end_kuliah": SubResource("Animation_0ed0k"),
+"start_kuliah": SubResource("Animation_w1hi2")
+}
+
+[node name="kuliha_S1_Scene5" instance=ExtResource("1_1m6yp")]
+script = ExtResource("2_74hsp")
+dialogue_resource = ExtResource("3_bgfey")
+
+[node name="Player" parent="." index="2"]
+position = Vector2(112, 664)
+input_enabled = false
+metadata/_edit_group_ = true
+
+[node name="PlayerAnim" parent="Player" index="0"]
+animation = &"Idle"
+
+[node name="LeftDoor" parent="." index="3"]
+transition_type = "fade_to_black"
+path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
+
+[node name="Warga-warga" parent="." index="7" instance=ExtResource("2_xwmwj")]
+position = Vector2(945, 741)
+scale = Vector2(0.7, 0.7)
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_2i5jg")
+}
+
+[editable path="VillageGround"]
+[editable path="Player"]

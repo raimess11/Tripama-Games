@@ -15,4 +15,5 @@ func _On_finished_chatting():
 	print("Finished chatting")
 	if NpcState.questNPC[questStory][questKey]:
 		complete_quest.deliver_Quest()
+		print("Quest received")
 

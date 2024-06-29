@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckujvallmhah8"]
+[gd_scene load_steps=4 format=3 uid="uid://ckujvallmhah8"]
 
 [ext_resource type="PackedScene" uid="uid://d0togqwtqbveu" path="res://NPC/quect_receiver.tscn" id="1_4qun5"]
 [ext_resource type="PackedScene" uid="uid://c5h8w1xj4frqq" path="res://QuestSystem/Quest/Story 1/quest_interact_guard.tscn" id="2_aq4my"]
+[ext_resource type="Resource" uid="uid://dev7ra67qoxdy" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue2_Guard&Suwanda.dialogue" id="3_32uqo"]
 
-[node name="Guard 2" instance=ExtResource("1_4qun5")]
-questKey = "questS1Scene2"
+[node name="Guard 2" groups=["Guard"] instance=ExtResource("1_4qun5")]
+questKey = "questS1Scene1"
 
 [node name="CompleteQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_aq4my")
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("3_32uqo")

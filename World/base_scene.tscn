@@ -50,5 +50,7 @@ entry_door_name = "LeftDoor"
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-24, 840, -88, 840, -72, 312, -304, 312, -320, 992, 2104, 992, 2088, 408, 1984, 424, 1976, 856, 1936, 848)

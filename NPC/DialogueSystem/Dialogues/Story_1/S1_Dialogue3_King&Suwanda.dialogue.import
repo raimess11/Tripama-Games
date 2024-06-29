@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://8aor4cth3g7a"
+path="res://.godot/imported/S1_Dialogue3_King&Suwanda.dialogue-b5454323fc7ef39ff7fb35e841672a47.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue"
+dest_files=["res://.godot/imported/S1_Dialogue3_King&Suwanda.dialogue-b5454323fc7ef39ff7fb35e841672a47.tres"]
+
+[params]
+
+defaults=true

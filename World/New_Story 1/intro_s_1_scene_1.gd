@@ -1,5 +1,7 @@
 extends Level
 
+const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
+
 @onready var cut_scene = $CutScene
 @onready var villager_1 = $S1IntroVil1
 @onready var villager_2 = $S1IntroVil2
@@ -28,4 +30,7 @@ func _on_Dialogue_Ended(source):
 		nextCutscene("PlayerDialogueEnd")
 
 func start_intro():
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, "test")
+	var balloon : Node = Balloon_source.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(dialogue_resource, "start")
+	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, "test")

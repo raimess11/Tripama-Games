@@ -1,0 +1,42 @@
+~ start
+
+if NpcState.vil12_scene1_war:
+	=> has_interacted
+
+Warga 1: Permisi, Mapatih
+Sumatri: Kalian berdua[speed=0.5]...
+Warga 2: Iya, kami mendengar kabar bahwa akan ada gerilya di atas gunung
+Sumatri: Benar, aku ingin kalian bersiap-siap pada buruknya. Karena pasukan yang kita hadapi adalah raksasa
+Warga 2: Tapi Mapatih, kami ingin membantu mapatih
+Sumatri: Membantu, bagaimana?
+Warga 1: [speed=0.5]...[speed=1]kita akan maju ke medan perang!
+Sumatri: [speed=0.5]...[speed=1]kalian?
+Warga 1: Kita juga akan mengajak dari warga-warga lain untuk berperang!
+Warga 1: Karena Mapatih sudah menuntun kita, kita ingin mengembalikannya.
+Sumatri: ...
+- Kasih tahu warga lain. Nanti temui aku di depan gerbang
+	set NpcState.accept_help_S1 = true
+	Warga 2: [speed=0.5]...
+	Warga 1: Baiklah!
+	Warga 1: Terima kasih banyak sudah menerima permintaan kami lagi
+	Warga 1: Ayo kakak, kita kasih tahu warga-warga lain!
+	Warga 2: Okay okay, tunggu bentar
+
+- Jangan...
+	set NpcState.accept_help_S1 = false
+	Warga 1: [speed=0.5]...
+	Sumatri: Maaf[speed=0.5]...
+	Sumatri: Hidup kalian lebih berharga daripada di medan perang
+	Sumatri: Biarkan aku dan pasukan Maepati melindungi kalian
+	Warga 1: [speed=0.5]...
+	Warga 2: Baiklah. Kita kasih tahu warga-warga lain untuk bersiap-siap
+	Warga 2: Ayo dek
+
+set NpcState.vil12_scene1_war = true
+=> END
+
+~ has_interacted
+
+Warga 2: Permisi Mapatih...
+
+=> END

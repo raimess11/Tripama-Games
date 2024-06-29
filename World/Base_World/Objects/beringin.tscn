@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://6w05qyqoeghq"]
+
+[ext_resource type="PackedScene" uid="uid://r0wh05ahd8m6" path="res://World/Base_World/object.tscn" id="1_1t753"]
+[ext_resource type="Texture2D" uid="uid://b3m2wwhd1p6k5" path="res://Asset/Object/pohon beringin.png" id="2_k6tj2"]
+
+[node name="Beringin" instance=ExtResource("1_1t753")]
+texture = ExtResource("2_k6tj2")

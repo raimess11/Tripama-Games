@@ -11,19 +11,15 @@ const JUMP_VELOCITY = -400.0
 #@onready var interact_sound = $InteractSound
 @onready var player_anim = $PlayerAnim
 @onready var audio_queue = $AudioQueue
-@onready var chat_bubble = $ChatBubble
 @onready var walk_sfx = $AudioPool
 @onready var action_detector = $ActionDetector
 
+var direction
+
 var footstep_frame : Array = [3, 6]
 
-@export_file("*.json") var dialogue_text
-
-var dialogue = []
-var dialogue_index = 0
-
 var is_chatting = false
-var input_enabled = true
+@export var input_enabled = true
 var to_next_text = false
 
 signal playerFinishedTalking
@@ -41,13 +37,7 @@ func _physics_process(delta):
 	
 	if input_enabled:
 		if (!is_chatting):
-			# Handle Jump.
-			#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			#	velocity.y = JUMP_VELOCITY
-
 			# Get the input direction and handle the movement/deceleration.
-			# As good practice, you should replace UI actions with custom gameplay actions.
-			var direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 			if direction:
 				player_anim.play("Walk")
 				if direction == -1:
@@ -72,13 +62,15 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 	move_and_slide()
 
-func _input(event):
+func _unhandled_input(event):
 	if event.is_action_pressed("Interact"):
-		
 		var actionables = action_detector.get_overlapping_areas()
 		print("Interact", actionables.size())
 		if actionables.size() > 0:
 			actionables[0].action()
+			return
+	
+	direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 
 func orient(dir : Vector2):
 	if dir.x:
