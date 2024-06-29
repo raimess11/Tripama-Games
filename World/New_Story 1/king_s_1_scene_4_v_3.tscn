@@ -19,6 +19,7 @@ metadata/_edit_group_ = true
 position = Vector2(20, 607.5)
 
 [node name="RightDoor" parent="." index="4"]
+transition_type = "fade_to_black"
 push_distance = 300
 path_to_new_scene = "res://World/New_Story 1/village_s_1_scene_1_v_2.tscn"
 
