@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cnes118hvgr4k" path="res://NPC/New_story 1/s_1_scene_3_guard.tscn" id="3_0mlna"]
 
 [node name="Castle_S1_Scene3_B" instance=ExtResource("1_jbgkn")]
+doors = null
 
 [node name="VillageGround" parent="." index="1"]
 position = Vector2(952, 864)
@@ -23,10 +24,10 @@ position = Vector2(1224, 664)
 
 [node name="LeftDoor" parent="." index="4"]
 push_distance = 200
-path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4_v_3.tscn"
+main_path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4_v_3.tscn"
 
 [node name="RightDoor" parent="." index="5"]
 push_distance = 200
-path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
+main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
 
 [editable path="VillageGround"]

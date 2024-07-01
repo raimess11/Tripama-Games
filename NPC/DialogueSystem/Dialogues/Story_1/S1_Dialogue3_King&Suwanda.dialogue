@@ -22,5 +22,6 @@ Hurjana: Kau memang sudah tumbuh dewasa, Suwanda
 set NpcState.questNPC[0]["questS1Scene4"] = true
 set NpcState.king_scene4 = true
 set NpcState.questKing_Scene4 = true
+do NpcState.emit_has_interacted(false, true)
 
 => END

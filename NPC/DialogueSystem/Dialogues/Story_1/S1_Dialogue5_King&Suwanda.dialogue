@@ -25,6 +25,7 @@ Sumatri: [speed=0.5]...
 Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumatri: Siap yang mulia!
 set NpcState.king_scene4_war = true
+do NpcState.emit_has_interacted(false, true)
 
 => END
 
@@ -41,6 +42,7 @@ Sumatri: [speed=0.5]...
 Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumatri: Siap yang mulia!
 set NpcState.king_scene4_war = true
+do NpcState.emit_has_interacted(false, false)
 
 => END
 

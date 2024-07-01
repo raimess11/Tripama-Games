@@ -31,6 +31,7 @@ Warga 2: Seperti menuntun dalam keprajuritan. Apakah bisa?
 	Warga 2: Saya sama adik saya pergi dahulu
 
 set NpcState.villager1and2_Scene1 = true
+do NpcState.emit_has_interacted(true, true)
 
 => END
 

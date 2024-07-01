@@ -4,6 +4,11 @@ State of which has the player interacted with the NPC or not
 Used for dialogues
 """
 
+signal has_interacted(leftDoor, state)
+
+func emit_has_interacted(leftDoor, state):
+	emit_signal("has_interacted", leftDoor, state)
+
 
 #Story 1 Suwanda Arc
 #Quest dictionary

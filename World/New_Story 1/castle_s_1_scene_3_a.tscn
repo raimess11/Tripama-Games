@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xxsbqdcgrpa4" path="res://NPC/New_story 1/maid.tscn" id="3_30xtr"]
 
 [node name="Castle_S1_Scene3_A" instance=ExtResource("1_m8ld7")]
+doors = null
 
 [node name="VillageGround" parent="." index="1"]
 position = Vector2(952, 872)
@@ -23,11 +24,12 @@ position = Vector2(1752, 656)
 
 [node name="LeftDoor" parent="." index="4"]
 push_distance = 200
-path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_b.tscn"
+main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_b.tscn"
 
 [node name="RightDoor" parent="." index="5"]
 monitoring = false
 monitorable = false
+enable = false
 push_distance = 200
 
 [editable path="VillageGround"]

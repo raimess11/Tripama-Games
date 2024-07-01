@@ -3,11 +3,21 @@ class_name Door
 
 signal player_entered_door(door : Door, transition_type : String)
 
+@export var enable : bool = true
 @export_enum ("Left", "Right") var entry_direction
 @export_enum ("fade_to_black", "fade_from_black", "zelda") var transition_type : String
 @export var push_distance : int = 16
-@export var path_to_new_scene : String
+@export var main_path_to_new_scene : String
 @export var entry_door_name : String
+@export var alt_path_to_new_scene : String
+@export var questStory : int = 0
+@export var questKey : String = ""
+
+var path_to_new_scene : String = main_path_to_new_scene
+
+func _ready():
+	print("ready")
+	set_path_to_new_scene()
 
 func _on_body_entered(body):
 	if not body is Player:
@@ -42,3 +52,28 @@ func get_move_dir() -> Vector2:
 		1: 
 			dir = Vector2.LEFT	
 	return dir
+
+func enable_door():
+	enable = true
+	self.monitoring = true
+	self.monitorable = true
+	set_path_to_new_scene()
+
+func disable_door():
+	enable = false
+	self.monitoring = false
+	self.monitorable = false
+
+func set_path_to_new_scene():
+	if questKey == "":
+		path_to_new_scene = main_path_to_new_scene
+		return
+	if NpcState.questNPC[questStory][questKey]:
+		path_to_new_scene = main_path_to_new_scene
+	else:
+		if alt_path_to_new_scene == "":
+			print("alt path is null")
+			path_to_new_scene = main_path_to_new_scene
+			return
+		
+		path_to_new_scene = alt_path_to_new_scene

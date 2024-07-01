@@ -33,6 +33,7 @@ Sumatri: ...
 	Warga 2: Ayo dek
 
 set NpcState.vil12_scene1_war = true
+do NpcState.emit_has_interacted(false, true)
 => END
 
 ~ has_interacted

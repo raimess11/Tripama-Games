@@ -10,6 +10,7 @@ const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
 
 func _ready():
 	QuestSystem.connectAllNodes()
+	NpcState.has_interacted.connect(_update_doors)
 	addDoorToDoors()
 	player.disable()
 	player.visible = false
@@ -32,5 +33,5 @@ func _on_Dialogue_Ended(source):
 func start_intro():
 	var balloon : Node = Balloon_source.instantiate()
 	get_tree().current_scene.add_child(balloon)
-	balloon.start(dialogue_resource, "start")
+	balloon.start(dialogue_resource, "test")
 	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, "test")

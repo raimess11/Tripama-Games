@@ -27,6 +27,7 @@ Suwanda: [speed=0.2]...
 	Suwanda: Kalau saya mendapatkan izin dari Yang Mulia, panggil saja Sumatri. Itu adalah perintah terakhir
 	Guard: Siap laksanakan!
 	set NpcState.questGuard_Scene2 = true
+	do NpcState.emit_has_interacted(true, true)
 
 - Saya akan sampaikan kabar bahwa saya tidak bisa menuntun mereka
 	set NpcState.questNPC[0]["questS1Scene2"] = false
@@ -37,6 +38,8 @@ Suwanda: [speed=0.2]...
 	Guard: Siap Mapatih!
 
 set NpcState.guard_scene2 = true
+do NpcState.emit_has_interacted(true, true)
+
 
 => END
 

@@ -246,10 +246,17 @@ modulate = Color(0.298039, 0.807843, 0.435294, 1)
 position = Vector2(1776, 727)
 
 [node name="LeftDoor" parent="." index="6"]
-path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
+alt_path_to_new_scene = "res://World/Story 1/Scene 3/s_1_scene_3.tscn"
+questKey = "questS1Scene1"
 
 [node name="RightDoor" parent="." index="7"]
 monitoring = false
+transition_type = "fade_to_black"
 
 [node name="CutScene" type="AnimationPlayer" parent="." index="8"]
 libraries = {

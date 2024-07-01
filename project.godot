@@ -69,7 +69,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue1_Villager&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue2_Guard&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Kuliah_Umum.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue6_Villager&Suwanda.dialogue")
+locale/translations_pot_files=PackedStringArray("res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue1_Villager&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue2_Guard&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Kuliah_Umum.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue6_Villager&Suwanda.dialogue", "res://NPC/DialogueSystem/Dialogues/Story_1/S1_Gate.dialogue")
 
 [layer_names]
 

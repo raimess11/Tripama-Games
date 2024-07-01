@@ -8,6 +8,7 @@
 size = Vector2(306, 410)
 
 [node name="King_S1_Scene 4" instance=ExtResource("1_n7rou")]
+doors = null
 
 [node name="VillageGround" parent="." index="1"]
 position = Vector2(960, 888)
@@ -22,9 +23,13 @@ position = Vector2(-24, 744)
 
 [node name="RightDoor" parent="." index="4"]
 position = Vector2(1968, 664)
+monitoring = false
+monitorable = false
+enable = false
 transition_type = "fade_to_black"
 push_distance = 300
-path_to_new_scene = "res://World/New_Story 1/kuliha_s_1_scene_5.tscn"
+main_path_to_new_scene = "res://World/New_Story 1/kuliha_s_1_scene_5.tscn"
+alt_path_to_new_scene = "res://World/New_Story 1/kuliha_s_1_scene_5.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(504, 632)

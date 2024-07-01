@@ -208,7 +208,7 @@ animation = &"Idle"
 
 [node name="LeftDoor" parent="." index="3"]
 transition_type = "fade_to_black"
-path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
+main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
 
 [node name="Warga-warga" parent="." index="7" instance=ExtResource("2_xwmwj")]
 position = Vector2(945, 741)

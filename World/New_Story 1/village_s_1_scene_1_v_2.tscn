@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://37b7s4ob0vpv" path="res://NPC/New_story 1/s_1_scene_1_vil_1.tscn" id="3_sfb74"]
 
 [node name="Village_S1_Scene1_V2" instance=ExtResource("1_hrvlf")]
+doors = null
 
 [node name="Beringin" parent="." index="2" instance=ExtResource("2_bn3ba")]
 position = Vector2(1024, 336)
@@ -16,8 +17,10 @@ position = Vector2(1624, 688)
 [node name="LeftDoor" parent="." index="5"]
 monitoring = false
 monitorable = false
+enable = false
 push_distance = 200
 
 [node name="RightDoor" parent="." index="6"]
 monitoring = false
 monitorable = false
+enable = false
