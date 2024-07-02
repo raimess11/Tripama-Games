@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpao0gndatply"]
+[gd_scene load_steps=10 format=3 uid="uid://dpao0gndatply"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1m6yp"]
 [ext_resource type="Script" path="res://World/New_Story 1/kuliha_s_1_scene_5.gd" id="2_74hsp"]
 [ext_resource type="PackedScene" uid="uid://bapnnrce6a23x" path="res://World/Base_World/Objects/warga_warga.tscn" id="2_xwmwj"]
 [ext_resource type="Resource" uid="uid://djj26172c7qte" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Kuliah_Umum.dialogue" id="3_bgfey"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="4_8fls3"]
 
 [sub_resource type="Animation" id="Animation_38scp"]
 length = 0.001
@@ -198,6 +199,12 @@ _data = {
 script = ExtResource("2_74hsp")
 dialogue_resource = ExtResource("3_bgfey")
 
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(912, 392)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_8fls3")
+
 [node name="Player" parent="." index="2"]
 position = Vector2(112, 664)
 input_enabled = false
@@ -205,6 +212,42 @@ metadata/_edit_group_ = true
 
 [node name="PlayerAnim" parent="Player" index="0"]
 animation = &"Idle"
+
+[node name="AudioStreamPlayer" parent="Player/AudioQueue" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue2" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue3" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue4" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue5" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue6" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue7" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue8" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue9" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue10" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue11" index="0"]
+bus = &"SFX"
 
 [node name="LeftDoor" parent="." index="3"]
 transition_type = "fade_to_black"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dng70nssjimnv"]
+[gd_scene load_steps=6 format=3 uid="uid://dng70nssjimnv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_qqtr5"]
+[ext_resource type="Texture2D" uid="uid://brbqkqwfxveo8" path="res://Asset/Background/bg istana interior raja.png" id="2_ejvgu"]
 [ext_resource type="Texture2D" uid="uid://3gtextfwfdsa" path="res://Asset/Platform/platform stone brick fix.png" id="2_uclhk"]
 [ext_resource type="PackedScene" uid="uid://dvry36aglor4d" path="res://NPC/New_story 1/king_v_2.tscn" id="3_2rumk"]
 
@@ -8,7 +9,11 @@
 size = Vector2(306, 410)
 
 [node name="King_S1_Scene 4_V3" instance=ExtResource("1_qqtr5")]
-doors = null
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 264)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_ejvgu")
 
 [node name="VillageGround" parent="." index="1"]
 position = Vector2(960, 864)

@@ -21,6 +21,7 @@ QuestSystem="*res://QuestSystem/quest_system.tscn"
 SceneManager="*res://World/SceneManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NpcState="*res://NPC/npc_state.gd"
+Bgm="*res://Audio Manager/bgm.tscn"
 
 [dialogue_manager]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk4wy24s8qiyw"]
+[gd_scene load_steps=14 format=3 uid="uid://bk4wy24s8qiyw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_17mo5"]
 [ext_resource type="Script" path="res://World/New_Story 1/intro_s_1_scene_1.gd" id="2_pokhx"]
 [ext_resource type="Resource" uid="uid://18icgtne5p2o" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue" id="3_veb1k"]
 [ext_resource type="PackedScene" uid="uid://bxyvnw0ymvhfd" path="res://NPC/New_story 1/s_1_intro_vil_1.tscn" id="4_duni3"]
 [ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="4_j3ubu"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="4_stby6"]
 [ext_resource type="PackedScene" uid="uid://b81xkqccr001n" path="res://NPC/New_story 1/s_1_intro_vil_2.tscn" id="5_206cw"]
 
 [sub_resource type="Animation" id="Animation_l1sr7"]
@@ -234,6 +235,12 @@ _data = {
 script = ExtResource("2_pokhx")
 dialogue_resource = ExtResource("3_veb1k")
 
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(912, 392)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_stby6")
+
 [node name="Beringin" parent="." index="2" instance=ExtResource("4_j3ubu")]
 position = Vector2(1016, 328)
 scale = Vector2(0.2, 0.2)
@@ -244,6 +251,42 @@ position = Vector2(1650, 673)
 [node name="S1IntroVil2" parent="." index="4" groups=["villager"] instance=ExtResource("5_206cw")]
 modulate = Color(0.298039, 0.807843, 0.435294, 1)
 position = Vector2(1776, 727)
+
+[node name="AudioStreamPlayer" parent="Player/AudioQueue" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue2" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue3" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue4" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue5" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue6" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue7" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue8" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue9" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue10" index="0"]
+bus = &"SFX"
+
+[node name="WalkSfx" parent="Player/AudioPool/AudioQueue11" index="0"]
+bus = &"SFX"
 
 [node name="LeftDoor" parent="." index="6"]
 monitoring = false

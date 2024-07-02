@@ -64,6 +64,7 @@ func _physics_process(delta):
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Interact"):
+		audio_queue.PlaySound()
 		var actionables = action_detector.get_overlapping_areas()
 		print("Interact", actionables.size())
 		if actionables.size() > 0:

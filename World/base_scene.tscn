@@ -21,9 +21,7 @@ player = NodePath("Player")
 doors = null
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(964, 540)
-scale = Vector2(3.76563, 2.10938)
 texture = SubResource("NoiseTexture2D_nurdp")
 
 [node name="VillageGround" parent="." instance=ExtResource("1_mmor0")]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnwdndkbpxrql"]
+
+[ext_resource type="AudioStream" uid="uid://btxta2vl6vy5p" path="res://Asset/Sound/BGM/bgm 1.mp3" id="1_6n2ix"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_6n2ix")
+autoplay = true
+bus = &"BGM"

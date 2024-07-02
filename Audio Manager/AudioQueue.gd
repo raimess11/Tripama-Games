@@ -16,6 +16,7 @@ func _ready():
 	var child = self.get_child(0)
 	if child is AudioStreamPlayer:
 		_audioStreamPlayer.append(child)
+		child.bus = "SFX"
 		for i in count:
 			var duplicate = child.duplicate()
 			self.add_child(duplicate) 

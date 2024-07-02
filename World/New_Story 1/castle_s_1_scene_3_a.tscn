@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2kh0aw32jjyk"]
+[gd_scene load_steps=5 format=3 uid="uid://d2kh0aw32jjyk"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_m8ld7"]
 [ext_resource type="Texture2D" uid="uid://3gtextfwfdsa" path="res://Asset/Platform/platform stone brick fix.png" id="2_0jcbp"]
+[ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_d6tbo"]
 [ext_resource type="PackedScene" uid="uid://xxsbqdcgrpa4" path="res://NPC/New_story 1/maid.tscn" id="3_30xtr"]
 
 [node name="Castle_S1_Scene3_A" instance=ExtResource("1_m8ld7")]
-doors = null
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 280)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_d6tbo")
 
 [node name="VillageGround" parent="." index="1"]
 position = Vector2(952, 872)
