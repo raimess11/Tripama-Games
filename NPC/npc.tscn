@@ -28,9 +28,27 @@ shape = SubResource("CapsuleShape2D_1dwe3")
 
 [node name="Actionable" parent="." instance=ExtResource("4_0nnka")]
 collision_layer = 8
-collision_mask = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
 position = Vector2(0, -96)
 shape = SubResource("RectangleShape2D_c35a0")
 debug_color = Color(0.788235, 0.160784, 0.964706, 0.419608)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = -331.0
+offset_right = 31.0
+offset_bottom = -259.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "[E]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Actionable" to="." method="_on_actionable_area_entered"]
+[connection signal="area_exited" from="Actionable" to="." method="_on_actionable_area_exited"]

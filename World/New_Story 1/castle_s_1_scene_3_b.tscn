@@ -1,37 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj37von8dlebp"]
+[gd_scene load_steps=6 format=3 uid="uid://bj37von8dlebp"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jbgkn"]
-[ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_6i851"]
-[ext_resource type="Texture2D" uid="uid://3gtextfwfdsa" path="res://Asset/Platform/platform stone brick fix.png" id="2_iayk3"]
+[ext_resource type="Texture2D" uid="uid://iblicy84o6dd" path="res://Asset/Background/bg istana polos.png" id="2_o51t5"]
 [ext_resource type="PackedScene" uid="uid://cnes118hvgr4k" path="res://NPC/New_story 1/s_1_scene_3_guard.tscn" id="3_0mlna"]
+[ext_resource type="Texture2D" uid="uid://cgxnlpbrwulra" path="res://Asset/Object/pintu.png" id="3_mx020"]
+[ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="4_7qilr"]
 
 [node name="Castle_S1_Scene3_B" instance=ExtResource("1_jbgkn")]
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 264)
 scale = Vector2(0.44, 0.44)
-texture = ExtResource("2_6i851")
+texture = ExtResource("2_o51t5")
 
-[node name="VillageGround" parent="." index="1"]
-position = Vector2(952, 864)
-texture = ExtResource("2_iayk3")
+[node name="Door" type="Sprite2D" parent="." index="1"]
+position = Vector2(464, 400)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_mx020")
+
+[node name="Door2" type="Sprite2D" parent="." index="2"]
+position = Vector2(1400, 400)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_mx020")
+
+[node name="VillageGround" parent="." index="3"]
+position = Vector2(952, 536)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_7qilr")
 region_enabled = false
-metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
-position = Vector2(30, 612.5)
+position = Vector2(-48.0001, 1280)
 
-[node name="S1_Scene3_Guard" parent="." index="2" instance=ExtResource("3_0mlna")]
+[node name="S1_Scene3_Guard" parent="." index="4" instance=ExtResource("3_0mlna")]
 position = Vector2(328, 680)
 
-[node name="Player" parent="." index="3"]
+[node name="Player" parent="." index="5"]
 position = Vector2(1224, 664)
 
-[node name="LeftDoor" parent="." index="4"]
+[node name="LeftDoor" parent="." index="6"]
 push_distance = 200
 main_path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4_v_3.tscn"
 
-[node name="RightDoor" parent="." index="5"]
+[node name="RightDoor" parent="." index="7"]
 push_distance = 200
 main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
 

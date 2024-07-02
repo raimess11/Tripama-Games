@@ -22,10 +22,11 @@ layer = 100
 script = ExtResource("1_4u26j")
 
 [node name="Balloon" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.74902)
 color = Color(0, 0, 0, 1)
 
 [node name="Margin" type="MarginContainer" parent="Balloon"]
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 0
 anchor_right = 1.0
 offset_bottom = 119.0
@@ -41,10 +42,9 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Margin/VBox"]
-modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -52,8 +52,9 @@ scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/Margin/VBox" instance=ExtResource("2_a8ve6")]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/normal_font_size = 35
 text = "Dialogue"
+skip_action = "ui_accept"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]
 layout_mode = 2
@@ -62,7 +63,7 @@ theme_override_constants/separation = 2
 [node name="ResponseTemplate" type="RichTextLabel" parent="Balloon/Margin/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/normal_font_size = 35
 theme_override_styles/focus = SubResource("StyleBoxFlat_5d24i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_oj3c8")
 bbcode_enabled = true

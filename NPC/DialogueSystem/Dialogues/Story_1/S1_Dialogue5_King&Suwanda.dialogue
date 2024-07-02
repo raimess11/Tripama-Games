@@ -2,7 +2,7 @@
 
 if NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
 	=> good_end
-elif NpcState.dayang_scene3:
+elif NpcState.king_scene4_war:
 	=> has_interacted
 else
 	=> bad_end

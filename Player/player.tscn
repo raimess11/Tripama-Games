@@ -93,6 +93,7 @@ shape = SubResource("CapsuleShape2D_7y8io")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioQueue"]
 stream = ExtResource("3_hxorg")
+bus = &"SFX"
 
 [node name="AudioPool" parent="." instance=ExtResource("16_xjfvg")]
 
@@ -100,59 +101,70 @@ stream = ExtResource("3_hxorg")
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue"]
 stream = ExtResource("17_fps0r")
+bus = &"SFX"
 
 [node name="AudioQueue2" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue2"]
 stream = ExtResource("18_547lb")
+bus = &"SFX"
 
 [node name="AudioQueue3" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue3"]
 stream = ExtResource("19_eovi6")
+bus = &"SFX"
 
 [node name="AudioQueue4" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue4"]
 stream = ExtResource("20_u0b7j")
+bus = &"SFX"
 
 [node name="AudioQueue5" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue5"]
 stream = ExtResource("21_4utgw")
+bus = &"SFX"
 
 [node name="AudioQueue6" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue6"]
 stream = ExtResource("22_mr2x2")
+bus = &"SFX"
 
 [node name="AudioQueue7" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue7"]
 stream = ExtResource("23_cx7ai")
+bus = &"SFX"
 
 [node name="AudioQueue8" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue8"]
 stream = ExtResource("24_ptfe6")
+bus = &"SFX"
 
 [node name="AudioQueue9" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue9"]
 stream = ExtResource("25_v5uk1")
+bus = &"SFX"
 
 [node name="AudioQueue10" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue10"]
 stream = ExtResource("26_4wffq")
+bus = &"SFX"
 
 [node name="AudioQueue11" parent="AudioPool" instance=ExtResource("13_s6dvj")]
 
 [node name="WalkSfx" type="AudioStreamPlayer" parent="AudioPool/AudioQueue11"]
 stream = ExtResource("27_0kwqe")
+bus = &"SFX"
 
 [node name="ActionDetector" type="Area2D" parent="."]
-collision_layer = 0
+collision_layer = 16
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionDetector"]

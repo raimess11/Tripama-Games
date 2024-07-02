@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.GOLD, 
+						"Warga 1": Color.FOREST_GREEN, "Warga 2": Color.LIGHT_GREEN,
+						"Guard" : Color.ORANGE, "Hurjana" : Color.AQUA, "Dayang": Color.PURPLE,
+						"Sukarsana": Color.GOLDENROD, "Sumatri": Color.GOLD}
 
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
@@ -38,6 +42,7 @@ var dialogue_line: DialogueLine:
 		
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		character_label.self_modulate = characterColor[character_label.text]
 		
 		dialogue_label.modulate.a = 0
 		dialogue_label.custom_minimum_size.x = dialogue_label.get_parent().size.x - 1

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_qqtr5"]
 [ext_resource type="Texture2D" uid="uid://brbqkqwfxveo8" path="res://Asset/Background/bg istana interior raja.png" id="2_ejvgu"]
-[ext_resource type="Texture2D" uid="uid://3gtextfwfdsa" path="res://Asset/Platform/platform stone brick fix.png" id="2_uclhk"]
 [ext_resource type="PackedScene" uid="uid://dvry36aglor4d" path="res://NPC/New_story 1/king_v_2.tscn" id="3_2rumk"]
+[ext_resource type="Texture2D" uid="uid://tc0bgtguqug2" path="res://Asset/Platform/platform castle raja.png" id="3_itee8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6eoo"]
 size = Vector2(306, 410)
@@ -16,13 +16,13 @@ scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_ejvgu")
 
 [node name="VillageGround" parent="." index="1"]
-position = Vector2(960, 864)
-texture = ExtResource("2_uclhk")
+position = Vector2(936, 536)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_itee8")
 region_enabled = false
-metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
-position = Vector2(20, 607.5)
+position = Vector2(47.9999, 1296)
 
 [node name="RightDoor" parent="." index="4"]
 monitoring = false

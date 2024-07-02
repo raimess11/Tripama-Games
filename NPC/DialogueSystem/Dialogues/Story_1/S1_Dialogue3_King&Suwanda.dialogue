@@ -1,5 +1,8 @@
 ~ start
 
+if NpcState.king_scene4:
+	=> has_interacted
+
 Hurjana: Ah, Suwanda. Kau sudah kembali
 Suwanda: Yang mulia[speed=0.5]...
 Hurjana: Ada apa sampai menghadapiku?
@@ -23,5 +26,11 @@ set NpcState.questNPC[0]["questS1Scene4"] = true
 set NpcState.king_scene4 = true
 set NpcState.questKing_Scene4 = true
 do NpcState.emit_has_interacted(false, true)
+
+=> END
+
+~ has_interacted
+
+Hurjana: ...
 
 => END

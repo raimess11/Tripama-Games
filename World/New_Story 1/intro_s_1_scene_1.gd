@@ -33,5 +33,5 @@ func _on_Dialogue_Ended(source):
 func start_intro():
 	var balloon : Node = Balloon_source.instantiate()
 	get_tree().current_scene.add_child(balloon)
-	balloon.start(dialogue_resource, "test")
+	balloon.start(dialogue_resource, "start")
 	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, "test")

@@ -251,42 +251,6 @@ position = Vector2(1616, 664)
 input_enabled = false
 metadata/_edit_group_ = true
 
-[node name="AudioStreamPlayer" parent="Player/AudioQueue" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue2" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue3" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue4" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue5" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue6" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue7" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue8" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue9" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue10" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue11" index="0"]
-bus = &"SFX"
-
 [node name="LeftDoor" parent="." index="7"]
 position = Vector2(8, 624)
 monitoring = false

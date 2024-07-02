@@ -234,6 +234,7 @@ _data = {
 [node name="IntroS1Scene1" instance=ExtResource("1_17mo5")]
 script = ExtResource("2_pokhx")
 dialogue_resource = ExtResource("3_veb1k")
+doors = Array[Resource("res://World/door.gd")]([])
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
@@ -247,46 +248,11 @@ scale = Vector2(0.2, 0.2)
 
 [node name="S1IntroVil1" parent="." index="3" groups=["villager"] instance=ExtResource("4_duni3")]
 position = Vector2(1650, 673)
+questStory = 0
 
 [node name="S1IntroVil2" parent="." index="4" groups=["villager"] instance=ExtResource("5_206cw")]
 modulate = Color(0.298039, 0.807843, 0.435294, 1)
 position = Vector2(1776, 727)
-
-[node name="AudioStreamPlayer" parent="Player/AudioQueue" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue2" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue3" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue4" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue5" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue6" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue7" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue8" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue9" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue10" index="0"]
-bus = &"SFX"
-
-[node name="WalkSfx" parent="Player/AudioPool/AudioQueue11" index="0"]
-bus = &"SFX"
 
 [node name="LeftDoor" parent="." index="6"]
 monitoring = false
