@@ -18,7 +18,6 @@ noise = SubResource("FastNoiseLite_8o837")
 [node name="BaseScene" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_haqds")
 player = NodePath("Player")
-doors = null
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(964, 540)
@@ -35,14 +34,14 @@ position = Vector2(1014, 663)
 position = Vector2(-24, 663)
 entry_direction = 1
 transition_type = "zelda"
-push_distance = 100
+push_distance = 200
 entry_door_name = "RightDoor"
 
 [node name="RightDoor" parent="." instance=ExtResource("3_ir28f")]
 position = Vector2(1968, 663)
 entry_direction = 0
 transition_type = "zelda"
-push_distance = 100
+push_distance = 200
 entry_door_name = "LeftDoor"
 
 [node name="Camera2D" type="Camera2D" parent="."]

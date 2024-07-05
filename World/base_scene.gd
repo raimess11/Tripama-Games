@@ -17,9 +17,11 @@ func _ready():
 	addDoorToDoors()
 	player.disable()
 	player.visible = false
+	connect_NPC_to_player()
 	
 	if data == null:
 		enter_level()
+	
 
 func enter_level():
 	if data != null:
@@ -80,3 +82,7 @@ func addDoorToDoors():
 		if node is Door:
 			doors.append(node)
 
+func connect_NPC_to_player():
+	for child in self.get_children():
+		if child is NPC:
+			child.chat_ends.connect(player._on_finished_chatting)

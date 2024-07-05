@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxrectdfphuc"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_qvd5x"]
+[ext_resource type="Resource" uid="uid://dfw3lcek08s1b" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Rahwana&Kumbakarna.dialogue" id="2_rxl5f"]
+
+[node name="Rahwana" instance=ExtResource("1_qvd5x")]
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
+scale = Vector2(0.84375, 2.48438)
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("2_rxl5f")

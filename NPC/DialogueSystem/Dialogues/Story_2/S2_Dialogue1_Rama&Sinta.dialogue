@@ -1,0 +1,24 @@
+~ start
+
+Narator: Di suatu pinggir hutan...
+Sinta: Jadi, apakah situasi dengan para raksasa sudah selesai?
+Rama: Kuharap. Untuk sekarang, kita santai dulu.
+Rama: ...
+Sinta: Sayang, kau tidak terlihat santai dengan muka itu.
+Rama: ...iya. Kau benar.
+Rama: Aku masih khawatir para raksasa ingin menikam kediaman kita.
+Rama: Sama... apa yang kudapat, Kara tidak tahu kesalahan adiknya.
+Rama: Mungkin dari sisinya gugur dengan hormat...
+Rama: Tapi aslinya, ia gugur karena kesalahan adiknya.
+Sinta: ...Rama.
+Sinta: Ini bukan salahmu.
+Sinta: Kau hanya melindungi kita agar bisa hidup tenang.
+Sinta: Raksasa-raksasa itu yang meminta untuk perang.
+Sinta: Jadi... jangan pikirkan hal itu dan melihatlah kepadaku.
+Rama: ...Sinta.
+Rama: Suatu hari, ku akan membangun kerajaan untukmu.
+Laksama: ...
+set NpcState.forest_scene1 = true
+
+=> END
+

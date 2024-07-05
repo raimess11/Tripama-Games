@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://ns6kbb3ynru0"
+path="res://.godot/imported/S2_Dialogue5_war.dialogue-e6af99cd056e57f73aeb7f335c95ee37.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue5_war.dialogue"
+dest_files=["res://.godot/imported/S2_Dialogue5_war.dialogue-e6af99cd056e57f73aeb7f335c95ee37.tres"]
+
+[params]
+
+defaults=true

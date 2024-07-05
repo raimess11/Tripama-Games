@@ -69,6 +69,7 @@ func _unhandled_input(event):
 		if actionables.size() > 0:
 			audio_queue.PlaySound()
 			actionables[0].action()
+			is_chatting = true
 			return
 	
 	direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -80,9 +81,11 @@ func orient(dir : Vector2):
 #Disable input
 func disable():
 	input_enabled = false
+	is_chatting = true
 	
 func enable():
 	input_enabled = true
+	is_chatting = false
 	visible = true
 
 func playInteractSound():
@@ -97,3 +100,10 @@ func play_idle():
 func _on_player_anim_frame_changed():
 	if player_anim.animation == "Idle": return
 	if player_anim.frame in footstep_frame: walk_sfx.PlayRandomSound(false)
+
+func _on_finished_chatting():
+	print("finished chatting")
+	is_chatting = false
+
+func set_is_chatting(state:bool):
+	is_chatting = state

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c1fgl0c08emyr"
+path="res://.godot/imported/S2_Dialogue2_Rahwana&Sinta.dialogue-54db7e246018ee91d714f3cf2a10dd1a.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue2_Rahwana&Sinta.dialogue"
+dest_files=["res://.godot/imported/S2_Dialogue2_Rahwana&Sinta.dialogue-54db7e246018ee91d714f3cf2a10dd1a.tres"]
+
+[params]
+
+defaults=true

@@ -1,9 +1,11 @@
 extends CanvasLayer
 
-var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.GOLD, 
-						"Warga 1": Color.FOREST_GREEN, "Warga 2": Color.LIGHT_GREEN,
-						"Guard" : Color.ORANGE, "Hurjana" : Color.AQUA, "Dayang": Color.PURPLE,
-						"Sukarsana": Color.GOLDENROD, "Sumatri": Color.GOLD}
+var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_GREEN, 
+						"Warga 1": Color.ROSY_BROWN, "Warga 2": Color.SANDY_BROWN,
+						"Guard" : Color.BLUE, "Hurjana" : Color.YELLOW, "Dayang": Color.BLUE_VIOLET,
+						"Sukarsana": Color.GOLDENROD, "Sumatri": Color.MEDIUM_SEA_GREEN,
+						"Sinta": Color.HOT_PINK, "Laksama": Color.FOREST_GREEN, "Rama": Color.LIME_GREEN,
+						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE}
 
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin

@@ -1,0 +1,28 @@
+~ start
+
+if NpcState.choice_scene2 == "c1":
+	=> bad_end1
+elif NpcState.choice_scene2 == "c2":
+	=> good_end
+else:
+	=> bad_end2
+
+=> END
+
+~ bad_end1
+
+Rahwana: Cepat
+
+=> END
+
+~ good_end
+
+Rahwana: ...
+
+=> END
+
+~ bad_end2
+
+Rahwana: ...
+
+=> END

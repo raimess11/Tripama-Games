@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm3rvtyhevhw2"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_1kt7k"]
+
+[node name="Rama" instance=ExtResource("1_1kt7k")]
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(0.85098, 0.384314, 1, 1)
+scale = Vector2(0.84375, 2.48438)
+
+[node name="Actionable" parent="." index="3"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" parent="Actionable" index="0"]
+disabled = true

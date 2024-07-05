@@ -13,6 +13,7 @@ func _ready():
 	player.disable()
 	player.visible = false
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
+	connect_NPC_to_player()
 	
 	if data == null:
 		enter_level()

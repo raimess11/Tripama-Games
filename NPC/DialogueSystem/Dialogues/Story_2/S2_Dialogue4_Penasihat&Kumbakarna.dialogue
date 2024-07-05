@@ -1,0 +1,57 @@
+~ start
+
+if NpcState.penasihat_scene3:
+	=> has_interacted
+
+set NpcState.penasihat_scene3 = true
+do NpcState.emit_has_interacted(false, true)
+
+if NpcState.choice_scene2 == "c2":
+	=> good_end
+elif NpcState.choice_scene2 == "c1":
+	=> bad_end1
+else:
+	=> bad_end2
+
+=> END
+
+~ bad_end1
+
+Penasihat: Selamat kembali dari tidur, Kumbakarna.
+Kumbakarna: ...
+Penasihat: Matamu...
+Penasihat: Sama dengan Rahwana.
+Kumbakarna: Akuakan persiapkan diri.
+Kumbakarna: Akan kuhancurkan para kera itu.
+
+=> END
+
+~ bad_end2
+
+Penasihat: Selamat kembali dari tidur, Kumbakarna.
+Kumbakarna: ...
+Penasihat: Segeralah mempersiapkan dirimu.
+Kumbakarna: Ah, baik.
+
+=> END
+
+~ good_end
+
+Penasihat: Selamat kembali dari tidur, Kumbakarna.
+Kumbakarna: ...
+Penasihat: Kenapa kamu?
+Kumbakarna: Kakak sialan. Tahu kan kita akan mati jika melawan Rama?
+Penasihat: Maaf, Kumbakarna. Kau harus segera mempersiapkan diri.
+Kumbakarna: Ah, baiklah.
+Kumbakarna: ...
+Kumbakarna: Kasih tahu tengkorak tebal kakak,
+Kumbakarna: Aku tidak berperang untukmu, tapi agar tanah ini terjaga.
+Penasihat: ...baiklah.
+
+=> END
+
+~ has_interacted
+
+Penasihat: Segeralah mempersiapkan dirimu.
+
+=> END

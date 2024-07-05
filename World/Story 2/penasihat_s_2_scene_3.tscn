@@ -1,0 +1,237 @@
+[gd_scene load_steps=12 format=3 uid="uid://kc5q663nmts2"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1l3ya"]
+[ext_resource type="Script" path="res://World/Story 2/penasihat_s_2_scene_3.gd" id="2_dfdh0"]
+[ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_u2wqa"]
+[ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_plc7t"]
+[ext_resource type="PackedScene" uid="uid://c778qggau6nkv" path="res://NPC/Story 2/s_2_scene_3_penasihat.tscn" id="4_dd66v"]
+[ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_4n1mi"]
+
+[sub_resource type="Animation" id="Animation_5tyxl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(912, 656)]
+}
+
+[sub_resource type="Animation" id="Animation_ufs3l"]
+resource_name = "end_scene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(912, 656), Vector2(1872, 656)]
+}
+
+[sub_resource type="Animation" id="Animation_227h0"]
+resource_name = "start_description"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.5, 1, 2.1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, null, 2.0, 2.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 2, 2.5),
+"transitions": PackedFloat32Array(1, 9.51366, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_keksp"]
+_data = {
+"RESET": SubResource("Animation_5tyxl"),
+"end_scene": SubResource("Animation_ufs3l"),
+"start_description": SubResource("Animation_227h0")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ywkul"]
+shader = ExtResource("5_4n1mi")
+shader_parameter/amount = 2.0
+
+[node name="Penasihat_S2_Scene3" instance=ExtResource("1_1l3ya")]
+script = ExtResource("2_dfdh0")
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 280)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_u2wqa")
+
+[node name="VillageGround" parent="." index="1"]
+position = Vector2(952, 552)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_plc7t")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(-47.9999, 1248)
+
+[node name="S2_Scene3_Penasihat" parent="." index="2" instance=ExtResource("4_dd66v")]
+position = Vector2(1120, 696)
+
+[node name="Player" parent="." index="3"]
+position = Vector2(912, 656)
+
+[node name="LeftDoor" parent="." index="4"]
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 2/village_s_2_scene_2.tscn"
+
+[node name="RightDoor" parent="." index="5"]
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 2/war_s_2_scene_4.tscn"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="8"]
+autoplay = "start_description"
+libraries = {
+"": SubResource("AnimationLibrary_keksp")
+}
+
+[node name="Overlay" type="CanvasLayer" parent="." index="9"]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Blur" type="ColorRect" parent="Overlay" index="1"]
+material = SubResource("ShaderMaterial_ywkul")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Overlay" index="2"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Setelah bertemu dengan Rahwana, Kumbakarna
+menghadap kepada penasihat kerajaan"
+metadata/_edit_use_anchors_ = true
+
+[editable path="VillageGround"]

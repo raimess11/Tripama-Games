@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c778qggau6nkv"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_lm5ls"]
+[ext_resource type="Resource" uid="uid://yms11j7g114" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue4_Penasihat&Kumbakarna.dialogue" id="2_u4jgq"]
+
+[node name="S2_Scene3_Penasihat" instance=ExtResource("1_lm5ls")]
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.768627, 0.74902, 0.729412, 1)
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("2_u4jgq")

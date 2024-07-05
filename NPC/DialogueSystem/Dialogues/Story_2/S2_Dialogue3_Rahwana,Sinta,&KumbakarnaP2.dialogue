@@ -1,0 +1,70 @@
+~ start
+
+Kumbakarna: ...
+Kumbakarna: ...kenapa...
+Rahwana: Cepat bangun, kita akan diserang oleh Ramacandra.
+Kumbakarna: ...kenapa kita diserang?
+Rahwana: Dia sudah menyakiti Surpanaka dan menghancurkan pos jaga di Yanasthana.
+Kumbakarna: ...!
+Rahwana: Jadi aku culik istrinya, Sinta, dan merayunya sekarang.
+Kumbakarna: ...
+
+- ...Bagus
+	Rahwana: ...
+	Rahwana: Apakah karena adik kita tersakiti?
+	Kumbakarna: Itu juga, tapi...
+	Kumbakarna: Pernikahanmu dengan Sinta,
+	Kumbakarna: Rakyat Alengka akan menjaya.
+	Rahwana: ...
+	Rahwana: Bagus, kau sudah meniru diriku...
+	Kumbakarna: Akan kulindungi Alangka dari seorang yang menyakiti saudara kita.
+	Kumbakarna: Dan saat kubunuh Rama, kepalanya akan jadi pialaku.
+	Rahwana: Bagus. Bagus.
+	Rahwana: Sekarang bergegaslah, persiapkan perang dengan segera.
+	Kumbakarna: Dan kakak, cepatlah amankan Sinta.
+	set NpcState.choice_scene2 = "c1"
+	set NpcState.questNPC[1]["questS2Scene2"] = false
+
+- Kenapa...Balikan dia Segera!
+	Rahwana: ...
+	Rahwana: Lagi-lagi kau...
+	Kumbakarna: Kakak, untuk apa menculik istri Rama?
+	Rahwana: KARENA DIA SUDAH MENYAKITI ADIK KITA!
+	Rahwana: Dan membunuh saudara kita, Kara!
+	Rahwana: Dia mempermalukan kita Kumbakarna.
+	Kumbakarna: tenangkan dirimu dulu.
+	Rahwana: ...
+	Kumbakarna: Kenapa tidak kita tanya kenapa Supranaka disakiti oleh Rama.
+	Kumbakarna: Setelah itu, kita bicarakan baik-baik tanpa pertumpahan darah.
+	Rahwana: Tidak.
+	Kumbakarna: Kenapa...
+	Rahwana: Kita adalah raksasa sakti lebih baik dari kera yang lemah.
+	Rahwana: Kita tak perlu berbicara baik atau menunduk kepadanya,
+	Rahwana: Kita memakannya.
+	Kumbakarna: ...
+	Rahwana: Mana sifat banggamu sudah lahir sebagai raksasa?
+	Rahwana: Apakah sudah hilang setelah tidur...
+	Kumbakarna: Bukan gitu---
+	Rahwana: Atau kau ingin kaum raksasa mati!
+	Kumbakarna: ...
+	Rahwana: Kalau kau masih seorang Raksasa, maka berperanglah.
+	Kumbakarna: ...
+	Kumbakarna: kakak, sialan kau...
+	set NpcState.choice_scene2 = "c2"
+	set NpcState.questNPC[1]["questS2Scene2"] = true
+
+- ...
+	Rahwana: ...
+	Rahwana: Kenapa kau diam?
+	Kumbakarna: Sejujurnya, aku tidak terlalu peduli.
+	Rahwana: Tapi kamu harus tetap berperang.
+	Rahwana: Cepat, siapkan dirimu.
+	Kumbakarna: ...
+	set NpcState.choice_scene2 = "c3"
+	set NpcState.questNPC[1]["questS2Scene2"] = false
+
+set NpcState.desa_scene2 = true
+do NpcState.emit_has_interacted(true, true)
+do NpcState.emit_has_interacted(false, true)
+
+=> END

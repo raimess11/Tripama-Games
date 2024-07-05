@@ -12,6 +12,7 @@ signal content_finished_loading(content)
 signal zelda_content_finished_loading(content)
 signal content_invalid(content_path : String)
 signal content_failed_to_load(content_path : String)
+signal done_transition
 
 var transition_screen : TransitionScreen
 var _transition_scene : PackedScene = preload("res://World/transition.tscn")
@@ -138,6 +139,7 @@ func on_content_finished_loading(content):
 		
 		#Wait transition to finish
 		await transition_screen.animation_player.animation_finished
+		emit_signal("done_transition")
 		
 		if content is Level:
 			content.init_player_location()

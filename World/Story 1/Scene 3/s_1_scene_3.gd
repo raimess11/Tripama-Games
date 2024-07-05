@@ -17,6 +17,7 @@ func _ready():
 	if data == null:
 		enter_level()
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
+	connect_NPC_to_player()
 	
 	if NpcState.questNPC[0]["questS1Scene1"] == false:
 		nextCutscene("fade_to_black")

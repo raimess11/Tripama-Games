@@ -1,0 +1,14 @@
+~ start
+
+Sinta: Kamu...
+Rahwana: Selamat Siang, Sita. Maaf mengganggu kediamanmu.
+Sinta: ...Pergi.
+Sinta: Pergi sekarang sebelum kupanggil Rama.
+Rahwana: Hadeh, putri-putri sepertimu memang cerewet banget.
+Rahwana: ♪♪♪♪\n*Rahwana mengeluarkan mantranya untuk menidurkan Sita.
+Sinta: ...
+Sinta: zzz....
+Rahwana: Lain kali jangan ceweret putri.
+set NpcState.forest2_scene1 = true
+
+=> END

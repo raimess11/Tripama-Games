@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bvkoca5a858qc"
+path="res://.godot/imported/S2_Dialogue1_Rama&Sinta.dialogue-ffcaea5a525a3fb06cf67957df128a0e.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue1_Rama&Sinta.dialogue"
+dest_files=["res://.godot/imported/S2_Dialogue1_Rama&Sinta.dialogue-ffcaea5a525a3fb06cf67957df128a0e.tres"]
+
+[params]
+
+defaults=true
