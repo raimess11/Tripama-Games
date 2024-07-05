@@ -17,6 +17,8 @@ func _ready():
 	if data == null:
 		enter_level()
 	if NpcState.desa_scene2:
+		_update_doors(true, true)
+		_update_doors(false, true)
 		nextCutscene("normal")
 	else:
 		nextCutscene("start_cutscene")
