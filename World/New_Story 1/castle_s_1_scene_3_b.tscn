@@ -33,17 +33,15 @@ region_enabled = false
 position = Vector2(-48.0001, 1280)
 
 [node name="S1_Scene3_Guard" parent="." index="4" instance=ExtResource("3_0mlna")]
-position = Vector2(328, 680)
+position = Vector2(328, 664)
 
 [node name="Player" parent="." index="5"]
 position = Vector2(1224, 664)
 
 [node name="LeftDoor" parent="." index="6"]
-push_distance = 200
 main_path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4_v_3.tscn"
 
 [node name="RightDoor" parent="." index="7"]
-push_distance = 200
 main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
 
 [editable path="VillageGround"]

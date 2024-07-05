@@ -1,14 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvry36aglor4d"]
+[gd_scene load_steps=13 format=3 uid="uid://dvry36aglor4d"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_jt2sj"]
 [ext_resource type="Resource" uid="uid://cny272arbkgw1" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue" id="2_cyhs4"]
+[ext_resource type="Texture2D" uid="uid://dlv5obgihu2rp" path="res://Asset/Object/kursi raja 2.png" id="2_w5edx"]
+[ext_resource type="Texture2D" uid="uid://bx3brexbmm1s0" path="res://Asset/Sprite/Raja/raja1.png" id="3_l7dqp"]
+[ext_resource type="Texture2D" uid="uid://c1ou6r0wnorhx" path="res://Asset/Sprite/Raja/raja2.png" id="4_ejlis"]
+[ext_resource type="Texture2D" uid="uid://bedd68yh14t70" path="res://Asset/Sprite/Raja/raja3.png" id="5_7p4v7"]
+[ext_resource type="Texture2D" uid="uid://cevpo5bwe2aw7" path="res://Asset/Sprite/Raja/raja4.png" id="6_5lt7h"]
+[ext_resource type="Texture2D" uid="uid://b0vikymqlnldr" path="res://Asset/Sprite/Raja/raja5.png" id="7_637w0"]
+[ext_resource type="Texture2D" uid="uid://b3blxvuf620lw" path="res://Asset/Sprite/Raja/raja6.png" id="8_svk12"]
+[ext_resource type="Texture2D" uid="uid://f8lwlup44iex" path="res://Asset/Sprite/Raja/raja7.png" id="9_j557l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqd7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l7dqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ejlis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7p4v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5lt7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_637w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_svk12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j557l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o421e"]
 size = Vector2(704, 312)
 
 [node name="KingV2" instance=ExtResource("1_jt2sj")]
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(16, -96)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("2_w5edx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(16, -96)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_yqd7n")
+autoplay = "default"
+
+[node name="Actionable" parent="." index="5"]
 dialogue_resource = ExtResource("2_cyhs4")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]

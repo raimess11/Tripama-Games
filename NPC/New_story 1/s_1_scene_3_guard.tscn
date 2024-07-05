@@ -1,10 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnes118hvgr4k"]
+[gd_scene load_steps=11 format=3 uid="uid://cnes118hvgr4k"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_0kje2"]
 [ext_resource type="Resource" uid="uid://mcdfehw8hyvb" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue" id="2_4sb4e"]
+[ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="2_mmnky"]
+[ext_resource type="Texture2D" uid="uid://fta6mq2ierru" path="res://Asset/Sprite/Guard/guard2.png" id="3_gvifl"]
+[ext_resource type="Texture2D" uid="uid://c7e7o7nf2vtv8" path="res://Asset/Sprite/Guard/guard3.png" id="4_cwbd8"]
+[ext_resource type="Texture2D" uid="uid://d3esbwqkcpdt3" path="res://Asset/Sprite/Guard/guard4.png" id="5_756e8"]
+[ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="6_s45eb"]
+[ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="7_wa0ak"]
+[ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="8_ob4gf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afgq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mmnky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gvifl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cwbd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_756e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s45eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wa0ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ob4gf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="S1_Scene3_Guard" instance=ExtResource("1_0kje2")]
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -104)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_afgq5")
+autoplay = "default"
+frame_progress = 0.0243209
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_4sb4e")
 dialogue_start = "start_B"
