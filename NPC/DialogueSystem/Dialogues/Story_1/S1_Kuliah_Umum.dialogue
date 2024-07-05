@@ -1,0 +1,9 @@
+~ start
+
+Narator: Setelah Prabu Hurjana merestukan permintaan, Patih Suwanda memberikan teladan. Menuntun masyarakat dengan keterampilan dalam perang.
+Narator: kepandaian, keberanian, dan kedisiplinan.
+Narator: Patih Suwanda terus menuntun masyarakat.
+Narator: Beberapa bulan kemudian, ia dipanggil oleh Prabu.
+set NpcState.kuliah_scene5 = true
+
+=> END

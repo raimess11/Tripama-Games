@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diww1kbf74o6k"
+path="res://.godot/imported/Lose.mp3-53e8b5e8be0ed59cfff167739b81a3dd.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Lose & Win SFX/Lose.mp3"
+dest_files=["res://.godot/imported/Lose.mp3-53e8b5e8be0ed59cfff167739b81a3dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

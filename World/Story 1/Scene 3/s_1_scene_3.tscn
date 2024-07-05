@@ -1,27 +1,291 @@
-[gd_scene load_steps=5 format=3 uid="uid://chai5cvb7h0q7"]
+[gd_scene load_steps=18 format=3 uid="uid://chai5cvb7h0q7"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_vyc0p"]
+[ext_resource type="PackedScene" uid="uid://caoo2grf6e0o" path="res://World/Base_World/Grounds/gate_ground.tscn" id="2_1l1p8"]
+[ext_resource type="Script" path="res://World/Story 1/Scene 3/s_1_scene_3.gd" id="2_e7oc5"]
 [ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="2_w02rp"]
+[ext_resource type="Resource" uid="uid://c85illruonb42" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Gate.dialogue" id="3_glolx"]
 [ext_resource type="PackedScene" uid="uid://dua0iu8etq3dk" path="res://World/Story 1/Scene 1/gate.tscn" id="3_lyb5s"]
+[ext_resource type="Texture2D" uid="uid://bta4sq6aof7u8" path="res://Asset/Object/gerbang recreated (1).png" id="4_aa8eb"]
+[ext_resource type="Resource" uid="uid://dev7ra67qoxdy" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue2_Guard&Suwanda.dialogue" id="4_b5n0y"]
 [ext_resource type="PackedScene" uid="uid://ckujvallmhah8" path="res://NPC/Story 1/guard_2.tscn" id="4_tghvu"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="5_hglml"]
+[ext_resource type="Texture2D" uid="uid://qs8pp4fho0mb" path="res://Asset/Object/gerbang recreated.png" id="7_17jxa"]
+
+[sub_resource type="Animation" id="Animation_4xec1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1616, 664)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_angb0"]
+resource_name = "base_narator"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1616, 664)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftDoor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enable_door"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_yfu5p"]
+resource_name = "exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1616, 664), Vector2(80, 576)]
+}
+
+[sub_resource type="Animation" id="Animation_2dm8y"]
+resource_name = "fade_from_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:input_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_cwgox"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1616, 664)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jgvy8"]
+_data = {
+"RESET": SubResource("Animation_4xec1"),
+"base_narator": SubResource("Animation_angb0"),
+"exit": SubResource("Animation_yfu5p"),
+"fade_from_black": SubResource("Animation_2dm8y"),
+"fade_to_black": SubResource("Animation_cwgox")
+}
 
 [node name="S1_Scene 3" instance=ExtResource("1_vyc0p")]
+script = ExtResource("2_e7oc5")
+dialogue_resource = ExtResource("3_glolx")
+guard_dialogue = ExtResource("4_b5n0y")
 
-[node name="Stairs" parent="." index="2" instance=ExtResource("2_w02rp")]
-position = Vector2(336, 810)
-scale = Vector2(1.5, 1.5)
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(960, 384)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_hglml")
 
-[node name="Guard 2" parent="." index="3" instance=ExtResource("4_tghvu")]
-position = Vector2(1144, 720)
+[node name="VillageGround" parent="." index="1"]
+visible = false
 
-[node name="Player" parent="." index="4"]
-position = Vector2(1368, 664)
+[node name="StaticBody2D" type="StaticBody2D" parent="VillageGround" index="0"]
 
-[node name="LeftDoor" parent="." index="5"]
-position = Vector2(-24, 656)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(8, 264)
+polygon = PackedVector2Array(2432, -736, -2432, -736, -2432, 968, 2432, 968)
 
-[node name="Gate" parent="." index="6" instance=ExtResource("3_lyb5s")]
-position = Vector2(968, 584)
+[node name="GateGround" parent="." index="2" instance=ExtResource("2_1l1p8")]
+position = Vector2(960, 872)
+scale = Vector2(0.4, 0.4)
 
-[node name="RightDoor" parent="." index="7"]
-path_to_new_scene = "res://World/Story 1/Scene 2/s_1_scene_2.tscn"
+[node name="Gate2" parent="." index="3" instance=ExtResource("3_lyb5s")]
+y_sort_enabled = true
+position = Vector2(1178, 691)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_aa8eb")
+
+[node name="Stairs" parent="." index="4" instance=ExtResource("2_w02rp")]
+position = Vector2(-256, 736)
+scale = Vector2(0.8, 0.8)
+
+[node name="Guard 2" parent="." index="5" instance=ExtResource("4_tghvu")]
+position = Vector2(1456, 672)
+
+[node name="Player" parent="." index="6"]
+position = Vector2(1616, 664)
+input_enabled = false
+metadata/_edit_group_ = true
+
+[node name="LeftDoor" parent="." index="7"]
+position = Vector2(8, 624)
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4.tscn"
+alt_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
+questKey = "questS1Scene2"
+
+[node name="Gate" parent="." index="8" instance=ExtResource("3_lyb5s")]
+y_sort_enabled = true
+position = Vector2(1178, 691)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_17jxa")
+
+[node name="RightDoor" parent="." index="9"]
+monitoring = false
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="12"]
+libraries = {
+"": SubResource("AnimationLibrary_jgvy8")
+}
+
+[node name="Transition" type="CanvasLayer" parent="." index="13"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Transition" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="animation_finished" from="CutScene" to="." method="_on_cut_scene_animation_finished"]
+
+[editable path="Player"]

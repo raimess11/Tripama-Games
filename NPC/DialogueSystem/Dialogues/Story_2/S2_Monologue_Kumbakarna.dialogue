@@ -1,0 +1,45 @@
+~ start
+
+set NpcState.monologue_kumbakarna = true
+
+if NpcState.choice_scene2 == "c2":
+	=> good_end
+elif NpcState.choice_scene2 == "c1":
+	=> bad_end1
+else:
+	=> bad_end2
+
+=> END
+
+~ good_end
+
+Rahwana: (...)
+Rahwana: (oh, adikku.)
+Rahwana: (Rencanaku gagal.)
+Rahwana: (Aku tidak sempat menikah dengan Sinta.)
+Rahwana: (Kau memang benar,)
+Rahwana: (Marica juga benar,)
+Rahwana: (Memang aku mempunyai ego yang besar.)
+Rahwana: (...)
+Rahwana: (Beristirahatlah dengan tenang adikku...)
+Rahwana: (Bahwasanya, kau akan menjadi seorang yang lebih baik dari raksasa.)
+
+=> END
+
+~ bad_end1
+
+Rahwana: (...)
+Rahwana: (oh, adikku.)
+Rahwana: (Ambisi kita tidak tercapai.)
+Rahwana: (Biarkan dia beristirahat dengan tenang, wahai dewa...)
+
+=> END
+
+~ bad_end2
+
+Rahwana: (...)
+Rahwana: (oh, adikku.)
+Rahwana: (Maafkan aku telah membawamu kepada perang.)
+Rahwana: (Rencanaku sudah gagal.)
+
+=> END

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://xxsbqdcgrpa4"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_22mx3"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_iqb4b"]
+[ext_resource type="Resource" uid="uid://mcdfehw8hyvb" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue" id="3_0itk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ktog"]
+size = Vector2(408, 312)
+
+[node name="Maid" instance=ExtResource("1_22mx3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(136, -88)
+scale = Vector2(0.625, 2.4375)
+texture = ExtResource("2_iqb4b")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
+position = Vector2(-120, -88)
+scale = Vector2(0.625, 2.4375)
+texture = ExtResource("2_iqb4b")
+
+[node name="Actionable" parent="." index="5"]
+dialogue_resource = ExtResource("3_0itk0")
+dialogue_start = "start_A"
+
+[node name="CollisionShape2D" parent="Actionable" index="0"]
+visible = false
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Actionable" index="1"]
+position = Vector2(4, -92)
+shape = SubResource("RectangleShape2D_0ktog")
+debug_color = Color(0.890196, 0.211765, 0.619608, 0.419608)
+
+[editable path="Actionable"]

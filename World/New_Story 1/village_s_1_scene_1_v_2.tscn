@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4kxh4lpv4wbk"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_hrvlf"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_8rjsd"]
+[ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="2_bn3ba"]
+[ext_resource type="PackedScene" uid="uid://37b7s4ob0vpv" path="res://NPC/New_story 1/s_1_scene_1_vil_1.tscn" id="3_sfb74"]
+
+[node name="Village_S1_Scene1_V2" instance=ExtResource("1_hrvlf")]
+
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(912, 392)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_8rjsd")
+
+[node name="Beringin" parent="." index="2" instance=ExtResource("2_bn3ba")]
+position = Vector2(1024, 336)
+scale = Vector2(0.2, 0.2)
+
+[node name="S1_Scene1_Vil1" parent="." index="3" instance=ExtResource("3_sfb74")]
+position = Vector2(1624, 688)
+
+[node name="LeftDoor" parent="." index="5"]
+monitoring = false
+monitorable = false
+enable = false
+push_distance = 200
+
+[node name="RightDoor" parent="." index="6"]
+monitoring = false
+monitorable = false
+enable = false

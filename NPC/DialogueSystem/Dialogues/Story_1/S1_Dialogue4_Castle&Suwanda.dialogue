@@ -1,0 +1,67 @@
+~ start_A
+
+if NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
+	=> good_end_A
+elif NpcState.dayang_scene3:
+	=> has_interacted_A
+else
+	=> bad_end_A
+
+=> END
+
+~ start_B
+
+if NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
+	=> good_end_B
+elif NpcState.guard_scene3:
+	=> has_interacted_B
+else
+	=> bad_end_B
+
+=> END
+
+~ good_end_A
+
+Dayang: Selamat datang kembali, Suma-- Maksud saya, Mapatih
+Suwanda: Tidak apa panggil saya Sumatri. Lagian, sudah lama saya tidak pegang gelar Patih
+Dayang: Baiklah, apakah saya dapat merapihkan ruang kerja Mapatih?
+Suwanda: Bisa, saya juga tidak tahu dipanggil untuk hal apa
+set NpcState.dayang_scene3 = true
+
+=> END
+
+~ bad_end_A
+
+Dayang: Sepertinya Mapatih dipanggil oleh yang mulia
+Dayang: Permisi...
+set NpcState.dayang_scene3 = true
+
+=> END
+
+~ has_interacted_A
+
+Dayang: Permisi...
+
+=> END
+
+~ good_end_B
+
+Guard: Selamat datang kembali, Mapatih. Senang melihat Mapatih kembali ke istana ini
+Suwanda: Terima kasih
+Suwanda: Kabar apa yang ingin yang mulia sampaikan?
+Guard: Kurang tahu. Sepertinya ia mendapatkan kabar dari negeri lain
+
+=> END
+
+~ bad_end_B
+
+Guard: Selamat siang, Mapatih
+Guard: Mapatih dipanggil untuk menghadap ke yang mulia di takhtanya
+
+=> END
+
+~ has_interacted_B
+
+Guard: Silahkan Mapatih
+
+=> END

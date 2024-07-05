@@ -1,0 +1,204 @@
+[gd_scene load_steps=13 format=3 uid="uid://yubtww7nvyc8"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_mc028"]
+[ext_resource type="Script" path="res://World/Story 2/village_s_2_scene_2.gd" id="2_ymyjw"]
+[ext_resource type="Resource" uid="uid://cvsa4t58eh13u" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Rahwana,Sinta,&Kumbakarna.dialogue" id="3_g6k1s"]
+[ext_resource type="Resource" uid="uid://dw7t4a8nd35ua" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Rahwana,Sinta,&KumbakarnaP2.dialogue" id="4_pmde3"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="5_hewko"]
+[ext_resource type="PackedScene" uid="uid://cd17oo0c0t4fd" path="res://NPC/Story 2/s_2_scene_2_sinta.tscn" id="6_qtnek"]
+[ext_resource type="PackedScene" uid="uid://sxrectdfphuc" path="res://NPC/Story 2/rahwana.tscn" id="7_dmmkp"]
+
+[sub_resource type="Animation" id="Animation_irqsu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1014, 663)]
+}
+
+[sub_resource type="Animation" id="Animation_u4toh"]
+resource_name = "cutscene_p2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro_p2"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_xbxnu"]
+resource_name = "normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_83t6j"]
+resource_name = "start_cutscene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1014, 663)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ke2rh"]
+_data = {
+"RESET": SubResource("Animation_irqsu"),
+"cutscene_p2": SubResource("Animation_u4toh"),
+"normal": SubResource("Animation_xbxnu"),
+"start_cutscene": SubResource("Animation_83t6j")
+}
+
+[node name="Village_S2_Scene2" instance=ExtResource("1_mc028")]
+script = ExtResource("2_ymyjw")
+dialogue_resource = ExtResource("3_g6k1s")
+dialogue_resource_p2 = ExtResource("4_pmde3")
+
+[node name="Background" parent="." index="0"]
+position = Vector2(936, 400)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("5_hewko")
+
+[node name="S2_Scene2_Sinta" parent="." index="2" instance=ExtResource("6_qtnek")]
+position = Vector2(624, 680)
+
+[node name="Rahwana" parent="." index="3" instance=ExtResource("7_dmmkp")]
+position = Vector2(832, 720)
+
+[node name="PlayerAnim" parent="Player" index="0"]
+flip_h = true
+
+[node name="LeftDoor" parent="." index="5"]
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 2/intro_story_2.tscn"
+
+[node name="RightDoor" parent="." index="6"]
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 2/penasihat_s_2_scene_3.tscn"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="9"]
+libraries = {
+"": SubResource("AnimationLibrary_ke2rh")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="10"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[editable path="Player"]

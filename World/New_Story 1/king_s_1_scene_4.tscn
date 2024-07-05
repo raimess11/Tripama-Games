@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bafayjp7sajig"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_n7rou"]
+[ext_resource type="Texture2D" uid="uid://brbqkqwfxveo8" path="res://Asset/Background/bg istana interior raja.png" id="2_fvjs1"]
+[ext_resource type="Texture2D" uid="uid://tc0bgtguqug2" path="res://Asset/Platform/platform castle raja.png" id="3_4csiw"]
+[ext_resource type="PackedScene" uid="uid://dqbxtjhpoi621" path="res://NPC/New_story 1/king.tscn" id="3_cnd2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciixj"]
+size = Vector2(306, 410)
+
+[node name="King_S1_Scene 4" instance=ExtResource("1_n7rou")]
+
+[node name="Background" parent="." index="0"]
+position = Vector2(944, 288)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_fvjs1")
+
+[node name="VillageGround" parent="." index="1"]
+position = Vector2(928, 560)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_4csiw")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(19.9998, 1340)
+
+[node name="LeftDoor" parent="." index="3"]
+position = Vector2(-24, 744)
+
+[node name="RightDoor" parent="." index="4"]
+position = Vector2(1968, 664)
+monitoring = false
+monitorable = false
+enable = false
+transition_type = "fade_to_black"
+push_distance = 300
+main_path_to_new_scene = "res://World/New_Story 1/kuliha_s_1_scene_5.tscn"
+alt_path_to_new_scene = "res://World/New_Story 1/kuliha_s_1_scene_5.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(504, 632)
+shape = SubResource("RectangleShape2D_ciixj")
+
+[node name="King" parent="." index="7" instance=ExtResource("3_cnd2a")]
+position = Vector2(176, 712)
+
+[node name="Objects" type="Node2D" parent="." index="8"]
+
+[editable path="VillageGround"]
+[editable path="King"]
+[editable path="King/Actionable"]

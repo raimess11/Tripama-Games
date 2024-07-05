@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://w5hqjd3il41j"
+path="res://.godot/imported/S2_Dialogue3_Sinta&Kumbakarna.dialogue-fdd3cafc7601c521caec7f4acd526c30.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Sinta&Kumbakarna.dialogue"
+dest_files=["res://.godot/imported/S2_Dialogue3_Sinta&Kumbakarna.dialogue-fdd3cafc7601c521caec7f4acd526c30.tres"]
+
+[params]
+
+defaults=true

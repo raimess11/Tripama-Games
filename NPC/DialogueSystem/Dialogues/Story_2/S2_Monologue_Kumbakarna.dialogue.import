@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dixg80nhejfrc"
+path="res://.godot/imported/S2_Monologue_Kumbakarna.dialogue-6f13e0e475430b8953a332cf64ef87ad.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Monologue_Kumbakarna.dialogue"
+dest_files=["res://.godot/imported/S2_Monologue_Kumbakarna.dialogue-6f13e0e475430b8953a332cf64ef87ad.tres"]
+
+[params]
+
+defaults=true

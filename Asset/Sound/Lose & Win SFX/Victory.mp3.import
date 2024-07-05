@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6m1lyh4dcg16"
+path="res://.godot/imported/Victory.mp3-096bc7a3f27162ae0fa8fd562e69c5f4.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Lose & Win SFX/Victory.mp3"
+dest_files=["res://.godot/imported/Victory.mp3-096bc7a3f27162ae0fa8fd562e69c5f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

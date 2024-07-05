@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://bapnnrce6a23x"]
+
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="1_ql1la"]
+
+[node name="Warga-warga" type="Node2D"]
+
+[node name="Warga" type="Sprite2D" parent="."]
+position = Vector2(-2.84217e-14, -168)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga2" type="Sprite2D" parent="."]
+position = Vector2(128, -168)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga3" type="Sprite2D" parent="."]
+position = Vector2(256, -168)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga4" type="Sprite2D" parent="."]
+position = Vector2(33.5, -69)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga5" type="Sprite2D" parent="."]
+position = Vector2(161.5, -69)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga6" type="Sprite2D" parent="."]
+position = Vector2(289.5, -69)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga7" type="Sprite2D" parent="."]
+position = Vector2(-6.5, 67)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga8" type="Sprite2D" parent="."]
+position = Vector2(121.5, 67)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")
+
+[node name="Warga9" type="Sprite2D" parent="."]
+position = Vector2(249.5, 67)
+scale = Vector2(0.898438, 2.67188)
+texture = ExtResource("1_ql1la")

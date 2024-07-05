@@ -1,0 +1,418 @@
+[gd_scene load_steps=18 format=3 uid="uid://x2rp38drdset"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_thwl2"]
+[ext_resource type="Script" path="res://World/Story 2/intro_story_2.gd" id="2_nkkty"]
+[ext_resource type="Resource" uid="uid://bvkoca5a858qc" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue1_Rama&Sinta.dialogue" id="3_ddib2"]
+[ext_resource type="Texture2D" uid="uid://bfjrsgkjwp0ty" path="res://Asset/temp/TX Village Props.png" id="3_utdpf"]
+[ext_resource type="Resource" uid="uid://b3jsbw6ww3t8o" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue1V2_Rama&Sinta.dialogue" id="4_vja7g"]
+[ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="4_wjljq"]
+[ext_resource type="Resource" uid="uid://c1fgl0c08emyr" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue2_Rahwana&Sinta.dialogue" id="5_mir1j"]
+[ext_resource type="AudioStream" uid="uid://dbh2yyqaapyr0" path="res://Asset/temp/086374_shaken-bush-40116.mp3" id="5_u3n2j"]
+[ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="6_ifq7o"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="7_vpl7a"]
+
+[sub_resource type="Animation" id="Animation_25doo"]
+resource_name = "Normal"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lesmana")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rama")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sinta")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Rahwana")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ouph3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bush:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(286, 612)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sinta:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1142, 626)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1014, 663)]
+}
+
+[sub_resource type="Animation" id="Animation_qvhig"]
+resource_name = "bush_move"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioQueue")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"PlaySound"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bush:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(286, 612), Vector2(314, 612), Vector2(286, 612), Vector2(259, 612), Vector2(286, 612), Vector2(314, 612), Vector2(286, 612), Vector2(259, 612), Vector2(286, 612), Vector2(314, 612), Vector2(286, 612)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"continue_intro"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_fg17b"]
+resource_name = "end_first_intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lesmana")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rama")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Rahwana")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sinta:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1142, 626), Vector2(864, 624)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro_p2"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cyhxt"]
+resource_name = "end_last_intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1014, 663), Vector2(1880, 672)]
+}
+
+[sub_resource type="Animation" id="Animation_b8h5q"]
+resource_name = "start_intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"hide"
+}, {
+"args": [],
+"method": &"disable"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kcbi2"]
+_data = {
+"Normal": SubResource("Animation_25doo"),
+"RESET": SubResource("Animation_ouph3"),
+"bush_move": SubResource("Animation_qvhig"),
+"end_first_intro": SubResource("Animation_fg17b"),
+"end_last_intro": SubResource("Animation_cyhxt"),
+"start_intro": SubResource("Animation_b8h5q")
+}
+
+[node name="Intro_Story2" instance=ExtResource("1_thwl2")]
+script = ExtResource("2_nkkty")
+dialogue_resource = ExtResource("3_ddib2")
+dialogue_resourceV2 = ExtResource("4_vja7g")
+dialogue_resource_p2 = ExtResource("5_mir1j")
+
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(968, 376)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("6_ifq7o")
+
+[node name="Bush" type="Sprite2D" parent="." index="2"]
+position = Vector2(286, 612)
+scale = Vector2(6, 6)
+texture = ExtResource("3_utdpf")
+region_enabled = true
+region_rect = Rect2(572.732, 569.601, 104.83, 42.3779)
+
+[node name="Bush2" type="Sprite2D" parent="." index="3"]
+position = Vector2(1664, 602)
+scale = Vector2(6, 6)
+texture = ExtResource("3_utdpf")
+region_enabled = true
+region_rect = Rect2(450.823, 566.648, 91.1284, 44.2897)
+
+[node name="Player" parent="." index="4"]
+visible = false
+
+[node name="LeftDoor" parent="." index="5"]
+monitoring = false
+monitorable = false
+enable = false
+
+[node name="RightDoor" parent="." index="6"]
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 2/village_s_2_scene_2.tscn"
+
+[node name="AudioQueue" parent="." index="9" instance=ExtResource("4_wjljq")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioQueue" index="0"]
+stream = ExtResource("5_u3n2j")
+bus = &"SFX"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="10"]
+libraries = {
+"": SubResource("AnimationLibrary_kcbi2")
+}
+
+[node name="Lesmana" type="Sprite2D" parent="." index="11"]
+self_modulate = Color(0.87451, 0.239216, 1, 1)
+position = Vector2(744, 622)
+scale = Vector2(0.84375, 2.48438)
+texture = ExtResource("7_vpl7a")
+
+[node name="Rama" type="Sprite2D" parent="." index="12"]
+self_modulate = Color(0.85098, 0.384314, 1, 1)
+position = Vector2(960, 650)
+scale = Vector2(0.84375, 2.48438)
+texture = ExtResource("7_vpl7a")
+
+[node name="Sinta" type="Sprite2D" parent="." index="13"]
+self_modulate = Color(1, 0.443137, 0.701961, 1)
+position = Vector2(1142, 626)
+scale = Vector2(0.84375, 2.48438)
+texture = ExtResource("7_vpl7a")
+
+[node name="Rahwana" type="Sprite2D" parent="." index="14"]
+visible = false
+self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
+position = Vector2(1160, 616)
+scale = Vector2(0.84375, 2.48438)
+texture = ExtResource("7_vpl7a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="15"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true

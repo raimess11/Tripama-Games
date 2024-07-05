@@ -1,0 +1,48 @@
+~ start
+
+Narator: Dahulu kala, berdirilah sang Prabu dari kerajaan Maespati
+Narator: Patih Suwanda
+Narator: Atau nama kecilnya, Bambang Sumantri
+Narator: Ia telah memberikan banyak jasa-jasa atas pengabdian di Maespati
+Narator: kepandaian penghasilan, keberanian yang tekun, dan menepati kewajiban untuk kerjaannya
+Narator: Namun[speed=0.2]...
+Narator: Dia berduka
+Narator: Terus, dan terus berduka
+Narator: Tanpa air mata keluar[wait=2]
+
+Narator: Semua bermula saat Suwanda dihukum setelah kalah tanding dengan sang Raja Pradu harjuna Sasrabahu
+Hurjana: Pindahkan taman Sriwedari yang elok di gunung Untara, tamankan ke tanah Maespati, dan kau bisa mengabdi di kerajaan ini
+Narator: Dia menerimanya tanpa berpikir lanjut
+Narator: Dan dia seharusnya berpikir lanjut
+Narator: Dimana tamannya? cara memindahnya bagaimana?
+Narator: Dia mengerjakan tugasnta tanpa arah
+Narator: Sampai[speed=0.2]...
+Narator: Sukarsana, adiknya, turun dari angkasa untuk menyapa
+Narator: Sang adik yang sudah menyari kakaknya di kampung halaman akhirnya menemukannya
+Sukarsana: Dengan apa muka kakak murung begitu?
+Suwanda: *Menyampaikan situasi
+Sukarsana: Ah, gampang itu!
+Sukarsana: Tapi, janjikan aku satu ini kakak akan membiarkan aku ikutimu meski sampai perang jika tidak, maka aku tidak akan membantu kakak
+Narator: Tanpa mengelak, Suwanda menerima janji
+Narator: Dengan sekejap, Sukrasana memindahkan taman Sriwedari dan Suwanda menyampaikan kabar ke sang raja
+Narator: Dan pada akhirnya, Suwanda menjadi Patih di kerajaan Maespati
+Narator: Keduanya berbahagia, atau tidak?
+Narator: Suatu hari, Prabu Suwanda disuruh untuk memulangkan adiknya karena dia buruk rupa
+Narator: Sukarsana mempunyai muka yang buruk rupa
+Narator: Sangat buruk rupa sampai bulan-bulan sang raja menjadi ketakutan dan membuat heboh
+Narator: Prabu Suwanda menyuruh adiknya untuk pulang ke kampung
+Narator: Sukarsana tidak bergeming
+Sukarsana: Apakah kakak sudah janji membiarkanku mengikutimu?
+Narator: Kehilangan sabar, Prabu Suwanda menarik panah kepada Sukarsana untuk menakutinya
+Narator: Tapi, Sukarsana masih tidak bergeming
+Sukarsana: Kau sudah janji Kak!
+Narator: Mereka bolak-balik teriak, sampai[speed=0.1]...
+Narator: Tanpa sengaja, Prabu Suwanda melepaskan panahnya
+Narator: Menusuk adiknya sampai jatuh
+Narator: Melihat badan tak bernyawa adiknya, Suwanda menyadari [wait=1] bahwa dia bukanlah sang kakak seperti dahulu 
+
+=> END
+
+~ test
+Bleh
+=> END

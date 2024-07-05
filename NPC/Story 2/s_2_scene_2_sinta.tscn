@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd17oo0c0t4fd"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_adr20"]
+[ext_resource type="Resource" uid="uid://w5hqjd3il41j" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Sinta&Kumbakarna.dialogue" id="2_fk5fi"]
+
+[node name="S2_Scene2_Sinta" instance=ExtResource("1_adr20")]
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 0.443137, 0.701961, 1)
+scale = Vector2(0.84375, 2.48438)
+
+[node name="Actionable" parent="." index="3"]
+dialogue_resource = ExtResource("2_fk5fi")

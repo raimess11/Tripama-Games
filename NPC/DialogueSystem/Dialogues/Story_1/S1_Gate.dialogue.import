@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c85illruonb42"
+path="res://.godot/imported/S1_Gate.dialogue-eaf6779c1d73cd6a883c46bd7b6a4a07.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Gate.dialogue"
+dest_files=["res://.godot/imported/S1_Gate.dialogue-eaf6779c1d73cd6a883c46bd7b6a4a07.tres"]
+
+[params]
+
+defaults=true

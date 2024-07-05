@@ -1,0 +1,50 @@
+~ start
+
+if NpcState.guard_scene2:
+	=> has_interacted
+
+Guard: Mapatih Suwanda. Selamat datang kembali di istana!
+Suwanda: Terima kasih
+Guard: Yang Mulia Prabu Harjuna ada di dalam. Sepertinya Yang Mulia sudah selesai bermain dengan Bulan-Bulannya
+Suwanda: [speed=0.2]...
+Guard: Maaf, saya seharusnya tidak membuat candaan seperti itu
+Suwanda: Tidak apa-apa. Lagipula, bukan itu yang saya lagi pikirkan
+Guard: Apa yang dipikirkan oleh Mapatih Suwanda?
+Suwanda: [speed=0.2]...
+Suwanda: Tadi saya didekati oleh dua orang
+Suwanda: Mereka ingin saya menjadi penuntun warga agar bisa berjasa untuk Maespati
+Suwanda : Karena mereka ingin menjadi seperti saya
+Guard: Apakah itu hal yang bagus?
+Suwanda: Iya, tapi[speed=0.4]...
+Suwanda: Kemungkinan besar saya tidak bisa mengabdi jadi Patih lagi
+Suwanda: Gelar yang saya sudah kejar habis-habisan
+Suwanda: [speed=0.2]...
+- Tapi, saya tidak peduli dengan gelar seperti itu sekarang
+	set NpcState.questNPC[0]["questS1Scene2"] = true
+	Suwanda: Aku sudah mendapatkan hormat dari mereka, buat apa memakai gelar Patih
+	Suwanda: Aku akan meminta izin kepada Yang Mulia Prabu agar bisa menuntun masyarakat
+	Guard: [speed=0.4]...[speed=1]Mapatih[speed=0.4]...
+	Suwanda: Kalau saya mendapatkan izin dari Yang Mulia, panggil saja Sumatri. Itu adalah perintah terakhir
+	Guard: Siap laksanakan!
+	set NpcState.questGuard_Scene2 = true
+	do NpcState.emit_has_interacted(true, true)
+
+- Saya akan sampaikan kabar bahwa saya tidak bisa menuntun mereka
+	set NpcState.questNPC[0]["questS1Scene2"] = false
+	Guard: Mau saya sampaikan hal itu kepada Yang Mulia?
+	Suwanda: Tidak perlu. Dia mungkin masih sibuk dengan Bulan-bulannya
+	Guard: [speed=0.2]...
+	Suwanda: Sampaikan saja bahwa saya sudah di dalam istana. Saya akan ke ruang kerja
+	Guard: Siap Mapatih!
+
+set NpcState.guard_scene2 = true
+do NpcState.emit_has_interacted(true, true)
+
+
+=> END
+
+~ has_interacted
+
+Guard: Siap Mapatih!
+
+=> END

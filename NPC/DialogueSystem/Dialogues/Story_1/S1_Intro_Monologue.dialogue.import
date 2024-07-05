@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://18icgtne5p2o"
+path="res://.godot/imported/S1_Intro_Monologue.dialogue-b87807b3f7b94201279d753fdc52fcd0.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue"
+dest_files=["res://.godot/imported/S1_Intro_Monologue.dialogue-b87807b3f7b94201279d753fdc52fcd0.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,54 @@
+~ start
+
+if NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
+	=> good_end
+elif NpcState.king_scene4_war:
+	=> has_interacted
+else
+	=> bad_end
+
+=> END
+
+~ good_end
+
+Hurjana: Selamat datang kembali menjadi Patih, Sumatri
+Sumatri: Saya senang menjadi Patih lagi
+Sumatri: Apa kabar yang yang mulia ingin sampaikan?
+Hurjana: Ada pasukan asing yang mengepung telaga di atas gunung
+Hurjana: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
+Hurjana: Pemilihan waktu sialan[speed=0.5]...
+Sumatri: Apakah ada informasi lain?
+Hurjana: Pasukan-pasukan asing tersebut adalah raksasa
+Hurjana: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
+Hurjana: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
+Sumatri: [speed=0.5]...
+Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Sumatri: Siap yang mulia!
+set NpcState.king_scene4_war = true
+do NpcState.emit_has_interacted(false, true)
+
+=> END
+
+~ bad_end
+
+Hurjana: Patih Suwanda, saya mendapatkan kabar dari pos dekat telaga bahwa pasukan asing telah menyerbu tempatnya
+Hurjana: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
+Hurjana: Pemilihan waktu sialan[speed=0.5]...
+Sumatri: Apakah ada informasi lain?
+Hurjana: Pasukan-pasukan asing tersebut adalah raksasa
+Hurjana: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
+Hurjana: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
+Sumatri: [speed=0.5]...
+Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Sumatri: Siap yang mulia!
+set NpcState.king_scene4_war = true
+do NpcState.emit_has_interacted(false, false)
+
+=> END
+
+~ has_interacted
+
+Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Sumatri: Siap yang mulia!
+
+=> END
