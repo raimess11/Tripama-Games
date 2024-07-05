@@ -28,13 +28,11 @@ position = Vector2(1408, 680)
 position = Vector2(1752, 656)
 
 [node name="LeftDoor" parent="." index="4"]
-push_distance = 200
 main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_b.tscn"
 
 [node name="RightDoor" parent="." index="5"]
 monitoring = false
 monitorable = false
 enable = false
-push_distance = 200
 
 [editable path="VillageGround"]

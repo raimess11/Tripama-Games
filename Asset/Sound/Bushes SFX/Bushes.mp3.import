@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1c0mwqxcr4uq"
+path="res://.godot/imported/Bushes.mp3-3300f649bd0d368b5e0cddb22ca1a8fd.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Bushes SFX/Bushes.mp3"
+dest_files=["res://.godot/imported/Bushes.mp3-3300f649bd0d368b5e0cddb22ca1a8fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

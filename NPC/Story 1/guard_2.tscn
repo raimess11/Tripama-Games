@@ -1,14 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckujvallmhah8"]
+[gd_scene load_steps=12 format=3 uid="uid://ckujvallmhah8"]
 
 [ext_resource type="PackedScene" uid="uid://d0togqwtqbveu" path="res://NPC/quect_receiver.tscn" id="1_4qun5"]
 [ext_resource type="PackedScene" uid="uid://c5h8w1xj4frqq" path="res://QuestSystem/Quest/Story 1/quest_interact_guard.tscn" id="2_aq4my"]
 [ext_resource type="Resource" uid="uid://dev7ra67qoxdy" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue2_Guard&Suwanda.dialogue" id="3_32uqo"]
+[ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="4_40fkr"]
+[ext_resource type="Texture2D" uid="uid://fta6mq2ierru" path="res://Asset/Sprite/Guard/guard2.png" id="5_fkj23"]
+[ext_resource type="Texture2D" uid="uid://c7e7o7nf2vtv8" path="res://Asset/Sprite/Guard/guard3.png" id="6_v2pjw"]
+[ext_resource type="Texture2D" uid="uid://d3esbwqkcpdt3" path="res://Asset/Sprite/Guard/guard4.png" id="7_f55ra"]
+[ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="8_3qi84"]
+[ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="9_ifemw"]
+[ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="10_ao2sw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afgq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_40fkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fkj23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v2pjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f55ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3qi84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ifemw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ao2sw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="Guard 2" groups=["Guard"] instance=ExtResource("1_4qun5")]
 questKey = "questS1Scene1"
 
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -104)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_afgq5")
+autoplay = "default"
+frame_progress = 0.64717
+
 [node name="CompleteQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_aq4my")
 
-[node name="Actionable" parent="." index="3"]
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("3_32uqo")
