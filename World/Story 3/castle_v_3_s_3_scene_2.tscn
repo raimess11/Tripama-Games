@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cww678ipuvryc"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_eq47m"]
+[ext_resource type="Texture2D" uid="uid://iblicy84o6dd" path="res://Asset/Background/bg istana polos.png" id="2_4owdo"]
+[ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_olb62"]
+[ext_resource type="Texture2D" uid="uid://cgxnlpbrwulra" path="res://Asset/Object/pintu.png" id="4_jdvp0"]
+[ext_resource type="PackedScene" uid="uid://ca1fy4ycxrfud" path="res://NPC/Story 3/s_3_scene_2_guard.tscn" id="5_gvvbo"]
+
+[node name="CastleV3_S3_Scene2" instance=ExtResource("1_eq47m")]
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 280)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_4owdo")
+
+[node name="VillageGround" parent="." index="1"]
+position = Vector2(952, 552)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_olb62")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(-47.9999, 1248)
+
+[node name="Door" type="Sprite2D" parent="." index="2"]
+position = Vector2(459.1, 420.3)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_jdvp0")
+
+[node name="Door2" type="Sprite2D" parent="." index="3"]
+position = Vector2(1395.1, 420.3)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_jdvp0")
+
+[node name="S3_Scene2_Guard" parent="." index="4" instance=ExtResource("5_gvvbo")]
+position = Vector2(1736, 688)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="LeftDoor" parent="." index="6"]
+main_path_to_new_scene = "res://World/Story 3/castle_v_2_s_3_scene_2.tscn"
+
+[editable path="VillageGround"]

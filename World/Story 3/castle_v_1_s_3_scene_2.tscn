@@ -1,0 +1,211 @@
+[gd_scene load_steps=11 format=3 uid="uid://plxapn2xxq33"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jkkxc"]
+[ext_resource type="Script" path="res://World/Story 3/castle_v_1_s_3_scene_2.gd" id="2_u2p4r"]
+[ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_ybcog"]
+[ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_fdpld"]
+[ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="4_j1oah"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="5_jx3yw"]
+
+[sub_resource type="Animation" id="Animation_y3wi6"]
+resource_name = "choice2_description"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 2.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7, 1.2, 2.3, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Overlay/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Deskripsi time skip dan perang"]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [false],
+"method": &"set_is_chatting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jjqtf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Overlay/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Time skip ke perang"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3i845"]
+_data = {
+"RESET": SubResource("Animation_jjqtf"),
+"choice2_description": SubResource("Animation_y3wi6")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ieuig"]
+shader = ExtResource("4_j1oah")
+shader_parameter/amount = 0.0
+
+[node name="castleV1_S3_Scene2" instance=ExtResource("1_jkkxc")]
+script = ExtResource("2_u2p4r")
+dialogue_resource = null
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 280)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_ybcog")
+
+[node name="VillageGround" parent="." index="1"]
+position = Vector2(952, 552)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_fdpld")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(-47.9999, 1248)
+
+[node name="LeftDoor" parent="." index="3"]
+monitoring = false
+monitorable = false
+enable = false
+
+[node name="RightDoor" parent="." index="4"]
+main_path_to_new_scene = "res://World/Story 3/castle_v_2_s_3_scene_2.tscn"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_3i845")
+}
+
+[node name="Overlay" type="CanvasLayer" parent="." index="8"]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Blur" type="ColorRect" parent="Overlay" index="1"]
+material = SubResource("ShaderMaterial_ieuig")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Overlay" index="2"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_jx3yw")
+theme_override_font_sizes/font_size = 50
+text = "Time skip ke perang"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[editable path="VillageGround"]
