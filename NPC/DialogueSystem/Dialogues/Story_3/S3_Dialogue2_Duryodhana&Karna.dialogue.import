@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://drt50ca6s88qe"
+path="res://.godot/imported/S3_Dialogue2_Duryodhana&Karna.dialogue-65b4fd3a5ae8c7cedb8b83e81611cf50.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue2_Duryodhana&Karna.dialogue"
+dest_files=["res://.godot/imported/S3_Dialogue2_Duryodhana&Karna.dialogue-65b4fd3a5ae8c7cedb8b83e81611cf50.tres"]
+
+[params]
+
+defaults=true

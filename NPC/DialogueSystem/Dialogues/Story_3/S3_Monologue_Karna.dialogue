@@ -1,0 +1,25 @@
+~ start
+
+set NpcState.monologue_scene2 = true
+if NpcState.toForest_choice == "refuse":
+	=> choice2_refuse
+else:
+	=> choice3_idc
+
+=> END
+
+~ choice2_refuse
+
+Karna: (Kurawa...)
+Karna: (Mereka akan berperang huh...)
+Karna: (Sudah kuduga mereka punya ego yang besar.)
+
+=> END
+
+~ choice3_idc
+
+Karna: (Perang...)
+Karna: (Mereka akan berperang huh...)
+Karna: (Memang benar bahwa perang adalah suatu hal yang takkan terhindar.)
+
+=> END

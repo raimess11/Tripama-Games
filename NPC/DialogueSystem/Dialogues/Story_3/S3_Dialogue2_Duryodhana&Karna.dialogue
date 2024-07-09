@@ -1,0 +1,31 @@
+~ start
+
+Duryodhana: Pohon disini bagus-bagus.
+Duryodhana: Seperti dibesarkan oleh tuhan.
+Karna: ...
+Karna: Duryodhana, itu namamu?
+Duryodhana: Iya.
+Karna: Jadi, apa yang kau maksud dari 'ikutlah denganku'?
+Duryodhana: Lebihnya... aku ingin kau berkenalan dengan kita para Korawa di Hastinapura.
+Karna: Untuk apa?
+Duryodhana: Agar ikatan kita lebih kuat.
+Duryodhana: Dan agar kau tidak dipermalukan lagi.
+Karna: ...
+Karna: Aku selalu berpikir, kenapa hidupku seperti ini?
+Duryodhana: ...?
+Karna: Meskipun aku dan Arjuna setara dalam perwiraan, aku bukanlah orang bangsawan.
+Karna: Aku hanya bisa melihat para Pandawa dan tidak dapat meraihnya.
+Karna: Mungkin ini adalah nasib.
+Duryodhana: Karna...
+Karna: Tapi...
+Karna: Jika aku yang dibesarkan dengan keluarga kusir adalah nasib.
+Karna: Maka menjadi sahabatmu agar bisa mengalahkan Arjuna, itu adalah nasibku.
+Duryodhana: ...
+Karna: Duryodhana, dalam kebingunan dan kesusahan, aku akan selalu menolongmu.
+Duryodhana: ...dan dalam kesedihan dan kehinaan, aku akan selalu membelamu.
+Karna: Itu adalah janji.
+Duryodhana: Tepat.
+
+set NpcState.forest_scene2 = true
+
+=> END

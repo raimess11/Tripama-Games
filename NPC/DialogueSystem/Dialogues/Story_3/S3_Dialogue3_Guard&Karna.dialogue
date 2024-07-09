@@ -1,0 +1,80 @@
+~ start
+
+set NpcState.guardCastle = true
+if NpcState.toForest_choice == "accept":
+	=> accept_3A
+elif NpcState.toForest_choice == "refuse":
+	=> refuse_3B
+else:
+	=> idc_3C
+
+=> END
+
+
+~ accept_3A
+
+Guard: Karna!
+Karna: Apakah benar bahwa...
+Guard: Iya!
+Guard: Para Korawa akan merebut Indraprastha.
+Guard: Mereka lagi bersiap-siap untuk perang.
+Karna: ...
+Karna: Aku akan ikut dengan mereka.
+Guard: ...
+Karna: Duryodhana sudah memberiku takhta, harga diri, dan perlindungan setelah Pandawa menghinaku.
+Karna: Sekarang aku akan membalas budinya.
+Guard: ...
+Karna: Siapkan untuk perang. Saya akan kabarkan kepada Duryodhana.
+Guard: Siap!
+
+=> END
+
+
+~ refuse_3B
+
+Guard: Karna!
+Karna: Apakah benar bahwa...
+Guard: Iya!
+Guard: Para Korawa akan merebut Indraprastha.
+Guard: Mereka lagi bersiap-siap untuk perang.
+Karna: ...
+- Saya akan pergi ke Pandawa
+	Guard: ...
+	Guard: K-- kenapa, Karna?
+	Karna: Aku mendapatkan dari kresna... Mereka adalah keluarga.
+	Karna: Aku akan kembali kepada mereka...
+	Karna: Keluarga yang sesungguhnya.
+	Guard: ...
+	set NpcState.guardCastle_choice = true
+
+- Biarkan mereka berperang
+	Guard: ...
+	Guard: Apakah berarti...
+	Karna: Iya. Aku tidak akan ikutan pada siapapun.
+	Karna: Para Korawa hanya merebut karena ego. Para pandawa... kutak ingin membantu mereka juga...
+	Guard: ...
+	Karna: Evakuasikan warga-warga. Disini akan menjadi lahan perang mereka.
+	Guard: Siap!
+	set NpcState.guardCastle_choice = true
+
+=> END
+
+
+~ idc_3C
+
+Guard: Karna!
+Karna: Apakah benar bahwa...
+Guard: Iya!
+Guard: Para Korawa akan merebut Indraprastha.
+Guard: Mereka lagi bersiap-siap untuk perang.
+Karna: ...
+Karna: Biarkan mereka berperang.
+Guard: ...
+Guard: Apakah berarti...
+Karna: Iya. Aku tidak akan ikutan pada siapapun.
+Karna: Para Korawa hanya merebut karena ego. Para pandawa... kutak ingin membantu mereka juga...
+Guard: ...
+Karna: Evakuasikan warga-warga. Disini akan menjadi lahan perang mereka.
+Guard: Siap!
+
+=> END

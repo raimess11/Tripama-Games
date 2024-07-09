@@ -1,0 +1,60 @@
+~ start
+
+Duryodhana: ...
+Duryodhana: Karna...
+Karna: ...Pandawa kerapat itu.
+Duryodhana: ...
+Karna: Apa maksudnya mempermalukanku karena aku anak Kusir.
+Karna: Apa anak bangsawan aja yang bisa mengalahkan Arjuna? ngga juga.
+Duryodhana: ...
+Karna: Dan Resi sialan itu.
+Karna: Apa dia cuma melihatku sebagai penonton aja.
+Karna: Dasar tua bangka---
+Duryodhana: Karna.
+Karna: ...kenapa?
+Duryodhana: Aku tahu kau lagi keras kepala.
+Duryodhana: Arjuna dan Para Pandawa memang punya banyak nama baik dari warga.
+Karna: ...
+Karna: ...aku akan mengalahkannya.
+Karna: Suatu hari, aku akan berdiri di atas Arjuna yang kalah.
+Duryodhana: Jadi ikutlah denganku.
+Karna: ...hah?
+Duryodhana: Aku pernah mengendar kabar bahwa seorang kusir yang memakai anting-anting surya, seperti krastia.
+Duryodhana: Dan melihatmu kedepan dengan pakaian itu dan menantang Arjuna, aku maju membela.
+Duryodhana: Bukan hanya karena kau dapat bertarung dengannya, tapi kau memang bisa bertarung dengannya.
+Karna: ....
+Karna: Aku dan Arjuna memang setara.
+Karna: Melihat cara tombaknya, aku tahu aku bisa melakukan hal yang sama.
+Duryodhana: Dan itu kenapa kau harus ikut denganku.
+Duryodhana: Bagaimana kalau kita pindah dulu ke hutan. Agar kita bisa sendiri dulu.
+Karna: ...
+
+- Boleh
+	Duryodhana: Bagus. Ayo ikut denganku.
+	set NpcState.toForest_choice = "accept"
+	set NpcState.questNPC[2]["questS3Scene1"] = true
+
+- Kau main licik
+	Duryodhana: Main Licik? Bagaimana?
+	Karna: Kau hanya ingin menggunakanku sebagai diplomatik.
+	Karna: Agar para pandawa terdorong.
+	Karna: Setelah mereka terdorong, aku juga akan terdorong.
+	Duryodhana: ...
+	Karna: Terima kasih sudah mendukungku saat direndahkan oleh Resi dan Pandawa sialan itu.
+	Karna: Tapi menjauhlah dariku.
+	Duryodhana: ...baik.
+	set NpcState.toForest_choice = "refuse"
+	set NpcState.questNPC[2]["questS3Scene1"] = false
+
+- ...maaf
+	Duryodhana: Kenapa?
+	Karna: Aku tidak bisa mengikutimu sekarang.
+	Karna: Aku lebih baik sendirian.
+	Duryodhana: ...baik.
+	set NpcState.toForest_choice = "..."
+	set NpcState.questNPC[2]["questS3Scene1"] = false
+
+set NpcState.toForest_scene1 = true
+do emit_has_interacted(false, true)
+
+=> END

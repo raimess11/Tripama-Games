@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=3 uid="uid://2ktpl2a16mrw"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_etbxl"]
+[ext_resource type="Script" path="res://World/Story 3/desa_s_3_scene_1.gd" id="2_3tucs"]
+[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_nb6n6"]
+[ext_resource type="Resource" uid="uid://o8mwycvocvme" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue1_Duryodhana&Karna.dialogue" id="3_h4726"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_td7hv"]
+
+[sub_resource type="Animation" id="Animation_nexkl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1086, 655)]
+}
+
+[sub_resource type="Animation" id="Animation_b4u2f"]
+resource_name = "end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1086, 655), Vector2(1888, 672)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_is_chatting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2cxab"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/PlayerAnim:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlu7l"]
+_data = {
+"RESET": SubResource("Animation_nexkl"),
+"end": SubResource("Animation_b4u2f"),
+"start": SubResource("Animation_2cxab")
+}
+
+[node name="Desa_S3_Scene1" instance=ExtResource("1_etbxl")]
+script = ExtResource("2_3tucs")
+dialogue_resource = ExtResource("3_h4726")
+
+[node name="Background" parent="." index="0"]
+self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
+position = Vector2(912, 392)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_nb6n6")
+
+[node name="Duryodhana" type="Sprite2D" parent="." index="2"]
+self_modulate = Color(1, 0.443137, 0.701961, 1)
+position = Vector2(878, 623)
+scale = Vector2(0.84375, 2.48438)
+texture = ExtResource("3_td7hv")
+
+[node name="Player" parent="." index="3"]
+position = Vector2(1086, 655)
+metadata/_edit_group_ = true
+
+[node name="PlayerAnim" parent="Player" index="0"]
+flip_h = true
+
+[node name="LeftDoor" parent="." index="4"]
+monitoring = false
+monitorable = false
+enable = false
+
+[node name="RightDoor" parent="." index="5"]
+transition_type = "fade_to_black"
+main_path_to_new_scene = "res://World/Story 3/forest_s_3_scene_2.tscn"
+alt_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
+questStory = 2
+questKey = "questS3Scene1"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_qlu7l")
+}
+
+[node name="Overlay" type="CanvasLayer" parent="." index="9"]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[editable path="Player"]

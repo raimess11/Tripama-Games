@@ -1,0 +1,262 @@
+[gd_scene load_steps=18 format=3 uid="uid://cww678ipuvryc"]
+
+[ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_eq47m"]
+[ext_resource type="Texture2D" uid="uid://iblicy84o6dd" path="res://Asset/Background/bg istana polos.png" id="2_4owdo"]
+[ext_resource type="Script" path="res://World/Story 3/castle_v_3_s_3_scene_2.gd" id="2_dfgjs"]
+[ext_resource type="Resource" uid="uid://bn17dnplyfxne" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue3_Guard&Karna.dialogue" id="3_ashck"]
+[ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_olb62"]
+[ext_resource type="Texture2D" uid="uid://cgxnlpbrwulra" path="res://Asset/Object/pintu.png" id="4_jdvp0"]
+[ext_resource type="PackedScene" uid="uid://ca1fy4ycxrfud" path="res://NPC/Story 3/s_3_scene_2_guard.tscn" id="5_gvvbo"]
+[ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="7_qvcvn"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="8_eert5"]
+[ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="9_dm37l"]
+[ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="10_si80p"]
+[ext_resource type="AudioStream" uid="uid://6m1lyh4dcg16" path="res://Asset/Sound/Lose & Win SFX/Victory.mp3" id="11_8m1am"]
+[ext_resource type="AudioStream" uid="uid://diww1kbf74o6k" path="res://Asset/Sound/Lose & Win SFX/Lose.mp3" id="12_1f523"]
+
+[sub_resource type="Animation" id="Animation_60520"]
+resource_name = "end_description"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playWinLose"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}, {
+"args": [true],
+"method": &"set_is_chatting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_7xvip"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1bgq"]
+_data = {
+"RESET": SubResource("Animation_7xvip"),
+"end_description": SubResource("Animation_60520")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p8tfn"]
+shader = ExtResource("7_qvcvn")
+shader_parameter/amount = 0.0
+
+[node name="CastleV3_S3_Scene2" instance=ExtResource("1_eq47m")]
+script = ExtResource("2_dfgjs")
+dialogue_resource = ExtResource("3_ashck")
+
+[node name="Background" parent="." index="0"]
+position = Vector2(952, 280)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_4owdo")
+
+[node name="VillageGround" parent="." index="1"]
+position = Vector2(952, 552)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_olb62")
+region_enabled = false
+
+[node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
+position = Vector2(-47.9999, 1248)
+
+[node name="Door" type="Sprite2D" parent="." index="2"]
+position = Vector2(459.1, 420.3)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_jdvp0")
+
+[node name="Door2" type="Sprite2D" parent="." index="3"]
+position = Vector2(1395.1, 420.3)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_jdvp0")
+
+[node name="S3_Scene2_Guard" parent="." index="4" instance=ExtResource("5_gvvbo")]
+position = Vector2(1720, 664)
+
+[node name="LeftDoor" parent="." index="6"]
+main_path_to_new_scene = "res://World/Story 3/castle_v_2_s_3_scene_2.tscn"
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="10"]
+libraries = {
+"": SubResource("AnimationLibrary_o1bgq")
+}
+
+[node name="Overlay" type="CanvasLayer" parent="." index="11"]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Blur" type="ColorRect" parent="Overlay" index="1"]
+material = SubResource("ShaderMaterial_p8tfn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Overlay" index="2"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_eert5")
+theme_override_font_sizes/font_size = 50
+text = "Time skip ke perang"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioPool" parent="." index="12" instance=ExtResource("9_dm37l")]
+
+[node name="Win" parent="AudioPool" index="0" instance=ExtResource("10_si80p")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPool/Win" index="0"]
+stream = ExtResource("11_8m1am")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer50012" type="AudioStreamPlayer" parent="AudioPool/Win" index="1"]
+stream = ExtResource("11_8m1am")
+bus = &"SFX"
+
+[node name="Lose" parent="AudioPool" index="1" instance=ExtResource("10_si80p")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPool/Lose" index="0"]
+stream = ExtResource("12_1f523")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer50013" type="AudioStreamPlayer" parent="AudioPool/Lose" index="1"]
+stream = ExtResource("12_1f523")
+bus = &"SFX"
+
+[editable path="VillageGround"]
