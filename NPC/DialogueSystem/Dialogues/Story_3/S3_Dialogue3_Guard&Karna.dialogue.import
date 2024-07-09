@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bn17dnplyfxne"
+path="res://.godot/imported/S3_Dialogue3_Guard&Karna.dialogue-52ceca4f1068adf2ac8abdbb8abd3ee5.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue3_Guard&Karna.dialogue"
+dest_files=["res://.godot/imported/S3_Dialogue3_Guard&Karna.dialogue-52ceca4f1068adf2ac8abdbb8abd3ee5.tres"]
+
+[params]
+
+defaults=true

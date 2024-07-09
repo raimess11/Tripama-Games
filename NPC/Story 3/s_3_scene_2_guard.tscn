@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ca1fy4ycxrfud"]
+[gd_scene load_steps=11 format=3 uid="uid://ca1fy4ycxrfud"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_os12q"]
 [ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="2_2up5c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="6_3itn8"]
 [ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="7_6qj2d"]
 [ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="8_cwjvy"]
+[ext_resource type="Resource" uid="uid://bn17dnplyfxne" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue3_Guard&Karna.dialogue" id="9_3q7cv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_afgq5"]
 animations = [{
@@ -47,7 +48,7 @@ visible = false
 position = Vector2(8, -104)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_afgq5")
+flip_h = true
 
 [node name="Actionable" parent="." index="4"]
-monitoring = false
-monitorable = false
+dialogue_resource = ExtResource("9_3q7cv")

@@ -16,15 +16,15 @@ func _ready():
 	if data == null:
 		enter_level()
 	
-	nextCutscene("choice2_description")
-	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
+	nextCutscene("TimeSkip")
+	#DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
 
 func nextCutscene(next_scene):
 	cut_scene.play(next_scene)
 
-func _on_Dialogue_Ended(source):
-	if source == dialogue_resource:
-		nextCutscene("next_description")
+#func _on_Dialogue_Ended(source):
+#	if source == dialogue_resource:
+#		nextCutscene("next_description")
 
 func start_intro():
 	var balloon : Node = Balloon_source.instantiate()

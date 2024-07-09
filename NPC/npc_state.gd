@@ -71,3 +71,8 @@ var toForest_choice = "accept" # Possible choice accept, refuse, ...
 
 #Scene 2
 var forest_scene2 = false
+var monologue_scene2 = false
+
+#Scene 3
+var guardCastle_scene3 = false
+var guardCastle_choice = false
