@@ -33,7 +33,7 @@ region_enabled = false
 position = Vector2(-48.0001, 1280)
 
 [node name="S1_Scene3_Guard" parent="." index="4" instance=ExtResource("3_0mlna")]
-position = Vector2(328, 680)
+position = Vector2(328, 664)
 
 [node name="Player" parent="." index="5"]
 position = Vector2(1224, 664)

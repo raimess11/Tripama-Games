@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://ca1fy4ycxrfud"]
+
+[ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_os12q"]
+[ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="2_2up5c"]
+[ext_resource type="Texture2D" uid="uid://fta6mq2ierru" path="res://Asset/Sprite/Guard/guard2.png" id="3_afdxj"]
+[ext_resource type="Texture2D" uid="uid://c7e7o7nf2vtv8" path="res://Asset/Sprite/Guard/guard3.png" id="4_bywat"]
+[ext_resource type="Texture2D" uid="uid://d3esbwqkcpdt3" path="res://Asset/Sprite/Guard/guard4.png" id="5_xs8h8"]
+[ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="6_3itn8"]
+[ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="7_6qj2d"]
+[ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="8_cwjvy"]
+[ext_resource type="Resource" uid="uid://bn17dnplyfxne" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue3_Guard&Karna.dialogue" id="9_3q7cv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afgq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2up5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_afdxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bywat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xs8h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3itn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6qj2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cwjvy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="S3_Scene2_Guard" instance=ExtResource("1_os12q")]
+
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(8, -104)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_afgq5")
+flip_h = true
+
+[node name="Actionable" parent="." index="4"]
+dialogue_resource = ExtResource("9_3q7cv")

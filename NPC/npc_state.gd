@@ -15,6 +15,8 @@ var questNPC = [{"questS1Scene1": false, #Scene 1
 				"questS1Scene4": false #Scene 4
 				},
 				{"questS2Scene2": false #Scene 2
+				},
+				{"questS3Scene1": false #Scene 1
 				}]
 
 #Story 1 Suwanda Arc
@@ -61,3 +63,16 @@ var war_scene4 = false
 
 #Scene 5
 var monologue_kumbakarna = false
+
+#Story 3 Karna Arc
+#Scene 1
+var toForest_scene1 = false
+var toForest_choice = "accept" # Possible choice accept, refuse, ...
+
+#Scene 2
+var forest_scene2 = false
+var monologue_scene2 = false
+
+#Scene 3
+var guardCastle_scene3 = false
+var guardCastle_choice = false

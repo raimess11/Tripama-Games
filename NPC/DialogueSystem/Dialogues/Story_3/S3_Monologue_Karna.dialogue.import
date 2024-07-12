@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bf24dbn85fv83"
+path="res://.godot/imported/S3_Monologue_Karna.dialogue-87b4631a89ea4a3a800a402326d133b5.tres"
+
+[deps]
+
+source_file="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Monologue_Karna.dialogue"
+dest_files=["res://.godot/imported/S3_Monologue_Karna.dialogue-87b4631a89ea4a3a800a402326d133b5.tres"]
+
+[params]
+
+defaults=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c0q503hruwwlv"]
+[gd_scene load_steps=17 format=3 uid="uid://c0q503hruwwlv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jr7hc"]
 [ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_m4fyp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bm3rvtyhevhw2" path="res://NPC/Story 2/rama.tscn" id="5_lfqv7"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="6_rfamb"]
 [ext_resource type="Texture2D" uid="uid://dw7bdbvp1y8hq" path="res://Asset/temp/RPG Weapons Dark Outline 64x64.png" id="7_6k30c"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="9_q7p1a"]
 
 [sub_resource type="Animation" id="Animation_kl8eb"]
 length = 0.001
@@ -618,7 +619,8 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("9_q7p1a")
+theme_override_font_sizes/font_size = 50
 text = "Setelah bertemu dengan Rahwana, Kumbakarna
 menghadap kepada penasihat kerajaan"
 horizontal_alignment = 1

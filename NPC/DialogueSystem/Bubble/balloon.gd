@@ -5,7 +5,8 @@ var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_G
 						"Guard" : Color.BLUE, "Hurjana" : Color.YELLOW, "Dayang": Color.BLUE_VIOLET,
 						"Sukarsana": Color.GOLDENROD, "Sumatri": Color.MEDIUM_SEA_GREEN,
 						"Sinta": Color.HOT_PINK, "Laksama": Color.FOREST_GREEN, "Rama": Color.LIME_GREEN,
-						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE}
+						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE,
+						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED}
 
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin

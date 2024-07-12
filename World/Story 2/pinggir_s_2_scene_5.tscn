@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b808k05i4ho5x"]
+[gd_scene load_steps=19 format=3 uid="uid://b808k05i4ho5x"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_nlq40"]
 [ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="2_5frsf"]
@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="3_vp3lu"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_ex6wl"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="6_6bxrj"]
+[ext_resource type="Texture2D" uid="uid://bwc2s132kqq4h" path="res://Asset/Object/makam.png" id="6_mijec"]
 [ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="7_56i8k"]
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="8_8t4yx"]
 [ext_resource type="AudioStream" uid="uid://6m1lyh4dcg16" path="res://Asset/Sound/Lose & Win SFX/Victory.mp3" id="9_448eu"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="9_qca5t"]
 [ext_resource type="AudioStream" uid="uid://diww1kbf74o6k" path="res://Asset/Sound/Lose & Win SFX/Lose.mp3" id="10_su7lh"]
 
 [sub_resource type="Animation" id="Animation_y76ux"]
@@ -170,22 +172,27 @@ texture = ExtResource("2_5frsf")
 position = Vector2(1016, 328)
 scale = Vector2(0.2, 0.2)
 
-[node name="Rahwana" type="Sprite2D" parent="." index="3"]
+[node name="Makam" type="Sprite2D" parent="." index="3"]
+position = Vector2(1016, 664)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_mijec")
+
+[node name="Rahwana" type="Sprite2D" parent="." index="4"]
 self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
 position = Vector2(840, 632)
 scale = Vector2(0.84375, 2.48438)
 texture = ExtResource("6_6bxrj")
 
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="5"]
 visible = false
 position = Vector2(848, 664)
 
-[node name="CutScene" type="AnimationPlayer" parent="." index="9"]
+[node name="CutScene" type="AnimationPlayer" parent="." index="10"]
 libraries = {
 "": SubResource("AnimationLibrary_2ps7a")
 }
 
-[node name="Overlay" type="CanvasLayer" parent="." index="10"]
+[node name="Overlay" type="CanvasLayer" parent="." index="11"]
 
 [node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
 anchors_preset = 15
@@ -218,10 +225,11 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("9_qca5t")
+theme_override_font_sizes/font_size = 50
 text = "END SCENE"
 
-[node name="AudioPool" parent="." index="11" instance=ExtResource("7_56i8k")]
+[node name="AudioPool" parent="." index="12" instance=ExtResource("7_56i8k")]
 
 [node name="Win" parent="AudioPool" index="0" instance=ExtResource("8_8t4yx")]
 
