@@ -1,7 +1,122 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm3t8waa87ugi"]
+[gd_scene load_steps=23 format=3 uid="uid://bm3t8waa87ugi"]
 
-[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="1_2kvre"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_rl6kh"]
+[ext_resource type="Texture2D" uid="uid://bxktwkswm35dv" path="res://GUI/Images/UI_background.png" id="1_ggev4"]
+[ext_resource type="FontFile" uid="uid://d26mugl5xsxqh" path="res://GUI/Fonts/Merienda/static/Merienda-Bold.ttf" id="2_ga1ur"]
+[ext_resource type="Script" path="res://GUI/CharSelect.gd" id="2_jur30"]
+[ext_resource type="Texture2D" uid="uid://dnn5h2fqsocga" path="res://GUI/Images/Crop_PatihSuwanda.png" id="3_fqeiy"]
+[ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="4_lbc2j"]
+[ext_resource type="Script" path="res://GUI/Deskripsi.gd" id="6_hx8av"]
+[ext_resource type="Texture2D" uid="uid://d2fayydgmlvaj" path="res://GUI/Images/Crop_Kumbakarna.png" id="6_rtnh0"]
+[ext_resource type="Texture2D" uid="uid://bm4jit6q7k4bm" path="res://GUI/Images/Crop_Adipati.png" id="7_l3ut7"]
+[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="9_mp0h8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg20w"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kq22"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_m8d1b"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Theme" id="Theme_uwelp"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Theme" id="Theme_opdgm"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Theme" id="Theme_uresn"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Theme" id="Theme_sxw4q"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Theme" id="Theme_12fxx"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddgt0"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mnri"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i0j0"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_ws2wm"]
+default_font = ExtResource("4_lbc2j")
+Button/styles/hover = SubResource("StyleBoxFlat_ddgt0")
+Button/styles/normal = SubResource("StyleBoxFlat_6mnri")
+Button/styles/pressed = SubResource("StyleBoxFlat_4i0j0")
 
 [node name="CharacterSelectScreen" type="Control"]
 layout_mode = 3
@@ -12,17 +127,59 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.231373, 0.427451, 0.462745, 1)
+
+[node name="UiBackground" type="Sprite2D" parent="."]
+position = Vector2(962, 540)
+scale = Vector2(0.48004, 0.478723)
+texture = ExtResource("1_ggev4")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.0
+offset_top = 130.0
+offset_right = 259.0
+offset_bottom = 250.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.333333, 0.231373, 0.156863, 1)
+theme_override_fonts/font = ExtResource("2_ga1ur")
+theme_override_font_sizes/font_size = 90
+text = "PILIH CERITA"
+
+[node name="Title2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -287.0
+offset_top = 134.0
+offset_right = 294.0
+offset_bottom = 268.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.572549, 0.411765, 0.298039, 1)
+theme_override_fonts/font = ExtResource("2_ga1ur")
+theme_override_font_sizes/font_size = 90
+text = "PILIH CERITA"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 55.0
+offset_left = 40.0
+offset_top = 219.0
+offset_right = -62.0
 offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -33,70 +190,94 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/separation = 120
 
-[node name="CharContain" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Contain_Patih" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 44
 
-[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain"]
-position = Vector2(223, -122)
-scale = Vector2(3.49219, 3.73955)
-texture = ExtResource("3_rl6kh")
+[node name="IMG_Patih" type="Sprite2D" parent="MarginContainer/HBoxContainer/Contain_Patih"]
+position = Vector2(254, -222)
+scale = Vector2(1.49346, 1.49346)
+texture = ExtResource("3_fqeiy")
 
-[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain" instance=ExtResource("1_2kvre")]
+[node name="CharSelec1" type="Button" parent="MarginContainer/HBoxContainer/Contain_Patih"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Char Name"
-level_path = "res://World/New_Story 1/intro_s_1_scene_1.tscn"
+theme = SubResource("Theme_m8d1b")
+theme_override_font_sizes/font_size = 65
+text = "PATIH SUWANDA"
+script = ExtResource("2_jur30")
 
-[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain" instance=ExtResource("1_2kvre")]
+[node name="Deskripsi1" type="Button" parent="MarginContainer/HBoxContainer/Contain_Patih"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Description"
-level_path = "res://GUI/Character_description.tscn"
+theme = SubResource("Theme_uwelp")
+theme_override_font_sizes/font_size = 65
+text = "Deskripsi"
+script = ExtResource("6_hx8av")
+path = "res://GUI/Character Description Scene/Desc_Patih.tscn"
 
-[node name="CharContain2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 44
-
-[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain2"]
-position = Vector2(228, -124)
-scale = Vector2(3.49219, 3.73955)
-texture = ExtResource("3_rl6kh")
-
-[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain2" instance=ExtResource("1_2kvre")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Char Name"
-
-[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain2" instance=ExtResource("1_2kvre")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Description"
-level_path = "res://GUI/Character_description.tscn"
-
-[node name="CharContain3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Contain_Kumba" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 44
 
-[node name="CharModel" type="Sprite2D" parent="MarginContainer/HBoxContainer/CharContain3"]
-position = Vector2(224, -120)
-scale = Vector2(3.49219, 3.73955)
-texture = ExtResource("3_rl6kh")
+[node name="IMG_Kumba" type="Sprite2D" parent="MarginContainer/HBoxContainer/Contain_Kumba"]
+position = Vector2(216, -229)
+scale = Vector2(0.253706, 0.271676)
+texture = ExtResource("6_rtnh0")
 
-[node name="CharName" parent="MarginContainer/HBoxContainer/CharContain3" instance=ExtResource("1_2kvre")]
+[node name="CharSelec2" type="Button" parent="MarginContainer/HBoxContainer/Contain_Kumba"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Char Name"
+theme = SubResource("Theme_opdgm")
+theme_override_font_sizes/font_size = 65
+text = "KUMBAKARNA"
+script = ExtResource("2_jur30")
 
-[node name="CharDesc" parent="MarginContainer/HBoxContainer/CharContain3" instance=ExtResource("1_2kvre")]
+[node name="Deskripsi2" type="Button" parent="MarginContainer/HBoxContainer/Contain_Kumba"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Description"
-level_path = "res://GUI/Character_description.tscn"
+theme = SubResource("Theme_uresn")
+theme_override_font_sizes/font_size = 65
+text = "Deskripsi"
+script = ExtResource("6_hx8av")
+path = "res://GUI/Character Description Scene/Desc_Kumba.tscn"
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="Contain_Adipati" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 80
-text = "Select Story"
+theme_override_constants/separation = 44
+
+[node name="IMG_Adipati" type="Sprite2D" parent="MarginContainer/HBoxContainer/Contain_Adipati"]
+position = Vector2(223, -225)
+scale = Vector2(0.303082, 0.32455)
+texture = ExtResource("7_l3ut7")
+flip_h = true
+
+[node name="CharSelec3" type="Button" parent="MarginContainer/HBoxContainer/Contain_Adipati"]
+layout_mode = 2
+theme = SubResource("Theme_sxw4q")
+theme_override_font_sizes/font_size = 65
+text = "ADIPATI KARNA"
+script = ExtResource("2_jur30")
+
+[node name="Deskripsi3" type="Button" parent="MarginContainer/HBoxContainer/Contain_Adipati"]
+layout_mode = 2
+theme = SubResource("Theme_12fxx")
+theme_override_font_sizes/font_size = 65
+text = "Deskripsi"
+script = ExtResource("6_hx8av")
+path = "res://GUI/Character Description Scene/Desc_Adipati.tscn"
+
+[node name="Button" parent="." instance=ExtResource("9_mp0h8")]
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 258.0
+offset_bottom = 101.0
+grow_horizontal = 1
+grow_vertical = 1
+theme = SubResource("Theme_ws2wm")
+theme_override_font_sizes/font_size = 50
+text = "KEMBALI"
+level_path = "res://GUI/mainMenu.tscn"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Patih/CharSelec1" to="MarginContainer/HBoxContainer/Contain_Patih/CharSelec1" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Patih/Deskripsi1" to="MarginContainer/HBoxContainer/Contain_Patih/Deskripsi1" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Kumba/CharSelec2" to="MarginContainer/HBoxContainer/Contain_Kumba/CharSelec2" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Kumba/Deskripsi2" to="MarginContainer/HBoxContainer/Contain_Kumba/Deskripsi2" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Adipati/CharSelec3" to="MarginContainer/HBoxContainer/Contain_Adipati/CharSelec3" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Contain_Adipati/Deskripsi3" to="MarginContainer/HBoxContainer/Contain_Adipati/Deskripsi3" method="_on_pressed"]

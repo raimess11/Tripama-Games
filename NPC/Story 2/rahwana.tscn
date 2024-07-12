@@ -1,14 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://sxrectdfphuc"]
+[gd_scene load_steps=11 format=3 uid="uid://sxrectdfphuc"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_qvd5x"]
 [ext_resource type="Resource" uid="uid://dfw3lcek08s1b" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Rahwana&Kumbakarna.dialogue" id="2_rxl5f"]
+[ext_resource type="Texture2D" uid="uid://dhp1jcfl50j4f" path="res://Asset/Sprite/Rahwana/Rahwana0000.png" id="2_u200o"]
+[ext_resource type="Texture2D" uid="uid://dy0j1tysoelcr" path="res://Asset/Sprite/Rahwana/Rahwana0001.png" id="3_tm8my"]
+[ext_resource type="Texture2D" uid="uid://td06xrwrhxea" path="res://Asset/Sprite/Rahwana/Rahwana0002.png" id="4_k7i4q"]
+[ext_resource type="Texture2D" uid="uid://fjl1rpw116vc" path="res://Asset/Sprite/Rahwana/Rahwana0003.png" id="5_5oi3r"]
+[ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="6_thatc"]
+[ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="7_p5rme"]
+[ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="8_mwfvq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d04vr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u200o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tm8my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k7i4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5oi3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_thatc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p5rme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mwfvq")
+}],
+"loop": true,
+"name": &"Rahwana_idle",
+"speed": 5.0
+}]
 
 [node name="Rahwana" instance=ExtResource("1_qvd5x")]
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 modulate = Color(1, 1, 1, 1)
 self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
 scale = Vector2(0.84375, 2.48438)
 
-[node name="Actionable" parent="." index="3"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(3, -93)
+scale = Vector2(0.497104, 0.497104)
+sprite_frames = SubResource("SpriteFrames_d04vr")
+animation = &"Rahwana_idle"
+frame_progress = 0.454219
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_rxl5f")

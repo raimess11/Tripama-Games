@@ -1,17 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://uu5xos7lnp54"]
+[gd_scene load_steps=4 format=3 uid="uid://dtibap7ug7heb"]
 
-[ext_resource type="Script" path="res://LoadingBar.gd" id="1_vkg8l"]
+[ext_resource type="Script" path="res://GUI/Loading.gd" id="1_3x1rn"]
+[ext_resource type="Texture2D" uid="uid://bxktwkswm35dv" path="res://GUI/Images/UI_background.png" id="2_b3oas"]
+[ext_resource type="FontFile" uid="uid://jgrukd223i7d" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Bold.ttf" id="3_xot4y"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_3x1rn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,31 +15,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.141176, 0.141176, 0.141176, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="UiBackground" type="Sprite2D" parent="ColorRect"]
+position = Vector2(960, 540)
+scale = Vector2(0.479042, 0.478723)
+texture = ExtResource("2_b3oas")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.5
 anchor_right = 0.9
 anchor_bottom = 0.5
-offset_top = -28.5
-offset_bottom = 28.5
+offset_top = -88.5
+offset_bottom = 88.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "Loading"
+theme_override_colors/font_color = Color(0.568627, 0.411765, 0.298039, 1)
+theme_override_fonts/font = ExtResource("3_xot4y")
+theme_override_font_sizes/font_size = 90
+text = "Loading..."
 horizontal_alignment = 1
 
-[node name="LoadingBar" type="ProgressBar" parent="VBoxContainer"]
+[node name="LoadingBar" type="ProgressBar" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 60
+theme_override_colors/font_color = Color(0.898039, 0.843137, 0.721569, 1)
+theme_override_fonts/font = ExtResource("3_xot4y")
+theme_override_font_sizes/font_size = 65
 step = 1.0
-script = ExtResource("1_vkg8l")
 
-[node name="Timer" type="Timer" parent="VBoxContainer/LoadingBar"]
+[node name="Timer" type="Timer" parent="ColorRect/VBoxContainer/LoadingBar"]
 wait_time = 2.0
-autostart = true
+one_shot = true
