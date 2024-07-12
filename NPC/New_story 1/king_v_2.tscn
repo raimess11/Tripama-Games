@@ -1,43 +1,42 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvry36aglor4d"]
+[gd_scene load_steps=12 format=3 uid="uid://dvry36aglor4d"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_jt2sj"]
 [ext_resource type="Resource" uid="uid://cny272arbkgw1" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue" id="2_cyhs4"]
-[ext_resource type="Texture2D" uid="uid://dlv5obgihu2rp" path="res://Asset/Object/kursi raja 2.png" id="2_w5edx"]
-[ext_resource type="Texture2D" uid="uid://bx3brexbmm1s0" path="res://Asset/Sprite/Raja/raja1.png" id="3_l7dqp"]
-[ext_resource type="Texture2D" uid="uid://c1ou6r0wnorhx" path="res://Asset/Sprite/Raja/raja2.png" id="4_ejlis"]
-[ext_resource type="Texture2D" uid="uid://bedd68yh14t70" path="res://Asset/Sprite/Raja/raja3.png" id="5_7p4v7"]
-[ext_resource type="Texture2D" uid="uid://cevpo5bwe2aw7" path="res://Asset/Sprite/Raja/raja4.png" id="6_5lt7h"]
-[ext_resource type="Texture2D" uid="uid://b0vikymqlnldr" path="res://Asset/Sprite/Raja/raja5.png" id="7_637w0"]
-[ext_resource type="Texture2D" uid="uid://b3blxvuf620lw" path="res://Asset/Sprite/Raja/raja6.png" id="8_svk12"]
-[ext_resource type="Texture2D" uid="uid://f8lwlup44iex" path="res://Asset/Sprite/Raja/raja7.png" id="9_j557l"]
+[ext_resource type="Texture2D" uid="uid://cj6l7rht44wce" path="res://Asset/Sprite/Raja/raja1.png" id="2_vt6bl"]
+[ext_resource type="Texture2D" uid="uid://7j1ja6valjpv" path="res://Asset/Sprite/Raja/raja2.png" id="3_6dlj3"]
+[ext_resource type="Texture2D" uid="uid://brt4oijoxwl3c" path="res://Asset/Sprite/Raja/raja3.png" id="4_felwi"]
+[ext_resource type="Texture2D" uid="uid://3855xpt84w4o" path="res://Asset/Sprite/Raja/raja4.png" id="5_hwhly"]
+[ext_resource type="Texture2D" uid="uid://cussi2l1bm8co" path="res://Asset/Sprite/Raja/raja5.png" id="6_i344k"]
+[ext_resource type="Texture2D" uid="uid://d3b2b1re4hp6" path="res://Asset/Sprite/Raja/raja6.png" id="7_4l85k"]
+[ext_resource type="Texture2D" uid="uid://44cdfuwrwq6t" path="res://Asset/Sprite/Raja/raja7.png" id="8_0yfc8"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yqd7n"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5akjy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_l7dqp")
+"texture": ExtResource("2_vt6bl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ejlis")
+"texture": ExtResource("3_6dlj3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_7p4v7")
+"texture": ExtResource("4_felwi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_5lt7h")
+"texture": ExtResource("5_hwhly")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_637w0")
+"texture": ExtResource("6_i344k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_svk12")
+"texture": ExtResource("7_4l85k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_j557l")
+"texture": ExtResource("8_0yfc8")
 }],
 "loop": true,
-"name": &"default",
-"speed": 8.0
+"name": &"raja_idle",
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o421e"]
@@ -48,18 +47,14 @@ size = Vector2(704, 312)
 [node name="Sprite2D" parent="." index="0"]
 visible = false
 
-[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
-position = Vector2(16, -96)
-scale = Vector2(0.14, 0.14)
-texture = ExtResource("2_w5edx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(17, -111)
+scale = Vector2(0.62, 0.62)
+sprite_frames = SubResource("SpriteFrames_5akjy")
+animation = &"raja_idle"
+autoplay = "raja_idle"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
-position = Vector2(16, -96)
-scale = Vector2(0.6, 0.6)
-sprite_frames = SubResource("SpriteFrames_yqd7n")
-autoplay = "default"
-
-[node name="Actionable" parent="." index="5"]
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_cyhs4")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]
