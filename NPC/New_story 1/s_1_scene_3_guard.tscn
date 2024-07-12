@@ -1,10 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnes118hvgr4k"]
+[gd_scene load_steps=11 format=3 uid="uid://cnes118hvgr4k"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_0kje2"]
 [ext_resource type="Resource" uid="uid://mcdfehw8hyvb" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue" id="2_4sb4e"]
+[ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="2_kw1pj"]
+[ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="3_nr3re"]
+[ext_resource type="Texture2D" uid="uid://b4w18gywlp7wl" path="res://Asset/Sprite/Guard/guard3.png" id="4_hdf4i"]
+[ext_resource type="Texture2D" uid="uid://kt3tp2gsiotg" path="res://Asset/Sprite/Guard/guard4.png" id="5_ciki1"]
+[ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="6_pkx0c"]
+[ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="7_7lvsk"]
+[ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="8_1q3yd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdggx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kw1pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nr3re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hdf4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ciki1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pkx0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7lvsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1q3yd")
+}],
+"loop": true,
+"name": &"guard_idle",
+"speed": 6.0
+}]
 
 [node name="S1_Scene3_Guard" instance=ExtResource("1_0kje2")]
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(5.75, -100)
+scale = Vector2(0.57, 0.57)
+sprite_frames = SubResource("SpriteFrames_xdggx")
+animation = &"guard_idle"
+autoplay = "guard_idle"
+frame_progress = 0.689205
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_4sb4e")
 dialogue_start = "start_B"

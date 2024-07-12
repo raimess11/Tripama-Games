@@ -1,25 +1,77 @@
-[gd_scene load_steps=5 format=3 uid="uid://xxsbqdcgrpa4"]
+[gd_scene load_steps=12 format=3 uid="uid://xxsbqdcgrpa4"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_22mx3"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_iqb4b"]
+[ext_resource type="Texture2D" uid="uid://ci1rd5y5h1k0a" path="res://Asset/Sprite/Maid/Maid/Maid1.png" id="2_pcwx7"]
 [ext_resource type="Resource" uid="uid://mcdfehw8hyvb" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue4_Castle&Suwanda.dialogue" id="3_0itk0"]
+[ext_resource type="Texture2D" uid="uid://c0d7j7gqbdc8l" path="res://Asset/Sprite/Maid/Maid/Maid2.png" id="3_ifawv"]
+[ext_resource type="Texture2D" uid="uid://c2xmo8a4kifyg" path="res://Asset/Sprite/Maid/Maid/Maid3.png" id="4_brynu"]
+[ext_resource type="Texture2D" uid="uid://d1u1hkchomt4h" path="res://Asset/Sprite/Maid/Maid/Maid4.png" id="5_ddg0s"]
+[ext_resource type="Texture2D" uid="uid://cjep7vf6ar07r" path="res://Asset/Sprite/Maid/Maid/Maid5.png" id="6_6vxlr"]
+[ext_resource type="Texture2D" uid="uid://crn1cmbs3dr7i" path="res://Asset/Sprite/Maid/Maid/Maid6.png" id="7_jv7w6"]
+[ext_resource type="Texture2D" uid="uid://c2naqxd50qenu" path="res://Asset/Sprite/Maid/Maid/Maid7.png" id="8_lhshn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ko0pi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pcwx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ifawv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_brynu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ddg0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6vxlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jv7w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lhshn")
+}],
+"loop": true,
+"name": &"maid_idle",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ktog"]
 size = Vector2(408, 312)
 
 [node name="Maid" instance=ExtResource("1_22mx3")]
 
-[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
-position = Vector2(136, -88)
-scale = Vector2(0.625, 2.4375)
-texture = ExtResource("2_iqb4b")
+[node name="Sprite2D" parent="." index="0"]
+visible = false
 
-[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
-position = Vector2(-120, -88)
-scale = Vector2(0.625, 2.4375)
-texture = ExtResource("2_iqb4b")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(125.125, -93.1667)
+scale = Vector2(0.532778, 0.532778)
+sprite_frames = SubResource("SpriteFrames_ko0pi")
+animation = &"maid_idle"
+autoplay = "maid_idle"
 
-[node name="Actionable" parent="." index="5"]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(-2.00002, -93.1667)
+scale = Vector2(0.532778, 0.532778)
+sprite_frames = SubResource("SpriteFrames_ko0pi")
+animation = &"maid_idle"
+autoplay = "maid_idle"
+frame_progress = 0.0825447
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="3"]
+position = Vector2(-122, -93.1667)
+scale = Vector2(0.532778, 0.532778)
+sprite_frames = SubResource("SpriteFrames_ko0pi")
+animation = &"maid_idle"
+autoplay = "maid_idle"
+frame = 5
+frame_progress = 0.969508
+
+[node name="Actionable" parent="." index="6"]
 dialogue_resource = ExtResource("3_0itk0")
 dialogue_start = "start_A"
 

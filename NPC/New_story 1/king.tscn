@@ -1,8 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqbxtjhpoi621"]
+[gd_scene load_steps=13 format=3 uid="uid://dqbxtjhpoi621"]
 
 [ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_13vpl"]
+[ext_resource type="Texture2D" uid="uid://cj6l7rht44wce" path="res://Asset/Sprite/Raja/raja1.png" id="2_k3f2t"]
 [ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_ph070"]
+[ext_resource type="Texture2D" uid="uid://7j1ja6valjpv" path="res://Asset/Sprite/Raja/raja2.png" id="3_3c53s"]
 [ext_resource type="Resource" uid="uid://8aor4cth3g7a" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue" id="3_fa0er"]
+[ext_resource type="Texture2D" uid="uid://brt4oijoxwl3c" path="res://Asset/Sprite/Raja/raja3.png" id="4_5lc87"]
+[ext_resource type="Texture2D" uid="uid://3855xpt84w4o" path="res://Asset/Sprite/Raja/raja4.png" id="5_xqmsr"]
+[ext_resource type="Texture2D" uid="uid://cussi2l1bm8co" path="res://Asset/Sprite/Raja/raja5.png" id="6_jc45e"]
+[ext_resource type="Texture2D" uid="uid://d3b2b1re4hp6" path="res://Asset/Sprite/Raja/raja6.png" id="7_a1nbw"]
+[ext_resource type="Texture2D" uid="uid://44cdfuwrwq6t" path="res://Asset/Sprite/Raja/raja7.png" id="8_6sn6q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35rwt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k3f2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3c53s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5lc87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xqmsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jc45e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a1nbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6sn6q")
+}],
+"loop": true,
+"name": &"raja_idle",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nqpn"]
 size = Vector2(600, 312)
@@ -10,10 +46,21 @@ size = Vector2(600, 312)
 [node name="King" instance=ExtResource("1_13vpl")]
 questKey = "questS1Scene4"
 
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(17, -111)
+scale = Vector2(0.62, 0.62)
+sprite_frames = SubResource("SpriteFrames_35rwt")
+animation = &"raja_idle"
+autoplay = "raja_idle"
+frame_progress = 0.975445
+
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_ph070")
 
-[node name="Actionable" parent="." index="3"]
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("3_fa0er")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]

@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5o4o1m0wgr63"]
+
+[ext_resource type="Texture2D" uid="uid://bxktwkswm35dv" path="res://GUI/Images/UI_background.png" id="1_lrlci"]
+[ext_resource type="FontFile" uid="uid://d26mugl5xsxqh" path="res://GUI/Fonts/Merienda/static/Merienda-Bold.ttf" id="3_jt1am"]
+[ext_resource type="Texture2D" uid="uid://707kpljpjcgs" path="res://GUI/Images/Adipati.png" id="3_jttwa"]
+[ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="4_gwf87"]
+[ext_resource type="FontFile" uid="uid://jgrukd223i7d" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Bold.ttf" id="5_rxua4"]
+[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="6_vr5i3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg20w"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kq22"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_ejyv7"]
+default_font = ExtResource("4_gwf87")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.266667, 0.498039, 0.364706, 1)
+
+[node name="UiBackground" type="Sprite2D" parent="."]
+position = Vector2(962, 540)
+scale = Vector2(0.48004, 0.478723)
+texture = ExtResource("1_lrlci")
+
+[node name="ImageArea" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = 20.0
+offset_right = 56.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ImageArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ImageArea/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ImageArea/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.419608, 0.305882, 1)
+theme_override_fonts/font = ExtResource("3_jt1am")
+theme_override_font_sizes/font_size = 60
+text = "Adipati Karna"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageArea/VBoxContainer"]
+position = Vector2(390, 342)
+scale = Vector2(0.267491, 0.272368)
+texture = ExtResource("3_jttwa")
+flip_h = true
+
+[node name="TextArea" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextArea"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_top = 104.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="TextArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextArea/VBoxContainer/Panel"]
+layout_mode = 2
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 848.0
+offset_bottom = 856.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.901154, 0.859135, 0.744505, 1)
+theme_override_fonts/normal_font = ExtResource("4_gwf87")
+theme_override_fonts/bold_font = ExtResource("5_rxua4")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "Adipati Karna adalah prajurit gagah dengan bakat luar biasa dalam memanah dan strategi perang. Anak kandung Kunti, ia ditelantarkan karena lahir di luar pernikahan dan dibesarkan oleh Adhirata, seorang kusir. Meskipun berbakat, Karna sering dihina karena statusnya. Duryodhana, pangeran Kurawa, melihat potensinya dan menjadikannya pangeran, membangun persahabatan yang kuat.
+
+Dalam perang Baratayudha, Karna berpihak pada Kurawa karena rasa ingin balas budi. Ia menunjukkan keahliannya di medan perang, namun gugur di tangan saudaranya, Arjuna, meninggalkan kisah penuh perjuangan dan tragedi.
+
+Fisik Karna: gagah, berkulit sawo matang, berwajah tegas dengan mata tajam. Rambutnya panjang dan hitam. Tubuhnya atletis dan berotot. Ia mengenakan baju zirah berhias emas dan selalu membawa busur besar dan anak panah, membuatnya dihormati dan ditakuti di medan perang
+"
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("6_vr5i3")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 258.0
+offset_bottom = 101.0
+grow_horizontal = 1
+grow_vertical = 1
+theme = SubResource("Theme_ejyv7")
+theme_override_font_sizes/font_size = 50
+text = "KEMBALI"
+level_path = "res://GUI/character_select_screen.tscn"

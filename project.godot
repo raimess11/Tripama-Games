@@ -22,6 +22,9 @@ SceneManager="*res://World/SceneManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NpcState="*res://NPC/npc_state.gd"
 Bgm="*res://Audio Manager/bgm.tscn"
+Loading="*res://GUI/Loading.tscn"
+SfxButton="*res://GUI/sfx_button.tscn"
+TextTransition="*res://GUI/text_transition.tscn"
 
 [dialogue_manager]
 

@@ -1,0 +1,155 @@
+[gd_scene load_steps=11 format=3 uid="uid://h4qdnjlia8sy"]
+
+[ext_resource type="PackedScene" uid="uid://ca8qs65dvn2fu" path="res://GUI/char_btn.tscn" id="1_6qqr0"]
+[ext_resource type="Texture2D" uid="uid://bxktwkswm35dv" path="res://GUI/Images/UI_background.png" id="1_a45c1"]
+[ext_resource type="AudioStream" uid="uid://dpy4cm7fdrbem" path="res://Asset/Sound/NPC Interaction SFX/NPC Interaction.mp3" id="2_g7x30"]
+[ext_resource type="FontFile" uid="uid://bwm0tr4edj67w" path="res://GUI/Fonts/Merienda/static/Merienda-ExtraBold.ttf" id="3_khbf5"]
+[ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="5_v8s1w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg20w"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kq22"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_ekcok"]
+default_font = ExtResource("5_v8s1w")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="GDScript" id="GDScript_a7on6"]
+script/source = "extends Button
+
+
+
+
+func _on_pressed():
+	get_tree().quit()
+"
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UiBackground" type="Sprite2D" parent="."]
+position = Vector2(960.101, 538.5)
+scale = Vector2(0.479092, 0.477394)
+texture = ExtResource("1_a45c1")
+
+[node name="sfx_button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_g7x30")
+volume_db = -10.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529412, 0.756863, 0.34902, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 140.0
+offset_bottom = 361.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.407843, 0.32549, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_khbf5")
+theme_override_font_sizes/font_size = 150
+text = "SERAT TRIPAMA"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 148.0
+offset_right = 8.0
+offset_bottom = 369.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.572549, 0.415686, 0.301961, 1)
+theme_override_fonts/font = ExtResource("3_khbf5")
+theme_override_font_sizes/font_size = 150
+text = "SERAT TRIPAMA"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.9
+offset_left = 121.0
+offset_top = 193.0
+offset_right = -101.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 170
+
+[node name="Play" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_6qqr0")]
+layout_mode = 2
+size_flags_horizontal = 1
+theme = SubResource("Theme_ekcok")
+theme_override_fonts/font = ExtResource("5_v8s1w")
+theme_override_font_sizes/font_size = 100
+text = "        Mulai        "
+level_path = "res://GUI/character_select_screen.tscn"
+
+[node name="Exit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_ekcok")
+theme_override_fonts/font = ExtResource("5_v8s1w")
+theme_override_font_sizes/font_size = 100
+text = "Keluar"
+script = SubResource("GDScript_a7on6")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Exit" to="MarginContainer/HBoxContainer/VBoxContainer/Exit" method="_on_pressed"]

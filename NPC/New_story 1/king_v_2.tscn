@@ -1,14 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvry36aglor4d"]
+[gd_scene load_steps=12 format=3 uid="uid://dvry36aglor4d"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_jt2sj"]
 [ext_resource type="Resource" uid="uid://cny272arbkgw1" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue" id="2_cyhs4"]
+[ext_resource type="Texture2D" uid="uid://cj6l7rht44wce" path="res://Asset/Sprite/Raja/raja1.png" id="2_vt6bl"]
+[ext_resource type="Texture2D" uid="uid://7j1ja6valjpv" path="res://Asset/Sprite/Raja/raja2.png" id="3_6dlj3"]
+[ext_resource type="Texture2D" uid="uid://brt4oijoxwl3c" path="res://Asset/Sprite/Raja/raja3.png" id="4_felwi"]
+[ext_resource type="Texture2D" uid="uid://3855xpt84w4o" path="res://Asset/Sprite/Raja/raja4.png" id="5_hwhly"]
+[ext_resource type="Texture2D" uid="uid://cussi2l1bm8co" path="res://Asset/Sprite/Raja/raja5.png" id="6_i344k"]
+[ext_resource type="Texture2D" uid="uid://d3b2b1re4hp6" path="res://Asset/Sprite/Raja/raja6.png" id="7_4l85k"]
+[ext_resource type="Texture2D" uid="uid://44cdfuwrwq6t" path="res://Asset/Sprite/Raja/raja7.png" id="8_0yfc8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5akjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vt6bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6dlj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_felwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hwhly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i344k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4l85k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0yfc8")
+}],
+"loop": true,
+"name": &"raja_idle",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o421e"]
 size = Vector2(704, 312)
 
 [node name="KingV2" instance=ExtResource("1_jt2sj")]
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(17, -111)
+scale = Vector2(0.62, 0.62)
+sprite_frames = SubResource("SpriteFrames_5akjy")
+animation = &"raja_idle"
+autoplay = "raja_idle"
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_cyhs4")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]
