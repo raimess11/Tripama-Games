@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqbxtjhpoi621"]
+[gd_scene load_steps=14 format=3 uid="uid://dqbxtjhpoi621"]
 
 [ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_13vpl"]
 [ext_resource type="Texture2D" uid="uid://cj6l7rht44wce" path="res://Asset/Sprite/Raja/raja1.png" id="2_k3f2t"]
+[ext_resource type="Texture2D" uid="uid://dlv5obgihu2rp" path="res://Asset/Object/kursi raja 2.png" id="2_mak8k"]
 [ext_resource type="PackedScene" uid="uid://tu12gp216vcs" path="res://QuestSystem/Quest/Story 1/quest_talkto_villager.tscn" id="2_ph070"]
 [ext_resource type="Texture2D" uid="uid://7j1ja6valjpv" path="res://Asset/Sprite/Raja/raja2.png" id="3_3c53s"]
 [ext_resource type="Resource" uid="uid://8aor4cth3g7a" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue3_King&Suwanda.dialogue" id="3_fa0er"]
@@ -49,18 +50,24 @@ questKey = "questS1Scene4"
 [node name="Sprite2D" parent="." index="0"]
 visible = false
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="Chair" type="Sprite2D" parent="." index="1"]
+position = Vector2(8, -107)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_mak8k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
 position = Vector2(17, -111)
 scale = Vector2(0.62, 0.62)
 sprite_frames = SubResource("SpriteFrames_35rwt")
 animation = &"raja_idle"
 autoplay = "raja_idle"
 frame_progress = 0.975445
+metadata/_edit_lock_ = true
 
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_ph070")
 
-[node name="Actionable" parent="." index="4"]
+[node name="Actionable" parent="." index="5"]
 dialogue_resource = ExtResource("3_fa0er")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]

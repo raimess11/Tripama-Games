@@ -1,0 +1,168 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgilg0g8ld51e"]
+
+[ext_resource type="Script" path="res://World/base_battle.gd" id="1_d77kb"]
+[ext_resource type="Texture2D" uid="uid://rby64a3juymf" path="res://Asset/Background/bg desa malem terbakar.png" id="1_eovou"]
+[ext_resource type="PackedScene" uid="uid://cgdwhpyqhhkvx" path="res://World/Base_World/Grounds/village_ground.tscn" id="2_gows0"]
+[ext_resource type="PackedScene" uid="uid://bkb8v365spe8n" path="res://Battle_System/battle_player.tscn" id="3_eaqp4"]
+[ext_resource type="PackedScene" uid="uid://b1n3vcd8ctrba" path="res://Battle_System/enemy.tscn" id="4_niup4"]
+[ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="5_7f6wx"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="7_0fkse"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg20w"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kq22"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_ekcok"]
+default_font = ExtResource("5_7f6wx")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44l5q"]
+bg_color = Color(0, 0, 0, 0.662745)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="BaseBattle" type="Node2D"]
+script = ExtResource("1_d77kb")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(936, 400)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("1_eovou")
+
+[node name="VillageGround" parent="." instance=ExtResource("2_gows0")]
+position = Vector2(960, 1005)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-24, 840, -88, 840, -72, 312, -304, 312, -320, 992, 2104, 992, 2088, 408, 1984, 424, 1976, 856, 1936, 848)
+
+[node name="BattlePlayer" parent="." instance=ExtResource("3_eaqp4")]
+position = Vector2(1312, 672)
+
+[node name="Enemy" parent="." instance=ExtResource("4_niup4")]
+position = Vector2(672, 680)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 544)
+zoom = Vector2(1.3, 1.3)
+
+[node name="Battle Button" type="CanvasLayer" parent="."]
+
+[node name="Control" type="MarginContainer" parent="Battle Button"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Battle Button/Control"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.662745)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Battle Button/Control"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button1" type="MarginContainer" parent="Battle Button/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Attack" type="Button" parent="Battle Button/Control/HBoxContainer/Button1"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 6
+theme = SubResource("Theme_ekcok")
+theme_override_fonts/font = ExtResource("5_7f6wx")
+theme_override_font_sizes/font_size = 50
+text = "    Attack   "
+icon_alignment = 1
+
+[node name="Button2" type="MarginContainer" parent="Battle Button/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Defend" type="Button" parent="Battle Button/Control/HBoxContainer/Button2"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 6
+theme = SubResource("Theme_ekcok")
+theme_override_fonts/font = ExtResource("5_7f6wx")
+theme_override_font_sizes/font_size = 50
+text = "    Defend   "
+icon_alignment = 1
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+
+[node name="Control" type="PanelContainer" parent="TextBox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -208.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44l5q")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox/Control"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="TextBox/Control/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_0fkse")
+theme_override_font_sizes/font_size = 100
+text = "Kumbakarna menyerang dengan 10 damage"
+
+[connection signal="player_attack" from="BattlePlayer" to="Enemy" method="hit"]
+[connection signal="enemy_attack" from="Enemy" to="BattlePlayer" method="hit"]
+[connection signal="pressed" from="Battle Button/Control/HBoxContainer/Button1/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Battle Button/Control/HBoxContainer/Button2/Defend" to="." method="_on_defend_pressed"]

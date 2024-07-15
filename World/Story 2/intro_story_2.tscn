@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://x2rp38drdset"]
+[gd_scene load_steps=42 format=3 uid="uid://x2rp38drdset"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_thwl2"]
 [ext_resource type="Script" path="res://World/Story 2/intro_story_2.gd" id="2_nkkty"]
@@ -10,13 +10,27 @@
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="7_vpl7a"]
 [ext_resource type="Texture2D" uid="uid://dhtthauc7s8f6" path="res://Asset/Object/semak.png" id="7_x72bk"]
 [ext_resource type="AudioStream" uid="uid://c2iia4xacboqf" path="res://Asset/Sound/Bushes SFX/BushesCutV2.wav" id="9_1lomr"]
-[ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="10_1j7yg"]
-[ext_resource type="Texture2D" uid="uid://fta6mq2ierru" path="res://Asset/Sprite/Guard/guard2.png" id="11_riv8g"]
-[ext_resource type="Texture2D" uid="uid://c7e7o7nf2vtv8" path="res://Asset/Sprite/Guard/guard3.png" id="12_654g0"]
-[ext_resource type="Texture2D" uid="uid://d3esbwqkcpdt3" path="res://Asset/Sprite/Guard/guard4.png" id="13_bn4py"]
-[ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="14_s34wc"]
-[ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="15_feawa"]
-[ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="16_u5yu3"]
+[ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="10_1j7yg"]
+[ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="11_riv8g"]
+[ext_resource type="Texture2D" uid="uid://b4w18gywlp7wl" path="res://Asset/Sprite/Guard/guard3.png" id="12_654g0"]
+[ext_resource type="Texture2D" uid="uid://kt3tp2gsiotg" path="res://Asset/Sprite/Guard/guard4.png" id="13_bn4py"]
+[ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="14_s34wc"]
+[ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="15_feawa"]
+[ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="16_u5yu3"]
+[ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="18_w20op"]
+[ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="19_vf3rm"]
+[ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="20_rcly0"]
+[ext_resource type="Texture2D" uid="uid://obvrfyr4jmky" path="res://Asset/Sprite/Sinta/Sinta0003.png" id="21_a8421"]
+[ext_resource type="Texture2D" uid="uid://r2xnr2pwwk44" path="res://Asset/Sprite/Sinta/Sinta0004.png" id="22_xy7j6"]
+[ext_resource type="Texture2D" uid="uid://dfjvrafd4e43r" path="res://Asset/Sprite/Sinta/Sinta0005.png" id="23_fui5p"]
+[ext_resource type="Texture2D" uid="uid://daljfuf4gawf0" path="res://Asset/Sprite/Sinta/Sinta0006.png" id="24_pmmuu"]
+[ext_resource type="Texture2D" uid="uid://dhp1jcfl50j4f" path="res://Asset/Sprite/Rahwana/Rahwana0000.png" id="25_7w847"]
+[ext_resource type="Texture2D" uid="uid://dy0j1tysoelcr" path="res://Asset/Sprite/Rahwana/Rahwana0001.png" id="26_o3fnv"]
+[ext_resource type="Texture2D" uid="uid://td06xrwrhxea" path="res://Asset/Sprite/Rahwana/Rahwana0002.png" id="27_i50dm"]
+[ext_resource type="Texture2D" uid="uid://fjl1rpw116vc" path="res://Asset/Sprite/Rahwana/Rahwana0003.png" id="28_m6acb"]
+[ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="29_qieui"]
+[ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="30_mehrq"]
+[ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="31_oyydi"]
 
 [sub_resource type="Animation" id="Animation_25doo"]
 resource_name = "Normal"
@@ -126,6 +140,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1014, 663)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sinta:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_qvhig"]
@@ -255,6 +281,18 @@ tracks/5/keys = {
 "method": &"start_intro_p2"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sinta:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_cyhxt"]
 resource_name = "end_last_intro"
@@ -328,6 +366,18 @@ tracks/2/keys = {
 "method": &"disable"
 }]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sinta:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kcbi2"]
 _data = {
@@ -366,6 +416,64 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_suybo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_w20op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vf3rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rcly0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_a8421")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xy7j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_fui5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pmmuu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d04vr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_7w847")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_o3fnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_i50dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_m6acb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qieui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mehrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_oyydi")
+}],
+"loop": true,
+"name": &"Rahwana_idle",
+"speed": 5.0
 }]
 
 [node name="Intro_Story2" instance=ExtResource("1_thwl2")]
@@ -421,7 +529,7 @@ position = Vector2(744, 622)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_afgq5")
 autoplay = "default"
-frame_progress = 0.655954
+frame_progress = 0.710041
 
 [node name="Rama" type="Sprite2D" parent="." index="12"]
 self_modulate = Color(0.85098, 0.384314, 1, 1)
@@ -429,18 +537,23 @@ position = Vector2(960, 650)
 scale = Vector2(0.84375, 2.48438)
 texture = ExtResource("7_vpl7a")
 
-[node name="Sinta" type="Sprite2D" parent="." index="13"]
-self_modulate = Color(1, 0.443137, 0.701961, 1)
+[node name="Sinta" type="AnimatedSprite2D" parent="." index="13"]
 position = Vector2(1142, 626)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("7_vpl7a")
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_suybo")
+autoplay = "default"
+frame_progress = 0.581433
+flip_h = true
 
-[node name="Rahwana" type="Sprite2D" parent="." index="14"]
+[node name="Rahwana" type="AnimatedSprite2D" parent="." index="14"]
 visible = false
-self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
 position = Vector2(1160, 616)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("7_vpl7a")
+scale = Vector2(0.497104, 0.497104)
+sprite_frames = SubResource("SpriteFrames_d04vr")
+animation = &"Rahwana_idle"
+autoplay = "Rahwana_idle"
+frame_progress = 0.870569
+flip_h = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="15"]
 

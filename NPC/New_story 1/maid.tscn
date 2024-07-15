@@ -48,11 +48,12 @@ size = Vector2(408, 312)
 visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
-position = Vector2(125.125, -93.1667)
-scale = Vector2(0.532778, 0.532778)
+position = Vector2(120, -80)
+scale = Vector2(0.49, 0.49)
 sprite_frames = SubResource("SpriteFrames_ko0pi")
 animation = &"maid_idle"
 autoplay = "maid_idle"
+flip_h = true
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." index="2"]
 position = Vector2(-2.00002, -93.1667)
@@ -63,8 +64,8 @@ autoplay = "maid_idle"
 frame_progress = 0.0825447
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="3"]
-position = Vector2(-122, -93.1667)
-scale = Vector2(0.532778, 0.532778)
+position = Vector2(-120, -88)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ko0pi")
 animation = &"maid_idle"
 autoplay = "maid_idle"
@@ -74,12 +75,14 @@ frame_progress = 0.969508
 [node name="Actionable" parent="." index="6"]
 dialogue_resource = ExtResource("3_0itk0")
 dialogue_start = "start_A"
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]
 visible = false
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Actionable" index="1"]
+visible = false
 position = Vector2(4, -92)
 shape = SubResource("RectangleShape2D_0ktog")
 debug_color = Color(0.890196, 0.211765, 0.619608, 0.419608)

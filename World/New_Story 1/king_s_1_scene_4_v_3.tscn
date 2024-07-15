@@ -31,6 +31,8 @@ enable = false
 transition_type = "fade_to_black"
 push_distance = 300
 main_path_to_new_scene = "res://World/New_Story 1/village_s_1_scene_1_v_2.tscn"
+alt_path_to_new_scene = "res://Battle_System/Story 1/s_1_no_companion.tscn"
+questKey = "questS1Scene5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
 position = Vector2(504, 632)

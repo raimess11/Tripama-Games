@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://c7ff1sl6kixje"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_c5nw2"]
-[ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="2_ivh5q"]
 [ext_resource type="Script" path="res://World/Story 3/forest_s_3_scene_2.gd" id="2_ukjuw"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_5tjg4"]
 [ext_resource type="Resource" uid="uid://drt50ca6s88qe" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue2_Duryodhana&Karna.dialogue" id="3_nglg1"]
+[ext_resource type="Texture2D" uid="uid://bo2qacrawnl06" path="res://Asset/Background/bg hutam malem.png" id="4_ityxq"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_boido"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="6_fn8jq"]
 
@@ -301,7 +301,7 @@ dialogue_resource = ExtResource("3_nglg1")
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
 position = Vector2(968, 376)
 scale = Vector2(0.34, 0.34)
-texture = ExtResource("2_ivh5q")
+texture = ExtResource("4_ityxq")
 
 [node name="Duryodhana" type="Sprite2D" parent="." index="2"]
 self_modulate = Color(1, 0.443137, 0.701961, 1)

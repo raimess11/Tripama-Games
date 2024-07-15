@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="TurnManager" load_steps=2 format=3 uid="uid://bu5dk15w3i1tk"]
+
+[ext_resource type="Script" path="res://Battle_System/turn_manager.gd" id="1_5gwdx"]
+
+[resource]
+script = ExtResource("1_5gwdx")

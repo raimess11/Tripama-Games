@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b808k05i4ho5x"]
+[gd_scene load_steps=26 format=3 uid="uid://b808k05i4ho5x"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_nlq40"]
 [ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="2_5frsf"]
@@ -6,13 +6,48 @@
 [ext_resource type="Resource" uid="uid://dixg80nhejfrc" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Monologue_Kumbakarna.dialogue" id="3_pgh33"]
 [ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="3_vp3lu"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_ex6wl"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="6_6bxrj"]
 [ext_resource type="Texture2D" uid="uid://bwc2s132kqq4h" path="res://Asset/Object/makam.png" id="6_mijec"]
+[ext_resource type="Texture2D" uid="uid://dhp1jcfl50j4f" path="res://Asset/Sprite/Rahwana/Rahwana0000.png" id="7_2ercy"]
 [ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="7_56i8k"]
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="8_8t4yx"]
+[ext_resource type="Texture2D" uid="uid://dy0j1tysoelcr" path="res://Asset/Sprite/Rahwana/Rahwana0001.png" id="8_yekob"]
+[ext_resource type="Texture2D" uid="uid://td06xrwrhxea" path="res://Asset/Sprite/Rahwana/Rahwana0002.png" id="9_1bosl"]
 [ext_resource type="AudioStream" uid="uid://6m1lyh4dcg16" path="res://Asset/Sound/Lose & Win SFX/Victory.mp3" id="9_448eu"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="9_qca5t"]
+[ext_resource type="Texture2D" uid="uid://fjl1rpw116vc" path="res://Asset/Sprite/Rahwana/Rahwana0003.png" id="10_i23uj"]
 [ext_resource type="AudioStream" uid="uid://diww1kbf74o6k" path="res://Asset/Sound/Lose & Win SFX/Lose.mp3" id="10_su7lh"]
+[ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="11_c4165"]
+[ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="12_a73tj"]
+[ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="13_78c2o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_um4jy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2ercy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yekob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1bosl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i23uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c4165")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a73tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_78c2o")
+}],
+"loop": true,
+"name": &"Rahwana_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_y76ux"]
 length = 0.001
@@ -177,11 +212,12 @@ position = Vector2(1016, 664)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_mijec")
 
-[node name="Rahwana" type="Sprite2D" parent="." index="4"]
-self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
+[node name="Rahwana" type="AnimatedSprite2D" parent="." index="4"]
 position = Vector2(840, 632)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("6_6bxrj")
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_um4jy")
+animation = &"Rahwana_idle"
+autoplay = "Rahwana_idle"
 
 [node name="Player" parent="." index="5"]
 visible = false
@@ -242,3 +278,5 @@ bus = &"SFX"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPool/Lose" index="0"]
 stream = ExtResource("10_su7lh")
 bus = &"SFX"
+
+[connection signal="animation_finished" from="CutScene" to="." method="_on_cut_scene_animation_finished"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://vdhl1j3rtr38"]
+
+[ext_resource type="Script" path="res://Battle_System/startingStats.gd" id="1_5qe84"]
+
+[resource]
+script = ExtResource("1_5qe84")
+job_name = "Kumbakarna"
+max_health = 1000
+strength = 100
+defence = 0
+armor = 50

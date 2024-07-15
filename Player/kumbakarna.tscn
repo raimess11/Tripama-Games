@@ -1,0 +1,180 @@
+[gd_scene load_steps=40 format=3 uid="uid://do37dbh7q4ue4"]
+
+[ext_resource type="PackedScene" uid="uid://dsp2vsshdmmbw" path="res://Player/player.tscn" id="1_oxm4m"]
+[ext_resource type="Texture2D" uid="uid://dnvf0dbj4ot4e" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0001_frame_35.png" id="2_sqh4f"]
+[ext_resource type="Texture2D" uid="uid://ble3tm6mjp4cl" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0000_frame_100.png" id="2_tcqy5"]
+[ext_resource type="Texture2D" uid="uid://covftw4wlgf8j" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0001_frame_096.png" id="3_ntpuq"]
+[ext_resource type="Texture2D" uid="uid://c2mq2rd4x80ey" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0002_frame_26.png" id="3_p8ou3"]
+[ext_resource type="Texture2D" uid="uid://coh78sjw55leq" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0002_frame_091.png" id="4_5fn75"]
+[ext_resource type="Texture2D" uid="uid://lxto27katj3u" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0003_frame_23.png" id="4_hhxcp"]
+[ext_resource type="Texture2D" uid="uid://crgsdvmj4vbrt" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0004_frame_17.png" id="5_mf3jv"]
+[ext_resource type="Texture2D" uid="uid://bacg6tt07x50a" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0003_frame_086.png" id="5_pqjek"]
+[ext_resource type="Texture2D" uid="uid://dafsjsarfewu7" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0004_frame_081.png" id="6_2k6wk"]
+[ext_resource type="Texture2D" uid="uid://bijh0tobvkypo" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0005_frame_14.png" id="6_wub3p"]
+[ext_resource type="Texture2D" uid="uid://dckrwwkhb2kev" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0005_frame_076.png" id="7_stf1t"]
+[ext_resource type="Texture2D" uid="uid://b4da0o7g44j1k" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0006_frame_10.png" id="7_ydfrk"]
+[ext_resource type="Texture2D" uid="uid://bviuwnoq5tby6" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0007_frame_04.png" id="8_7i0it"]
+[ext_resource type="Texture2D" uid="uid://k6dh5hj2qidm" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0006_frame_071.png" id="8_tpsss"]
+[ext_resource type="Texture2D" uid="uid://cn073p6gwtcgv" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0007_frame_066.png" id="9_2mors"]
+[ext_resource type="Texture2D" uid="uid://uw1ljhx5xet3" path="res://Asset/Sprite/Kumbakarna/Walk/1.png" id="9_6kpme"]
+[ext_resource type="Texture2D" uid="uid://b73p1egr4w1md" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0008_frame_056.png" id="10_5iiy0"]
+[ext_resource type="Texture2D" uid="uid://dcxy07uufkfjg" path="res://Asset/Sprite/Kumbakarna/Walk/2.png" id="10_knti6"]
+[ext_resource type="Texture2D" uid="uid://cn43ukogpbde4" path="res://Asset/Sprite/Kumbakarna/Walk/3.png" id="11_gb3xo"]
+[ext_resource type="Texture2D" uid="uid://bxutvjr0mf4b5" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0009_frame_051(1).png" id="11_lo4wv"]
+[ext_resource type="Texture2D" uid="uid://pbrtndg0hytp" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0010_frame_036.png" id="12_r5h13"]
+[ext_resource type="Texture2D" uid="uid://cwbi6yssggi5i" path="res://Asset/Sprite/Kumbakarna/Walk/4.png" id="12_tbwm5"]
+[ext_resource type="Texture2D" uid="uid://b5fo7ohwu56qb" path="res://Asset/Sprite/Kumbakarna/Walk/5.png" id="13_4dpnu"]
+[ext_resource type="Texture2D" uid="uid://bkdfa50kwtwwt" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0011_frame_026.png" id="13_cpddv"]
+[ext_resource type="Texture2D" uid="uid://drf868fbx0xdq" path="res://Asset/Sprite/Kumbakarna/Walk/6.png" id="14_261q2"]
+[ext_resource type="Texture2D" uid="uid://bdmtk486lmpgq" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0012_frame_021.png" id="14_tkfod"]
+[ext_resource type="Texture2D" uid="uid://jmgdpt0op8mw" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0013_frame_011.png" id="15_6jjaq"]
+[ext_resource type="Texture2D" uid="uid://dngyj3o1icc7y" path="res://Asset/Sprite/Kumbakarna/Walk/7.png" id="15_hh23s"]
+[ext_resource type="Texture2D" uid="uid://bjjllkgr1thlk" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0014_frame_006.png" id="16_1ppqn"]
+[ext_resource type="Texture2D" uid="uid://dte60m3v5kpip" path="res://Asset/Sprite/Kumbakarna/Walk/8.png" id="16_ij0d2"]
+[ext_resource type="Texture2D" uid="uid://2iomuruttkfl" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0015_frame_001.png" id="17_8gh6m"]
+[ext_resource type="Texture2D" uid="uid://brhp8xtwgvkfd" path="res://Asset/Sprite/Kumbakarna/Walk/9.png" id="17_a36sd"]
+[ext_resource type="Texture2D" uid="uid://bup4bjkdr4kf4" path="res://Asset/Sprite/Kumbakarna/Walk/10.png" id="18_cs5k6"]
+[ext_resource type="Texture2D" uid="uid://us57eojro6i5" path="res://Asset/Sprite/Kumbakarna/Walk/11.png" id="19_mod7s"]
+[ext_resource type="Texture2D" uid="uid://243y5bh7snb5" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="20_teehw"]
+[ext_resource type="Texture2D" uid="uid://d3n62eyqysi1q" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="21_4nfti"]
+[ext_resource type="Texture2D" uid="uid://c0vpiucuq1bjf" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="22_8vygx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fdk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tcqy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ntpuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5fn75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pqjek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2k6wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_stf1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tpsss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2mors")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5iiy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lo4wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r5h13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cpddv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tkfod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6jjaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1ppqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8gh6m")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sqh4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p8ou3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hhxcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mf3jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wub3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ydfrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7i0it")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6kpme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_knti6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gb3xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tbwm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4dpnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_261q2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hh23s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ij0d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_a36sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cs5k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mod7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_teehw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4nfti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8vygx")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="Kumbakarna" instance=ExtResource("1_oxm4m")]
+
+[node name="PlayerAnim" parent="." index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_6fdk8")
+animation = &"Attack"
+frame_progress = 0.854326
+
+[node name="ActionDetector" parent="." index="4"]
+visible = false

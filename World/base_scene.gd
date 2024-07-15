@@ -86,3 +86,4 @@ func connect_NPC_to_player():
 	for child in self.get_children():
 		if child is NPC:
 			child.chat_ends.connect(player._on_finished_chatting)
+

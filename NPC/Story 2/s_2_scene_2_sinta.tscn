@@ -1,14 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd17oo0c0t4fd"]
+[gd_scene load_steps=11 format=3 uid="uid://cd17oo0c0t4fd"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_adr20"]
 [ext_resource type="Resource" uid="uid://w5hqjd3il41j" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Sinta&Kumbakarna.dialogue" id="2_fk5fi"]
+[ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="2_ss3qo"]
+[ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="3_bqe4b"]
+[ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="4_l60ho"]
+[ext_resource type="Texture2D" uid="uid://obvrfyr4jmky" path="res://Asset/Sprite/Sinta/Sinta0003.png" id="5_s4y0h"]
+[ext_resource type="Texture2D" uid="uid://r2xnr2pwwk44" path="res://Asset/Sprite/Sinta/Sinta0004.png" id="6_b7x24"]
+[ext_resource type="Texture2D" uid="uid://dfjvrafd4e43r" path="res://Asset/Sprite/Sinta/Sinta0005.png" id="7_3wsh7"]
+[ext_resource type="Texture2D" uid="uid://daljfuf4gawf0" path="res://Asset/Sprite/Sinta/Sinta0006.png" id="8_ifq1j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_suybo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ss3qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqe4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l60ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s4y0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b7x24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3wsh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ifq1j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="S2_Scene2_Sinta" instance=ExtResource("1_adr20")]
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 modulate = Color(1, 1, 1, 1)
 self_modulate = Color(1, 0.443137, 0.701961, 1)
 scale = Vector2(0.84375, 2.48438)
 
-[node name="Actionable" parent="." index="3"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(-1, -78)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_suybo")
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_fk5fi")

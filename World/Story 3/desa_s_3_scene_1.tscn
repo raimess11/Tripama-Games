@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_etbxl"]
 [ext_resource type="Script" path="res://World/Story 3/desa_s_3_scene_1.gd" id="2_3tucs"]
-[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_nb6n6"]
 [ext_resource type="Resource" uid="uid://o8mwycvocvme" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue1_Duryodhana&Karna.dialogue" id="3_h4726"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_td7hv"]
+[ext_resource type="Texture2D" uid="uid://cwa02aq5u52b2" path="res://Asset/Background/bg desa malem.png" id="4_v48te"]
 
 [sub_resource type="Animation" id="Animation_nexkl"]
 length = 0.001
@@ -153,7 +153,7 @@ dialogue_resource = ExtResource("3_h4726")
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
 position = Vector2(912, 392)
 scale = Vector2(0.45, 0.45)
-texture = ExtResource("2_nb6n6")
+texture = ExtResource("4_v48te")
 
 [node name="Duryodhana" type="Sprite2D" parent="." index="2"]
 self_modulate = Color(1, 0.443137, 0.701961, 1)

@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://m8wplw7lsiu0"]
+
+[ext_resource type="Script" path="res://Audio Manager/audio_manager.gd" id="1_j5ulf"]
+[ext_resource type="PackedScene" uid="uid://d2wtn56o8bkip" path="res://Audio Manager/audio_pool.tscn" id="1_s7u24"]
+[ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="2_3r021"]
+[ext_resource type="AudioStream" uid="uid://cfdgotdxlv0ja" path="res://Asset/Sound/Talk SFX/Male 1.mp3" id="3_leqne"]
+[ext_resource type="AudioStream" uid="uid://d0n2bygmbqcgf" path="res://Asset/Sound/Talk SFX/Male 2.mp3" id="4_7k8v6"]
+[ext_resource type="AudioStream" uid="uid://cr50y822uktbj" path="res://Asset/Sound/Talk SFX/Female 1.mp3" id="5_1tjj6"]
+[ext_resource type="AudioStream" uid="uid://k0meat8nolim" path="res://Asset/Sound/Talk SFX/Female 2.mp3" id="6_ei57b"]
+[ext_resource type="AudioStream" uid="uid://d0i4c2c3l6ydy" path="res://Asset/Sound/Talk SFX/Oompa Loompa.mp3" id="7_igdob"]
+[ext_resource type="AudioStream" uid="uid://cdbmf80g10yfx" path="res://Asset/Sound/Swords SFX/On hit.mp3" id="9_y06v0"]
+[ext_resource type="AudioStream" uid="uid://bkf6u5xjbphav" path="res://Asset/Sound/Swords SFX/On hit 2.mp3" id="10_tamnt"]
+[ext_resource type="AudioStream" uid="uid://diae72xlgux48" path="res://Asset/Sound/Swords SFX/Unsheathed.mp3" id="11_riatn"]
+[ext_resource type="AudioStream" uid="uid://dk03i0r8ngf7d" path="res://Asset/Sound/Swords SFX/Unsheathed 2.mp3" id="12_o74vu"]
+[ext_resource type="AudioStream" uid="uid://ceim54cs5xmcs" path="res://Asset/Sound/Swords SFX/Parry.mp3" id="13_hbnet"]
+[ext_resource type="AudioStream" uid="uid://6m1lyh4dcg16" path="res://Asset/Sound/Lose & Win SFX/Victory.mp3" id="14_1y56a"]
+[ext_resource type="AudioStream" uid="uid://diww1kbf74o6k" path="res://Asset/Sound/Lose & Win SFX/Lose.mp3" id="15_a1kvb"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_j5ulf")
+
+[node name="MaleVoice" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Male1" parent="MaleVoice" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MaleVoice/Male1"]
+stream = ExtResource("3_leqne")
+volume_db = 4.0
+bus = &"SFX"
+
+[node name="Male2" parent="MaleVoice" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MaleVoice/Male2"]
+stream = ExtResource("4_7k8v6")
+bus = &"SFX"
+
+[node name="FemaleVoice" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Female1" parent="FemaleVoice" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FemaleVoice/Female1"]
+stream = ExtResource("5_1tjj6")
+volume_db = 4.0
+bus = &"SFX"
+
+[node name="Female2" parent="FemaleVoice" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FemaleVoice/Female2"]
+stream = ExtResource("6_ei57b")
+bus = &"SFX"
+
+[node name="OompaLoompaVoice" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="OompaLoompa" parent="OompaLoompaVoice" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="OompaLoompaVoice/OompaLoompa"]
+stream = ExtResource("7_igdob")
+volume_db = 4.0
+bus = &"SFX"
+
+[node name="SwordHit" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Hit1" parent="SwordHit" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SwordHit/Hit1"]
+stream = ExtResource("9_y06v0")
+bus = &"SFX"
+
+[node name="Hit2" parent="SwordHit" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SwordHit/Hit2"]
+stream = ExtResource("10_tamnt")
+bus = &"SFX"
+
+[node name="Unsheated" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Unsheated1" parent="Unsheated" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Unsheated/Unsheated1"]
+stream = ExtResource("11_riatn")
+bus = &"SFX"
+
+[node name="Unsheated2" parent="Unsheated" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Unsheated/Unsheated2"]
+stream = ExtResource("12_o74vu")
+bus = &"SFX"
+
+[node name="Parry" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Parry" parent="Parry" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Parry/Parry"]
+stream = ExtResource("13_hbnet")
+bus = &"SFX"
+
+[node name="WinLose" parent="." instance=ExtResource("1_s7u24")]
+
+[node name="Win" parent="WinLose" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WinLose/Win"]
+stream = ExtResource("14_1y56a")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer50012" type="AudioStreamPlayer" parent="WinLose/Win"]
+stream = ExtResource("14_1y56a")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer743833" type="AudioStreamPlayer" parent="WinLose/Win"]
+stream = ExtResource("14_1y56a")
+bus = &"SFX"
+
+[node name="Lose" parent="WinLose" instance=ExtResource("2_3r021")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WinLose/Lose"]
+stream = ExtResource("15_a1kvb")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer50013" type="AudioStreamPlayer" parent="WinLose/Lose"]
+stream = ExtResource("15_a1kvb")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer743834" type="AudioStreamPlayer" parent="WinLose/Lose"]
+stream = ExtResource("15_a1kvb")
+bus = &"SFX"
