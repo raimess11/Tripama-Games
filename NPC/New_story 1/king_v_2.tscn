@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvry36aglor4d"]
+[gd_scene load_steps=13 format=3 uid="uid://dvry36aglor4d"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_jt2sj"]
 [ext_resource type="Resource" uid="uid://cny272arbkgw1" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue5_King&Suwanda.dialogue" id="2_cyhs4"]
+[ext_resource type="Texture2D" uid="uid://dlv5obgihu2rp" path="res://Asset/Object/kursi raja 2.png" id="2_rpyv5"]
 [ext_resource type="Texture2D" uid="uid://cj6l7rht44wce" path="res://Asset/Sprite/Raja/raja1.png" id="2_vt6bl"]
 [ext_resource type="Texture2D" uid="uid://7j1ja6valjpv" path="res://Asset/Sprite/Raja/raja2.png" id="3_6dlj3"]
 [ext_resource type="Texture2D" uid="uid://brt4oijoxwl3c" path="res://Asset/Sprite/Raja/raja3.png" id="4_felwi"]
@@ -47,14 +48,19 @@ size = Vector2(704, 312)
 [node name="Sprite2D" parent="." index="0"]
 visible = false
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="Chair" type="Sprite2D" parent="." index="1"]
+position = Vector2(8, -107)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_rpyv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
 position = Vector2(17, -111)
 scale = Vector2(0.62, 0.62)
 sprite_frames = SubResource("SpriteFrames_5akjy")
 animation = &"raja_idle"
 autoplay = "raja_idle"
 
-[node name="Actionable" parent="." index="4"]
+[node name="Actionable" parent="." index="5"]
 dialogue_resource = ExtResource("2_cyhs4")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]

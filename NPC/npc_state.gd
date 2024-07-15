@@ -12,7 +12,8 @@ func emit_has_interacted(leftDoor, state):
 #Quest dictionary
 var questNPC = [{"questS1Scene1": false, #Scene 1
 				"questS1Scene2": false, #Scene 2
-				"questS1Scene4": false #Scene 4
+				"questS1Scene4": false, #Scene 4
+				"questS1Scene5": false #KingBeforeWar
 				},
 				{"questS2Scene2": false #Scene 2
 				},

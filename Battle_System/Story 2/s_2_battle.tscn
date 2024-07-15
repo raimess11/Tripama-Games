@@ -1,0 +1,139 @@
+[gd_scene load_steps=31 format=3 uid="uid://cd0ccshx706xd"]
+
+[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_rjn55"]
+[ext_resource type="Resource" uid="uid://vdhl1j3rtr38" path="res://Battle_System/Story 2/S2.tres" id="2_nfrsx"]
+[ext_resource type="Script" path="res://Battle_System/Story 2/s_2_battle.gd" id="2_sqtfy"]
+[ext_resource type="Resource" uid="uid://kux1whkkpyw3" path="res://Battle_System/Story 2/S2_enemy.tres" id="3_jbf62"]
+[ext_resource type="Texture2D" uid="uid://ble3tm6mjp4cl" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0000_frame_100.png" id="3_q2hms"]
+[ext_resource type="Texture2D" uid="uid://covftw4wlgf8j" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0001_frame_096.png" id="4_gsy2p"]
+[ext_resource type="Texture2D" uid="uid://coh78sjw55leq" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0002_frame_091.png" id="5_j8mp0"]
+[ext_resource type="Texture2D" uid="uid://bacg6tt07x50a" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0003_frame_086.png" id="6_hlxpy"]
+[ext_resource type="Texture2D" uid="uid://dafsjsarfewu7" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0004_frame_081.png" id="7_ax6fh"]
+[ext_resource type="Texture2D" uid="uid://dckrwwkhb2kev" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0005_frame_076.png" id="8_o4ns7"]
+[ext_resource type="Texture2D" uid="uid://k6dh5hj2qidm" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0006_frame_071.png" id="9_g3rle"]
+[ext_resource type="Texture2D" uid="uid://cn073p6gwtcgv" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0007_frame_066.png" id="10_35x50"]
+[ext_resource type="Texture2D" uid="uid://b73p1egr4w1md" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0008_frame_056.png" id="11_mmxbx"]
+[ext_resource type="Texture2D" uid="uid://bxutvjr0mf4b5" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0009_frame_051(1).png" id="12_3lgpq"]
+[ext_resource type="Texture2D" uid="uid://pbrtndg0hytp" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0010_frame_036.png" id="13_413oc"]
+[ext_resource type="Texture2D" uid="uid://bkdfa50kwtwwt" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0011_frame_026.png" id="14_apvsm"]
+[ext_resource type="Texture2D" uid="uid://bdmtk486lmpgq" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0012_frame_021.png" id="15_olb5t"]
+[ext_resource type="Texture2D" uid="uid://jmgdpt0op8mw" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0013_frame_011.png" id="16_hg2bj"]
+[ext_resource type="Texture2D" uid="uid://bjjllkgr1thlk" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0014_frame_006.png" id="17_mpx82"]
+[ext_resource type="Texture2D" uid="uid://2iomuruttkfl" path="res://Asset/Sprite/Kumbakarna/Combat pose/combat_0000s_0015_frame_001.png" id="18_tvxri"]
+[ext_resource type="Texture2D" uid="uid://ceh4p8huthsj1" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0000_frame_36.png" id="19_wv1sg"]
+[ext_resource type="Texture2D" uid="uid://dnvf0dbj4ot4e" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0001_frame_35.png" id="20_0b2ug"]
+[ext_resource type="Texture2D" uid="uid://c2mq2rd4x80ey" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0002_frame_26.png" id="21_ktnxe"]
+[ext_resource type="Texture2D" uid="uid://lxto27katj3u" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0003_frame_23.png" id="22_cxcw5"]
+[ext_resource type="Texture2D" uid="uid://crgsdvmj4vbrt" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0004_frame_17.png" id="23_epohn"]
+[ext_resource type="Texture2D" uid="uid://bijh0tobvkypo" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0005_frame_14.png" id="24_joe3y"]
+[ext_resource type="Texture2D" uid="uid://b4da0o7g44j1k" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0006_frame_10.png" id="25_cel00"]
+[ext_resource type="Texture2D" uid="uid://bviuwnoq5tby6" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0007_frame_04.png" id="26_qkwgy"]
+[ext_resource type="Texture2D" uid="uid://d4dw64cqgabpf" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0008_frame_01.png" id="27_yndl0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgoqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q2hms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gsy2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j8mp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hlxpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ax6fh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o4ns7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g3rle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_35x50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mmxbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3lgpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_413oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_apvsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_olb5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hg2bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mpx82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tvxri")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_wv1sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0b2ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ktnxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cxcw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_epohn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_joe3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cel00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qkwgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yndl0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="S2_battle" instance=ExtResource("1_rjn55")]
+process_mode = 3
+script = ExtResource("2_sqtfy")
+
+[node name="BattlePlayer" parent="." index="3"]
+starting_stats = ExtResource("2_nfrsx")
+
+[node name="PlayerAnim" parent="BattlePlayer" index="0"]
+position = Vector2(16, 0)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_bgoqb")
+animation = &"Attack"
+frame = 15
+frame_progress = 1.0
+
+[node name="Enemy" parent="." index="4"]
+starting_stats = ExtResource("3_jbf62")
+
+[editable path="BattlePlayer"]

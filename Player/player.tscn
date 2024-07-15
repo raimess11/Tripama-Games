@@ -84,7 +84,7 @@ script = ExtResource("1_21t83")
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_o8meq")
-animation = &"Walk"
+animation = &"Idle"
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_7y8io")

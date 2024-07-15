@@ -1,0 +1,328 @@
+[gd_scene load_steps=44 format=3 uid="uid://cs5plb55min2c"]
+
+[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_ovf2c"]
+[ext_resource type="Script" path="res://Battle_System/Story 3/s_3_pandawa.gd" id="2_qsdty"]
+[ext_resource type="Resource" uid="uid://ek2j5p5hown" path="res://Battle_System/Story 3/S3_pandawa.tres" id="2_vrcp6"]
+[ext_resource type="Texture2D" uid="uid://dmhlgij7gitr5" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0000_frame_177.png" id="3_do2su"]
+[ext_resource type="Resource" uid="uid://evelqjanvxyu" path="res://Battle_System/Story 3/S3_enemy_pandawa.tres" id="3_dvppb"]
+[ext_resource type="Texture2D" uid="uid://do5qtbsa64akk" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0001_frame_176.png" id="4_rcgf4"]
+[ext_resource type="Texture2D" uid="uid://qh07gwqyer8l" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0002_frame_175.png" id="5_oud3f"]
+[ext_resource type="Texture2D" uid="uid://blcrx0ejpemfn" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0003_frame_174.png" id="6_6mrgl"]
+[ext_resource type="Texture2D" uid="uid://ch73txchifbj4" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0004_frame_173.png" id="7_bxj6o"]
+[ext_resource type="Texture2D" uid="uid://cbfb2bbqt3e2x" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0005_frame_172.png" id="8_udj6p"]
+[ext_resource type="Texture2D" uid="uid://b4vstp8f6qi0n" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0006_frame_171.png" id="9_sfijp"]
+[ext_resource type="Texture2D" uid="uid://qmael5jtnjkt" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0007_frame_166.png" id="10_2jdh1"]
+[ext_resource type="Texture2D" uid="uid://b3c18mq8pyiuv" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0008_frame_151.png" id="11_d2qf3"]
+[ext_resource type="Texture2D" uid="uid://cy7187dx1i6hb" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0009_frame_126.png" id="12_6d2vs"]
+[ext_resource type="Texture2D" uid="uid://dfdhvq11xympg" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0010_frame_121.png" id="13_qndhq"]
+[ext_resource type="Texture2D" uid="uid://lpytw70rwrsv" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0011_frame_111.png" id="14_s2bh8"]
+[ext_resource type="Texture2D" uid="uid://10mgkilfn3dn" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0012_frame_091.png" id="15_slgqx"]
+[ext_resource type="Texture2D" uid="uid://cj3j8isdcrbg2" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0013_frame_076.png" id="16_f3exv"]
+[ext_resource type="Texture2D" uid="uid://b1scteyumjyit" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0014_frame_071.png" id="17_bct40"]
+[ext_resource type="Texture2D" uid="uid://by2b3lvjq8j07" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0015_frame_066.png" id="18_ibi3a"]
+[ext_resource type="Texture2D" uid="uid://catphc4c30wx8" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0016_frame_056.png" id="19_gluyf"]
+[ext_resource type="Texture2D" uid="uid://7soj1yllmyn8" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0017_frame_051.png" id="20_i0dqb"]
+[ext_resource type="Texture2D" uid="uid://1d5aow6ljoxk" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0018_frame_036.png" id="21_03d21"]
+[ext_resource type="Texture2D" uid="uid://b6v0ivlwb6dcv" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0019_frame_016.png" id="22_xnbmq"]
+[ext_resource type="Texture2D" uid="uid://b2yqo3qgegxq" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0020_frame_011.png" id="23_r2mpp"]
+[ext_resource type="Texture2D" uid="uid://wpl45r5h7bbd" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0021_frame_001.png" id="24_t6dyu"]
+[ext_resource type="Texture2D" uid="uid://cmsoyvcavm4b8" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0000_frame_58.png" id="25_abmym"]
+[ext_resource type="Texture2D" uid="uid://lscw7sdxxk7w" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0001_frame_57.png" id="26_m8te5"]
+[ext_resource type="Texture2D" uid="uid://dx4oihx375y8g" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0002_frame_41.png" id="27_d1kgb"]
+[ext_resource type="Texture2D" uid="uid://cuvsxacqfygf6" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0003_frame_37.png" id="28_0fqb3"]
+[ext_resource type="Texture2D" uid="uid://c17xfqj88x6sb" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0004_frame_29.png" id="29_htkyh"]
+[ext_resource type="Texture2D" uid="uid://blkfm00ydx3y" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0005_frame_25.png" id="30_yv4k5"]
+[ext_resource type="Texture2D" uid="uid://c1p7wlak0ww8h" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0006_frame_11.png" id="31_vs1oi"]
+[ext_resource type="Texture2D" uid="uid://d0oqphxwbymxp" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0007_frame_09.png" id="32_6kh82"]
+[ext_resource type="Texture2D" uid="uid://dy2gcog6uxlj7" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0008_frame_01.png" id="33_5ounr"]
+[ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="36_ev3fo"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="37_s1rsm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txmmf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_do2su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rcgf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oud3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6mrgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bxj6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_udj6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sfijp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2jdh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d2qf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6d2vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qndhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s2bh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_slgqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f3exv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bct40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ibi3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gluyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_i0dqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_03d21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xnbmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_r2mpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_t6dyu")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_abmym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_m8te5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_d1kgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0fqb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_htkyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yv4k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vs1oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6kh82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5ounr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_rm0j7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_70h4o"]
+resource_name = "end_end"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Overlay/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h4xhj"]
+resource_name = "start_end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Overlay/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uvea0"]
+_data = {
+"RESET": SubResource("Animation_rm0j7"),
+"end_end": SubResource("Animation_70h4o"),
+"start_end": SubResource("Animation_h4xhj")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bn0lw"]
+shader = ExtResource("36_ev3fo")
+shader_parameter/amount = 0.0
+
+[node name="S3_Pandawa" instance=ExtResource("1_ovf2c")]
+script = ExtResource("2_qsdty")
+
+[node name="BattlePlayer" parent="." index="3"]
+starting_stats = ExtResource("2_vrcp6")
+
+[node name="PlayerAnim" parent="BattlePlayer" index="0"]
+position = Vector2(0, 8)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_txmmf")
+
+[node name="Enemy" parent="." index="4"]
+starting_stats = ExtResource("3_dvppb")
+
+[node name="CutScene" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_uvea0")
+}
+
+[node name="Overlay" type="CanvasLayer" parent="." index="9"]
+
+[node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Blur" type="ColorRect" parent="Overlay" index="1"]
+material = SubResource("ShaderMaterial_bn0lw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Overlay" index="2"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("37_s1rsm")
+theme_override_font_sizes/font_size = 50
+text = "Bad End
+Pandawa dan Korawa berperang sengit di tanah Kurukshetra.
+Karna berpihak pada Korawa, bertarung dengan Arjuna.
+Namun, Karna kalah dan terbunuh oleh Arjuna.
+Meskipun mati dalam perang, ia mati dengan hormat dari para Korawa, khususnya Duryodhana."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[editable path="BattlePlayer"]

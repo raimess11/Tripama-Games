@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0n2bygmbqcgf"
+path="res://.godot/imported/Male 2.mp3-7b0cfbfc4a913f3a7b6c1efabcce2526.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Talk SFX/Male 2.mp3"
+dest_files=["res://.godot/imported/Male 2.mp3-7b0cfbfc4a913f3a7b6c1efabcce2526.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

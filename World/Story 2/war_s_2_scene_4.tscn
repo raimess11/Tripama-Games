@@ -1,14 +1,191 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0q503hruwwlv"]
+[gd_scene load_steps=57 format=3 uid="uid://c0q503hruwwlv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jr7hc"]
-[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_m4fyp"]
 [ext_resource type="Script" path="res://World/Story 2/war_s_2_scene_4.gd" id="2_vw0wv"]
 [ext_resource type="Resource" uid="uid://ns6kbb3ynru0" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue5_war.dialogue" id="3_1d3g6"]
+[ext_resource type="Texture2D" uid="uid://rby64a3juymf" path="res://Asset/Background/bg desa malem terbakar.png" id="4_lwl40"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="4_u1cbn"]
+[ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="5_8frjp"]
 [ext_resource type="PackedScene" uid="uid://bm3rvtyhevhw2" path="res://NPC/Story 2/rama.tscn" id="5_lfqv7"]
+[ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="6_aityc"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="6_rfamb"]
-[ext_resource type="Texture2D" uid="uid://dw7bdbvp1y8hq" path="res://Asset/temp/RPG Weapons Dark Outline 64x64.png" id="7_6k30c"]
+[ext_resource type="Texture2D" uid="uid://b4w18gywlp7wl" path="res://Asset/Sprite/Guard/guard3.png" id="7_nutqa"]
+[ext_resource type="Texture2D" uid="uid://kt3tp2gsiotg" path="res://Asset/Sprite/Guard/guard4.png" id="8_pprj2"]
+[ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="9_enuhj"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="9_q7p1a"]
+[ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="10_1pnbv"]
+[ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="11_c3afv"]
+[ext_resource type="Texture2D" uid="uid://dhp1jcfl50j4f" path="res://Asset/Sprite/Rahwana/Rahwana0000.png" id="12_i6rqu"]
+[ext_resource type="Texture2D" uid="uid://dy0j1tysoelcr" path="res://Asset/Sprite/Rahwana/Rahwana0001.png" id="13_bdngt"]
+[ext_resource type="Texture2D" uid="uid://td06xrwrhxea" path="res://Asset/Sprite/Rahwana/Rahwana0002.png" id="14_afm3r"]
+[ext_resource type="Texture2D" uid="uid://fjl1rpw116vc" path="res://Asset/Sprite/Rahwana/Rahwana0003.png" id="15_g36nh"]
+[ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="16_6keoy"]
+[ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="17_cq3oi"]
+[ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="18_xafwp"]
+[ext_resource type="Texture2D" uid="uid://b5opoca7uuec3" path="res://Asset/Object/panah aset.png" id="21_5u4wl"]
+[ext_resource type="Texture2D" uid="uid://ceh4p8huthsj1" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0000_frame_36.png" id="22_utbo8"]
+[ext_resource type="Texture2D" uid="uid://dnvf0dbj4ot4e" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0001_frame_35.png" id="23_43r0o"]
+[ext_resource type="Texture2D" uid="uid://c2mq2rd4x80ey" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0002_frame_26.png" id="24_8j3ki"]
+[ext_resource type="Texture2D" uid="uid://lxto27katj3u" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0003_frame_23.png" id="25_4gtev"]
+[ext_resource type="Texture2D" uid="uid://crgsdvmj4vbrt" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0004_frame_17.png" id="26_528y1"]
+[ext_resource type="Texture2D" uid="uid://bijh0tobvkypo" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0005_frame_14.png" id="27_bus5o"]
+[ext_resource type="Texture2D" uid="uid://b4da0o7g44j1k" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0006_frame_10.png" id="28_aiyt7"]
+[ext_resource type="Texture2D" uid="uid://bviuwnoq5tby6" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0007_frame_04.png" id="29_m1anr"]
+[ext_resource type="Texture2D" uid="uid://d4dw64cqgabpf" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0008_frame_01.png" id="30_lkcr7"]
+[ext_resource type="Texture2D" uid="uid://bywijwvi0atap" path="res://Asset/Sprite/Kumbakarna/Walk/1.png" id="31_l6yhf"]
+[ext_resource type="Texture2D" uid="uid://bd04sy74h4lgl" path="res://Asset/Sprite/Kumbakarna/Walk/2.png" id="32_1u7m4"]
+[ext_resource type="Texture2D" uid="uid://bvuynmd21yyw7" path="res://Asset/Sprite/Kumbakarna/Walk/3.png" id="33_o1epl"]
+[ext_resource type="Texture2D" uid="uid://cbmtgy8tfk1r1" path="res://Asset/Sprite/Kumbakarna/Walk/4.png" id="34_22pnf"]
+[ext_resource type="Texture2D" uid="uid://s8jibt21t3ly" path="res://Asset/Sprite/Kumbakarna/Walk/5.png" id="35_dywqq"]
+[ext_resource type="Texture2D" uid="uid://c4rfbsoby7g53" path="res://Asset/Sprite/Kumbakarna/Walk/6.png" id="36_s2c10"]
+[ext_resource type="Texture2D" uid="uid://lhfle7en2sqt" path="res://Asset/Sprite/Kumbakarna/Walk/7.png" id="37_thmqr"]
+[ext_resource type="Texture2D" uid="uid://e0e53itwyu6a" path="res://Asset/Sprite/Kumbakarna/Walk/8.png" id="38_i3vxl"]
+[ext_resource type="Texture2D" uid="uid://o6wgyeideyly" path="res://Asset/Sprite/Kumbakarna/Walk/9.png" id="39_4vdxi"]
+[ext_resource type="Texture2D" uid="uid://cq31piqrlqdbk" path="res://Asset/Sprite/Kumbakarna/Walk/10.png" id="40_pffb3"]
+[ext_resource type="Texture2D" uid="uid://c3k668xbusdp0" path="res://Asset/Sprite/Kumbakarna/Walk/11.png" id="41_umq4r"]
+[ext_resource type="Texture2D" uid="uid://ccvan4iolybco" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="42_xwyen"]
+[ext_resource type="Texture2D" uid="uid://cnj161gg0mrx0" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="43_ujm5t"]
+[ext_resource type="Texture2D" uid="uid://ccn8l4iygbhm3" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="44_q8afo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lm2ul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8frjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aityc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nutqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pprj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_enuhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1pnbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c3afv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cow2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_i6rqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bdngt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_afm3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g36nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6keoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cq3oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xafwp")
+}],
+"loop": true,
+"name": &"Rahwana_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bw5jf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_utbo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_43r0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8j3ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4gtev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_528y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bus5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_aiyt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_m1anr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lkcr7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_l6yhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_1u7m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_o1epl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_22pnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dywqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_s2c10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_thmqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_i3vxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_4vdxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pffb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_umq4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xwyen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ujm5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_q8afo")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
 
 [sub_resource type="Animation" id="Animation_kl8eb"]
 length = 0.001
@@ -353,7 +530,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_kmdi7"]
 resource_name = "first_description"
-length = 3.5
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -373,7 +550,7 @@ tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1, 3, 3.5),
+"times": PackedFloat32Array(0.5, 1, 5.5, 6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 2.0, 2.0, 0.0]
@@ -385,7 +562,7 @@ tracks/2/path = NodePath("Overlay/Label:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 1, 2.7, 3.4),
+"times": PackedFloat32Array(0.5, 1, 5.2, 5.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -468,6 +645,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_battle"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xcdse"]
 _data = {
@@ -483,25 +674,30 @@ shader = ExtResource("6_rfamb")
 shader_parameter/amount = 0.0
 
 [node name="War_S2_Scene4" instance=ExtResource("1_jr7hc")]
+process_mode = 1
 script = ExtResource("2_vw0wv")
 dialogue_resource = ExtResource("3_1d3g6")
 
 [node name="Background" parent="." index="0"]
 position = Vector2(936, 400)
 scale = Vector2(0.44, 0.44)
-texture = ExtResource("2_m4fyp")
+texture = ExtResource("4_lwl40")
 
-[node name="Lesmana" type="Sprite2D" parent="." index="2"]
-self_modulate = Color(0.87451, 0.239216, 1, 1)
+[node name="Lesmana" type="AnimatedSprite2D" parent="." index="2"]
 position = Vector2(680, 632)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("4_u1cbn")
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_lm2ul")
+autoplay = "default"
+frame_progress = 0.668966
 
-[node name="Rahwana" type="Sprite2D" parent="." index="3"]
-self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
+[node name="Rahwana" type="AnimatedSprite2D" parent="." index="3"]
 position = Vector2(1208, 616)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("4_u1cbn")
+scale = Vector2(0.497, 0.497)
+sprite_frames = SubResource("SpriteFrames_cow2y")
+animation = &"Rahwana_idle"
+autoplay = "Rahwana_idle"
+frame_progress = 0.378244
+flip_h = true
 
 [node name="Rahwana2" type="Sprite2D" parent="." index="4"]
 self_modulate = Color(1, 0.466667, 0.619608, 1)
@@ -542,49 +738,47 @@ position = Vector2(896, 376)
 
 [node name="Arrow" type="Sprite2D" parent="Arrows" index="0"]
 position = Vector2(-512, 248)
-rotation = 0.785398
-scale = Vector2(2, 2)
-texture = ExtResource("7_6k30c")
-region_enabled = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_5u4wl")
 region_rect = Rect2(896, 512, 65, 62)
 
 [node name="Arrow2" type="Sprite2D" parent="Arrows" index="1"]
 position = Vector2(-528, 144)
-rotation = 0.92677
-scale = Vector2(2, 2)
-texture = ExtResource("7_6k30c")
-region_enabled = true
+rotation = 0.141372
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_5u4wl")
 region_rect = Rect2(896, 512, 65, 62)
 
 [node name="Arrow4" type="Sprite2D" parent="Arrows" index="2"]
 position = Vector2(-624, 144)
-rotation = 0.877901
-scale = Vector2(2, 2)
-texture = ExtResource("7_6k30c")
-region_enabled = true
+rotation = 0.0925025
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_5u4wl")
 region_rect = Rect2(896, 512, 65, 62)
 
 [node name="Arrow3" type="Sprite2D" parent="Arrows" index="3"]
 position = Vector2(-496, 352)
-rotation = 0.785398
-scale = Vector2(2, 2)
-texture = ExtResource("7_6k30c")
-region_enabled = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_5u4wl")
 region_rect = Rect2(896, 512, 65, 62)
 
 [node name="Arrow5" type="Sprite2D" parent="Arrows" index="4"]
 position = Vector2(-600, 16)
-rotation = 1.06814
-scale = Vector2(2, 2)
-texture = ExtResource("7_6k30c")
-region_enabled = true
+rotation = 0.282743
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_5u4wl")
 region_rect = Rect2(896, 512, 65, 62)
 
 [node name="Player" parent="." index="11"]
 position = Vector2(1048, 672)
+scale = Vector2(1.3, 1.3)
 metadata/_edit_group_ = true
 
 [node name="PlayerAnim" parent="Player" index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_bw5jf")
+animation = &"Walk"
+autoplay = "Idle"
 flip_h = true
 
 [node name="RightDoor" parent="." index="13"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr50y822uktbj"
+path="res://.godot/imported/Female 1.mp3-a85d1dfb00e8c3a5a71b9b55dc5e0f91.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Talk SFX/Female 1.mp3"
+dest_files=["res://.godot/imported/Female 1.mp3-a85d1dfb00e8c3a5a71b9b55dc5e0f91.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

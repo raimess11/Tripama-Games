@@ -108,6 +108,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(1014, 663)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sinta:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_qvhig"]
 resource_name = "bush_move"
@@ -224,6 +236,18 @@ tracks/4/keys = {
 "method": &"start_intro_p2"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sinta:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_cyhxt"]
 resource_name = "end_last_intro"
@@ -296,6 +320,18 @@ tracks/2/keys = {
 "args": [],
 "method": &"disable"
 }]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sinta:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kcbi2"]
@@ -419,7 +455,7 @@ position = Vector2(744, 622)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_afgq5")
 autoplay = "default"
-frame_progress = 0.655954
+frame_progress = 0.710041
 
 [node name="Rama" type="Sprite2D" parent="." index="12"]
 self_modulate = Color(0.85098, 0.384314, 1, 1)
@@ -435,12 +471,15 @@ animation = &"sinta_idle"
 autoplay = "sinta_idle"
 flip_h = true
 
-[node name="Rahwana" type="Sprite2D" parent="." index="14"]
+[node name="Rahwana" type="AnimatedSprite2D" parent="." index="14"]
 visible = false
-self_modulate = Color(0.0980392, 0.729412, 0.94902, 1)
 position = Vector2(1160, 616)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("7_vpl7a")
+scale = Vector2(0.497104, 0.497104)
+sprite_frames = SubResource("SpriteFrames_d04vr")
+animation = &"Rahwana_idle"
+autoplay = "Rahwana_idle"
+frame_progress = 0.870569
+flip_h = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="15"]
 

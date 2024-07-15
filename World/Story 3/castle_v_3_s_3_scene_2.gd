@@ -3,9 +3,13 @@ extends Level
 @onready var cut_scene = $CutScene
 
 const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
+var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
 @onready var label = $Overlay/Label
+
+const battle_pandawa = "res://Battle_System/Story 3/s_3_pandawa.tscn"
+const battle_kurawa = "res://Battle_System/Story 3/s_3_kurawa.tscn"
 
 const good_end = "Good End \nPandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna, yang melihat hancur kerajaannya, mati tanpa memilih sekutu."
 const dumb_end = "Dumb End \nPandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna berpihak pada Pandawa, menang mengalahkan para Korawa.\nNamun, Arjuna membunuhnya dari belakang. Karna mati dikhianati oleh keluarga aslinya."
@@ -30,14 +34,15 @@ func nextCutscene(next_scene):
 func _on_Dialogue_Ended(source):
 	if source == dialogue_resource:
 		if NpcState.toForest_choice == "accept":
-			label.text = good_end
+			SceneManager.load_new_scene(battle_kurawa, "fade_to_black")
 		elif NpcState.toForest_choice == "refuse" and NpcState.guardCastle_choice:
-			label.text = dumb_end
+			SceneManager.load_new_scene(battle_pandawa, "fade_to_black")
 		elif NpcState.toForest_choice == "refuse" and !NpcState.guardCastle_choice:
 			label.text = bad_end
+			nextCutscene("end_description")
 		else:
 			label.text = bad_end
-	nextCutscene("end_description")
+			nextCutscene("end_description")
 
 func start_intro():
 	var balloon : Node = Balloon_source.instantiate()
@@ -49,3 +54,8 @@ func playWinLose():
 		audio_pool.PlayIndexSound(0)
 	else:
 		audio_pool.PlayIndexSound(1)
+
+func _on_cut_scene_animation_finished(anim_name):
+	if anim_name == "end_description":
+		await get_tree().create_timer(5).timeout
+		SceneManager.load_new_scene(character_selection,"fade_to_black")

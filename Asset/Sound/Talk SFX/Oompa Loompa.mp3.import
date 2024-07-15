@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0i4c2c3l6ydy"
+path="res://.godot/imported/Oompa Loompa.mp3-bb8f4b314554f599d550990b844f7a7d.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Talk SFX/Oompa Loompa.mp3"
+dest_files=["res://.godot/imported/Oompa Loompa.mp3-bb8f4b314554f599d550990b844f7a7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

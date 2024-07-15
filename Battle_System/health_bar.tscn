@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbnvih7guvpgn"]
+
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="1_b67ma"]
+[ext_resource type="Script" path="res://Battle_System/health_bar.gd" id="2_748fv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg4th"]
+bg_color = Color(0.564706, 0.564706, 0.564706, 0.458824)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3ny3"]
+bg_color = Color(0.196078, 0.803922, 0.196078, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="HealthBar" type="ProgressBar"]
+offset_left = -112.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 11.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_b67ma")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/background = SubResource("StyleBoxFlat_bg4th")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o3ny3")
+max_value = 1000.0
+step = 1.0
+value = 500.0
+rounded = true
+show_percentage = false
+script = ExtResource("2_748fv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_b67ma")
+theme_override_font_sizes/font_size = 20
+text = "1000/1000"
+horizontal_alignment = 1
+vertical_alignment = 1

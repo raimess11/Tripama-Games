@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://cygpxxpdt0j5m"]
+
+[ext_resource type="Script" path="res://Battle_System/startingStats.gd" id="1_hcmb2"]
+
+[resource]
+script = ExtResource("1_hcmb2")
+job_name = "Enemy"
+max_health = 1000
+strength = 150
+defence = 0
+armor = 0

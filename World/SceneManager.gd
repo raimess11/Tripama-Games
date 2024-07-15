@@ -123,8 +123,10 @@ func on_content_finished_loading(content):
 	if content is Level:
 		content.data = incoming_data
 	
-	outCamera.enabled = false
-	inCamera.enabled = false
+	if outCamera != null:
+		outCamera.enabled = false
+	if inCamera != null:
+		inCamera.enabled = false
 	
 	#Remove old scene
 	outgoing_scene.queue_free()
@@ -144,7 +146,8 @@ func on_content_finished_loading(content):
 		if content is Level:
 			content.init_player_location()
 		
-		inCamera.enabled = true
+		if inCamera != null:
+			inCamera.enabled = true
 		
 		transition_screen = null
 		if content is Level:
