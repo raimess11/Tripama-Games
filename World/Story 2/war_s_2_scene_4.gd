@@ -25,6 +25,16 @@ func _ready():
 	
 	player.is_chatting = true
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
+	
+func scene_desc_one():
+	$Overlay.visible = false
+	TextTransition.transisition("s2desc2")
+	await TextTransition.TextTransitionEnd
+	$Overlay.visible = true
+	start_intro()
+
+func scene_desc_two():
+	TextTransition.transisition("s2desc3")
 
 func nextCutscene(next_scene):
 	cut_scene.play(next_scene)
@@ -32,6 +42,8 @@ func nextCutscene(next_scene):
 func _on_Dialogue_Ended(source):
 	if source == dialogue_resource:
 		nextCutscene("temp_battle")
+		await cut_scene.animation_finished
+		$Overlay.visible = false
 
 func start_intro():
 	var balloon : Node = Balloon_source.instantiate()
@@ -41,7 +53,9 @@ func start_intro():
 
 func _on_cut_scene_animation_finished(anim_name):
 	if anim_name == "arrow_cutscene":
-		await get_tree().create_timer(5).timeout
+		scene_desc_two()
+		await TextTransition.TextTransitionEnd
+		$Overlay.visible = true
 		nextCutscene("end")
 	if anim_name == "temp_battle":
 		nextCutscene("arrow_cutscene")

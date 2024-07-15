@@ -22,6 +22,14 @@ func transisition(target: String):
 	cont.visible = true
 	button.disabled = false
 	
+func changeMenu(target: String):
+	root.visible = true
+	$AnimationPlayer.play("Slide_in")
+	await $AnimationPlayer.animation_finished
+	get_tree().change_scene_to_file(target)
+	$AnimationPlayer.play("Slide_out")
+	await $AnimationPlayer.animation_finished
+	root.visible = false
 
 func playAnim(target: String):
 	if target == 'test':

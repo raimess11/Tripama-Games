@@ -1,0 +1,197 @@
+[gd_scene load_steps=14 format=3 uid="uid://bphv7tybbfmxe"]
+
+[ext_resource type="Script" path="res://GUI/pause_menu.gd" id="1_q3b08"]
+[ext_resource type="Texture2D" uid="uid://bxktwkswm35dv" path="res://GUI/Images/UI_background.png" id="1_vgbfs"]
+[ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="2_0ekip"]
+[ext_resource type="FontFile" uid="uid://d26mugl5xsxqh" path="res://GUI/Fonts/Merienda/static/Merienda-Bold.ttf" id="4_7hn7h"]
+[ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="5_2ahod"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdapv"]
+shader = ExtResource("2_0ekip")
+shader_parameter/amount = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
+bg_color = Color(0.741176, 0.564706, 0.435294, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg20w"]
+bg_color = Color(0.572549, 0.415686, 0.301961, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kq22"]
+bg_color = Color(0.368627, 0.258824, 0.176471, 1)
+border_width_bottom = 15
+border_color = Color(0.381717, 0.267833, 0.184802, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_n2dq1"]
+default_font = ExtResource("5_2ahod")
+Button/styles/hover = SubResource("StyleBoxFlat_tbpf7")
+Button/styles/normal = SubResource("StyleBoxFlat_jg20w")
+Button/styles/pressed = SubResource("StyleBoxFlat_7kq22")
+
+[sub_resource type="Animation" id="Animation_m1dss"]
+resource_name = "Blur"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.25, 2.5),
+"update": 0,
+"values": [0.0, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UiBackground:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1p5g6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UiBackground:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5l3wb"]
+_data = {
+"Blur": SubResource("Animation_m1dss"),
+"RESET": SubResource("Animation_1p5g6")
+}
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q3b08")
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qdapv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="UiBackground" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960, 510)
+scale = Vector2(0.274823, 0.274823)
+texture = ExtResource("1_vgbfs")
+
+[node name="Title" type="Label" parent="UiBackground"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2530.5
+offset_top = -778.684
+offset_right = -1477.5
+offset_bottom = -391.684
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.572549, 0.415686, 0.301961, 1)
+theme_override_fonts/font = ExtResource("4_7hn7h")
+theme_override_font_sizes/font_size = 265
+text = "PAUSED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UiBackground"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2353.5
+offset_top = -2470.0
+offset_right = -1654.5
+offset_bottom = -1128.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 180
+
+[node name="Resume" type="Button" parent="UiBackground/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_n2dq1")
+theme_override_font_sizes/font_size = 150
+text = "Resume
+"
+
+[node name="Restart" type="Button" parent="UiBackground/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_n2dq1")
+theme_override_font_sizes/font_size = 150
+text = "Restart"
+
+[node name="Menu" type="Button" parent="UiBackground/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_n2dq1")
+theme_override_font_sizes/font_size = 150
+text = "Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5l3wb")
+}
+
+[connection signal="pressed" from="UiBackground/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="UiBackground/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="UiBackground/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

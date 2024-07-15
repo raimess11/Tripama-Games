@@ -1,42 +1,42 @@
 [gd_scene load_steps=11 format=3 uid="uid://cd17oo0c0t4fd"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_adr20"]
+[ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="2_f16ad"]
 [ext_resource type="Resource" uid="uid://w5hqjd3il41j" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue3_Sinta&Kumbakarna.dialogue" id="2_fk5fi"]
-[ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="2_ss3qo"]
-[ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="3_bqe4b"]
-[ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="4_l60ho"]
-[ext_resource type="Texture2D" uid="uid://obvrfyr4jmky" path="res://Asset/Sprite/Sinta/Sinta0003.png" id="5_s4y0h"]
-[ext_resource type="Texture2D" uid="uid://r2xnr2pwwk44" path="res://Asset/Sprite/Sinta/Sinta0004.png" id="6_b7x24"]
-[ext_resource type="Texture2D" uid="uid://dfjvrafd4e43r" path="res://Asset/Sprite/Sinta/Sinta0005.png" id="7_3wsh7"]
-[ext_resource type="Texture2D" uid="uid://daljfuf4gawf0" path="res://Asset/Sprite/Sinta/Sinta0006.png" id="8_ifq1j"]
+[ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="3_wpchn"]
+[ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="4_6idjw"]
+[ext_resource type="Texture2D" uid="uid://obvrfyr4jmky" path="res://Asset/Sprite/Sinta/Sinta0003.png" id="5_0x1wg"]
+[ext_resource type="Texture2D" uid="uid://r2xnr2pwwk44" path="res://Asset/Sprite/Sinta/Sinta0004.png" id="6_oqmeq"]
+[ext_resource type="Texture2D" uid="uid://dfjvrafd4e43r" path="res://Asset/Sprite/Sinta/Sinta0005.png" id="7_ajs65"]
+[ext_resource type="Texture2D" uid="uid://daljfuf4gawf0" path="res://Asset/Sprite/Sinta/Sinta0006.png" id="8_v7yup"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_suybo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpxp5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ss3qo")
+"texture": ExtResource("2_f16ad")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_bqe4b")
+"texture": ExtResource("3_wpchn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_l60ho")
+"texture": ExtResource("4_6idjw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_s4y0h")
+"texture": ExtResource("5_0x1wg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_b7x24")
+"texture": ExtResource("6_oqmeq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_3wsh7")
+"texture": ExtResource("7_ajs65")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_ifq1j")
+"texture": ExtResource("8_v7yup")
 }],
 "loop": true,
-"name": &"default",
-"speed": 8.0
+"name": &"sinta_idle",
+"speed": 6.0
 }]
 
 [node name="S2_Scene2_Sinta" instance=ExtResource("1_adr20")]
@@ -48,9 +48,12 @@ self_modulate = Color(1, 0.443137, 0.701961, 1)
 scale = Vector2(0.84375, 2.48438)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
-position = Vector2(-1, -78)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_suybo")
+position = Vector2(3, -93)
+scale = Vector2(0.560278, 0.560278)
+sprite_frames = SubResource("SpriteFrames_wpxp5")
+animation = &"sinta_idle"
+autoplay = "sinta_idle"
+frame_progress = 0.229291
 
 [node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_fk5fi")
