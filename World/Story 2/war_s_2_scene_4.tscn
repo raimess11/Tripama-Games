@@ -777,7 +777,6 @@ metadata/_edit_group_ = true
 [node name="PlayerAnim" parent="Player" index="0"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_bw5jf")
-animation = &"Walk"
 autoplay = "Idle"
 flip_h = true
 
