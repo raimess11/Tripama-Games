@@ -205,6 +205,7 @@ theme = SubResource("Theme_m8d1b")
 theme_override_font_sizes/font_size = 65
 text = "PATIH SUWANDA"
 script = ExtResource("2_jur30")
+level_path = "res://World/New_Story 1/intro_s_1_scene_1.tscn"
 
 [node name="Deskripsi1" type="Button" parent="MarginContainer/HBoxContainer/Contain_Patih"]
 layout_mode = 2
@@ -229,6 +230,7 @@ theme = SubResource("Theme_opdgm")
 theme_override_font_sizes/font_size = 65
 text = "KUMBAKARNA"
 script = ExtResource("2_jur30")
+level_path = "res://World/Story 2/intro_story_2.tscn"
 
 [node name="Deskripsi2" type="Button" parent="MarginContainer/HBoxContainer/Contain_Kumba"]
 layout_mode = 2
@@ -254,6 +256,7 @@ theme = SubResource("Theme_sxw4q")
 theme_override_font_sizes/font_size = 65
 text = "ADIPATI KARNA"
 script = ExtResource("2_jur30")
+level_path = "res://World/Story 3/desa_s_3_scene_1.tscn"
 
 [node name="Deskripsi3" type="Button" parent="MarginContainer/HBoxContainer/Contain_Adipati"]
 layout_mode = 2
@@ -264,6 +267,7 @@ script = ExtResource("6_hx8av")
 path = "res://GUI/Character Description Scene/Desc_Adipati.tscn"
 
 [node name="Button" parent="." instance=ExtResource("9_mp0h8")]
+layout_mode = 0
 offset_left = 19.0
 offset_top = 14.0
 offset_right = 258.0

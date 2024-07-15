@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kc5q663nmts2"]
+[gd_scene load_steps=14 format=3 uid="uid://kc5q663nmts2"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1l3ya"]
 [ext_resource type="Script" path="res://World/Story 2/penasihat_s_2_scene_3.gd" id="2_dfdh0"]
@@ -157,10 +157,27 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_dhtpr"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_keksp"]
 _data = {
 "RESET": SubResource("Animation_5tyxl"),
 "end_scene": SubResource("Animation_ufs3l"),
+"fade_out": SubResource("Animation_dhtpr"),
 "start_description": SubResource("Animation_227h0")
 }
 
@@ -206,7 +223,6 @@ transition_type = "fade_to_black"
 main_path_to_new_scene = "res://World/Story 2/war_s_2_scene_4.tscn"
 
 [node name="CutScene" type="AnimationPlayer" parent="." index="8"]
-autoplay = "start_description"
 libraries = {
 "": SubResource("AnimationLibrary_keksp")
 }
@@ -223,6 +239,7 @@ color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Blur" type="ColorRect" parent="Overlay" index="1"]
+visible = false
 material = SubResource("ShaderMaterial_ywkul")
 anchors_preset = 15
 anchor_right = 1.0
@@ -232,6 +249,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Overlay" index="2"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
