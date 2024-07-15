@@ -7,6 +7,7 @@ signal TextTransitionEnd
 @onready var cont = $sceneClose
 
 func _ready():
+	$AnimationPlayer.play("RESET")
 	root.visible = false
 	cont.visible = false
 	

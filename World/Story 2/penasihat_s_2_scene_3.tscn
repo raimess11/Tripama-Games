@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kc5q663nmts2"]
+[gd_scene load_steps=38 format=3 uid="uid://kc5q663nmts2"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1l3ya"]
 [ext_resource type="Script" path="res://World/Story 2/penasihat_s_2_scene_3.gd" id="2_dfdh0"]
@@ -318,7 +318,6 @@ metadata/_edit_group_ = true
 [node name="PlayerAnim" parent="Player" index="0"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_bw5jf")
-animation = &"Walk"
 autoplay = "Idle"
 
 [node name="LeftDoor" parent="." index="4"]
