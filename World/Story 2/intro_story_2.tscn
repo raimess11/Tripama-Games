@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://x2rp38drdset"]
+[gd_scene load_steps=34 format=3 uid="uid://x2rp38drdset"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_thwl2"]
 [ext_resource type="Script" path="res://World/Story 2/intro_story_2.gd" id="2_nkkty"]
@@ -17,6 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="14_s34wc"]
 [ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="15_feawa"]
 [ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="16_u5yu3"]
+[ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="18_2ff28"]
+[ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="19_73xey"]
+[ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="20_eqiwn"]
+[ext_resource type="Texture2D" uid="uid://obvrfyr4jmky" path="res://Asset/Sprite/Sinta/Sinta0003.png" id="21_dvtoo"]
+[ext_resource type="Texture2D" uid="uid://r2xnr2pwwk44" path="res://Asset/Sprite/Sinta/Sinta0004.png" id="22_mvxb8"]
+[ext_resource type="Texture2D" uid="uid://dfjvrafd4e43r" path="res://Asset/Sprite/Sinta/Sinta0005.png" id="23_uodri"]
+[ext_resource type="Texture2D" uid="uid://daljfuf4gawf0" path="res://Asset/Sprite/Sinta/Sinta0006.png" id="24_t7ypw"]
 
 [sub_resource type="Animation" id="Animation_25doo"]
 resource_name = "Normal"
@@ -51,24 +58,10 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sinta")
+tracks/2/path = NodePath("Rahwana")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"hide"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Rahwana")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -106,22 +99,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sinta:position")
+tracks/2/path = NodePath("Player:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1142, 626)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Player:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -229,25 +210,13 @@ tracks/3/keys = {
 "method": &"show"
 }]
 }
-tracks/4/type = "value"
+tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sinta:position")
+tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.7, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1142, 626), Vector2(864, 624)]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(1.9),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -368,6 +337,35 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_eb4jd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_2ff28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_73xey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_eqiwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dvtoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mvxb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uodri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_t7ypw")
+}],
+"loop": true,
+"name": &"sinta_idle",
+"speed": 6.0
+}]
+
 [node name="Intro_Story2" instance=ExtResource("1_thwl2")]
 script = ExtResource("2_nkkty")
 dialogue_resource = ExtResource("3_ddib2")
@@ -429,11 +427,13 @@ position = Vector2(960, 650)
 scale = Vector2(0.84375, 2.48438)
 texture = ExtResource("7_vpl7a")
 
-[node name="Sinta" type="Sprite2D" parent="." index="13"]
-self_modulate = Color(1, 0.443137, 0.701961, 1)
-position = Vector2(1142, 626)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("7_vpl7a")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="13"]
+position = Vector2(1137, 642)
+scale = Vector2(0.560278, 0.560278)
+sprite_frames = SubResource("SpriteFrames_eb4jd")
+animation = &"sinta_idle"
+autoplay = "sinta_idle"
+flip_h = true
 
 [node name="Rahwana" type="Sprite2D" parent="." index="14"]
 visible = false
