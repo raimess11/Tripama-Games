@@ -1,0 +1,301 @@
+[gd_scene load_steps=33 format=3 uid="uid://b1n3vcd8ctrba"]
+
+[ext_resource type="Script" path="res://Battle_System/enemy.gd" id="1_cx2hk"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_88x0h"]
+[ext_resource type="Resource" uid="uid://b0wfevhkwtapc" path="res://Battle_System/Story 1/S1_enemy.tres" id="2_875de"]
+[ext_resource type="Shader" path="res://Battle_System/hit_enemy.gdshader" id="3_lb7tg"]
+[ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="3_vur3q"]
+[ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="4_nmt17"]
+[ext_resource type="Texture2D" uid="uid://b4w18gywlp7wl" path="res://Asset/Sprite/Guard/guard3.png" id="5_sxs7v"]
+[ext_resource type="Texture2D" uid="uid://kt3tp2gsiotg" path="res://Asset/Sprite/Guard/guard4.png" id="6_i7tw6"]
+[ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="7_we1vs"]
+[ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="8_0dquv"]
+[ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="9_7jton"]
+[ext_resource type="Texture2D" uid="uid://b8mognfv8axrf" path="res://Asset/Sprite/Char Patih Suwanda/export202405172152172674.png" id="10_8jjlm"]
+[ext_resource type="Texture2D" uid="uid://ckxvnu6gqp2k8" path="res://Asset/Sprite/Char Patih Suwanda/export202405172153274639.png" id="11_ps5ql"]
+[ext_resource type="Texture2D" uid="uid://133lqx25o108" path="res://Asset/Sprite/Char Patih Suwanda/export202405172155014055.png" id="12_jcptn"]
+[ext_resource type="Texture2D" uid="uid://cpnqr4ynbg67t" path="res://Asset/Sprite/Char Patih Suwanda/export202405172156143978.png" id="13_2yvu0"]
+[ext_resource type="Texture2D" uid="uid://kaoo7hv33l2y" path="res://Asset/Sprite/Char Patih Suwanda/export202405172157357473.png" id="14_jkyw3"]
+[ext_resource type="Texture2D" uid="uid://bxv7kud60aox7" path="res://Asset/Sprite/Char Patih Suwanda/export202405172159284651.png" id="15_3v358"]
+[ext_resource type="Texture2D" uid="uid://bb2oc5msjt2dx" path="res://Asset/Sprite/Char Patih Suwanda/export202405172200446576.png" id="16_eudg4"]
+[ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="17_72ov7"]
+[ext_resource type="PackedScene" uid="uid://cgqvrg36y8fv0" path="res://Battle_System/stats.tscn" id="18_j54gb"]
+[ext_resource type="PackedScene" uid="uid://dbnvih7guvpgn" path="res://Battle_System/health_bar.tscn" id="19_72se5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ovh62"]
+noise_type = 4
+frequency = 0.1705
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gg7ar"]
+seamless = true
+noise = SubResource("FastNoiseLite_ovh62")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bd28u"]
+shader = ExtResource("3_lb7tg")
+shader_parameter/hit_flash = false
+shader_parameter/shield = false
+shader_parameter/disintagrate = false
+shader_parameter/white_progress = 0.0
+shader_parameter/percentage = 1.0
+shader_parameter/burn_texture = SubResource("NoiseTexture2D_gg7ar")
+shader_parameter/layer_1 = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/size_1 = 0.05
+shader_parameter/layer_2 = Color(1, 0, 0, 1)
+shader_parameter/size_2 = 0.05
+shader_parameter/layer_3 = Color(1, 0.5, 0, 1)
+shader_parameter/size_3 = 0.05
+shader_parameter/highlight_color = Color(0.529412, 0.807843, 0.921569, 1)
+shader_parameter/frequency = 0.5
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hsgla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_88x0h")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vur3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nmt17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sxs7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i7tw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_we1vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0dquv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7jton")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8jjlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ps5ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jcptn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2yvu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jkyw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3v358")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_eudg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_72ov7")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_akm6v"]
+radius = 44.0
+height = 294.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vdyp"]
+bg_color = Color(1, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_po25o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyAnim:material:shader_parameter/shield")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemyAnim:material:shader_parameter/hit_flash")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EnemyAnim:material:shader_parameter/white_progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EnemyAnim:material:shader_parameter/disintagrate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("EnemyAnim:material:shader_parameter/percentage")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_whkcb"]
+resource_name = "defend"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyAnim:material:shader_parameter/shield")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ahhst"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyAnim:material:shader_parameter/disintagrate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemyAnim:material:shader_parameter/percentage")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2rmnc"]
+resource_name = "hurt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyAnim:material:shader_parameter/hit_flash")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemyAnim:material:shader_parameter/white_progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xddka"]
+_data = {
+"RESET": SubResource("Animation_po25o"),
+"death": SubResource("Animation_ahhst"),
+"defend": SubResource("Animation_whkcb"),
+"hurt": SubResource("Animation_2rmnc")
+}
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_cx2hk")
+starting_stats = ExtResource("2_875de")
+
+[node name="EnemyAnim" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_bd28u")
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_hsgla")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.429101
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_akm6v")
+
+[node name="Stats" parent="." instance=ExtResource("18_j54gb")]
+
+[node name="HealthBar" parent="." instance=ExtResource("19_72se5")]
+offset_top = -184.0
+offset_bottom = -157.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_5vdyp")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xddka")
+}
+
+[connection signal="health_change" from="Stats" to="HealthBar" method="_on_health_change"]

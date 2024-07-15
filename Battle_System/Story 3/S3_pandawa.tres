@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://ek2j5p5hown"]
+
+[ext_resource type="Script" path="res://Battle_System/startingStats.gd" id="1_nxy42"]
+
+[resource]
+script = ExtResource("1_nxy42")
+job_name = "Adipati Karna"
+max_health = 1000
+strength = 200
+defence = 0
+armor = 50

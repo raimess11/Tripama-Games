@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://u1oaje01v4np"]
+
+[ext_resource type="Script" path="res://Battle_System/startingStats.gd" id="1_e2d85"]
+
+[resource]
+script = ExtResource("1_e2d85")
+job_name = "Suwanda"
+max_health = 1000
+strength = 150
+defence = 0
+armor = 100

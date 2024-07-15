@@ -8,6 +8,11 @@ var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_G
 						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE,
 						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED}
 
+var maleCharacter = ["Suwanda", "Warga 1", "Warga 2", "Guard", "Hurjana", "Sukarsana", "Sumatri",
+					"Laksama", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna"]
+
+var femaleCharacter = ["Dayang", "Duryodhana", "Sinta"]
+
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
@@ -46,6 +51,7 @@ var dialogue_line: DialogueLine:
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
 		character_label.self_modulate = characterColor[character_label.text]
+		playCharacterSound(character_label.text)
 		
 		dialogue_label.modulate.a = 0
 		dialogue_label.custom_minimum_size.x = dialogue_label.get_parent().size.x - 1
@@ -218,3 +224,11 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_margin_resized() -> void:
 	handle_resize()
+
+func playCharacterSound(charName: String):
+	if charName in maleCharacter:
+		AudioManager.playRandomMaleVoice()
+	elif charName in femaleCharacter:
+		AudioManager.playRandomFemaleVoice()
+	else:
+		pass

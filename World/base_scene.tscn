@@ -5,15 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dsp2vsshdmmbw" path="res://Player/player.tscn" id="2_kikx2"]
 [ext_resource type="PackedScene" uid="uid://dgg7tpqcikj5x" path="res://World/door.tscn" id="3_ir28f"]
 
-[sub_resource type="Gradient" id="Gradient_r7kr1"]
+[sub_resource type="Gradient" id="Gradient_vhhdr"]
 offsets = PackedFloat32Array(0, 0.748387)
 colors = PackedColorArray(0.364375, 0.47, 0.393749, 1, 1, 1, 1, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_8o837"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ovd8v"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nurdp"]
-color_ramp = SubResource("Gradient_r7kr1")
-noise = SubResource("FastNoiseLite_8o837")
+color_ramp = SubResource("Gradient_vhhdr")
+noise = SubResource("FastNoiseLite_ovd8v")
 
 [node name="BaseScene" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_haqds")

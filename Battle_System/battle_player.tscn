@@ -1,0 +1,271 @@
+[gd_scene load_steps=27 format=3 uid="uid://bkb8v365spe8n"]
+
+[ext_resource type="Script" path="res://Battle_System/BattlePlayer.gd" id="1_b1rtv"]
+[ext_resource type="Resource" uid="uid://u1oaje01v4np" path="res://Battle_System/Story 1/S1_companion.tres" id="2_1w6bq"]
+[ext_resource type="Texture2D" uid="uid://l35rxfbclujv" path="res://Asset/Sprite/Char Patih Suwanda/export202405172148056627.png" id="2_h8f1c"]
+[ext_resource type="Texture2D" uid="uid://cui77uq12t0yt" path="res://Asset/Sprite/Char Patih Suwanda/export202405172150064914.png" id="3_78yck"]
+[ext_resource type="Shader" path="res://Battle_System/battle_player.gdshader" id="3_aisew"]
+[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="4_by6pa"]
+[ext_resource type="Texture2D" uid="uid://b8mognfv8axrf" path="res://Asset/Sprite/Char Patih Suwanda/export202405172152172674.png" id="4_ngel6"]
+[ext_resource type="Texture2D" uid="uid://ckxvnu6gqp2k8" path="res://Asset/Sprite/Char Patih Suwanda/export202405172153274639.png" id="5_k0wht"]
+[ext_resource type="Texture2D" uid="uid://133lqx25o108" path="res://Asset/Sprite/Char Patih Suwanda/export202405172155014055.png" id="6_xg5uo"]
+[ext_resource type="Texture2D" uid="uid://cpnqr4ynbg67t" path="res://Asset/Sprite/Char Patih Suwanda/export202405172156143978.png" id="7_v42ea"]
+[ext_resource type="Texture2D" uid="uid://kaoo7hv33l2y" path="res://Asset/Sprite/Char Patih Suwanda/export202405172157357473.png" id="8_m48jg"]
+[ext_resource type="Texture2D" uid="uid://bxv7kud60aox7" path="res://Asset/Sprite/Char Patih Suwanda/export202405172159284651.png" id="9_kypvb"]
+[ext_resource type="Texture2D" uid="uid://bb2oc5msjt2dx" path="res://Asset/Sprite/Char Patih Suwanda/export202405172200446576.png" id="10_mdtcv"]
+[ext_resource type="Texture2D" uid="uid://by3u8og64js78" path="res://Asset/Sprite/Char Patih Suwanda/export202405172201461290.png" id="11_xy20d"]
+[ext_resource type="PackedScene" uid="uid://cgqvrg36y8fv0" path="res://Battle_System/stats.tscn" id="12_7mjyj"]
+[ext_resource type="PackedScene" uid="uid://dbnvih7guvpgn" path="res://Battle_System/health_bar.tscn" id="13_awsq6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ovh62"]
+noise_type = 4
+frequency = 0.1705
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2uvek"]
+seamless = true
+noise = SubResource("FastNoiseLite_ovh62")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x81nm"]
+shader = ExtResource("3_aisew")
+shader_parameter/hit_flash = false
+shader_parameter/shield = false
+shader_parameter/disintagrate = false
+shader_parameter/white_progress = 0.0
+shader_parameter/percentage = 1.0
+shader_parameter/burn_texture = SubResource("NoiseTexture2D_2uvek")
+shader_parameter/layer_1 = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/size_1 = 0.05
+shader_parameter/layer_2 = Color(1, 0, 0, 1)
+shader_parameter/size_2 = 0.05
+shader_parameter/layer_3 = Color(1, 0.5, 0, 1)
+shader_parameter/size_3 = 0.05
+shader_parameter/highlight_color = Color(0.529412, 0.807843, 0.921569, 1)
+shader_parameter/frequency = 1.0
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vwlau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_by6pa")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h8f1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_78yck")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ngel6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k0wht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xg5uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v42ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m48jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kypvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mdtcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xy20d")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r03ti"]
+radius = 44.0
+height = 294.0
+
+[sub_resource type="Animation" id="Animation_ssw6e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnim:material:shader_parameter/shield")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerAnim:material:shader_parameter/hit_flash")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerAnim:material:shader_parameter/white_progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerAnim:material:shader_parameter/disintagrate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerAnim:material:shader_parameter/percentage")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_sn4es"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnim:material:shader_parameter/disintagrate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerAnim:material:shader_parameter/percentage")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_imdnw"]
+resource_name = "defend"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnim:material:shader_parameter/shield")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_x5sjh"]
+resource_name = "hurt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnim:material:shader_parameter/hit_flash")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerAnim:material:shader_parameter/white_progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h1dqt"]
+_data = {
+"RESET": SubResource("Animation_ssw6e"),
+"death": SubResource("Animation_sn4es"),
+"defend": SubResource("Animation_imdnw"),
+"hurt": SubResource("Animation_x5sjh")
+}
+
+[node name="BattlePlayer" type="CharacterBody2D"]
+position = Vector2(192, 208)
+script = ExtResource("1_b1rtv")
+starting_stats = ExtResource("2_1w6bq")
+
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_x81nm")
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vwlau")
+animation = &"Idle"
+autoplay = "Idle"
+flip_h = true
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r03ti")
+
+[node name="Stats" parent="." instance=ExtResource("12_7mjyj")]
+
+[node name="HealthBar" parent="." instance=ExtResource("13_awsq6")]
+offset_top = -184.0
+offset_bottom = -157.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h1dqt")
+}
+
+[connection signal="health_change" from="Stats" to="HealthBar" method="_on_health_change"]

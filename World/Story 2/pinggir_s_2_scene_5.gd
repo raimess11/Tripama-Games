@@ -2,8 +2,10 @@ extends Level
 
 @onready var cut_scene = $CutScene
 const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
+var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
+@onready var label = $Overlay/Label
 
 func _ready():
 	QuestSystem.connectAllNodes()
@@ -19,6 +21,11 @@ func _ready():
 	
 	player.is_chatting = true
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
+	
+	if NpcState.choice_scene2 == "c2":
+		label.text = "Good End"
+	else:
+		label.text = "Bad End"
 
 func nextCutscene(next_scene):
 	cut_scene.play(next_scene)
@@ -37,3 +44,10 @@ func play_sfx():
 		audio_pool. PlayIndexSound(0)
 	else:
 		audio_pool. PlayIndexSound(1)
+
+
+func _on_cut_scene_animation_finished(anim_name):
+	if anim_name == "end":
+		await get_tree().create_timer(5).timeout
+		SceneManager.load_new_scene(character_selection,"fade_to_black")
+	

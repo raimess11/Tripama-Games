@@ -1,9 +1,126 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsj1plgqjvplw"]
+[gd_scene load_steps=32 format=3 uid="uid://bsj1plgqjvplw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_ka4y1"]
 [ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_reg4u"]
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_uqyc8"]
 [ext_resource type="Texture2D" uid="uid://cgxnlpbrwulra" path="res://Asset/Object/pintu.png" id="4_6jokq"]
+[ext_resource type="Texture2D" uid="uid://cmsoyvcavm4b8" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0000_frame_58.png" id="5_w5vtp"]
+[ext_resource type="Texture2D" uid="uid://lscw7sdxxk7w" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0001_frame_57.png" id="6_5ns0y"]
+[ext_resource type="Texture2D" uid="uid://dx4oihx375y8g" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0002_frame_41.png" id="7_ggbx3"]
+[ext_resource type="Texture2D" uid="uid://cuvsxacqfygf6" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0003_frame_37.png" id="8_gsleg"]
+[ext_resource type="Texture2D" uid="uid://c17xfqj88x6sb" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0004_frame_29.png" id="9_k7sft"]
+[ext_resource type="Texture2D" uid="uid://blkfm00ydx3y" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0005_frame_25.png" id="10_me7d5"]
+[ext_resource type="Texture2D" uid="uid://c1p7wlak0ww8h" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0006_frame_11.png" id="11_rfkrp"]
+[ext_resource type="Texture2D" uid="uid://d0oqphxwbymxp" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0007_frame_09.png" id="12_xxkpa"]
+[ext_resource type="Texture2D" uid="uid://dy2gcog6uxlj7" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0008_frame_01.png" id="13_vt8ct"]
+[ext_resource type="Texture2D" uid="uid://dx7rmb3nodhxh" path="res://Asset/Sprite/Adipati/Walk/frame_001.png" id="14_gnh84"]
+[ext_resource type="Texture2D" uid="uid://du21p3ofhn1eq" path="res://Asset/Sprite/Adipati/Walk/frame_003.png" id="15_jkmku"]
+[ext_resource type="Texture2D" uid="uid://uenaykvtocnl" path="res://Asset/Sprite/Adipati/Walk/frame_004.png" id="16_o1smd"]
+[ext_resource type="Texture2D" uid="uid://dg0rjgp2ke73f" path="res://Asset/Sprite/Adipati/Walk/frame_005.png" id="17_tkf68"]
+[ext_resource type="Texture2D" uid="uid://c5yfgxqpvt850" path="res://Asset/Sprite/Adipati/Walk/frame_006.png" id="18_jbis0"]
+[ext_resource type="Texture2D" uid="uid://wll0niit1ea" path="res://Asset/Sprite/Adipati/Walk/frame_007.png" id="19_hvexn"]
+[ext_resource type="Texture2D" uid="uid://wuvq3ehl1jk0" path="res://Asset/Sprite/Adipati/Walk/frame_008.png" id="20_hpmq4"]
+[ext_resource type="Texture2D" uid="uid://qb7ps6ta7xap" path="res://Asset/Sprite/Adipati/Walk/frame_009.png" id="21_xqpbt"]
+[ext_resource type="Texture2D" uid="uid://ccjtgl13tk5ad" path="res://Asset/Sprite/Adipati/Walk/frame_010.png" id="22_rvwb3"]
+[ext_resource type="Texture2D" uid="uid://4wgho82nae80" path="res://Asset/Sprite/Adipati/Walk/frame_011.png" id="23_fdoj5"]
+[ext_resource type="Texture2D" uid="uid://do2nh31nuv5bj" path="res://Asset/Sprite/Adipati/Walk/frame_012.png" id="24_4vnda"]
+[ext_resource type="Texture2D" uid="uid://0v7p5i1ye8ts" path="res://Asset/Sprite/Adipati/Walk/frame_013.png" id="25_4wukm"]
+[ext_resource type="Texture2D" uid="uid://l0qjwx1s4oim" path="res://Asset/Sprite/Adipati/Walk/frame_014.png" id="26_xs8e3"]
+[ext_resource type="Texture2D" uid="uid://c8pw3a6ihbiwa" path="res://Asset/Sprite/Adipati/Walk/frame_015.png" id="27_14fk0"]
+[ext_resource type="Texture2D" uid="uid://x1xyg475d6lc" path="res://Asset/Sprite/Adipati/Walk/frame_016.png" id="28_vfogt"]
+[ext_resource type="Texture2D" uid="uid://c3ufalu6ijue5" path="res://Asset/Sprite/Adipati/Walk/frame_017.png" id="29_q7d5b"]
+[ext_resource type="Texture2D" uid="uid://cn7ur7m3j4l6l" path="res://Asset/Sprite/Adipati/Walk/frame_019.png" id="30_br7yj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3os8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w5vtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5ns0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ggbx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gsleg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k7sft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_me7d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rfkrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xxkpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vt8ct")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_gnh84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jkmku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o1smd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tkf68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jbis0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hvexn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hpmq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xqpbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rvwb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_fdoj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4vnda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4wukm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xs8e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_14fk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vfogt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q7d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_br7yj")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
 
 [node name="castleV2_S3_Scene2" instance=ExtResource("1_ka4y1")]
 
@@ -26,6 +143,12 @@ position = Vector2(960, 432)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_6jokq")
 
+[node name="PlayerAnim" parent="Player" index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_3os8r")
+autoplay = "Idle"
+frame = 7
+
 [node name="LeftDoor" parent="." index="4"]
 main_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
 
@@ -33,3 +156,4 @@ main_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
 main_path_to_new_scene = "res://World/Story 3/castle_v_3_s_3_scene_2.tscn"
 
 [editable path="VillageGround"]
+[editable path="Player"]

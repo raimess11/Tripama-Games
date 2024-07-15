@@ -1,10 +1,127 @@
-[gd_scene load_steps=10 format=3 uid="uid://2ktpl2a16mrw"]
+[gd_scene load_steps=37 format=3 uid="uid://2ktpl2a16mrw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_etbxl"]
 [ext_resource type="Script" path="res://World/Story 3/desa_s_3_scene_1.gd" id="2_3tucs"]
-[ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="2_nb6n6"]
 [ext_resource type="Resource" uid="uid://o8mwycvocvme" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue1_Duryodhana&Karna.dialogue" id="3_h4726"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_td7hv"]
+[ext_resource type="Texture2D" uid="uid://cwa02aq5u52b2" path="res://Asset/Background/bg desa malem.png" id="4_v48te"]
+[ext_resource type="Texture2D" uid="uid://cmsoyvcavm4b8" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0000_frame_58.png" id="6_jxnta"]
+[ext_resource type="Texture2D" uid="uid://lscw7sdxxk7w" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0001_frame_57.png" id="7_4lmri"]
+[ext_resource type="Texture2D" uid="uid://dx4oihx375y8g" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0002_frame_41.png" id="8_fjaiq"]
+[ext_resource type="Texture2D" uid="uid://cuvsxacqfygf6" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0003_frame_37.png" id="9_inarm"]
+[ext_resource type="Texture2D" uid="uid://c17xfqj88x6sb" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0004_frame_29.png" id="10_3dwd1"]
+[ext_resource type="Texture2D" uid="uid://blkfm00ydx3y" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0005_frame_25.png" id="11_oahhy"]
+[ext_resource type="Texture2D" uid="uid://c1p7wlak0ww8h" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0006_frame_11.png" id="12_iwmxy"]
+[ext_resource type="Texture2D" uid="uid://d0oqphxwbymxp" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0007_frame_09.png" id="13_5mls4"]
+[ext_resource type="Texture2D" uid="uid://dy2gcog6uxlj7" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0008_frame_01.png" id="14_sol6n"]
+[ext_resource type="Texture2D" uid="uid://dx7rmb3nodhxh" path="res://Asset/Sprite/Adipati/Walk/frame_001.png" id="15_hql2k"]
+[ext_resource type="Texture2D" uid="uid://du21p3ofhn1eq" path="res://Asset/Sprite/Adipati/Walk/frame_003.png" id="16_wrccv"]
+[ext_resource type="Texture2D" uid="uid://uenaykvtocnl" path="res://Asset/Sprite/Adipati/Walk/frame_004.png" id="17_dxvgh"]
+[ext_resource type="Texture2D" uid="uid://dg0rjgp2ke73f" path="res://Asset/Sprite/Adipati/Walk/frame_005.png" id="18_ftew3"]
+[ext_resource type="Texture2D" uid="uid://c5yfgxqpvt850" path="res://Asset/Sprite/Adipati/Walk/frame_006.png" id="19_ayubl"]
+[ext_resource type="Texture2D" uid="uid://wll0niit1ea" path="res://Asset/Sprite/Adipati/Walk/frame_007.png" id="20_wcfht"]
+[ext_resource type="Texture2D" uid="uid://wuvq3ehl1jk0" path="res://Asset/Sprite/Adipati/Walk/frame_008.png" id="21_i410y"]
+[ext_resource type="Texture2D" uid="uid://qb7ps6ta7xap" path="res://Asset/Sprite/Adipati/Walk/frame_009.png" id="22_48ect"]
+[ext_resource type="Texture2D" uid="uid://ccjtgl13tk5ad" path="res://Asset/Sprite/Adipati/Walk/frame_010.png" id="23_46m33"]
+[ext_resource type="Texture2D" uid="uid://4wgho82nae80" path="res://Asset/Sprite/Adipati/Walk/frame_011.png" id="24_uw71v"]
+[ext_resource type="Texture2D" uid="uid://do2nh31nuv5bj" path="res://Asset/Sprite/Adipati/Walk/frame_012.png" id="25_qnaso"]
+[ext_resource type="Texture2D" uid="uid://0v7p5i1ye8ts" path="res://Asset/Sprite/Adipati/Walk/frame_013.png" id="26_dnnef"]
+[ext_resource type="Texture2D" uid="uid://l0qjwx1s4oim" path="res://Asset/Sprite/Adipati/Walk/frame_014.png" id="27_qilld"]
+[ext_resource type="Texture2D" uid="uid://c8pw3a6ihbiwa" path="res://Asset/Sprite/Adipati/Walk/frame_015.png" id="28_k1unw"]
+[ext_resource type="Texture2D" uid="uid://x1xyg475d6lc" path="res://Asset/Sprite/Adipati/Walk/frame_016.png" id="29_y2bgg"]
+[ext_resource type="Texture2D" uid="uid://c3ufalu6ijue5" path="res://Asset/Sprite/Adipati/Walk/frame_017.png" id="30_kr6th"]
+[ext_resource type="Texture2D" uid="uid://cn7ur7m3j4l6l" path="res://Asset/Sprite/Adipati/Walk/frame_019.png" id="31_toqo5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3os8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jxnta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4lmri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fjaiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_inarm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3dwd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oahhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iwmxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5mls4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sol6n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_hql2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wrccv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dxvgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ftew3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ayubl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wcfht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i410y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_48ect")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_46m33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_uw71v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qnaso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_dnnef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qilld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k1unw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_y2bgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kr6th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_toqo5")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Animation" id="Animation_nexkl"]
 length = 0.001
@@ -153,7 +270,7 @@ dialogue_resource = ExtResource("3_h4726")
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
 position = Vector2(912, 392)
 scale = Vector2(0.45, 0.45)
-texture = ExtResource("2_nb6n6")
+texture = ExtResource("4_v48te")
 
 [node name="Duryodhana" type="Sprite2D" parent="." index="2"]
 self_modulate = Color(1, 0.443137, 0.701961, 1)
@@ -166,6 +283,9 @@ position = Vector2(1086, 655)
 metadata/_edit_group_ = true
 
 [node name="PlayerAnim" parent="Player" index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_3os8r")
+autoplay = "Idle"
 flip_h = true
 
 [node name="LeftDoor" parent="." index="4"]

@@ -52,7 +52,8 @@ position = Vector2(3, -93)
 scale = Vector2(0.497104, 0.497104)
 sprite_frames = SubResource("SpriteFrames_d04vr")
 animation = &"Rahwana_idle"
-frame_progress = 0.454219
+autoplay = "Rahwana_idle"
+frame_progress = 0.427125
 
 [node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_rxl5f")

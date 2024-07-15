@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://plxapn2xxq33"]
+[gd_scene load_steps=39 format=3 uid="uid://plxapn2xxq33"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jkkxc"]
 [ext_resource type="Script" path="res://World/Story 3/castle_v_1_s_3_scene_2.gd" id="2_u2p4r"]
@@ -7,6 +7,123 @@
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_fdpld"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="4_j1oah"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="5_jx3yw"]
+[ext_resource type="Texture2D" uid="uid://cmsoyvcavm4b8" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0000_frame_58.png" id="6_f730y"]
+[ext_resource type="Texture2D" uid="uid://lscw7sdxxk7w" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0001_frame_57.png" id="7_l7ha7"]
+[ext_resource type="Texture2D" uid="uid://dx4oihx375y8g" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0002_frame_41.png" id="8_q1c6o"]
+[ext_resource type="Texture2D" uid="uid://cuvsxacqfygf6" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0003_frame_37.png" id="9_snypb"]
+[ext_resource type="Texture2D" uid="uid://c17xfqj88x6sb" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0004_frame_29.png" id="10_awqqc"]
+[ext_resource type="Texture2D" uid="uid://blkfm00ydx3y" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0005_frame_25.png" id="11_m4ayn"]
+[ext_resource type="Texture2D" uid="uid://c1p7wlak0ww8h" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0006_frame_11.png" id="12_mrd1e"]
+[ext_resource type="Texture2D" uid="uid://d0oqphxwbymxp" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0007_frame_09.png" id="13_2pi6y"]
+[ext_resource type="Texture2D" uid="uid://dy2gcog6uxlj7" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0008_frame_01.png" id="14_160y4"]
+[ext_resource type="Texture2D" uid="uid://dx7rmb3nodhxh" path="res://Asset/Sprite/Adipati/Walk/frame_001.png" id="15_sibda"]
+[ext_resource type="Texture2D" uid="uid://du21p3ofhn1eq" path="res://Asset/Sprite/Adipati/Walk/frame_003.png" id="16_2daad"]
+[ext_resource type="Texture2D" uid="uid://uenaykvtocnl" path="res://Asset/Sprite/Adipati/Walk/frame_004.png" id="17_27tt6"]
+[ext_resource type="Texture2D" uid="uid://dg0rjgp2ke73f" path="res://Asset/Sprite/Adipati/Walk/frame_005.png" id="18_8oujx"]
+[ext_resource type="Texture2D" uid="uid://c5yfgxqpvt850" path="res://Asset/Sprite/Adipati/Walk/frame_006.png" id="19_4lmcd"]
+[ext_resource type="Texture2D" uid="uid://wll0niit1ea" path="res://Asset/Sprite/Adipati/Walk/frame_007.png" id="20_eq0yr"]
+[ext_resource type="Texture2D" uid="uid://wuvq3ehl1jk0" path="res://Asset/Sprite/Adipati/Walk/frame_008.png" id="21_2whg8"]
+[ext_resource type="Texture2D" uid="uid://qb7ps6ta7xap" path="res://Asset/Sprite/Adipati/Walk/frame_009.png" id="22_unbsb"]
+[ext_resource type="Texture2D" uid="uid://ccjtgl13tk5ad" path="res://Asset/Sprite/Adipati/Walk/frame_010.png" id="23_j3e13"]
+[ext_resource type="Texture2D" uid="uid://4wgho82nae80" path="res://Asset/Sprite/Adipati/Walk/frame_011.png" id="24_1t42c"]
+[ext_resource type="Texture2D" uid="uid://do2nh31nuv5bj" path="res://Asset/Sprite/Adipati/Walk/frame_012.png" id="25_iiblv"]
+[ext_resource type="Texture2D" uid="uid://0v7p5i1ye8ts" path="res://Asset/Sprite/Adipati/Walk/frame_013.png" id="26_aqrkx"]
+[ext_resource type="Texture2D" uid="uid://l0qjwx1s4oim" path="res://Asset/Sprite/Adipati/Walk/frame_014.png" id="27_2w853"]
+[ext_resource type="Texture2D" uid="uid://c8pw3a6ihbiwa" path="res://Asset/Sprite/Adipati/Walk/frame_015.png" id="28_mfxv6"]
+[ext_resource type="Texture2D" uid="uid://x1xyg475d6lc" path="res://Asset/Sprite/Adipati/Walk/frame_016.png" id="29_wtix2"]
+[ext_resource type="Texture2D" uid="uid://c3ufalu6ijue5" path="res://Asset/Sprite/Adipati/Walk/frame_017.png" id="30_du3re"]
+[ext_resource type="Texture2D" uid="uid://cn7ur7m3j4l6l" path="res://Asset/Sprite/Adipati/Walk/frame_019.png" id="31_pavj1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3os8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f730y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l7ha7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q1c6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_snypb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_awqqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m4ayn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mrd1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2pi6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_160y4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_sibda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2daad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_27tt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8oujx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4lmcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_eq0yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2whg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_unbsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_j3e13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1t42c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iiblv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_aqrkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2w853")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mfxv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wtix2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_du3re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pavj1")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Animation" id="Animation_jjqtf"]
 length = 0.001
@@ -156,6 +273,11 @@ region_enabled = false
 [node name="CollisionPolygon2D" parent="VillageGround/StaticBody2D" index="0"]
 position = Vector2(-47.9999, 1248)
 
+[node name="PlayerAnim" parent="Player" index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_3os8r")
+autoplay = "Idle"
+
 [node name="LeftDoor" parent="." index="3"]
 monitoring = false
 monitorable = false
@@ -210,3 +332,4 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [editable path="VillageGround"]
+[editable path="Player"]
