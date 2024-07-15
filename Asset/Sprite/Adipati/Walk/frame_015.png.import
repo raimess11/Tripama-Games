@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq31piqrlqdbk"
-path="res://.godot/imported/10.png-ff104ea88c5ff7553b64032d9f38da0a.ctex"
+uid="uid://c8pw3a6ihbiwa"
+path="res://.godot/imported/frame_015.png-0e8e63131c4ce11496cc0c8890a98a8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Sprite/Kumbakarna/Walk/10.png"
-dest_files=["res://.godot/imported/10.png-ff104ea88c5ff7553b64032d9f38da0a.ctex"]
+source_file="res://Asset/Sprite/Adipati/Walk/frame_015.png"
+dest_files=["res://.godot/imported/frame_015.png-0e8e63131c4ce11496cc0c8890a98a8c.ctex"]
 
 [params]
 

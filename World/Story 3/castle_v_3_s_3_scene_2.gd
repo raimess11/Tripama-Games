@@ -3,6 +3,7 @@ extends Level
 @onready var cut_scene = $CutScene
 
 const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
+var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
 @onready var label = $Overlay/Label
@@ -53,3 +54,8 @@ func playWinLose():
 		audio_pool.PlayIndexSound(0)
 	else:
 		audio_pool.PlayIndexSound(1)
+
+func _on_cut_scene_animation_finished(anim_name):
+	if anim_name == "end_description":
+		await get_tree().create_timer(5).timeout
+		SceneManager.load_new_scene(character_selection,"fade_to_black")

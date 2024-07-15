@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kc5q663nmts2"]
+[gd_scene load_steps=37 format=3 uid="uid://kc5q663nmts2"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1l3ya"]
 [ext_resource type="Script" path="res://World/Story 2/penasihat_s_2_scene_3.gd" id="2_dfdh0"]
@@ -6,7 +6,112 @@
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_plc7t"]
 [ext_resource type="PackedScene" uid="uid://c778qggau6nkv" path="res://NPC/Story 2/s_2_scene_3_penasihat.tscn" id="4_dd66v"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_4n1mi"]
+[ext_resource type="Texture2D" uid="uid://ceh4p8huthsj1" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0000_frame_36.png" id="6_yvepg"]
+[ext_resource type="Texture2D" uid="uid://dnvf0dbj4ot4e" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0001_frame_35.png" id="7_b34im"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="7_hoyjv"]
+[ext_resource type="Texture2D" uid="uid://c2mq2rd4x80ey" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0002_frame_26.png" id="8_qvo5w"]
+[ext_resource type="Texture2D" uid="uid://lxto27katj3u" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0003_frame_23.png" id="9_77s1k"]
+[ext_resource type="Texture2D" uid="uid://crgsdvmj4vbrt" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0004_frame_17.png" id="10_ej3lo"]
+[ext_resource type="Texture2D" uid="uid://bijh0tobvkypo" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0005_frame_14.png" id="11_dsp1x"]
+[ext_resource type="Texture2D" uid="uid://b4da0o7g44j1k" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0006_frame_10.png" id="12_0voa4"]
+[ext_resource type="Texture2D" uid="uid://bviuwnoq5tby6" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0007_frame_04.png" id="13_2006j"]
+[ext_resource type="Texture2D" uid="uid://d4dw64cqgabpf" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0008_frame_01.png" id="14_c2cxu"]
+[ext_resource type="Texture2D" uid="uid://bywijwvi0atap" path="res://Asset/Sprite/Kumbakarna/Walk/1.png" id="15_2cc76"]
+[ext_resource type="Texture2D" uid="uid://bd04sy74h4lgl" path="res://Asset/Sprite/Kumbakarna/Walk/2.png" id="16_pr05l"]
+[ext_resource type="Texture2D" uid="uid://bvuynmd21yyw7" path="res://Asset/Sprite/Kumbakarna/Walk/3.png" id="17_njuod"]
+[ext_resource type="Texture2D" uid="uid://cbmtgy8tfk1r1" path="res://Asset/Sprite/Kumbakarna/Walk/4.png" id="18_rrg3e"]
+[ext_resource type="Texture2D" uid="uid://s8jibt21t3ly" path="res://Asset/Sprite/Kumbakarna/Walk/5.png" id="19_7bl0g"]
+[ext_resource type="Texture2D" uid="uid://c4rfbsoby7g53" path="res://Asset/Sprite/Kumbakarna/Walk/6.png" id="20_nbied"]
+[ext_resource type="Texture2D" uid="uid://lhfle7en2sqt" path="res://Asset/Sprite/Kumbakarna/Walk/7.png" id="21_jrbus"]
+[ext_resource type="Texture2D" uid="uid://e0e53itwyu6a" path="res://Asset/Sprite/Kumbakarna/Walk/8.png" id="22_bsjmw"]
+[ext_resource type="Texture2D" uid="uid://o6wgyeideyly" path="res://Asset/Sprite/Kumbakarna/Walk/9.png" id="23_betq6"]
+[ext_resource type="Texture2D" uid="uid://cq31piqrlqdbk" path="res://Asset/Sprite/Kumbakarna/Walk/10.png" id="24_4elbc"]
+[ext_resource type="Texture2D" uid="uid://c3k668xbusdp0" path="res://Asset/Sprite/Kumbakarna/Walk/11.png" id="25_vpu73"]
+[ext_resource type="Texture2D" uid="uid://ccvan4iolybco" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="26_4bxgt"]
+[ext_resource type="Texture2D" uid="uid://cnj161gg0mrx0" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="27_5bvy4"]
+[ext_resource type="Texture2D" uid="uid://ccn8l4iygbhm3" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="28_thniv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bw5jf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yvepg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b34im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvo5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_77s1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ej3lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dsp1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0voa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2006j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c2cxu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_2cc76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pr05l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_njuod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rrg3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7bl0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nbied")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jrbus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bsjmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_betq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4elbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_vpu73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4bxgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5bvy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_thniv")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
 
 [sub_resource type="Animation" id="Animation_5tyxl"]
 length = 0.001
@@ -102,7 +207,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_227h0"]
 resource_name = "start_description"
-length = 2.5
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -122,7 +227,7 @@ tracks/1/path = NodePath("Overlay/Blur:material:shader_parameter/amount")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.5, 1, 2.1, 2.5),
+"times": PackedFloat32Array(0.2, 0.5, 1, 3.6, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [2.0, null, 2.0, 2.0, 0.0]
@@ -134,7 +239,7 @@ tracks/2/path = NodePath("Overlay/Label:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 1, 2, 2.5),
+"times": PackedFloat32Array(0.5, 1, 3.5, 4),
 "transitions": PackedFloat32Array(1, 9.51366, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -146,7 +251,7 @@ tracks/3/path = NodePath("Player")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.5, 2.5),
+"times": PackedFloat32Array(0.5, 4),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -166,7 +271,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ywkul"]
 shader = ExtResource("5_4n1mi")
-shader_parameter/amount = 2.0
+shader_parameter/amount = 0.0
 
 [node name="Penasihat_S2_Scene3" instance=ExtResource("1_1l3ya")]
 script = ExtResource("2_dfdh0")
@@ -190,6 +295,14 @@ position = Vector2(1120, 696)
 
 [node name="Player" parent="." index="3"]
 position = Vector2(912, 656)
+scale = Vector2(1.3, 1.3)
+metadata/_edit_group_ = true
+
+[node name="PlayerAnim" parent="Player" index="0"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_bw5jf")
+animation = &"Walk"
+autoplay = "Idle"
 
 [node name="LeftDoor" parent="." index="4"]
 monitoring = false
@@ -251,3 +364,4 @@ menghadap kepada penasihat kerajaan"
 metadata/_edit_use_anchors_ = true
 
 [editable path="VillageGround"]
+[editable path="Player"]
