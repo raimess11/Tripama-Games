@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgdwhpyqhhkvx"]
+[gd_scene load_steps=3 format=3 uid="uid://cgdwhpyqhhkvx"]
 
 [ext_resource type="PackedScene" uid="uid://edard48h7bsh" path="res://World/Base_World/ground.tscn" id="1_rberj"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="2_dfno2"]
 
 [node name="VillageGround" instance=ExtResource("1_rberj")]
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 position = Vector2(8, 264)
 polygon = PackedVector2Array(2432, -736, -2432, -736, -2432, 968, 2432, 968)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+
+[node name="PauseMenu" parent="CanvasLayer" index="0" instance=ExtResource("2_dfno2")]
