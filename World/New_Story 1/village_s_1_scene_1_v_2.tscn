@@ -8,6 +8,7 @@
 
 [node name="Village_S1_Scene1_V2" instance=ExtResource("1_hrvlf")]
 script = ExtResource("2_w2gx0")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)

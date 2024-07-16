@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://chai5cvb7h0q7"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_vyc0p"]
-[ext_resource type="PackedScene" uid="uid://caoo2grf6e0o" path="res://World/Base_World/Grounds/gate_ground.tscn" id="2_1l1p8"]
+[ext_resource type="PackedScene" uid="uid://clwdsyph5pgt" path="res://World/Base_World/Grounds/gate_ground.tscn" id="2_1l1p8"]
 [ext_resource type="Script" path="res://World/Story 1/Scene 3/s_1_scene_3.gd" id="2_e7oc5"]
 [ext_resource type="PackedScene" uid="uid://d0ybeghc7qsyk" path="res://World/Story 1/Scene 1/stairs.tscn" id="2_w02rp"]
 [ext_resource type="Resource" uid="uid://c85illruonb42" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Gate.dialogue" id="3_glolx"]
@@ -213,6 +213,7 @@ _data = {
 script = ExtResource("2_e7oc5")
 dialogue_resource = ExtResource("3_glolx")
 guard_dialogue = ExtResource("4_b5n0y")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)

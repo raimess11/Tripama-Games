@@ -123,6 +123,7 @@ animations = [{
 }]
 
 [node name="castleV2_S3_Scene2" instance=ExtResource("1_ka4y1")]
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)
@@ -147,7 +148,6 @@ texture = ExtResource("4_6jokq")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_3os8r")
 autoplay = "Idle"
-frame = 7
 
 [node name="LeftDoor" parent="." index="4"]
 main_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
