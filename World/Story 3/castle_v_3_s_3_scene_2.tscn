@@ -278,6 +278,7 @@ shader_parameter/amount = 0.0
 [node name="CastleV3_S3_Scene2" instance=ExtResource("1_eq47m")]
 script = ExtResource("2_dfgjs")
 dialogue_resource = ExtResource("3_ashck")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)
@@ -310,7 +311,6 @@ position = Vector2(1720, 664)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_3os8r")
 autoplay = "Idle"
-frame = 7
 
 [node name="LeftDoor" parent="." index="6"]
 main_path_to_new_scene = "res://World/Story 3/castle_v_2_s_3_scene_2.tscn"

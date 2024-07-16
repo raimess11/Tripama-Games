@@ -413,6 +413,7 @@ shader_parameter/amount = 0.0
 [node name="Forest_S3_Scene2" instance=ExtResource("1_c5nw2")]
 script = ExtResource("2_ukjuw")
 dialogue_resource = ExtResource("3_nglg1")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
@@ -433,8 +434,8 @@ metadata/_edit_group_ = true
 [node name="PlayerAnim" parent="Player" index="0"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_3os8r")
+animation = &"Walk"
 autoplay = "Idle"
-frame = 7
 flip_h = true
 
 [node name="LeftDoor" parent="." index="4"]

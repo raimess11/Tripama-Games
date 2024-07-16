@@ -28,4 +28,5 @@ func nextCutscene(next_scene):
 
 func _on_Dialogue_Ended(source):
 	print("end_scene")
+	$Overlay.visible = true
 	nextCutscene("end_scene")

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="4_7qilr"]
 
 [node name="Castle_S1_Scene3_B" instance=ExtResource("1_jbgkn")]
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 264)

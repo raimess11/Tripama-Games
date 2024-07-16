@@ -677,6 +677,7 @@ shader_parameter/amount = 0.0
 process_mode = 1
 script = ExtResource("2_vw0wv")
 dialogue_resource = ExtResource("3_1d3g6")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(936, 400)
@@ -805,7 +806,6 @@ color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Blur" type="ColorRect" parent="Overlay" index="1"]
-visible = false
 material = SubResource("ShaderMaterial_3rgyi")
 anchors_preset = 15
 anchor_right = 1.0
