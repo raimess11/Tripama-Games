@@ -8,10 +8,10 @@ var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_G
 						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE,
 						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED}
 
-var maleCharacter = ["Suwanda", "Warga 1", "Warga 2", "Guard", "Hurjana", "Sukarsana", "Sumatri",
+var maleCharacter = ["Suwanda", "Warga 1", "Guard", "Hurjana", "Sukarsana", "Sumatri", "Duryodhana",
 					"Laksama", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna"]
 
-var femaleCharacter = ["Dayang", "Duryodhana", "Sinta"]
+var femaleCharacter = ["Dayang", "Sinta", "Warga 2"]
 
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin

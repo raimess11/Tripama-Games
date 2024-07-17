@@ -1,10 +1,9 @@
-[gd_scene load_steps=57 format=3 uid="uid://c0q503hruwwlv"]
+[gd_scene load_steps=61 format=3 uid="uid://c0q503hruwwlv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jr7hc"]
 [ext_resource type="Script" path="res://World/Story 2/war_s_2_scene_4.gd" id="2_vw0wv"]
 [ext_resource type="Resource" uid="uid://ns6kbb3ynru0" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue5_war.dialogue" id="3_1d3g6"]
 [ext_resource type="Texture2D" uid="uid://rby64a3juymf" path="res://Asset/Background/bg desa malem terbakar.png" id="4_lwl40"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="4_u1cbn"]
 [ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="5_8frjp"]
 [ext_resource type="PackedScene" uid="uid://bm3rvtyhevhw2" path="res://NPC/Story 2/rama.tscn" id="5_lfqv7"]
 [ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="6_aityc"]
@@ -22,8 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="16_6keoy"]
 [ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="17_cq3oi"]
 [ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="18_xafwp"]
+[ext_resource type="Texture2D" uid="uid://c3mjh0ktj7v1c" path="res://Asset/Other/wibisana.png" id="19_yw4ku"]
+[ext_resource type="Texture2D" uid="uid://n0rpr4fnomnj" path="res://Asset/Other/sarpakenaka.png" id="20_ie1c1"]
 [ext_resource type="Texture2D" uid="uid://b5opoca7uuec3" path="res://Asset/Object/panah aset.png" id="21_5u4wl"]
+[ext_resource type="Texture2D" uid="uid://b815ncdvf0a05" path="res://Asset/Other/lesmana.png" id="21_7j2bn"]
+[ext_resource type="Texture2D" uid="uid://dncx8o2o00n06" path="res://Asset/Other/kera 1.png" id="22_d3avc"]
 [ext_resource type="Texture2D" uid="uid://ceh4p8huthsj1" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0000_frame_36.png" id="22_utbo8"]
+[ext_resource type="Texture2D" uid="uid://ebppqp3ipmm2" path="res://Asset/Other/kera 2.png" id="23_2u4ik"]
 [ext_resource type="Texture2D" uid="uid://dnvf0dbj4ot4e" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0001_frame_35.png" id="23_43r0o"]
 [ext_resource type="Texture2D" uid="uid://c2mq2rd4x80ey" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0002_frame_26.png" id="24_8j3ki"]
 [ext_resource type="Texture2D" uid="uid://lxto27katj3u" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0003_frame_23.png" id="25_4gtev"]
@@ -700,35 +704,31 @@ autoplay = "Rahwana_idle"
 frame_progress = 0.378244
 flip_h = true
 
-[node name="Rahwana2" type="Sprite2D" parent="." index="4"]
-self_modulate = Color(1, 0.466667, 0.619608, 1)
+[node name="Wibisana" type="Sprite2D" parent="." index="4"]
 position = Vector2(1384, 624)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("4_u1cbn")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_yw4ku")
 
-[node name="Rahwana3" type="Sprite2D" parent="." index="5"]
-self_modulate = Color(0.784314, 0.658824, 0.0392157, 1)
+[node name="Sarpakenaka" type="Sprite2D" parent="." index="5"]
 position = Vector2(1560, 616)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("4_u1cbn")
+scale = Vector2(0.5, 0.5)
+skew = 0.0628319
+texture = ExtResource("20_ie1c1")
 
 [node name="Hanoman" type="Sprite2D" parent="." index="6"]
-self_modulate = Color(0.556863, 0.85098, 0.533333, 1)
-position = Vector2(528, 616)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("4_u1cbn")
+position = Vector2(536, 625)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("21_7j2bn")
 
 [node name="Kera1" type="Sprite2D" parent="." index="7"]
-self_modulate = Color(0.729412, 0.360784, 0.0980392, 1)
 position = Vector2(368, 679.5)
-scale = Vector2(0.84375, 1.49219)
-texture = ExtResource("4_u1cbn")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("22_d3avc")
 
 [node name="Kera2" type="Sprite2D" parent="." index="8"]
-self_modulate = Color(0.729412, 0.360784, 0.0980392, 1)
-position = Vector2(232, 672)
-scale = Vector2(0.84375, 1.49219)
-texture = ExtResource("4_u1cbn")
+position = Vector2(198, 671)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("23_2u4ik")
 
 [node name="Rama" parent="." index="9" instance=ExtResource("5_lfqv7")]
 position = Vector2(856, 736)
@@ -795,6 +795,7 @@ libraries = {
 }
 
 [node name="Overlay" type="CanvasLayer" parent="." index="17"]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
 anchors_preset = 15
@@ -810,6 +811,10 @@ material = SubResource("ShaderMaterial_3rgyi")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 21.0
+offset_right = -4.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true

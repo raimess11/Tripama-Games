@@ -10,6 +10,7 @@ signal enemy_dead
 @onready var health_bar = $HealthBar
 @onready var enemy_anim = $EnemyAnim
 @onready var animation_player = $AnimationPlayer
+@onready var vfx = $VFX
 
 func _ready():
 	stats.initialize(starting_stats)
@@ -18,6 +19,7 @@ func _ready():
 func action():
 	emit_signal("enemy_attack", stats.strength)
 	enemy_anim.play("Attack")
+	vfx.play("Attack")
 	AudioManager.playIndexSwordHit(0)
 	await enemy_anim.animation_finished
 	enemy_anim.play("Idle")
@@ -25,6 +27,7 @@ func action():
 
 func hit(dmg):
 	animation_player.play("hurt")
+	vfx.play("Hit")
 	AudioManager.playOompaLoompaVoice()
 	stats.take_damage(dmg)
 	if stats.health == 0:
