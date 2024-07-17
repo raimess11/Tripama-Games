@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj37von8dlebp"]
+[gd_scene load_steps=7 format=3 uid="uid://bj37von8dlebp"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jbgkn"]
 [ext_resource type="Texture2D" uid="uid://iblicy84o6dd" path="res://Asset/Background/bg istana polos.png" id="2_o51t5"]
 [ext_resource type="PackedScene" uid="uid://cnes118hvgr4k" path="res://NPC/New_story 1/s_1_scene_3_guard.tscn" id="3_0mlna"]
 [ext_resource type="Texture2D" uid="uid://cgxnlpbrwulra" path="res://Asset/Object/pintu.png" id="3_mx020"]
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="4_7qilr"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="6_2o28q"]
 
 [node name="Castle_S1_Scene3_B" instance=ExtResource("1_jbgkn")]
 player_visible = true
@@ -44,5 +45,7 @@ main_path_to_new_scene = "res://World/New_Story 1/king_s_1_scene_4_v_3.tscn"
 
 [node name="RightDoor" parent="." index="7"]
 main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_a.tscn"
+
+[node name="PauseMenu" parent="." index="10" instance=ExtResource("6_2o28q")]
 
 [editable path="VillageGround"]

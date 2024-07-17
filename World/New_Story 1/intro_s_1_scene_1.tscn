@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk4wy24s8qiyw"]
+[gd_scene load_steps=15 format=3 uid="uid://bk4wy24s8qiyw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_17mo5"]
 [ext_resource type="Script" path="res://World/New_Story 1/intro_s_1_scene_1.gd" id="2_pokhx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="4_j3ubu"]
 [ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="4_stby6"]
 [ext_resource type="PackedScene" uid="uid://b81xkqccr001n" path="res://NPC/New_story 1/s_1_intro_vil_2.tscn" id="5_206cw"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="8_menx5"]
 
 [sub_resource type="Animation" id="Animation_l1sr7"]
 resource_name = "NpcComesIn"
@@ -274,5 +275,7 @@ libraries = {
 [node name="Camera2D" parent="." index="9"]
 position = Vector2(960, 533)
 anchor_mode = 1
+
+[node name="PauseMenu" parent="." index="11" instance=ExtResource("8_menx5")]
 
 [editable path="Player"]

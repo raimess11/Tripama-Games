@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b808k05i4ho5x"]
+[gd_scene load_steps=27 format=3 uid="uid://b808k05i4ho5x"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_nlq40"]
 [ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="2_5frsf"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="11_c4165"]
 [ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="12_a73tj"]
 [ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="13_78c2o"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="20_8xlxa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_um4jy"]
 animations = [{
@@ -278,5 +279,7 @@ bus = &"SFX"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPool/Lose" index="0"]
 stream = ExtResource("10_su7lh")
 bus = &"SFX"
+
+[node name="PauseMenu" parent="." index="13" instance=ExtResource("20_8xlxa")]
 
 [connection signal="animation_finished" from="CutScene" to="." method="_on_cut_scene_animation_finished"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://2ktpl2a16mrw"]
+[gd_scene load_steps=38 format=3 uid="uid://2ktpl2a16mrw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_etbxl"]
 [ext_resource type="Script" path="res://World/Story 3/desa_s_3_scene_1.gd" id="2_3tucs"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://x1xyg475d6lc" path="res://Asset/Sprite/Adipati/Walk/frame_016.png" id="29_y2bgg"]
 [ext_resource type="Texture2D" uid="uid://c3ufalu6ijue5" path="res://Asset/Sprite/Adipati/Walk/frame_017.png" id="30_kr6th"]
 [ext_resource type="Texture2D" uid="uid://cn7ur7m3j4l6l" path="res://Asset/Sprite/Adipati/Walk/frame_019.png" id="31_toqo5"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="32_jhsb4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3os8r"]
 animations = [{
@@ -315,5 +316,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." index="10" instance=ExtResource("32_jhsb4")]
 
 [editable path="Player"]

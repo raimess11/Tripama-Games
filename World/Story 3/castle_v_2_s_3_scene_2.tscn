@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bsj1plgqjvplw"]
+[gd_scene load_steps=33 format=3 uid="uid://bsj1plgqjvplw"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_ka4y1"]
 [ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_reg4u"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://x1xyg475d6lc" path="res://Asset/Sprite/Adipati/Walk/frame_016.png" id="28_vfogt"]
 [ext_resource type="Texture2D" uid="uid://c3ufalu6ijue5" path="res://Asset/Sprite/Adipati/Walk/frame_017.png" id="29_q7d5b"]
 [ext_resource type="Texture2D" uid="uid://cn7ur7m3j4l6l" path="res://Asset/Sprite/Adipati/Walk/frame_019.png" id="30_br7yj"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="31_0np36"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3os8r"]
 animations = [{
@@ -154,6 +155,8 @@ main_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
 
 [node name="RightDoor" parent="." index="5"]
 main_path_to_new_scene = "res://World/Story 3/castle_v_3_s_3_scene_2.tscn"
+
+[node name="PauseMenu" parent="." index="8" instance=ExtResource("31_0np36")]
 
 [editable path="VillageGround"]
 [editable path="Player"]
