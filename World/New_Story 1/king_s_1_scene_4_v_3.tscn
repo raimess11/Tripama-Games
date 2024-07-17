@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dng70nssjimnv"]
+[gd_scene load_steps=7 format=3 uid="uid://dng70nssjimnv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_qqtr5"]
 [ext_resource type="Texture2D" uid="uid://brbqkqwfxveo8" path="res://Asset/Background/bg istana interior raja.png" id="2_ejvgu"]
 [ext_resource type="PackedScene" uid="uid://dvry36aglor4d" path="res://NPC/New_story 1/king_v_2.tscn" id="3_2rumk"]
 [ext_resource type="Texture2D" uid="uid://tc0bgtguqug2" path="res://Asset/Platform/platform castle raja.png" id="3_itee8"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="5_coduh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6eoo"]
 size = Vector2(306, 410)
@@ -40,5 +41,7 @@ shape = SubResource("RectangleShape2D_d6eoo")
 
 [node name="KingV2" parent="." index="7" instance=ExtResource("3_2rumk")]
 position = Vector2(168, 744)
+
+[node name="PauseMenu" parent="." index="8" instance=ExtResource("5_coduh")]
 
 [editable path="VillageGround"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2kh0aw32jjyk"]
+[gd_scene load_steps=6 format=3 uid="uid://d2kh0aw32jjyk"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_m8ld7"]
 [ext_resource type="Texture2D" uid="uid://copb0jb1sou63" path="res://Asset/Background/bg istana interior.png" id="2_d6tbo"]
 [ext_resource type="PackedScene" uid="uid://xxsbqdcgrpa4" path="res://NPC/New_story 1/maid.tscn" id="3_30xtr"]
 [ext_resource type="Texture2D" uid="uid://cv4ccb8b0sjp8" path="res://Asset/Platform/platform castle.png" id="3_qsxkn"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="5_7slq2"]
 
 [node name="Castle_S1_Scene3_A" instance=ExtResource("1_m8ld7")]
 
@@ -34,5 +35,7 @@ main_path_to_new_scene = "res://World/New_Story 1/castle_s_1_scene_3_b.tscn"
 monitoring = false
 monitorable = false
 enable = false
+
+[node name="PauseMenu" parent="." index="8" instance=ExtResource("5_7slq2")]
 
 [editable path="VillageGround"]

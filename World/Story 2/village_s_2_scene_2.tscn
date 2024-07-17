@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://yubtww7nvyc8"]
+[gd_scene load_steps=38 format=3 uid="uid://yubtww7nvyc8"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_mc028"]
 [ext_resource type="Script" path="res://World/Story 2/village_s_2_scene_2.gd" id="2_ymyjw"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ccvan4iolybco" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="28_a4wx5"]
 [ext_resource type="Texture2D" uid="uid://cnj161gg0mrx0" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="29_2074n"]
 [ext_resource type="Texture2D" uid="uid://ccn8l4iygbhm3" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="30_nsail"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="31_pigwu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bw5jf"]
 animations = [{
@@ -311,5 +312,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." index="11" instance=ExtResource("31_pigwu")]
 
 [editable path="Player"]

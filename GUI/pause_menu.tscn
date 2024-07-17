@@ -110,19 +110,12 @@ _data = {
 "RESET": SubResource("Animation_1p5g6")
 }
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_q3b08")
 
 [node name="Blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_qdapv")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -175,12 +168,6 @@ theme_override_font_sizes/font_size = 150
 text = "Resume
 "
 
-[node name="Restart" type="Button" parent="UiBackground/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_n2dq1")
-theme_override_font_sizes/font_size = 150
-text = "Restart"
-
 [node name="Menu" type="Button" parent="UiBackground/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_n2dq1")
@@ -193,5 +180,4 @@ libraries = {
 }
 
 [connection signal="pressed" from="UiBackground/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="UiBackground/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="UiBackground/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

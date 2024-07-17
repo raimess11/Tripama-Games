@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgilg0g8ld51e"]
+[gd_scene load_steps=14 format=3 uid="uid://dg7hdf7dqapna"]
 
 [ext_resource type="Script" path="res://World/base_battle.gd" id="1_d77kb"]
 [ext_resource type="Texture2D" uid="uid://rby64a3juymf" path="res://Asset/Background/bg desa malem terbakar.png" id="1_eovou"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b1n3vcd8ctrba" path="res://Battle_System/enemy.tscn" id="4_niup4"]
 [ext_resource type="FontFile" uid="uid://dfn05n2tcriyn" path="res://GUI/Fonts/Alegreya_SC/AlegreyaSC-Regular.ttf" id="5_7f6wx"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="7_0fkse"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="8_qugpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpf7"]
 bg_color = Color(0.741176, 0.564706, 0.435294, 1)
@@ -161,6 +162,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("7_0fkse")
 theme_override_font_sizes/font_size = 100
 text = "Kumbakarna menyerang dengan 10 damage"
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_qugpc")]
 
 [connection signal="player_attack" from="BattlePlayer" to="Enemy" method="hit"]
 [connection signal="enemy_attack" from="Enemy" to="BattlePlayer" method="hit"]

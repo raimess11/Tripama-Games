@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c0q503hruwwlv"]
+[gd_scene load_steps=58 format=3 uid="uid://c0q503hruwwlv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jr7hc"]
 [ext_resource type="Script" path="res://World/Story 2/war_s_2_scene_4.gd" id="2_vw0wv"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://ccvan4iolybco" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="42_xwyen"]
 [ext_resource type="Texture2D" uid="uid://cnj161gg0mrx0" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="43_ujm5t"]
 [ext_resource type="Texture2D" uid="uid://ccn8l4iygbhm3" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="44_q8afo"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="47_l5ldi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lm2ul"]
 animations = [{
@@ -834,6 +835,8 @@ menghadap kepada penasihat kerajaan"
 horizontal_alignment = 1
 vertical_alignment = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." index="18" instance=ExtResource("47_l5ldi")]
 
 [connection signal="animation_finished" from="CutScene" to="." method="_on_cut_scene_animation_finished"]
 

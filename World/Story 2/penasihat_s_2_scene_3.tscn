@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://kc5q663nmts2"]
+[gd_scene load_steps=39 format=3 uid="uid://kc5q663nmts2"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1l3ya"]
 [ext_resource type="Script" path="res://World/Story 2/penasihat_s_2_scene_3.gd" id="2_dfdh0"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ccvan4iolybco" path="res://Asset/Sprite/Kumbakarna/Walk/12.png" id="26_4bxgt"]
 [ext_resource type="Texture2D" uid="uid://cnj161gg0mrx0" path="res://Asset/Sprite/Kumbakarna/Walk/13.png" id="27_5bvy4"]
 [ext_resource type="Texture2D" uid="uid://ccn8l4iygbhm3" path="res://Asset/Sprite/Kumbakarna/Walk/14.png" id="28_thniv"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="31_2n775"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bw5jf"]
 animations = [{
@@ -379,6 +380,8 @@ theme_override_font_sizes/font_size = 50
 text = "Setelah bertemu dengan Rahwana, Kumbakarna
 menghadap kepada penasihat kerajaan"
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." index="10" instance=ExtResource("31_2n775")]
 
 [editable path="VillageGround"]
 [editable path="Player"]

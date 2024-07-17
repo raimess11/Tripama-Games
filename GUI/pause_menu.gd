@@ -1,24 +1,23 @@
-extends Control
+extends CanvasLayer
 
 func _ready():
 	$AnimationPlayer.play("RESET")
+	$".".visible = false
 
 func resume():
 	$AnimationPlayer.play_backwards("Blur")
 	await $AnimationPlayer.animation_finished
 	get_tree().paused = false
-	
+	$".".visible = false
 
 func pause():
+	$".".visible = true
 	$AnimationPlayer.play("Blur")
 	await $AnimationPlayer.animation_finished
 	get_tree().paused = true
-
-func restart():
-	get_tree().paused = false
-	get_tree().reload_current_scene()
 	
 func menu():
+	$".".visible = false
 	get_tree().change_scene_to_file("res://GUI/character_select_screen.tscn")
 	get_tree().paused = false
 	
@@ -33,11 +32,6 @@ func handler():
 func _on_resume_pressed():
 	SfxButton.play()
 	resume()
-
-
-func _on_restart_pressed():
-	SfxButton.play()
-	restart()
 
 
 func _on_menu_pressed():
