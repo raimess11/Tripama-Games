@@ -135,21 +135,19 @@ size_flags_vertical = 3
 layout_mode = 2
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 848.0
+offset_right = 813.0
 offset_bottom = 856.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.901154, 0.859135, 0.744505, 1)
 theme_override_fonts/normal_font = ExtResource("4_fec88")
 theme_override_fonts/bold_font = ExtResource("5_pp6v8")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet scelerisque arcu, in porta risus. Cras porttitor tellus arcu, eget dapibus nunc vehicula quis. Curabitur magna dolor, vestibulum id tristique pellentesque, aliquam vel neque. Nam varius auctor turpis. Cras nunc sem, gravida quis mattis ac, faucibus vel justo. Sed condimentum sem est, a mattis lorem faucibus quis. Duis egestas viverra risus et maximus. Duis faucibus fermentum semper. Vivamus eget tellus dapibus, suscipit arcu ac, finibus eros. Sed ornare blandit facilisis. Maecenas rutrum risus elit, eget ornare tellus cursus et.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet scelerisque arcu, in porta risus. Cras porttitor tellus arcu, eget dapibus nunc vehicula quis. Curabitur magna dolor, vestibulum id tristique pellentesque, aliquam vel neque. Nam varius auctor turpis. Cras nunc sem, gravida quis mattis ac, faucibus vel justo. Sed condimentum sem est, a mattis lorem faucibus quis. Duis egestas viverra risus et maximus. Duis faucibus fermentum semper. Vivamus eget tellus dapibus, suscipit arcu ac, finibus eros. Sed ornare blandit facilisis. Maecenas rutrum risus elit, eget ornare tellus cursus et."
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+text = "Patih Suwanda adalah panglima kerajaan Maespati dibawah pimpinan Prabu Harjuna Sasrabahu. Ia mempunyai keberanian yang masyhur dan mampu menyelesaikan tugas berat dengan penuh tanggung jawab. Patih Suwanda gugur ketika menghadapi Prabu Dasamuka raja raksasa dari kerajaan Alengka."
 autowrap_mode = 2
 
 [node name="Button" parent="." instance=ExtResource("6_x3yri")]
