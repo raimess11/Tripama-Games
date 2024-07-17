@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://c0q503hruwwlv"]
+[gd_scene load_steps=62 format=3 uid="uid://c0q503hruwwlv"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_jr7hc"]
 [ext_resource type="Script" path="res://World/Story 2/war_s_2_scene_4.gd" id="2_vw0wv"]
@@ -682,7 +682,6 @@ shader_parameter/amount = 0.0
 process_mode = 1
 script = ExtResource("2_vw0wv")
 dialogue_resource = ExtResource("3_1d3g6")
-player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(936, 400)

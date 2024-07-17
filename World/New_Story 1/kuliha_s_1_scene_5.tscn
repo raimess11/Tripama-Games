@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_1m6yp"]
 [ext_resource type="Script" path="res://World/New_Story 1/kuliha_s_1_scene_5.gd" id="2_74hsp"]
-[ext_resource type="PackedScene" uid="uid://bapnnrce6a23x" path="res://World/Base_World/Objects/warga_warga.tscn" id="2_xwmwj"]
+[ext_resource type="PackedScene" path="res://World/Base_World/Objects/warga_warga.tscn" id="2_xwmwj"]
 [ext_resource type="Resource" uid="uid://djj26172c7qte" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Kuliah_Umum.dialogue" id="3_bgfey"]
 [ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="4_8fls3"]
 [ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="6_quoio"]
@@ -199,7 +199,6 @@ _data = {
 [node name="kuliha_S1_Scene5" instance=ExtResource("1_1m6yp")]
 script = ExtResource("2_74hsp")
 dialogue_resource = ExtResource("3_bgfey")
-player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
