@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_c5nw2"]
 [ext_resource type="Script" path="res://World/Story 3/forest_s_3_scene_2.gd" id="2_ukjuw"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="3_5tjg4"]
 [ext_resource type="Resource" uid="uid://drt50ca6s88qe" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue2_Duryodhana&Karna.dialogue" id="3_nglg1"]
 [ext_resource type="Texture2D" uid="uid://bo2qacrawnl06" path="res://Asset/Background/bg hutam malem.png" id="4_ityxq"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_boido"]
+[ext_resource type="Texture2D" uid="uid://cfj501dduxqqe" path="res://Asset/Other/duryudana.png" id="5_eohhe"]
 [ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="6_fn8jq"]
 [ext_resource type="Texture2D" uid="uid://cmsoyvcavm4b8" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0000_frame_58.png" id="6_g1e7t"]
 [ext_resource type="Texture2D" uid="uid://lscw7sdxxk7w" path="res://Asset/Sprite/Adipati/Idle/idle_0000s_0001_frame_57.png" id="7_yi1p0"]
@@ -414,6 +414,7 @@ shader_parameter/amount = 0.0
 [node name="Forest_S3_Scene2" instance=ExtResource("1_c5nw2")]
 script = ExtResource("2_ukjuw")
 dialogue_resource = ExtResource("3_nglg1")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
@@ -422,10 +423,9 @@ scale = Vector2(0.34, 0.34)
 texture = ExtResource("4_ityxq")
 
 [node name="Duryodhana" type="Sprite2D" parent="." index="2"]
-self_modulate = Color(1, 0.443137, 0.701961, 1)
 position = Vector2(878, 623)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("3_5tjg4")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_eohhe")
 
 [node name="Player" parent="." index="3"]
 position = Vector2(1112, 664)
@@ -434,8 +434,8 @@ metadata/_edit_group_ = true
 [node name="PlayerAnim" parent="Player" index="0"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_3os8r")
+animation = &"Walk"
 autoplay = "Idle"
-frame = 7
 flip_h = true
 
 [node name="LeftDoor" parent="." index="4"]

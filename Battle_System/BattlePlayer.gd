@@ -11,6 +11,7 @@ signal player_dead
 @onready var health_bar = $HealthBar
 @onready var player_anim = $PlayerAnim
 @onready var animation_player = $AnimationPlayer
+@onready var vfx = $VFX
 
 var defended = false
 
@@ -21,6 +22,8 @@ func _ready():
 
 func attack():
 	emit_signal("player_attack", stats.strength)
+	vfx.flip_h = true
+	vfx.play("Attack")
 	player_anim.play("Attack")
 	AudioManager.playIndexSwordHit(1)
 	await player_anim.animation_finished
@@ -36,8 +39,12 @@ func defend():
 func hit(dmg):
 	animation_player.play("hurt")
 	if defended:
+		vfx.flip_h = true
+		vfx.play("Attack")
 		AudioManager.playIndexParry(0)
 	else:
+		vfx.flip_h = false
+		vfx.play("Hit")
 		AudioManager.playIndexMaleVoice(1)
 	defended = false
 	stats.take_damage(dmg)

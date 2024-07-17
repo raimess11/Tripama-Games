@@ -3,6 +3,7 @@ class_name Level
 
 @export var player : Player
 @export var doors : Array[Door]
+@export var player_visible : bool
 var data : LevelDataHandoff
 
 @onready var camera = $Camera2D
@@ -27,6 +28,8 @@ func enter_level():
 	if data != null:
 		init_player_location()
 	player.enable()
+	if player_visible:
+		player.show()
 	_connect_to_doors()
 
 func init_player_location():

@@ -289,10 +289,11 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ywkul"]
 shader = ExtResource("5_4n1mi")
-shader_parameter/amount = 0.0
+shader_parameter/amount = 2.0
 
 [node name="Penasihat_S2_Scene3" instance=ExtResource("1_1l3ya")]
 script = ExtResource("2_dfdh0")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)
@@ -320,6 +321,7 @@ metadata/_edit_group_ = true
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_bw5jf")
 autoplay = "Idle"
+frame_progress = 0.373709
 
 [node name="LeftDoor" parent="." index="4"]
 monitoring = false
@@ -341,6 +343,7 @@ libraries = {
 }
 
 [node name="Overlay" type="CanvasLayer" parent="." index="9"]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
 anchors_preset = 15
@@ -352,7 +355,6 @@ color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Blur" type="ColorRect" parent="Overlay" index="1"]
-visible = false
 material = SubResource("ShaderMaterial_ywkul")
 anchors_preset = 15
 anchor_right = 1.0
@@ -362,7 +364,6 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Overlay" index="2"]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5

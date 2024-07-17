@@ -86,7 +86,6 @@ func disable():
 func enable():
 	input_enabled = true
 	is_chatting = false
-	visible = true
 
 func playInteractSound():
 	audio_queue.PlaySound()

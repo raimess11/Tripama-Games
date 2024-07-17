@@ -1,9 +1,9 @@
 ~ start
 
-if NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
-	=> good_end
-elif NpcState.king_scene4_war:
+if NpcState.king_scene4_war:
 	=> has_interacted
+elif NpcState.questVillager_Scene1 and NpcState.questGuard_Scene2 and NpcState.questKing_Scene4:
+	=> good_end
 else
 	=> bad_end
 
@@ -25,8 +25,10 @@ Sumatri: [speed=0.5]...
 Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumatri: Siap yang mulia!
 set NpcState.king_scene4_war = true
-do NpcState.emit_has_interacted(false, true)
 set NpcState.questNPC[0]["questS1Scene5"] = true
+do NpcState.emit_has_interacted(false, true)
+
+
 
 => END
 
@@ -43,8 +45,9 @@ Sumatri: [speed=0.5]...
 Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumatri: Siap yang mulia!
 set NpcState.king_scene4_war = true
-do NpcState.emit_has_interacted(false, true)
 set NpcState.questNPC[0]["questS1Scene5"] = false
+do NpcState.emit_has_interacted(false, true)
+
 
 => END
 

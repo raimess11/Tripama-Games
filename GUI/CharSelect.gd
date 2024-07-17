@@ -8,4 +8,4 @@ func _on_pressed():
 	await Loading.loading_finished
 	if level_path == null:
 		return
-	get_tree().change_scene_to_file(level_path)
+	SceneManager.load_new_scene(level_path, "fade_to_black")

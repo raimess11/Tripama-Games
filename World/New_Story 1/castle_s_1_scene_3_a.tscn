@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="5_7slq2"]
 
 [node name="Castle_S1_Scene3_A" instance=ExtResource("1_m8ld7")]
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://World/New_Story 1/intro_s_1_scene_1.gd" id="2_pokhx"]
 [ext_resource type="Resource" uid="uid://18icgtne5p2o" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Intro_Monologue.dialogue" id="3_veb1k"]
 [ext_resource type="PackedScene" uid="uid://bxyvnw0ymvhfd" path="res://NPC/New_story 1/s_1_intro_vil_1.tscn" id="4_duni3"]
-[ext_resource type="PackedScene" path="res://World/Base_World/Objects/beringin.tscn" id="4_j3ubu"]
+[ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="4_j3ubu"]
 [ext_resource type="Texture2D" uid="uid://c3avp58invocn" path="res://Asset/Background/bg desa.png" id="4_stby6"]
 [ext_resource type="PackedScene" uid="uid://b81xkqccr001n" path="res://NPC/New_story 1/s_1_intro_vil_2.tscn" id="5_206cw"]
 [ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="8_menx5"]
@@ -235,6 +235,7 @@ _data = {
 [node name="IntroS1Scene1" instance=ExtResource("1_17mo5")]
 script = ExtResource("2_pokhx")
 dialogue_resource = ExtResource("3_veb1k")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
@@ -247,11 +248,10 @@ position = Vector2(1016, 328)
 scale = Vector2(0.2, 0.2)
 
 [node name="S1IntroVil1" parent="." index="3" groups=["villager"] instance=ExtResource("4_duni3")]
-position = Vector2(1650, 673)
+position = Vector2(1680, 675)
 questStory = 0
 
 [node name="S1IntroVil2" parent="." index="4" groups=["villager"] instance=ExtResource("5_206cw")]
-modulate = Color(0.298039, 0.807843, 0.435294, 1)
 position = Vector2(1776, 727)
 
 [node name="LeftDoor" parent="." index="6"]

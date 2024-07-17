@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c778qggau6nkv"]
+[gd_scene load_steps=4 format=3 uid="uid://c778qggau6nkv"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_lm5ls"]
+[ext_resource type="Texture2D" uid="uid://dvk4cujht07mv" path="res://Asset/Other/penasehat.png" id="2_csuku"]
 [ext_resource type="Resource" uid="uid://yms11j7g114" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue4_Penasihat&Kumbakarna.dialogue" id="2_u4jgq"]
 
 [node name="S2_Scene3_Penasihat" instance=ExtResource("1_lm5ls")]
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 modulate = Color(0.768627, 0.74902, 0.729412, 1)
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(3, -118)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_csuku")
+
+[node name="Actionable" parent="." index="4"]
 dialogue_resource = ExtResource("2_u4jgq")

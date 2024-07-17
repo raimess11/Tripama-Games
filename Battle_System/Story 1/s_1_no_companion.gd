@@ -12,7 +12,6 @@ func battle_complete():
 	ui.hide()
 	cut_scene.play("start_end")
 	await cut_scene.animation_finished
-	await get_tree().create_timer(5)
 	await end_scene
 	cut_scene.play("end_end")
 	await cut_scene.animation_finished

@@ -10,6 +10,7 @@
 size = Vector2(306, 410)
 
 [node name="King_S1_Scene 4_V3" instance=ExtResource("1_qqtr5")]
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 264)
