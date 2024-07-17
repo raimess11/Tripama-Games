@@ -262,7 +262,6 @@ _data = {
 script = ExtResource("2_ymyjw")
 dialogue_resource = ExtResource("3_g6k1s")
 dialogue_resource_p2 = ExtResource("4_pmde3")
-player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(936, 400)

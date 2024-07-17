@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://x2rp38drdset"]
+[gd_scene load_steps=43 format=3 uid="uid://x2rp38drdset"]
 
 [ext_resource type="PackedScene" uid="uid://dujf08enq3ely" path="res://World/base_scene.tscn" id="1_thwl2"]
 [ext_resource type="Script" path="res://World/Story 2/intro_story_2.gd" id="2_nkkty"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://d2kyw10b3s8j6" path="res://Asset/Sprite/Rahwana/Rahwana0004.png" id="29_qieui"]
 [ext_resource type="Texture2D" uid="uid://cal3jt68781ta" path="res://Asset/Sprite/Rahwana/Rahwana0005.png" id="30_mehrq"]
 [ext_resource type="Texture2D" uid="uid://dwamiukxexggx" path="res://Asset/Sprite/Rahwana/Rahwana0006.png" id="31_oyydi"]
+[ext_resource type="PackedScene" uid="uid://bphv7tybbfmxe" path="res://GUI/pause_menu.tscn" id="32_xulw4"]
 
 [sub_resource type="Animation" id="Animation_25doo"]
 resource_name = "Normal"
@@ -576,3 +577,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." index="16" instance=ExtResource("32_xulw4")]

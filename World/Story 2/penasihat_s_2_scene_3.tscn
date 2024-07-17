@@ -293,7 +293,6 @@ shader_parameter/amount = 2.0
 
 [node name="Penasihat_S2_Scene3" instance=ExtResource("1_1l3ya")]
 script = ExtResource("2_dfdh0")
-player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)
