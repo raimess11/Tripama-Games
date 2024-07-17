@@ -29,11 +29,12 @@ func _input(event):
 
 func _on_ally_turn_started():
 	print("Ui show")
-	if not is_instance_valid(player): return
+	if not is_instance_valid(player) or player.stats.health == 0: return
+	if not is_instance_valid(enemy): return
 	ui.show()
 
 func _on_enemy_turn_started():
-	if not is_instance_valid(player): return
+	if not is_instance_valid(player) or player.stats.health == 0: return
 	ui.hide()
 	
 	if enemy.stats.health == 0:
