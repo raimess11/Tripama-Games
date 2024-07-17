@@ -64,4 +64,5 @@ func _on_texture_button_pressed():
 	root.visible = false
 	cont.visible = false
 	button.disabled = true
+	$AnimationPlayer.play("RESET")
 	TextTransitionEnd.emit()

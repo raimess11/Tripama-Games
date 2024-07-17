@@ -1,6 +1,6 @@
 [gd_scene load_steps=72 format=3 uid="uid://cs5plb55min2c"]
 
-[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_ovf2c"]
+[ext_resource type="PackedScene" uid="uid://dg7hdf7dqapna" path="res://World/base_battle.tscn" id="1_ovf2c"]
 [ext_resource type="Script" path="res://Battle_System/Story 3/s_3_pandawa.gd" id="2_qsdty"]
 [ext_resource type="Resource" uid="uid://ek2j5p5hown" path="res://Battle_System/Story 3/S3_pandawa.tres" id="2_vrcp6"]
 [ext_resource type="Texture2D" uid="uid://dmhlgij7gitr5" path="res://Asset/Sprite/Adipati/Archery/combat-pose_0000s_0000_frame_177.png" id="3_do2su"]

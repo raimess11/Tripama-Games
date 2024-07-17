@@ -54,10 +54,13 @@ func start_intro():
 func _on_cut_scene_animation_finished(anim_name):
 	if anim_name == "arrow_cutscene":
 		scene_desc_two()
+		cut_scene.play("RESET")
 		await TextTransition.TextTransitionEnd
 		$Overlay.visible = true
 		nextCutscene("end")
 	if anim_name == "temp_battle":
+		$Overlay.visible = false
+		cut_scene.play("RESET")
 		nextCutscene("arrow_cutscene")
 
 func start_battle():
@@ -109,4 +112,6 @@ func end_battle(scene):
 	scene.queue_free()
 	camera.enabled = true
 	transition_screen.finish_transition()
+	$Overlay.visible = false
 	cut_scene.play("temp_battle")
+	

@@ -240,8 +240,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Setelah bertemu dengan Rahwana, Kumbakarna
-menghadap kepada penasihat kerajaan"]
+"values": [""]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -446,13 +445,10 @@ tracks/8/path = NodePath("Overlay/Label:text")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(1.8),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": ["Dengan panah sakti, Rama menebas tangan Kumbakarna.
-Setelah itu kakinya. Kumbakarna jatuh mengguling-guling.
-Merasa iba dengan raksasa yang lumpuh,
-Rama melepaskan panah bernama Indrasatra untuk mengakhiri hidup sang raksasa."]
+"values": []
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -682,6 +678,7 @@ shader_parameter/amount = 0.0
 process_mode = 1
 script = ExtResource("2_vw0wv")
 dialogue_resource = ExtResource("3_1d3g6")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(936, 400)
@@ -795,7 +792,6 @@ libraries = {
 }
 
 [node name="Overlay" type="CanvasLayer" parent="." index="17"]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
 anchors_preset = 15
@@ -834,8 +830,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("9_q7p1a")
 theme_override_font_sizes/font_size = 50
-text = "Setelah bertemu dengan Rahwana, Kumbakarna
-menghadap kepada penasihat kerajaan"
 horizontal_alignment = 1
 vertical_alignment = 3
 metadata/_edit_use_anchors_ = true
