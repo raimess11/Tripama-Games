@@ -342,6 +342,7 @@ libraries = {
 }
 
 [node name="Overlay" type="CanvasLayer" parent="." index="9"]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Overlay" index="0"]
 anchors_preset = 15

@@ -247,11 +247,10 @@ position = Vector2(1016, 328)
 scale = Vector2(0.2, 0.2)
 
 [node name="S1IntroVil1" parent="." index="3" groups=["villager"] instance=ExtResource("4_duni3")]
-position = Vector2(1650, 673)
+position = Vector2(1680, 675)
 questStory = 0
 
 [node name="S1IntroVil2" parent="." index="4" groups=["villager"] instance=ExtResource("5_206cw")]
-modulate = Color(0.298039, 0.807843, 0.435294, 1)
 position = Vector2(1776, 727)
 
 [node name="LeftDoor" parent="." index="6"]

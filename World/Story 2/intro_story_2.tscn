@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bi0846o1rirjc" path="res://Audio Manager/audio_queue.tscn" id="4_wjljq"]
 [ext_resource type="Resource" uid="uid://c1fgl0c08emyr" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Dialogue2_Rahwana&Sinta.dialogue" id="5_mir1j"]
 [ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="6_ifq7o"]
-[ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="7_vpl7a"]
 [ext_resource type="Texture2D" uid="uid://dhtthauc7s8f6" path="res://Asset/Object/semak.png" id="7_x72bk"]
 [ext_resource type="AudioStream" uid="uid://c2iia4xacboqf" path="res://Asset/Sound/Bushes SFX/BushesCutV2.wav" id="9_1lomr"]
 [ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="10_1j7yg"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="14_s34wc"]
 [ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="15_feawa"]
 [ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="16_u5yu3"]
+[ext_resource type="Texture2D" uid="uid://bmq0dxu8cfnen" path="res://Asset/Other/rama.png" id="17_vv6g0"]
 [ext_resource type="Texture2D" uid="uid://dxi1jnyvu6mcl" path="res://Asset/Sprite/Sinta/Sinta0000.png" id="18_w20op"]
 [ext_resource type="Texture2D" uid="uid://buyffkbg6ut8p" path="res://Asset/Sprite/Sinta/Sinta0001.png" id="19_vf3rm"]
 [ext_resource type="Texture2D" uid="uid://dup5vuv72r37j" path="res://Asset/Sprite/Sinta/Sinta0002.png" id="20_rcly0"]
@@ -544,10 +544,9 @@ autoplay = "default"
 frame_progress = 0.710041
 
 [node name="Rama" type="Sprite2D" parent="." index="12"]
-self_modulate = Color(0.85098, 0.384314, 1, 1)
 position = Vector2(960, 650)
-scale = Vector2(0.84375, 2.48438)
-texture = ExtResource("7_vpl7a")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_vv6g0")
 
 [node name="Sinta" type="AnimatedSprite2D" parent="." index="13"]
 position = Vector2(1142, 626)

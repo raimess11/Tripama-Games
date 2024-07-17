@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cd0ccshx706xd"]
+[gd_scene load_steps=46 format=3 uid="uid://cd0ccshx706xd"]
 
 [ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_rjn55"]
 [ext_resource type="Resource" uid="uid://vdhl1j3rtr38" path="res://Battle_System/Story 2/S2.tres" id="2_nfrsx"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://b4da0o7g44j1k" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0006_frame_10.png" id="25_cel00"]
 [ext_resource type="Texture2D" uid="uid://bviuwnoq5tby6" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0007_frame_04.png" id="26_qkwgy"]
 [ext_resource type="Texture2D" uid="uid://d4dw64cqgabpf" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0008_frame_01.png" id="27_yndl0"]
+[ext_resource type="Texture2D" uid="uid://dnfal668jfodb" path="res://Asset/VFX/small_sting_hit-Sheet_new.png" id="29_syhfb"]
+[ext_resource type="Texture2D" uid="uid://b30nhk6lnbhnh" path="res://Asset/VFX/small_slash_3-Sheet_new.png" id="29_tefqs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bgoqb"]
 animations = [{
@@ -118,6 +120,103 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7jkq"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(0, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxthf"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(88, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyy1e"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(176, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2631"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(264, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13piy"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(352, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erbsw"]
+atlas = ExtResource("29_tefqs")
+region = Rect2(440, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2o74"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(0, 0, 26, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cqvr"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(26, 0, 26, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haj3e"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(52, 0, 26, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kra53"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(78, 0, 26, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_202li"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(104, 0, 26, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcgw1"]
+atlas = ExtResource("29_syhfb")
+region = Rect2(130, 0, 26, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymupk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7jkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxthf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyy1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2631")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13piy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erbsw")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2o74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cqvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haj3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kra53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_202li")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcgw1")
+}],
+"loop": false,
+"name": &"Hit",
+"speed": 16.0
+}]
+
 [node name="S2_battle" instance=ExtResource("1_rjn55")]
 process_mode = 3
 script = ExtResource("2_sqtfy")
@@ -132,6 +231,10 @@ sprite_frames = SubResource("SpriteFrames_bgoqb")
 animation = &"Attack"
 frame = 15
 frame_progress = 1.0
+
+[node name="VFX" parent="BattlePlayer" index="1"]
+sprite_frames = SubResource("SpriteFrames_ymupk")
+animation = &"Attack"
 
 [node name="Enemy" parent="." index="4"]
 starting_stats = ExtResource("3_jbf62")

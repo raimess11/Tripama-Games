@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b81xkqccr001n"]
+[gd_scene load_steps=3 format=3 uid="uid://b81xkqccr001n"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_1kqy5"]
+[ext_resource type="Texture2D" uid="uid://c7hmfxim2mcjr" path="res://Asset/Other/warga 2.png" id="2_678a2"]
 
 [node name="S1IntroVil2" instance=ExtResource("1_1kqy5")]
 
-[node name="Actionable" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(4, -103)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_678a2")
+
+[node name="Actionable" parent="." index="4"]
 monitoring = false
 monitorable = false

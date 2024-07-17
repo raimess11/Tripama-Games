@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxyvnw0ymvhfd"]
+[gd_scene load_steps=5 format=3 uid="uid://bxyvnw0ymvhfd"]
 
 [ext_resource type="PackedScene" uid="uid://c1tvyug341l0" path="res://NPC/quest_giver.tscn" id="1_yyg7x"]
+[ext_resource type="Texture2D" uid="uid://mc4qp4i0emwg" path="res://Asset/Other/warga 1.png" id="2_3wsoq"]
 [ext_resource type="PackedScene" uid="uid://c5h8w1xj4frqq" path="res://QuestSystem/Quest/Story 1/quest_interact_guard.tscn" id="2_w4orm"]
 [ext_resource type="Resource" uid="uid://cgxwld0rpvc3t" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue1_Villager&Suwanda.dialogue" id="3_2uhtl"]
 
@@ -8,8 +9,17 @@
 questStory = null
 questKey = "questS1Scene1"
 
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(8, -64)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_3wsoq")
+
 [node name="GiveQuestAction" parent="Action" index="0"]
 quest_reference = ExtResource("2_w4orm")
 
-[node name="Actionable" parent="." index="3"]
+[node name="Actionable" parent="." index="4"]
+visible = false
 dialogue_resource = ExtResource("3_2uhtl")
