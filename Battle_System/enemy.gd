@@ -31,6 +31,6 @@ func hit(dmg):
 	AudioManager.playOompaLoompaVoice()
 	stats.take_damage(dmg)
 	if stats.health == 0:
+		
 		animation_player.play("death")
 		await animation_player.animation_finished
-		emit_signal("enemy_dead")

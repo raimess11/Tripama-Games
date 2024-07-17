@@ -10,8 +10,10 @@ func battle_complete():
 	ui.hide()
 	cut_scene.play("start_end")
 	print("start anim")
+	ui.hide()
 	await cut_scene.animation_finished
 	print("wait input")
+	ui.hide()
 	await end_scene
 	print("anim end")
 	cut_scene.play("end_end")
