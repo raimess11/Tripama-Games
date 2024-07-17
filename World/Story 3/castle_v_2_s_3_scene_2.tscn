@@ -124,6 +124,7 @@ animations = [{
 }]
 
 [node name="castleV2_S3_Scene2" instance=ExtResource("1_ka4y1")]
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)

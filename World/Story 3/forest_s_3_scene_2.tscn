@@ -414,6 +414,7 @@ shader_parameter/amount = 0.0
 [node name="Forest_S3_Scene2" instance=ExtResource("1_c5nw2")]
 script = ExtResource("2_ukjuw")
 dialogue_resource = ExtResource("3_nglg1")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
