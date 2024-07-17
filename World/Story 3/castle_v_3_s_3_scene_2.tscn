@@ -279,6 +279,7 @@ shader_parameter/amount = 0.0
 [node name="CastleV3_S3_Scene2" instance=ExtResource("1_eq47m")]
 script = ExtResource("2_dfgjs")
 dialogue_resource = ExtResource("3_ashck")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 position = Vector2(952, 280)

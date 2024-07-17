@@ -266,6 +266,7 @@ _data = {
 [node name="Desa_S3_Scene1" instance=ExtResource("1_etbxl")]
 script = ExtResource("2_3tucs")
 dialogue_resource = ExtResource("3_h4726")
+player_visible = true
 
 [node name="Background" parent="." index="0"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
