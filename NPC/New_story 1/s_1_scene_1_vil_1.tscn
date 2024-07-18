@@ -1,17 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://37b7s4ob0vpv"]
+[gd_scene load_steps=6 format=3 uid="uid://37b7s4ob0vpv"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_8f5hf"]
+[ext_resource type="Texture2D" uid="uid://mc4qp4i0emwg" path="res://Asset/Other/warga 1.png" id="2_a4la3"]
 [ext_resource type="Texture2D" uid="uid://biywfhq8fefer" path="res://icon.svg" id="2_bgce2"]
 [ext_resource type="Resource" uid="uid://du3rsm7epfbui" path="res://NPC/DialogueSystem/Dialogues/Story_1/S1_Dialogue6_Villager&Suwanda.dialogue" id="3_bkrvm"]
+[ext_resource type="Texture2D" uid="uid://c7hmfxim2mcjr" path="res://Asset/Other/warga 2.png" id="4_fb7wk"]
 
 [node name="S1_Scene1_Vil1" instance=ExtResource("1_8f5hf")]
 
-[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="1"]
+position = Vector2(8, -64)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_a4la3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="2"]
+visible = false
 position = Vector2(88, -40)
 scale = Vector2(0.625, 2.4375)
 texture = ExtResource("2_bgce2")
 
-[node name="Actionable" parent="." index="4"]
+[node name="Sprite2D4" type="Sprite2D" parent="." index="3"]
+position = Vector2(93, -54)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_fb7wk")
+
+[node name="Actionable" parent="." index="6"]
 dialogue_resource = ExtResource("3_bkrvm")
 
 [node name="CollisionShape2D" parent="Actionable" index="0"]

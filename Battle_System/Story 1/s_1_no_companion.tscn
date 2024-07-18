@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dcp8l5k0k112n"]
 
-[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_bsxif"]
+[ext_resource type="PackedScene" uid="uid://dg7hdf7dqapna" path="res://World/base_battle.tscn" id="1_bsxif"]
 [ext_resource type="Script" path="res://Battle_System/Story 1/s_1_no_companion.gd" id="2_62jdq"]
 [ext_resource type="Resource" uid="uid://cwubc8mi3vp6m" path="res://Battle_System/Story 1/S1_no_companion.tres" id="2_swn4q"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="4_0vk45"]

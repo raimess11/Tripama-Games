@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=3 uid="uid://cd0ccshx706xd"]
 
-[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_rjn55"]
+[ext_resource type="PackedScene" uid="uid://dg7hdf7dqapna" path="res://World/base_battle.tscn" id="1_rjn55"]
 [ext_resource type="Resource" uid="uid://vdhl1j3rtr38" path="res://Battle_System/Story 2/S2.tres" id="2_nfrsx"]
 [ext_resource type="Script" path="res://Battle_System/Story 2/s_2_battle.gd" id="2_sqtfy"]
 [ext_resource type="Resource" uid="uid://kux1whkkpyw3" path="res://Battle_System/Story 2/S2_enemy.tres" id="3_jbf62"]
@@ -235,6 +235,8 @@ frame_progress = 1.0
 [node name="VFX" parent="BattlePlayer" index="1"]
 sprite_frames = SubResource("SpriteFrames_ymupk")
 animation = &"Attack"
+frame = 0
+frame_progress = 0.0
 
 [node name="Enemy" parent="." index="4"]
 starting_stats = ExtResource("3_jbf62")

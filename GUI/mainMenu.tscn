@@ -82,24 +82,24 @@ grow_horizontal = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.407843, 0.32549, 0.188235, 1)
 theme_override_fonts/font = ExtResource("3_khbf5")
-theme_override_font_sizes/font_size = 150
-text = "SERAT TRIPAMA"
+theme_override_font_sizes/font_size = 155
+text = "TRIPAMA WARRIORS"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 8.0
-offset_top = 148.0
-offset_right = 8.0
-offset_bottom = 369.0
+offset_left = -2.0
+offset_top = 147.0
+offset_right = -2.0
+offset_bottom = 368.0
 grow_horizontal = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.572549, 0.415686, 0.301961, 1)
 theme_override_fonts/font = ExtResource("3_khbf5")
 theme_override_font_sizes/font_size = 150
-text = "SERAT TRIPAMA"
+text = "TRIPAMA WARRIORS"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
