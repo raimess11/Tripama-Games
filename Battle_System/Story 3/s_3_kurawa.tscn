@@ -1,6 +1,6 @@
 [gd_scene load_steps=72 format=3 uid="uid://labos3vdbes7"]
 
-[ext_resource type="PackedScene" uid="uid://bgilg0g8ld51e" path="res://World/base_battle.tscn" id="1_626v0"]
+[ext_resource type="PackedScene" uid="uid://dg7hdf7dqapna" path="res://World/base_battle.tscn" id="1_626v0"]
 [ext_resource type="Resource" uid="uid://bmn85mwgwvpyv" path="res://Battle_System/Story 3/S3_kurawa.tres" id="2_0ecpn"]
 [ext_resource type="Script" path="res://Battle_System/Story 3/s_3_kurawa.gd" id="2_lajat"]
 [ext_resource type="Resource" uid="uid://cygpxxpdt0j5m" path="res://Battle_System/Story 3/S3_enemy_kurawa.tres" id="3_nxsmf"]

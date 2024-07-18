@@ -64,7 +64,7 @@ Kumbakarna: ...
 	set NpcState.questNPC[1]["questS2Scene2"] = false
 
 set NpcState.desa_scene2 = true
-do NpcState.emit_has_interacted(true, true)
+#do NpcState.emit_has_interacted(true, true)
 do NpcState.emit_has_interacted(false, true)
 
 => END
