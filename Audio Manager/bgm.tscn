@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnwdndkbpxrql"]
+[gd_scene load_steps=3 format=3 uid="uid://dnwdndkbpxrql"]
 
 [ext_resource type="AudioStream" uid="uid://btxta2vl6vy5p" path="res://Asset/Sound/BGM/bgm 1.mp3" id="1_6n2ix"]
+[ext_resource type="Script" path="res://Audio Manager/bgm.gd" id="2_jiq8i"]
 
 [node name="BGM" type="AudioStreamPlayer"]
 stream = ExtResource("1_6n2ix")
 autoplay = true
 bus = &"BGM"
+script = ExtResource("2_jiq8i")

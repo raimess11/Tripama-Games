@@ -8,14 +8,13 @@ var character_selection = "res://GUI/character_select_screen.tscn"
 
 func battle_complete():
 	ui.hide()
+	AudioManager.playWin()
 	cut_scene.play("start_end")
-	print("start anim")
 	await cut_scene.animation_finished
-	print("wait input")
 	await end_scene
-	print("anim end")
 	cut_scene.play("end_end")
 	await cut_scene.animation_finished
+	NpcState.reset()
 	SceneManager.load_new_scene(character_selection,"fade_to_black")
 
 func _input(event):

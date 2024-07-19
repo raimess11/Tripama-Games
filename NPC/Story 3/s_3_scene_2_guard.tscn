@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://ca1fy4ycxrfud"]
 
 [ext_resource type="PackedScene" uid="uid://dad6tyopc03kn" path="res://NPC/npc.tscn" id="1_os12q"]
-[ext_resource type="Texture2D" uid="uid://bh3ddy27cafaa" path="res://Asset/Sprite/Guard/guard1.png" id="2_2up5c"]
-[ext_resource type="Texture2D" uid="uid://fta6mq2ierru" path="res://Asset/Sprite/Guard/guard2.png" id="3_afdxj"]
-[ext_resource type="Texture2D" uid="uid://c7e7o7nf2vtv8" path="res://Asset/Sprite/Guard/guard3.png" id="4_bywat"]
-[ext_resource type="Texture2D" uid="uid://d3esbwqkcpdt3" path="res://Asset/Sprite/Guard/guard4.png" id="5_xs8h8"]
-[ext_resource type="Texture2D" uid="uid://wvnbynh8tt1b" path="res://Asset/Sprite/Guard/guard5.png" id="6_3itn8"]
-[ext_resource type="Texture2D" uid="uid://c4ig2kilus8sd" path="res://Asset/Sprite/Guard/guard6.png" id="7_6qj2d"]
-[ext_resource type="Texture2D" uid="uid://cxi7onebqockr" path="res://Asset/Sprite/Guard/guard7.png" id="8_cwjvy"]
+[ext_resource type="Texture2D" uid="uid://cp8qvfbgyoj8s" path="res://Asset/Sprite/Guard/guard1.png" id="2_2up5c"]
+[ext_resource type="Texture2D" uid="uid://dwutncpdd8d5l" path="res://Asset/Sprite/Guard/guard2.png" id="3_afdxj"]
+[ext_resource type="Texture2D" uid="uid://b4w18gywlp7wl" path="res://Asset/Sprite/Guard/guard3.png" id="4_bywat"]
+[ext_resource type="Texture2D" uid="uid://kt3tp2gsiotg" path="res://Asset/Sprite/Guard/guard4.png" id="5_xs8h8"]
+[ext_resource type="Texture2D" uid="uid://dbefo5tdabmhr" path="res://Asset/Sprite/Guard/guard5.png" id="6_3itn8"]
+[ext_resource type="Texture2D" uid="uid://c8l6hst5hwelk" path="res://Asset/Sprite/Guard/guard6.png" id="7_6qj2d"]
+[ext_resource type="Texture2D" uid="uid://isnrv7wksm5d" path="res://Asset/Sprite/Guard/guard7.png" id="8_cwjvy"]
 [ext_resource type="Resource" uid="uid://bn17dnplyfxne" path="res://NPC/DialogueSystem/Dialogues/Story_3/S3_Dialogue3_Guard&Karna.dialogue" id="9_3q7cv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_afgq5"]
@@ -48,6 +48,8 @@ visible = false
 position = Vector2(8, -104)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_afgq5")
+autoplay = "default"
+frame_progress = 0.502136
 flip_h = true
 
 [node name="Actionable" parent="." index="4"]

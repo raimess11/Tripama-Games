@@ -3,13 +3,13 @@ extends CanvasLayer
 var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_GREEN, 
 						"Warga 1": Color.ROSY_BROWN, "Warga 2": Color.SANDY_BROWN,
 						"Guard" : Color.BLUE, "Hurjana" : Color.YELLOW, "Dayang": Color.BLUE_VIOLET,
-						"Sukarsana": Color.GOLDENROD, "Sumatri": Color.MEDIUM_SEA_GREEN,
-						"Sinta": Color.HOT_PINK, "Laksama": Color.FOREST_GREEN, "Rama": Color.LIME_GREEN,
+						"Sukrasana": Color.GOLDENROD, "Sumantri": Color.MEDIUM_SEA_GREEN,
+						"Sinta": Color.HOT_PINK, "Laksmana": Color.FOREST_GREEN, "Rama": Color.LIME_GREEN,
 						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE,
 						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED}
 
-var maleCharacter = ["Suwanda", "Warga 1", "Guard", "Hurjana", "Sukarsana", "Sumatri", "Duryodhana",
-					"Laksama", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna"]
+var maleCharacter = ["Suwanda", "Warga 1", "Guard", "Hurjana", "Sukrasana", "Sumantri", "Duryodhana",
+					"Laksmana", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna"]
 
 var femaleCharacter = ["Dayang", "Sinta", "Warga 2"]
 
