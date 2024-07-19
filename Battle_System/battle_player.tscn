@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bkb8v365spe8n"]
+[gd_scene load_steps=42 format=3 uid="uid://bkb8v365spe8n"]
 
 [ext_resource type="Script" path="res://Battle_System/BattlePlayer.gd" id="1_b1rtv"]
 [ext_resource type="Resource" uid="uid://u1oaje01v4np" path="res://Battle_System/Story 1/S1_companion.tres" id="2_1w6bq"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dbnvih7guvpgn" path="res://Battle_System/health_bar.tscn" id="13_awsq6"]
 [ext_resource type="Texture2D" uid="uid://bi5s8r3a3eda3" path="res://Asset/VFX/small_slash_1-Sheet_new.png" id="15_v8q2c"]
 [ext_resource type="Texture2D" uid="uid://dnfal668jfodb" path="res://Asset/VFX/small_sting_hit-Sheet_new.png" id="16_de4re"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="18_88xh6"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ovh62"]
 noise_type = 4
@@ -378,5 +379,16 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_h1dqt")
 }
+
+[node name="Name" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -240.0
+offset_right = 71.0
+offset_bottom = -191.0
+theme_override_fonts/font = ExtResource("18_88xh6")
+theme_override_font_sizes/font_size = 45
+text = "Suwanda"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="health_change" from="Stats" to="HealthBar" method="_on_health_change"]

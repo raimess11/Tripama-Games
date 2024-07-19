@@ -9,6 +9,64 @@ signal has_interacted(leftDoor, state)
 func emit_has_interacted(leftDoor, state):
 	emit_signal("has_interacted", leftDoor, state)
 
+func reset():
+	for dict in questNPC:
+		for key in dict:
+			dict[key] = false
+	
+	villager1and2_Scene1 = false
+	questVillager_Scene1 = false
+	guard_scene2 = false
+	questGuard_Scene2 = false
+
+	king_scene4 = false
+	questKing_Scene4 = false
+
+	#Scene 5
+	kuliah_scene5 = false
+
+	#Scene 3
+	dayang_scene3 = false
+	guard_scene3 = false
+
+	#Scene 4 v2
+	king_scene4_war = false
+
+	#Scene 1 v2
+	vil12_scene1_war = false
+	accept_help_S1 = false
+
+	#Story 2 Kumbakarna Arc
+	#Scene 1
+	forest_scene1 = false
+	forest2_scene1 = false
+
+	#Scene 2
+	desa_scene2 = false
+	choice_scene2 = "c2" # Possible choice c1, c2, c3
+
+	#Scene 3
+	penasihat_scene3 = false
+
+	#Scene 4
+	war_scene4 = false
+
+	#Scene 5
+	monologue_kumbakarna = false
+
+	#Story 3 Karna Arc
+	#Scene 1
+	toForest_scene1 = false
+	toForest_choice = "accept" # Possible choice accept, refuse, ...
+
+	#Scene 2
+	forest_scene2 = false
+	monologue_scene2 = false
+
+	#Scene 3
+	guardCastle_scene3 = false
+	guardCastle_choice = false
+
 #Quest dictionary
 var questNPC = [{"questS1Scene1": false, #Scene 1
 				"questS1Scene2": false, #Scene 2

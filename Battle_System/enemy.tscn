@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://b1n3vcd8ctrba"]
+[gd_scene load_steps=48 format=3 uid="uid://b1n3vcd8ctrba"]
 
 [ext_resource type="Script" path="res://Battle_System/enemy.gd" id="1_cx2hk"]
 [ext_resource type="Resource" uid="uid://b0wfevhkwtapc" path="res://Battle_System/Story 1/S1_enemy.tres" id="2_875de"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dbnvih7guvpgn" path="res://Battle_System/health_bar.tscn" id="19_72se5"]
 [ext_resource type="Texture2D" uid="uid://bodmcevu1sxxn" path="res://Asset/VFX/small_sting-Sheet_new.png" id="20_34pd3"]
 [ext_resource type="Texture2D" uid="uid://clijmftk3vfu8" path="res://Asset/VFX/small_slash_hit_2-Sheet_new.png" id="21_5g3i6"]
+[ext_resource type="FontFile" uid="uid://c0j8uxro2gu5u" path="res://Asset/Font/dum3.ttf" id="23_etq04"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ovh62"]
 noise_type = 4
@@ -393,10 +394,8 @@ starting_stats = ExtResource("2_875de")
 material = SubResource("ShaderMaterial_bd28u")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_hsgla")
-animation = &"Attack"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="VFX" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -423,5 +422,16 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_xddka")
 }
+
+[node name="Name" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -240.0
+offset_right = 47.0
+offset_bottom = -191.0
+theme_override_fonts/font = ExtResource("23_etq04")
+theme_override_font_sizes/font_size = 45
+text = "Enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="health_change" from="Stats" to="HealthBar" method="_on_health_change"]

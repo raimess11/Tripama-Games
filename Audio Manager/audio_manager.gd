@@ -47,7 +47,15 @@ func playIndexParry(index: int):
 	parry.PlayIndexSound(index)
 
 func playWin():
+	Bgm.fade_in_bgm(2)
 	win_lose.PlayIndexSound(0)
+	await get_tree().create_timer(1).timeout
+	Bgm.fade_out_bgm(5)
 
 func playLose():
+	Bgm.fade_in_bgm(2)
 	win_lose.PlayIndexSound(1)
+	await get_tree().create_timer(1).timeout
+	Bgm.fade_out_bgm(5)
+
+

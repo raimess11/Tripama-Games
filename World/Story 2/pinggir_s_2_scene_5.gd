@@ -41,13 +41,14 @@ func start_intro():
 
 func play_sfx():
 	if NpcState.choice_scene2 == "c2":
-		audio_pool. PlayIndexSound(0)
+		AudioManager.playWin()
 	else:
-		audio_pool. PlayIndexSound(1)
+		AudioManager.playLose()
 
 
 func _on_cut_scene_animation_finished(anim_name):
 	if anim_name == "end":
 		await get_tree().create_timer(5).timeout
+		NpcState.reset()
 		SceneManager.load_new_scene(character_selection,"fade_to_black")
 	

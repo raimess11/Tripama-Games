@@ -19,8 +19,10 @@ func _ready():
 	cut_scene.play("fade_out")
 	await cut_scene.animation_finished
 	$Overlay.visible = false
+	player.set_is_chatting(true)
 	TextTransition.transisition("s2desc1")
 	await TextTransition.TextTransitionEnd
+	player.set_is_chatting(false)
 	player.enable()
 
 func nextCutscene(next_scene):

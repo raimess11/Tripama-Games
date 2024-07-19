@@ -17,6 +17,7 @@ func _ready():
 	addDoorToDoors()
 	connect_NPC_to_player()
 	player.disable()
+	player.set_is_chatting(true)
 	player.visible = false
 	
 	if data == null:
@@ -28,6 +29,7 @@ func _ready():
 	
 func scene_desc_one():
 	$Overlay.visible = false
+	player.set_is_chatting(true)
 	TextTransition.transisition("s2desc2")
 	await TextTransition.TextTransitionEnd
 	$Overlay.visible = true

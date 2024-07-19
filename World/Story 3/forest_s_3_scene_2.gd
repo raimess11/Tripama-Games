@@ -11,6 +11,7 @@ func _ready():
 	addDoorToDoors()
 	connect_NPC_to_player()
 	player.disable()
+	player.set_is_chatting(true)
 	player.visible = false
 	
 	if data == null:

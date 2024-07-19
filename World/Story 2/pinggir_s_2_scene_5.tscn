@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bm0ms13rnosu4" path="res://Asset/Background/bg hutan.png" id="2_5frsf"]
 [ext_resource type="Script" path="res://World/Story 2/pinggir_s_2_scene_5.gd" id="2_s4cs8"]
 [ext_resource type="Resource" uid="uid://dixg80nhejfrc" path="res://NPC/DialogueSystem/Dialogues/Story_2/S2_Monologue_Kumbakarna.dialogue" id="3_pgh33"]
-[ext_resource type="PackedScene" path="res://World/Base_World/Objects/beringin.tscn" id="3_vp3lu"]
+[ext_resource type="PackedScene" uid="uid://6w05qyqoeghq" path="res://World/Base_World/Objects/beringin.tscn" id="3_vp3lu"]
 [ext_resource type="Shader" path="res://Asset/Shaders/blur.gdshader" id="5_ex6wl"]
 [ext_resource type="Texture2D" uid="uid://bwc2s132kqq4h" path="res://Asset/Object/makam.png" id="6_mijec"]
 [ext_resource type="Texture2D" uid="uid://dhp1jcfl50j4f" path="res://Asset/Sprite/Rahwana/Rahwana0000.png" id="7_2ercy"]
