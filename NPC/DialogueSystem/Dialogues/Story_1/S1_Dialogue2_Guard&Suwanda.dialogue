@@ -24,7 +24,7 @@ Suwanda: [speed=0.2]...
 	Suwanda: Aku sudah mendapatkan hormat dari mereka, buat apa memakai gelar Patih
 	Suwanda: Aku akan meminta izin kepada Yang Mulia Prabu agar bisa menuntun masyarakat
 	Guard: [speed=0.4]...[speed=1]Mapatih[speed=0.4]...
-	Suwanda: Kalau saya mendapatkan izin dari Yang Mulia, panggil saja Sumatri. Itu adalah perintah terakhir
+	Suwanda: Kalau saya mendapatkan izin dari Yang Mulia, panggil saja Sumantri. Itu adalah perintah terakhir
 	Guard: Siap laksanakan!
 	set NpcState.questGuard_Scene2 = true
 	do NpcState.emit_has_interacted(true, true)
