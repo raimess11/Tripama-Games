@@ -17,6 +17,7 @@ var defended = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	animation_player.play("RESET")
 	stats.initialize(starting_stats)
 	health_bar.initialize(stats.max_health)
 
