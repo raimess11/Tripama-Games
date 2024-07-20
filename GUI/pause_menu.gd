@@ -7,6 +7,7 @@ func _ready():
 func resume():
 	$AnimationPlayer.play_backwards("Blur")
 	await $AnimationPlayer.animation_finished
+	NpcState.reset()
 	get_tree().paused = false
 	$".".visible = false
 

@@ -6,8 +6,10 @@ var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
 @onready var label = $Overlay/Label
+@onready var texture_rect = $Overlay/TextureRect
 
 func _ready():
+	cut_scene.play("RESET")
 	QuestSystem.connectAllNodes()
 	NpcState.has_interacted.connect(_update_doors)
 	addDoorToDoors()
@@ -23,9 +25,13 @@ func _ready():
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
 	
 	if NpcState.choice_scene2 == "c2":
+		texture_rect.self_modulate = Color("#74a24e")
 		label.text = "Good End"
+		label.modulate = Color.GREEN
 	else:
+		texture_rect.self_modulate = Color("#a86d46")
 		label.text = "Bad End"
+		label.modulate = Color.RED
 
 func nextCutscene(next_scene):
 	cut_scene.play(next_scene)

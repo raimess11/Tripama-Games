@@ -4,7 +4,8 @@ signal end_scene
 
 var character_selection = "res://GUI/character_select_screen.tscn"
 @onready var cut_scene = $CutScene
-@onready var label2 = $Overlay/Label
+@onready var label2 = $Overlay/VBoxContainer/Label
+
 
 
 func battle_complete():
@@ -29,7 +30,7 @@ func _input(event):
 
 func set_text_description():
 	if NpcState.questNPC[0]["questS1Scene5"] and !NpcState.accept_help_S1:
-		label2.text = "Guilt End \nPasukan Maespati bertempur sengit dengan raksasa-raksasa dari Alengka.\nSaat Patih Suwanda siap memenggal Prabu Dasamuka, ia melihat adiknya dari mata Dasamuka.\nTeringat oleh dosanya, Patih Suwanda mati ditangan Prabu Dasamuka."
+		label2.text = "Pasukan Maespati bertempur sengit dengan raksasa-raksasa dari Alengka.\nSaat Patih Suwanda siap memenggal Prabu Dasamuka, ia melihat adiknya dari mata Dasamuka.\nTeringat oleh dosanya, Patih Suwanda mati ditangan Prabu Dasamuka."
 	elif !NpcState.questNPC[0]["questS1Scene5"] and !NpcState.accept_help_S1:
-		label2.text = "Guilt End \nPasukan Maespati bertempur sengit dengan raksasa-raksasa dari Alengka.\nIa berjanji akan melindungi Negeri Maespati dari raksasa-rakasasa Alengka.\nSayangnya, ia tak bisa melindungi tanahnya, dan mati dengan kata terakhirnya, \"maaf... maaf...\""
+		label2.text = "Pasukan Maespati bertempur sengit dengan raksasa-raksasa dari Alengka.\nIa berjanji akan melindungi Negeri Maespati dari raksasa-rakasasa Alengka.\nSayangnya, ia tak bisa melindungi tanahnya, dan mati dengan kata terakhirnya, \"maaf... maaf...\""
 		

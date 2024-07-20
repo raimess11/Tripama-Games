@@ -151,6 +151,8 @@ sprite_frames = SubResource("SpriteFrames_3os8r")
 autoplay = "Idle"
 
 [node name="LeftDoor" parent="." index="4"]
+monitoring = false
+monitorable = false
 enable = false
 main_path_to_new_scene = "res://World/Story 3/castle_v_1_s_3_scene_2.tscn"
 
