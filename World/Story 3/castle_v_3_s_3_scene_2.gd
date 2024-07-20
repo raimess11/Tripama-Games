@@ -6,14 +6,14 @@ const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
 var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
-@onready var label = $Overlay/Label
+@onready var label = $Overlay/VBoxContainer/Label
 
 const battle_pandawa = "res://Battle_System/Story 3/s_3_pandawa.tscn"
 const battle_kurawa = "res://Battle_System/Story 3/s_3_kurawa.tscn"
 
-const good_end = "Good End \nPandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna, yang melihat hancur kerajaannya, mati tanpa memilih sekutu."
-const dumb_end = "Dumb End \nPandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna berpihak pada Pandawa, menang mengalahkan para Korawa.\nNamun, Arjuna membunuhnya dari belakang. Karna mati dikhianati oleh keluarga aslinya."
-const bad_end = "Bad End \nPandawa dan Korawa berperang sengit di tanah Kurukshetra. \nKarna berpihak pada Korawa, bertarung dengan Arjuna.\nNamun, Karna kalah dan terbunuh oleh Arjuna. \nMeskipun mati dalam perang, ia mati dengan hormat dari para Korawa, khususnya Duryodhana."
+const good_end = "Pandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna, yang melihat hancur kerajaannya, mati tanpa memilih sekutu."
+const dumb_end = "Pandawa dan Korawa berperang sengit di tanah Kurukshetra.\nKarna berpihak pada Pandawa, menang mengalahkan para Korawa.\nNamun, Arjuna membunuhnya dari belakang. Karna mati dikhianati oleh keluarga aslinya."
+const bad_end = "Pandawa dan Korawa berperang sengit di tanah Kurukshetra. \nKarna berpihak pada Korawa, bertarung dengan Arjuna.\nNamun, Karna kalah dan terbunuh oleh Arjuna. \nMeskipun mati dalam perang, ia mati dengan hormat dari para Korawa, khususnya Duryodhana."
 
 func _ready():
 	QuestSystem.connectAllNodes()
@@ -58,4 +58,5 @@ func playWinLose():
 func _on_cut_scene_animation_finished(anim_name):
 	if anim_name == "end_description":
 		await get_tree().create_timer(5).timeout
+		NpcState.reset()
 		SceneManager.load_new_scene(character_selection,"fade_to_black")
