@@ -23,7 +23,7 @@ else
 ~ good_end_A
 
 Dayang: Selamat datang kembali, Suma-- Maksud saya, Mapatih
-Suwanda: Tidak apa panggil saya Sumatri. Lagian, sudah lama saya tidak pegang gelar Patih
+Suwanda: Tidak apa panggil saya Sumantri. Lagian, sudah lama saya tidak pegang gelar Patih
 Dayang: Baiklah, apakah saya dapat merapihkan ruang kerja Mapatih?
 Suwanda: Bisa, saya juga tidak tahu dipanggil untuk hal apa
 set NpcState.dayang_scene3 = true
