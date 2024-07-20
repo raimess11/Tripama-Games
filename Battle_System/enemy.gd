@@ -13,6 +13,7 @@ signal enemy_dead
 @onready var vfx = $VFX
 
 func _ready():
+	animation_player.play("RESET")
 	stats.initialize(starting_stats)
 	health_bar.initialize(stats.max_health)
 
