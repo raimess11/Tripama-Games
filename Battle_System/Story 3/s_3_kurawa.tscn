@@ -595,11 +595,12 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("37_koq2v")
 theme_override_font_sizes/font_size = 50
-text = "Pasukan Maespati bertempur sengit dengan raksasa-raksasa dari Alengka.
-Bersama dengan warga-warga yang telah dituntun, Patih Suwanda maju ke medan perang penuh tekad.
-Sayangnya, hasil gerilya dimenangkan oleh pasukan Alengka.
-Namun, Patih Suwanda bersama warga-warga bisa mati penuh hormat."
+text = "Pandawa dan Kurawa berperang sengit di tanah Kurukshetra.
+Karna berpihak pada Kurawa, bertarung dengan Arjuna.
+Namun, Karna kalah dan terbunuh oleh Arjuna.
+Meskipun mati dalam perang, ia mati dengan hormat dari para Kurawa, khususnya Duryodhana."
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [editable path="BattlePlayer"]

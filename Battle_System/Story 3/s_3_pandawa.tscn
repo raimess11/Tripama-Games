@@ -594,11 +594,12 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("37_s1rsm")
 theme_override_font_sizes/font_size = 50
-text = "Pandawa dan Korawa berperang sengit di tanah Kurukshetra.
-Karna berpihak pada Korawa, bertarung dengan Arjuna.
-Namun, Karna kalah dan terbunuh oleh Arjuna.
-Meskipun mati dalam perang, ia mati dengan hormat dari para Korawa, khususnya Duryodhana."
+text = "Pandawa dan Kurawa berperang sengit di tanah Kurukshetra.
+Karna berpihak pada Pandawa, menang mengalahkan para Kurawa.
+Namun, Arjuna membunuhnya dari belakang.
+Karna mati dikhianati oleh keluarga aslinya."
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [editable path="BattlePlayer"]
