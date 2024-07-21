@@ -430,7 +430,7 @@ offset_right = 47.0
 offset_bottom = -191.0
 theme_override_fonts/font = ExtResource("23_etq04")
 theme_override_font_sizes/font_size = 45
-text = "Enemy"
+text = "Rahwana"
 horizontal_alignment = 1
 vertical_alignment = 1
 

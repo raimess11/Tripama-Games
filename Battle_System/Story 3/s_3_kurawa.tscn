@@ -515,7 +515,7 @@ frame_progress = 0.0
 [node name="Name" parent="BattlePlayer" index="6"]
 offset_left = -120.0
 offset_right = 116.0
-text = "Adipati Karna"
+text = "Basukarna"
 
 [node name="Enemy" parent="." index="4"]
 starting_stats = ExtResource("3_nxsmf")
@@ -525,6 +525,9 @@ sprite_frames = SubResource("SpriteFrames_q5dxr")
 animation = &"Attack"
 frame = 0
 frame_progress = 0.0
+
+[node name="Name" parent="Enemy" index="6"]
+text = "Arjuna"
 
 [node name="CutScene" type="AnimationPlayer" parent="." index="8"]
 libraries = {
