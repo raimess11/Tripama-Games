@@ -7,7 +7,6 @@ func _ready():
 func resume():
 	$AnimationPlayer.play_backwards("Blur")
 	await $AnimationPlayer.animation_finished
-	NpcState.reset()
 	get_tree().paused = false
 	$".".visible = false
 
@@ -19,6 +18,7 @@ func pause():
 	
 func menu():
 	$".".visible = false
+	NpcState.reset()
 	get_tree().change_scene_to_file("res://GUI/character_select_screen.tscn")
 	get_tree().paused = false
 	
