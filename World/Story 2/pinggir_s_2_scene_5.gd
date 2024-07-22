@@ -5,8 +5,13 @@ const Balloon_source = preload("res://NPC/DialogueSystem/Bubble/balloon.tscn")
 var character_selection = "res://GUI/character_select_screen.tscn"
 @export var dialogue_resource : DialogueResource
 @onready var audio_pool = $AudioPool
-@onready var label = $Overlay/Label
+@onready var label = $Overlay/VBoxContainer/Label
+@onready var title = $Overlay/VBoxContainer/Title
 @onready var texture_rect = $Overlay/TextureRect
+
+var good_end = "Setelah perang, Kumbakarna dikubur di tanah Alengka.\nKakaknya menyadari kesalahannya dan mengevakuasi Alengka.\nSebelum itu, dia menceritakan Kumbakarna kepada rakyat agar pada beratus-ratus tahun kedepan,\norang akan tahu tentang letak hati Kumbakarna... agar tahu,\nbahwa dia berperang untuk kebaikan rakyatnya."
+var bad_end1 = "Setelah perang, Kumbakarna dikubur di tanah Alengka.\nMakamnya hanya dijenguk oleh kakak yang serakah itu.\nKumbakarna mengorbankan diri untuk ambisi yang serakah."
+var bad_end2 = "Setelah perang, Kumbakarna dikubur di tanah Alengka.\nKakaknya jarang menjenguknya dan terus fokus mengurus urusan Alengka.\nIa mengorbankan diri bukan untuk siapapun."
 
 func _ready():
 	cut_scene.play("RESET")
@@ -24,14 +29,22 @@ func _ready():
 	player.is_chatting = true
 	DialogueManager.dialogue_ended.connect(_on_Dialogue_Ended)
 	
+	#C2 good end, c1 bad end 1, c3 bad end 3
 	if NpcState.choice_scene2 == "c2":
 		texture_rect.self_modulate = Color("#74a24e")
-		label.text = "Good End"
-		label.modulate = Color.GREEN
+		title.text = "Good End"
+		title.self_modulate = Color.GREEN
+		label.text = good_end
+	elif NpcState.choice_scene2 == "c1":
+		texture_rect.self_modulate = Color("#a86d46")
+		title.text = "Bad End"
+		title.self_modulate= Color.RED
+		label.text = bad_end1
 	else:
 		texture_rect.self_modulate = Color("#a86d46")
-		label.text = "Bad End"
-		label.modulate = Color.RED
+		title.text = "Bad End"
+		title.self_modulate = Color.RED
+		label.text = bad_end2
 
 func nextCutscene(next_scene):
 	cut_scene.play(next_scene)
