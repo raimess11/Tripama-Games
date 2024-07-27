@@ -11,18 +11,18 @@ else
 
 ~ good_end
 
-Hurjana: Selamat datang kembali menjadi Patih, Sumantri
+Arjuna: Selamat datang kembali menjadi Patih, Sumantri
 Sumantri: Saya senang menjadi Patih lagi
-Sumantri: Apa kabar yang yang mulia ingin sampaikan?
-Hurjana: Ada pasukan asing yang mengepung telaga di atas gunung
-Hurjana: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
-Hurjana: Pemilihan waktu sialan[speed=0.5]...
+Sumantri: Apa kabar yang mulia ingin sampaikan?
+Arjuna: Ada pasukan asing yang mengepung telaga di atas gunung
+Arjuna: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
+Arjuna: Pemilihan waktu sialan[speed=0.5]...
 Sumantri: Apakah ada informasi lain?
-Hurjana: Pasukan-pasukan asing tersebut adalah raksasa
-Hurjana: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
-Hurjana: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
+Arjuna: Pasukan-pasukan asing tersebut adalah raksasa
+Arjuna: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
+Arjuna: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
 Sumantri: [speed=0.5]...
-Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Arjuna: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumantri: Siap yang mulia!
 set NpcState.king_scene4_war = true
 set NpcState.questNPC[0]["questS1Scene5"] = true
@@ -34,15 +34,15 @@ do NpcState.emit_has_interacted(false, true)
 
 ~ bad_end
 
-Hurjana: Patih Suwanda, saya mendapatkan kabar dari pos dekat telaga bahwa pasukan asing telah menyerbu tempatnya
-Hurjana: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
-Hurjana: Pemilihan waktu sialan[speed=0.5]...
+Arjuna: Patih Suwanda, saya mendapatkan kabar dari pos dekat telaga bahwa pasukan asing telah menyerbu tempatnya
+Arjuna: Dan itu adalah tempat mandi ku yang sudah kujanjikan dengan bulan-bulanku!
+Arjuna: Pemilihan waktu sialan[speed=0.5]...
 Sumantri: Apakah ada informasi lain?
-Hurjana: Pasukan-pasukan asing tersebut adalah raksasa
-Hurjana: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
-Hurjana: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
+Arjuna: Pasukan-pasukan asing tersebut adalah raksasa
+Arjuna: Menurut pundit kita, pasukan rakasasa itu dari Negeri Alengka
+Arjuna: Mereka dipimpin oleh Raja bernama Prabu Dasamuka
 Sumantri: [speed=0.5]...
-Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Arjuna: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumantri: Siap yang mulia!
 set NpcState.king_scene4_war = true
 set NpcState.questNPC[0]["questS1Scene5"] = false
@@ -53,7 +53,7 @@ do NpcState.emit_has_interacted(false, true)
 
 ~ has_interacted
 
-Hurjana: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
+Arjuna: Siapkan gerilya. Aku ingin mereka diusir dari tanah Negeri ini
 Sumantri: Siap yang mulia!
 
 => END

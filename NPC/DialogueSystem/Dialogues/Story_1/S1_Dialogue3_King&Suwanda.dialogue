@@ -3,25 +3,25 @@
 if NpcState.king_scene4:
 	=> has_interacted
 
-Hurjana: Ah, Suwanda. Kau sudah kembali
+Arjuna: Ah, Suwanda. Kau sudah kembali
 Suwanda: Yang mulia[speed=0.5]...
-Hurjana: Ada apa sampai menghadapiku?
+Arjuna: Ada apa sampai menghadapiku?
 Suwanda: Saya ada permintaan yang mulia
-Hurjana: [speed=0.6]...[speed=1]permintaan apa?
+Arjuna: [speed=0.6]...[speed=1]permintaan apa?
 Suwanda: Melepas jabatan saya
 Suwanda: Saya ingin menuntun masyarakat dari ilmu yang saya pelajari sepanjang hidup di Maespati
-Hurjana: [speed=0.5]...
+Arjuna: [speed=0.5]...
 Suwanda: Seperti ilmu berperang yang saya dapatkan saat mengalahkan Prabu Darwawisesa
 Suwanda: atau saat bertempur dengan raja-raja yang berjejer melamar agar mendapatkan 800 bulan
-Hurjana: [speed=0.5]...
+Arjuna: [speed=0.5]...
 Suwanda: Saya ingin menuntun mereka tak hanya karena membagi ilmu
 Suwanda: Tapi agar mereka melihat contohku dan mempelajari darinya
-Hurjana: [speed=0.5]...
-Hurjana: Baik
-Hurjana: Sampai dipanggil lagi ke istana, kau boleh menuntun masyarakat
+Arjuna: [speed=0.5]...
+Arjuna: Baik
+Arjuna: Sampai dipanggil lagi ke istana, kau boleh menuntun masyarakat
 Suwanda: Baik yang mulia
-Hurjana: [speed=0.5]...
-Hurjana: Kau memang sudah tumbuh dewasa, Suwanda
+Arjuna: [speed=0.5]...
+Arjuna: Kau memang sudah tumbuh dewasa, Suwanda
 set NpcState.questNPC[0]["questS1Scene4"] = true
 set NpcState.king_scene4 = true
 set NpcState.questKing_Scene4 = true
@@ -31,6 +31,6 @@ do NpcState.emit_has_interacted(false, true)
 
 ~ has_interacted
 
-Hurjana: ...
+Arjuna: ...
 
 => END

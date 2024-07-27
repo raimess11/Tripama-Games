@@ -18,7 +18,7 @@ Warga 2: Seperti menuntun dalam keprajuritan. Apakah bisa?
 	set NpcState.questNPC[0]["questS1Scene1"] = true
 	Warga 1: Benar akan sampaikan? Terimakasih banyak Mapatih
 	Warga 2: Iya, terimakasih sudah mempertimbangkan permintaan kami
-	Warga 2: Untuk itu, kami pergi dahulu, Mapatuh Suwanda
+	Warga 2: Untuk itu, kami pergi dahulu, Mapatih Suwanda
 	set NpcState.questVillager_Scene1 = true
 
 - Maaf, tidak sekarang
