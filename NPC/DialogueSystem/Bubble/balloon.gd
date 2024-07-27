@@ -6,10 +6,10 @@ var characterColor = {"Narator": Color.LIGHT_GRAY, "Suwanda": Color.MEDIUM_SEA_G
 						"Sukrasana": Color.GOLDENROD, "Sumantri": Color.MEDIUM_SEA_GREEN,
 						"Sinta": Color.HOT_PINK, "Laksmana": Color.FOREST_GREEN, "Rama": Color.LIME_GREEN,
 						"Rahwana": Color.RED, "Kumbakarna": Color.DARK_RED, "Penasihat": Color.CORNFLOWER_BLUE,
-						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED}
+						"Duryodhana": Color.LIGHT_PINK, "Karna": Color.MEDIUM_VIOLET_RED, "Pasukan Kera": Color.RED}
 
 var maleCharacter = ["Suwanda", "Warga 1", "Guard", "Hurjana", "Sukrasana", "Sumantri", "Duryodhana",
-					"Laksmana", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna"]
+					"Laksmana", "Rama", "Rahwana", "Kumbakarna", "Penasihat", "Karna", "Pasukan Kera"]
 
 var femaleCharacter = ["Dayang", "Sinta", "Warga 2"]
 
@@ -50,7 +50,8 @@ var dialogue_line: DialogueLine:
 		
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-		character_label.self_modulate = characterColor[character_label.text]
+		if character_label.text in characterColor.keys():
+			character_label.self_modulate = characterColor[character_label.text]
 		playCharacterSound(character_label.text)
 		
 		dialogue_label.modulate.a = 0

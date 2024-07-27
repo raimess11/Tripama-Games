@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cd0ccshx706xd"]
+[gd_scene load_steps=48 format=3 uid="uid://cd0ccshx706xd"]
 
 [ext_resource type="PackedScene" uid="uid://dg7hdf7dqapna" path="res://World/base_battle.tscn" id="1_rjn55"]
 [ext_resource type="Resource" uid="uid://vdhl1j3rtr38" path="res://Battle_System/Story 2/S2.tres" id="2_nfrsx"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://d4dw64cqgabpf" path="res://Asset/Sprite/Kumbakarna/Idle/idle_0000s_0008_frame_01.png" id="27_yndl0"]
 [ext_resource type="Texture2D" uid="uid://dnfal668jfodb" path="res://Asset/VFX/small_sting_hit-Sheet_new.png" id="29_syhfb"]
 [ext_resource type="Texture2D" uid="uid://b30nhk6lnbhnh" path="res://Asset/VFX/small_slash_3-Sheet_new.png" id="29_tefqs"]
+[ext_resource type="Texture2D" uid="uid://dncx8o2o00n06" path="res://Asset/Other/kera 1.png" id="32_vwpwo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bgoqb"]
 animations = [{
@@ -217,6 +218,25 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyhc8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_vwpwo")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_vwpwo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
 [node name="S2_battle" instance=ExtResource("1_rjn55")]
 process_mode = 3
 script = ExtResource("2_sqtfy")
@@ -256,8 +276,19 @@ text = "Kumbakarna"
 [node name="Enemy" parent="." index="4"]
 starting_stats = ExtResource("3_jbf62")
 
+[node name="EnemyAnim" parent="Enemy" index="0"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_qyhc8")
+animation = &"Attack"
+flip_h = true
+
 [node name="Name" parent="Enemy" index="6"]
-text = "Rama"
+offset_left = -112.0
+offset_right = 106.0
+text = "Pasukan Kera"
+
+[node name="TextBox" parent="." index="7"]
+visible = false
 
 [editable path="BattlePlayer"]
 [editable path="Enemy"]
