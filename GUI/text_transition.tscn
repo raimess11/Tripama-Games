@@ -804,7 +804,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Setelah itu, Karna diajak oleh Duryodhana ke hujan agar mereka bisa berbincang lebih dalam."]
+"values": ["Setelah itu, Karna diajak oleh Duryodhana ke hutan agar mereka bisa berbincang lebih dalam."]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
